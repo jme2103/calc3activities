@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-MV" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Multivariable and Vector Functions</title>
+
+  <introduction>
+    <p> Some activities to help explore multivariable and vector functions. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-Functions-Of-Several-Vars-and-3D-Space.ptx" />
+
+</chapter>

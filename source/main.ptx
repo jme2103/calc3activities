@@ -5,14 +5,15 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Calculus III Activities</title>
+    <subtitle>For Use in the Classroom</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
     <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-MV.ptx" />
 
 
     <!-- Include backmatter -->
