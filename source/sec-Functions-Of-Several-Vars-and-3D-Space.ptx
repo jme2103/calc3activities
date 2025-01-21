@@ -3,13 +3,631 @@
 <section xml:id="sec-Functions-Of-Several-Vars-and-3D-Space" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Functions of Several Variables and Three Dimensional Space</title>
 
-  <p> Text of section. </p>
+    <definition>
+      <statement>
+        <p>
+          A <term>function <m>f</m> of two independent variables</term><idx><h>function</h><h>of two variables</h></idx> is a rule that assigns to each ordered pair <m>(x,y)</m> in some set <m>D</m> exactly one real number <m>f(x,y)</m>.
+        </p>
+      </statement>
+    </definition>
 
-    <example>
-  <title>Activity 1.1.3</title>
-  <p>
-    Which is true of the two coordinate systems shown above?
-  </p>
-  </example>
+    <definition>
+      <statement>
+        <p>
+          The
+          <term>domain</term><idx><h>function</h><h>domain</h></idx> of a function <m>f</m> is the
+          set of all inputs at which the function is
+          defined.
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="activity-n1-se1" estimated-time="3">
+        <introduction>
+            <p>
+            Consider the concentration, C, (in mg/liter) of a drug in the blood as a function of the amount of drug given, <m>x</m>, and the time since injection, <m>t</m>. For <m>0 \leq x \leq 6 </m> mg and <m>t \geq 0</m> hours, we have <me>C = f(x,t) = 28te^{(6-x)t}</me>
+            </p>
+        </introduction>
+        <task>
+        <statement>
+            Which of the following best describes the meaning of <m>f(2,3)</m> in this context?
+            <ol marker="A.">
+                <li><p><m>f(2,3)</m> is the concentration in the blood 3 hours after a 2 mg injection.</p></li>
+                <li><p><m>f(2,3)</m> is the concentration in the blood 2 hours after a 3 mg injection.</p></li>
+                <li><p><m>f(2,3)</m> is the change in concentration of a 3 mg dose 2 hours after injection.</p></li>
+                <li><p><m>f(2,3)</m> is the change in concentration of a 2 mg does 3 hours after injection.</p></li>
+            </ol>
+        </statement>
+        </task>
+    </activity>
+
+    <activity xml:id="activity-n1-fb1" estimated-time="5">
+        <introduction>
+            <p>
+             A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.
+            </p>
+        </introduction>
+        <task>
+        <statement>
+            <p>
+            Write a formula for the cost, <m>C</m>, of renting a car as a function of the number of days, <m>d</m>, and the number of miles driven, <m>m</m>.
+            </p>
+        </statement>
+        </task>
+        <task>
+        <statement>
+            <p>
+            Describe the domain of the function.
+            </p>
+        </statement>
+        </task>
+    </activity>
+
+    <activity xml:id="activity-n1-se2" estimated-time="3">
+        <statement>
+            <p>
+                Which of the following best describes the domain of <m>f</m>?
+            <me>f(x,y) = \frac{2\sin(xy)}{x^2 + y}</me>
+            </p>
+            
+            <ol marker="A.">
+                <li><p>The domain is all <m>(x,y)</m> such that <m>y > 0</m></p></li>
+                <li><p>The domain is all <m>\R^2</m> except the origin <m>(0,0)</m>.</p></li>
+                <li><p>The domain is all <m>(x,y)</m> such that <m>y \geq -x^2</m></p></li>
+                <li><p>The domain is all <m>\R^2</m>.</p></li>
+                <li><p>The domain is all <m>(x,y)</m> such that <m>x \geq 0</m> and <m>y \geq 0</m> because sine is not defined for negative numbers.</p></li>
+            </ol>
+        </statement>
+    </activity>
+
+    <activity xml:id="pd-functions-domain-range1">
+        <introduction>
+            <p>
+                Identify the domain of the functions below.
+            </p>
+        </introduction>
+        <task>
+            <statement>
+                <p>
+                    <m>g(x,y) = \sqrt{36-x^2-y^2}</m>
+                    <ol marker="A." cols="2">
+                        <li>
+                            <p>
+                                <m>\{ (x,y)\mid x^2 + y^2 \gt 6 \}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\{ (x,y)\mid x^2 + y^2 \geq 6 \}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\{ (x,y)\mid x^2 + y^2 \lt 6 \}</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>\{ (x,y)\mid x^2 + y^2 \leq 6 \}</m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </task>
+        <task>
+            <statement>
+                <p>
+                    <m>h(y,z) = 2y^2 + z^2</m>
+                </p>
+            </statement>
+        </task>
+    </activity>
+
+    <activity xml:id="pd-functions-graph1">
+        <statement>
+            <p>
+                Use technology to graph the function <m>f(x,y) = \sqrt{x^2 + y^2}</m>. Report the domain and the range of the function.
+            </p>
+        </statement>
+    </activity>
+
+    <activity xml:id="activit-n1-fb">
+      <statement>
+        <p>
+          Identify the domain of each of the following functions. Draw a picture of each domain in the <m>xy</m>-plane.
+          <ol marker="a.">
+            <li>
+              <p>
+                <m>f(x,y) = x^2+y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = \sqrt{x^2+y^2}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>Q(x,y) = \frac{x+y}{x^2-y^2}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>s(x,y) = \frac{1}{\sqrt{1-xy^2}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <!--
+
+      <answer>
+        <p>
+          <ol marker="a.">
+            <li>
+              <p>
+                <m>x:(-\infty,\infty)</m> <m>y:(-\infty,\infty)</m>
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                <m>x:(-\infty,\infty)</m> <m>y:(-\infty,\infty)</m> 
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                 <m>x \neq y</m> and <m>x \neq - y</m>
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                <m>xy^{2} \leq 1</m> or <m>x \leq \frac{1}{y^{2}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+
+      <solution>
+        <p>
+          <ol marker="a.">
+            <li>
+              <p>
+                There are no x or y values that make the function undefined, so the domain is all ordered pairs of real numbers.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The square root function is undefined for inputs that result in a negative radicand. Since <m>x^{2}+y{2} \geq 0</m>, there are no <m>(x,y)</m> that will result in a negative radicand. Therefore, the domain is all real ordered pairs of real numbers.  
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The rational function is undefined when the denominator is zero or undefined. The rational function is defined when <m>x^{2}-y^{2} = (x-y)(x+y) \neq 0</m>. So <m>(x-y) \neq 0</m> and <m>(x+y) \neq 0</m>. Therefore, <m>x \neq y</m> and <m>x \neq - y</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The rational function is undefined then the denominator is zero or undefined. The denominator is only defined when <m>1-xy^{2} \geq 0</m>. Therefore, <m>xy^{2} \leq 1</m> or <m>x \leq \frac{1}{y^{2}}</m>. But the denominator cannot be equal to zero, so the domain is all ordered pairs such that <m>x \lt \frac{1}{y^{2}}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+      -->
+
+    </activity>
+
+    <activity xml:id="activity-n1-fe" estimated-time="1">
+        <task>
+        <statement>
+            <p>
+            Describe a physical or real-world example of a function of two variables. What is its domain?
+            </p>
+        </statement>
+        </task>
+        <task>
+        <statement>
+            <p>
+            Describe a physical or real-world example of a function of <em>three</em> variables. What is its domain?
+            </p>
+        </statement>
+        </task>
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          A three-dimensional coordinate system is called <term>right-handed</term> if, after pointing your right thumb in the direction of the positive <m>x</m>-axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive <m>y</m>-axis to the positive <m>z</m>-axis. Otherwise, it's called left-handed.
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="activity-n1-se3" estimated-time="3">
+        <introduction>
+            <p>
+            insert picture
+            </p>
+        </introduction>
+        <statement>
+            Which of the following best describes the two coordinate systems?
+            <ol marker="A.">
+                <li><p>The first one is right-handed, while the second is left-handed.</p></li>
+                <li><p>The first one is left-handed, while the second is right-handed.</p></li>
+                <li><p>They are both right-handed.</p></li>
+                <li><p>They are both left-handed.</p></li>
+            </ol>
+        </statement>
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          The <term>graph</term><idx><h>function</h><h>graph</h></idx> of a function <m>f = f(x,y)</m> is the set of points of the form <m>(x,y,f(x,y))</m>, where the point <m>(x,y)</m> is in the domain of <m>f</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>trace</term><idx><h>trace</h></idx> of a function <m>f</m> of two independent variables <m>x</m> and <m>y</m> in the <m>x</m> direction is a curve of the form <m>z = f(x,c)</m>, where <m>c</m> is a constant. Similarly, a <term>trace</term> of a function <m>f</m> of two independent variables <m>x</m> and <m>y</m> in the <m>y</m> direction is a curve of the form <m>z = f(c,y)</m>, where <m>c</m> is a constant. 
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>level curve<idx><h>level curve</h></idx> (or contour)</term> of a function <m>f</m> of two independent variables <m>x</m> and <m>y</m> is a curve of the form <m>k = f(x,y)</m>, where <m>k</m> is a constant.
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="pd-vertical-trace1">
+        <statement>
+            <p>
+                Which of the following sets up the vertical trace for <m>x=1</m> for the function <m>z = 4-x-y</m>?
+                <ol marker="A." cols="2">
+                    <li>
+                        <p>
+                            <m>1 = 4-x-y</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>z = 3-y</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>x + y = 3</m>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <m>z = 3-x</m>
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+
+    <activity>
+        <statement>
+            <p>
+                Which of the following is a contour map for the function <m>f(x,y) = \sqrt{x^2 + y^2}</m>? 
+                <ol marker="A." cols="2">
+                <li>
+                    <p>
+                        <image>
+                            <sageplot>
+                                x = var('x')
+                                y = var('y')
+                                f(x,y) = x^2 + y^2
+                                contour_plot(f,(x,-4,4),(y,-4,4),fill=False,plot_points=150,axes_labels=('$x$','$y$'))
+                            </sageplot>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <image>
+                            <sageplot>
+                                x = var('x')
+                                y = var('y')
+                                f(x,y) = sqrt(x^2 + y^2)
+                                contour_plot(f,(x,-4,4),(y,-4,4),fill=False,plot_points=150,axes_labels=('$x$','$y$'))
+                            </sageplot>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <image>
+                            <sageplot>
+                                x = var('x')
+                                y = var('y')
+                                f(x,y) = x^2 - y^2
+                                contour_plot(f,(x,-4,4),(y,-4,4),fill=False,plot_points=150,axes_labels=('$x$','$y$'))
+                            </sageplot>
+                        </image>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <image>
+                            <sageplot>
+                                x = var('x')
+                                y = var('y')
+                                f(x,y) = sqrt(x^2 - y^2)
+                                contour_plot(f,(x,-4,4),(y,-4,4),fill=False,plot_points=150,axes_labels=('$x$','$y$'))
+                            </sageplot>
+                        </image>
+                    </p>
+                </li>
+                </ol>
+            </p>
+        </statement>
+    </activity>
+    <activity>
+        <statement>
+            <p>
+                Sketch the contour map for the function <m>f(x,y) = \sqrt{8+8x-4y-4x^2-y^2}</m> for <m>c = 0,1,2,3,4</m>
+            </p>
+        </statement>
+    </activity>
+
+    <activity xml:id="activity-n1-fe3" estimated-time="3">
+        <statement>
+            Which of the following best describes the difference between traces and contours?
+            <ol marker="A.">
+                <li><p>There is no difference; they are the same.</p></li>
+                <li><p>Traces are "vertical" while contours are "horizontal."</p></li>
+                <li><p>Traces never involve the <m>z</m> coordinate, while contours do.</p></li>
+                <li><p>Contours never involve the <m>z</m> coordinate, while traces do.</p></li>
+            </ol>
+        </statement>
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>sphere<idx><h>sphere</h></idx></term> is the set of all points equidistant from a fixed point. The fixed point is called the <term>center</term> of the sphere, and the distance from the center to any point on the sphere is called the <term>radius</term> of the sphere, and the distance from the center to all the points in the sphere is called the <term>radius</term>.
+        </p>
+      </statement>
+    </definition>
+
+    <activity>
+    <task>
+        <statement>
+            <p>
+                Find the equation of the sphere is center <m>(-6, -4, -3)</m> with radius <m>3</m>. Normalize your equation so that the coefficient of <m>x^2</m> is <m>1</m>.
+            </p>
+        </statement>
+    </task>
+    <task>
+        <statement>
+            <p>
+                Give an equation which describes the intersection of this sphere with the plane <m>z = -2</m>.
+            </p>
+        </statement>
+    </task>
+    </activity>
+
+    <definition xml:id="def-quadric-surface">
+            <title>Quadric Surface</title>
+            <statement>
+                <p>
+                    A <term>quadric surface</term> is a surface of the form
+                    <me>
+                        Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Jz + K = 0
+                    </me>
+                </p>
+            </statement>
+        </definition>
+
+        <fact xml:id="fact-quadric-surfaces">
+            <statement>
+                <p>
+                    There are six common types of quadric surfaces:
+                    <ul>
+                        <li>
+                            <p>
+                                Ellipsoid
+                                <me>
+                                    \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1
+                                </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Elliptic Cone
+                                <me>
+                                    \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 0
+                                </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Elliptic Paraboloid
+                                <me>
+                                    z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}
+                                </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Hyperboloid of One Sheet
+                                <me>
+                                    \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1
+                                </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Hyperboloid of Two Sheets
+                                <me>
+                                    \dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+                                </me>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Hyperbolic Paraboloid
+                                <me>
+                                    z = \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2}
+                                </me>
+                            </p>
+                        </li>
+                    </ul>
+                </p>
+            </statement>
+        </fact>
+
+        <activity>
+            <introduction>
+                <p>
+                    Each equation below is a quadric surface. Identify which kind it is.
+                </p>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        <m>
+                            -x^2 + 36y^2 + 36z^2 = 9
+                        </m>
+                        <ol marker="A." cols="2">
+                            <li>
+                                <p>
+                                    Ellipsoid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of One Sheet
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Cone
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Paraboloid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of Two Sheets
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperbolic Paraboloid
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>
+                            5y=x^2-z^2
+                        </m>
+                        <ol marker="A." cols="2">
+                            <li>
+                                <p>
+                                    Ellipsoid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of One Sheet
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Cone
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Paraboloid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of Two Sheets
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperbolic Paraboloid
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        <m>
+                            x^2+5y^2-8z^2 = 0
+                        </m>
+                        <ol marker="A." cols="2">
+                            <li>
+                                <p>
+                                    Ellipsoid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of One Sheet
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Cone
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Elliptic Paraboloid
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperboloid of Two Sheets
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Hyperbolic Paraboloid
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </task>
+        </activity>
+
+  
 
 </section>
