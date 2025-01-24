@@ -5,14 +5,14 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>Calculus III Activities</title>
-    <subtitle>For Use in the Classroom</subtitle>
+    <title>Calculus III</title>
+    <subtitle>In-Class Activities</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <!-- <xi:include href="./ch-chapter-title.ptx" /> -->
     <xi:include href="./ch-MV.ptx" />
 
 

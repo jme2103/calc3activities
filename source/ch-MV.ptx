@@ -4,10 +4,15 @@
   <title>Multivariable and Vector Functions</title>
 
   <introduction>
-    <p> Some activities to help explore multivariable and vector functions. </p>
+    <p>Activities for exploring three dimensional Euclidean space and multivariable and vector functions.</p>
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-Functions-Of-Several-Vars-and-3D-Space.ptx" />
+  <xi:include href="sec-Vectors.ptx" />
+  <xi:include href="sec-Vector-Geometry.ptx" />
+  <xi:include href="sec-Lines.ptx" />
+  <xi:include href="sec-Planes.ptx" />
+  <xi:include href="sec-Curves.ptx" />
 
 </chapter>
