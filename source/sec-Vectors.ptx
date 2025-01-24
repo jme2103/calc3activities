@@ -3,7 +3,217 @@
 <section xml:id="sec-Vectors" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vectors</title>
 
-    
+    <definition>
+      <statement>
+        <p>
+          A
+          <term>vector</term><idx><h>vector</h><h>definition</h></idx> is a quantity that possesses the attributes of magnitude and
+          direction.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      If a physical quantity has both magnitude and direction, it is called <em>vectorial</em>. If it has only magnitude, it is called <em>scalar</em>.
+    </p>
+
+    <activity xml:id="vectors-activity-1" estimated-time="3">
+        <statement>
+            Use your physical intuition to decide which of the following quantites are vectorial and which are scalar.
+            <ol marker="A.">
+                <li><p>temperature</p></li>
+                <li><p>pressure</p></li>
+                <li><p>velocity</p></li>
+                <li><p>displacement</p></li>
+                <li><p>length</p></li>
+                <li><p>entropy</p></li>
+                <li><p>density</p></li>
+                <li><p>acceleration</p></li>
+                <li><p>mass</p></li>
+            </ol>
+        </statement>
+    </activity>
+
+    <p>
+      Graphically, a vector is represented as a line segment with an 
+      arrowhead placed on one end. The magnitude 
+      corresponds to its length and the direction corresponds to the direction
+      that it points. Algebraically, a vector is represented by an <m>n</m>-tuple
+      of numbers, called its components. For example, 
+      <m>{\bf v} = \langle v_1, v_2, \ldots, v_n \rangle</m> is a vector 
+      in <m>n</m>-dimensional space. (N.B. Angled brackets denote a vector,
+      whereas round brackets denote a point.) 
+    </p>
+
+    <p>
+      Graphically, the <em>head</em> of a vector is the end with the arrowhead,
+      and the <em>tail</em> is the other end. When drawing a vector in
+      Euclidean space, the point at which we place the tail is called the 
+      <em>initial point</em>, and the point at which we place the head is called the
+      <em>terminal point</em>. If <m>P</m> is the initial point and <m>Q</m> is the
+      terminal point, we often write <m>{\bf v} = \overrightarrow{PQ}</m>.
+    </p>
+
+    <activity xml:id="vectors-activity-2" estimated-time="3">
+        <statement>
+            Suppose that the vector <m>{\bf v} = \langle -1, 0, 5 \rangle</m> is represented
+            as an arrow with terminal point <m>Q = (4,-3,0)</m>. What is the initial point <m>P</m> of the arrow?
+            <ol marker="A.">
+                <li><p><m>P = (5, 3, 5)</m></p></li>
+                <li><p><m>P = (5, -3, -5)</m></p></li>
+                <li><p><m>P = (-4, 0, 0)</m></p></li>
+                <li><p><m>P = (3, -3, 5)</m></p></li>
+            </ol>
+        </statement>
+    </activity>
+
+    <p>
+      The position vector of a point <m>P</m> is the vector whose initial point
+      is the origin and whose terminal point is <m>P</m>.
+    </p>
+
+    <p>
+      Two vectors are <em>equal</em> if they have the same magnitude and direction. Algebraically, this
+      means the two vectors have the same components. Notice that neither the initial nor terminal
+      point is mentioned in the definition of equality. So, graphically,
+      this means the two vectors are equal if they can be superimposed by a translation.
+    </p>
+
+    <p>
+      There are two operations that can be performed on vectors: addition and scalar
+      multiplication. They are defined algebraically as:
+      <me>
+        {\bf v} + {\bf w} = \langle v_1, v_2, v_3 \rangle + \langle w_1, w_2, w_3 \rangle = \langle v_1 + w_1, v_2 + w_2, v_3 + w_3 \rangle  
+      </me>
+      <me>
+        c{\bf v} = c \langle v_1, v_2, v_3 \rangle = \langle cv_1, cv_2, cv_3 \rangle  
+      </me>
+    </p>
+
+    <assemblage xml:id="Vectors-operations">
+      <title>Properties of vector operations</title>
+      <p>
+        Let <m>\vv</m>, <m>\vu</m>, and <m>\vw</m> be vectors in <m>\R^n</m> and let <m>a</m> and <m>b</m> be scalars. Then
+      <ol>
+        <li>
+          <p>
+            <m>\vv + \vu = \vu + \vv</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(\vv + \vu) + \vw = \vv + (\vu + \vw)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The vector <m>\vzero = \langle 0, 0, \ldots, 0 \rangle</m> has the
+              property that <m>\vv + \vzero = \vv</m>. The vector <m>\vzero</m> is called
+              the <em>zero vector</em>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(-1)\vv + \vv = \vzero</m>. The vector <m>(-1)\vv = -\vv</m> is called
+              the <em>additive inverse</em> of the vector <m>\vv</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(a+b) \vv = a\vv + b\vv</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>a(\vv + \vu) = a\vv + a\vu</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(ab) \vv = a(b\vv)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>1 \vv = \vv</m>.
+          </p>
+        </li>
+      </ol>
+      </p>
+    </assemblage>
+
+    <activity xml:id="vectors-activity-3" estimated-time="3">
+        <statement>
+            Suppose that <m>\vu = \langle 2, 1 \rangle</m> and
+            <m>\vv = \langle 0, 3 \rangle</m>.
+            <task>
+              <statement>
+                <p>
+                  Sketch <m>\vu</m>, <m>\vv</m>, and <m>\vu + \vv</m> on the same set of axes with initial point at the origin.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Sketch <m>-\vu</m> and <m>3\vu</m> on the same set of axes with initial point at the origin.
+                </p>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  For any vectors <m>\vu</m> and <m>\vv</m>, which of the following best 
+                  describes the vector <m>\vu + \vv</m>?
+                </p>
+                <ol marker="A.">
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with the same initial point as both <m>\vu</m> and <m>\vv</m>.</p></li>
+                </ol>
+              </statement>
+            </task>
+
+            <task>
+              <statement>
+                <p>
+                  For any vectors <m>\vu</m> and <m>\vv</m>, which of the following best 
+                  describes the vector <m>\vu - \vv</m>?
+                </p>
+                <ol marker="A.">
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with the same initial point as both <m>\vu</m> and <m>\vv</m>.</p></li>
+                </ol>
+              </statement>
+            </task>
+
+            <task>
+              <statement>
+                <p>
+                  For any vectors <m>\vu</m> and <m>\vv</m>, which of the is the best 
+                  best geometric description of the terminal points of the vectors <m>\vu + t\vv</m>?
+                </p>
+                <ol marker="A.">
+                  <li><p>It's the parallelogram determined by <m>\vu</m> and <m>\vv</m>.</p></li>
+                  <li><p>It's the circle with center at the terminal point of <m>\vu</m> and with radius the magnitude of <m>\vv</m>.</p></li>
+                  <li><p>It's the line with in the direction of <m>\vv</m> that goes through the terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the plane spanned by <m>\vu</m> and <m>\vv</m>.</p></li>
+                </ol>
+              </statement>
+            </task>
+            
+        </statement>
+    </activity>
   
 
 </section>
