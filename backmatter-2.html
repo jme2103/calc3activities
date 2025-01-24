@@ -12,7 +12,7 @@
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Calculus III Activities">
+<meta property="book:title" content="Calculus III">
 <meta property="book:author" content="Jonathan Epstein">
 <script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
@@ -139,12 +139,30 @@ eBookConfig.enable_chatcodes =  false;
 #sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2 { counter-set: sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2 0; }
 #sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2 > li::marker { content: ""counter(sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2,upper-alpha)"."; }
 #sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2 > li { counter-increment: sec-Functions-Of-Several-Vars-and-3D-Space-24-4-1-1-2; }
+#vectors-activity-1-1-1 { counter-set: vectors-activity-1-1-1 0; }
+#vectors-activity-1-1-1 > li::marker { content: ""counter(vectors-activity-1-1-1,upper-alpha)"."; }
+#vectors-activity-1-1-1 > li { counter-increment: vectors-activity-1-1-1; }
+#vectors-activity-2-1-4 { counter-set: vectors-activity-2-1-4 0; }
+#vectors-activity-2-1-4 > li::marker { content: ""counter(vectors-activity-2-1-4,upper-alpha)"."; }
+#vectors-activity-2-1-4 > li { counter-increment: vectors-activity-2-1-4; }
+#Vectors-operations-2-7 { counter-set: Vectors-operations-2-7 0; }
+#Vectors-operations-2-7 > li::marker { content: ""counter(Vectors-operations-2-7,decimal)"."; }
+#Vectors-operations-2-7 > li { counter-increment: Vectors-operations-2-7; }
+#vectors-activity-3-1-5-1-2 { counter-set: vectors-activity-3-1-5-1-2 0; }
+#vectors-activity-3-1-5-1-2 > li::marker { content: ""counter(vectors-activity-3-1-5-1-2,upper-alpha)"."; }
+#vectors-activity-3-1-5-1-2 > li { counter-increment: vectors-activity-3-1-5-1-2; }
+#vectors-activity-3-1-6-1-2 { counter-set: vectors-activity-3-1-6-1-2 0; }
+#vectors-activity-3-1-6-1-2 > li::marker { content: ""counter(vectors-activity-3-1-6-1-2,upper-alpha)"."; }
+#vectors-activity-3-1-6-1-2 > li { counter-increment: vectors-activity-3-1-6-1-2; }
+#vectors-activity-3-1-7-1-2 { counter-set: vectors-activity-3-1-7-1-2 0; }
+#vectors-activity-3-1-7-1-2 > li::marker { content: ""counter(vectors-activity-3-1-7-1-2,upper-alpha)"."; }
+#vectors-activity-3-1-7-1-2 > li { counter-increment: vectors-activity-3-1-7-1-2; }
 </style>
 </head>
 <body id="changeme" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner">
 <a id="logo-link" class="logo-link" target="_blank" href=""></a><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III Activities:</span> <span class="subtitle">For Use in the Classroom</span></a></h1>
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
 <p class="byline">Jonathan Epstein</p>
 </div>
 </div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
@@ -160,7 +178,8 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -171,12 +190,15 @@ eBookConfig.enable_chatcodes =  false;
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Chapter Title</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Section Title</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">2</span> <span class="title">Multivariable and Vector Functions</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li></ul>
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Planes.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Curves</span></a></div></li>
+</ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>

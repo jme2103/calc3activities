@@ -10,20 +10,11 @@ var ptx_lunr_docs = [
   "body": "  "
 },
 {
-  "id": "sec-section-name",
-  "level": "1",
-  "url": "sec-section-name.html",
-  "type": "Section",
-  "number": "1.1",
-  "title": "Section Title",
-  "body": " Section Title  Text of section.  "
-},
-{
   "id": "sec-Functions-Of-Several-Vars-and-3D-Space",
   "level": "1",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html",
   "type": "Section",
-  "number": "2.1",
+  "number": "1.1",
   "title": "Functions of Several Variables and Three Dimensional Space",
   "body": " Functions of Several Variables and Three Dimensional Space    A function of two independent variables function of two variables is a rule that assigns to each ordered pair in some set exactly one real number .      The domain function domain of a function is the set of all inputs at which the function is defined.      Consider the concentration, C, (in mg\/liter) of a drug in the blood as a function of the amount of drug given, , and the time since injection, . For mg and hours, we have    Which of the following best describes the meaning of in this context?  is the concentration in the blood 3 hours after a 2 mg injection.  is the concentration in the blood 2 hours after a 3 mg injection.  is the change in concentration of a 3 mg dose 2 hours after injection.  is the change in concentration of a 2 mg does 3 hours after injection.       A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.    Write a formula for the cost, , of renting a car as a function of the number of days, , and the number of miles driven, .    Describe the domain of the function.      Which of the following best describes the domain of ?    The domain is all such that  The domain is all except the origin .  The domain is all such that  The domain is all .  The domain is all such that and because sine is not defined for negative numbers.       Identify the domain of the functions below.                                      Use technology to graph the function . Report the domain and the range of the function.      Identify the domain of each of the following functions. Draw a picture of each domain in the -plane.                             Describe a physical or real-world example of a function of two variables. What is its domain?    Describe a physical or real-world example of a function of three variables. What is its domain?      A three-dimensional coordinate system is called right-handed if, after pointing your right thumb in the direction of the positive -axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive -axis to the positive -axis. Otherwise, it's called left-handed.      insert picture   Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.       The graph function graph of a function is the set of points of the form , where the point is in the domain of .      A trace trace of a function of two independent variables and in the direction is a curve of the form , where is a constant. Similarly, a trace of a function of two independent variables and in the direction is a curve of the form , where is a constant.      A level curve level curve (or contour) of a function of two independent variables and is a curve of the form , where is a constant.      Which of the following sets up the vertical trace for for the function ?                            Which of the following is a contour map for the function ?                                    Sketch the contour map for the function for      Which of the following best describes the difference between traces and contours?  There is no difference; they are the same.  Traces are \"vertical\" while contours are \"horizontal.\"  Traces never involve the coordinate, while contours do.  Contours never involve the coordinate, while traces do.       A sphere sphere is the set of all points equidistant from a fixed point. The fixed point is called the center of the sphere, and the distance from the center to any point on the sphere is called the radius of the sphere, and the distance from the center to all the points in the sphere is called the radius .      Find the equation of the sphere is center with radius . Normalize your equation so that the coefficient of is .    Give an equation which describes the intersection of this sphere with the plane .     Quadric Surface   A quadric surface is a surface of the form       There are six common types of quadric surfaces:   Ellipsoid     Elliptic Cone     Elliptic Paraboloid     Hyperboloid of One Sheet     Hyperboloid of Two Sheets     Hyperbolic Paraboloid          Each equation below is a quadric surface. Identify which kind it is.        Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid       "
 },
@@ -32,7 +23,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-2",
   "type": "Definition",
-  "number": "2.1.1",
+  "number": "1.1.1",
   "title": "",
   "body": "  A function of two independent variables function of two variables is a rule that assigns to each ordered pair in some set exactly one real number .   "
 },
@@ -41,7 +32,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-3",
   "type": "Definition",
-  "number": "2.1.2",
+  "number": "1.1.2",
   "title": "",
   "body": "  The domain function domain of a function is the set of all inputs at which the function is defined.   "
 },
@@ -50,7 +41,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-se1",
   "type": "Activity",
-  "number": "2.1.1",
+  "number": "1.1.1",
   "title": "",
   "body": "  Consider the concentration, C, (in mg\/liter) of a drug in the blood as a function of the amount of drug given, , and the time since injection, . For mg and hours, we have    Which of the following best describes the meaning of in this context?  is the concentration in the blood 3 hours after a 2 mg injection.  is the concentration in the blood 2 hours after a 3 mg injection.  is the change in concentration of a 3 mg dose 2 hours after injection.  is the change in concentration of a 2 mg does 3 hours after injection.    "
 },
@@ -59,7 +50,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-fb1",
   "type": "Activity",
-  "number": "2.1.2",
+  "number": "1.1.2",
   "title": "",
   "body": "  A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.    Write a formula for the cost, , of renting a car as a function of the number of days, , and the number of miles driven, .    Describe the domain of the function.   "
 },
@@ -68,7 +59,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-se2",
   "type": "Activity",
-  "number": "2.1.3",
+  "number": "1.1.3",
   "title": "",
   "body": "  Which of the following best describes the domain of ?    The domain is all such that  The domain is all except the origin .  The domain is all such that  The domain is all .  The domain is all such that and because sine is not defined for negative numbers.    "
 },
@@ -77,7 +68,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#pd-functions-domain-range1",
   "type": "Activity",
-  "number": "2.1.4",
+  "number": "1.1.4",
   "title": "",
   "body": "  Identify the domain of the functions below.                                   "
 },
@@ -86,7 +77,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#pd-functions-graph1",
   "type": "Activity",
-  "number": "2.1.5",
+  "number": "1.1.5",
   "title": "",
   "body": "  Use technology to graph the function . Report the domain and the range of the function.   "
 },
@@ -95,7 +86,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activit-n1-fb",
   "type": "Activity",
-  "number": "2.1.6",
+  "number": "1.1.6",
   "title": "",
   "body": "  Identify the domain of each of the following functions. Draw a picture of each domain in the -plane.                          "
 },
@@ -104,7 +95,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-fe",
   "type": "Activity",
-  "number": "2.1.7",
+  "number": "1.1.7",
   "title": "",
   "body": "  Describe a physical or real-world example of a function of two variables. What is its domain?    Describe a physical or real-world example of a function of three variables. What is its domain?   "
 },
@@ -113,7 +104,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-11",
   "type": "Definition",
-  "number": "2.1.3",
+  "number": "1.1.3",
   "title": "",
   "body": "  A three-dimensional coordinate system is called right-handed if, after pointing your right thumb in the direction of the positive -axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive -axis to the positive -axis. Otherwise, it's called left-handed.   "
 },
@@ -122,7 +113,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-se3",
   "type": "Activity",
-  "number": "2.1.8",
+  "number": "1.1.8",
   "title": "",
   "body": "  insert picture   Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.    "
 },
@@ -131,7 +122,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-13",
   "type": "Definition",
-  "number": "2.1.4",
+  "number": "1.1.4",
   "title": "",
   "body": "  The graph function graph of a function is the set of points of the form , where the point is in the domain of .   "
 },
@@ -140,7 +131,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-14",
   "type": "Definition",
-  "number": "2.1.5",
+  "number": "1.1.5",
   "title": "",
   "body": "  A trace trace of a function of two independent variables and in the direction is a curve of the form , where is a constant. Similarly, a trace of a function of two independent variables and in the direction is a curve of the form , where is a constant.   "
 },
@@ -149,7 +140,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-15",
   "type": "Definition",
-  "number": "2.1.6",
+  "number": "1.1.6",
   "title": "",
   "body": "  A level curve level curve (or contour) of a function of two independent variables and is a curve of the form , where is a constant.   "
 },
@@ -158,7 +149,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#pd-vertical-trace1",
   "type": "Activity",
-  "number": "2.1.9",
+  "number": "1.1.9",
   "title": "",
   "body": "  Which of the following sets up the vertical trace for for the function ?                         "
 },
@@ -167,7 +158,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-17",
   "type": "Activity",
-  "number": "2.1.10",
+  "number": "1.1.10",
   "title": "",
   "body": "  Which of the following is a contour map for the function ?                                 "
 },
@@ -176,7 +167,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-18",
   "type": "Activity",
-  "number": "2.1.11",
+  "number": "1.1.11",
   "title": "",
   "body": "  Sketch the contour map for the function for    "
 },
@@ -185,7 +176,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#activity-n1-fe3",
   "type": "Activity",
-  "number": "2.1.12",
+  "number": "1.1.12",
   "title": "",
   "body": " Which of the following best describes the difference between traces and contours?  There is no difference; they are the same.  Traces are \"vertical\" while contours are \"horizontal.\"  Traces never involve the coordinate, while contours do.  Contours never involve the coordinate, while traces do.    "
 },
@@ -194,7 +185,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-20",
   "type": "Definition",
-  "number": "2.1.7",
+  "number": "1.1.7",
   "title": "",
   "body": "  A sphere sphere is the set of all points equidistant from a fixed point. The fixed point is called the center of the sphere, and the distance from the center to any point on the sphere is called the radius of the sphere, and the distance from the center to all the points in the sphere is called the radius .   "
 },
@@ -203,7 +194,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-21",
   "type": "Activity",
-  "number": "2.1.13",
+  "number": "1.1.13",
   "title": "",
   "body": "  Find the equation of the sphere is center with radius . Normalize your equation so that the coefficient of is .    Give an equation which describes the intersection of this sphere with the plane .   "
 },
@@ -212,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#def-quadric-surface",
   "type": "Definition",
-  "number": "2.1.8",
+  "number": "1.1.8",
   "title": "Quadric Surface.",
   "body": " Quadric Surface   A quadric surface is a surface of the form    "
 },
@@ -221,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#fact-quadric-surfaces",
   "type": "Fact",
-  "number": "2.1.9",
+  "number": "1.1.9",
   "title": "",
   "body": "  There are six common types of quadric surfaces:   Ellipsoid     Elliptic Cone     Elliptic Paraboloid     Hyperboloid of One Sheet     Hyperboloid of Two Sheets     Hyperbolic Paraboloid       "
 },
@@ -230,9 +221,90 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-24",
   "type": "Activity",
-  "number": "2.1.14",
+  "number": "1.1.14",
   "title": "",
   "body": "  Each equation below is a quadric surface. Identify which kind it is.        Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid      "
+},
+{
+  "id": "sec-Vectors",
+  "level": "1",
+  "url": "sec-Vectors.html",
+  "type": "Section",
+  "number": "1.2",
+  "title": "Vectors",
+  "body": " Vectors    A vector vector definition is a quantity that possesses the attributes of magnitude and direction.    If a physical quantity has both magnitude and direction, it is called vectorial . If it has only magnitude, it is called scalar .   Use your physical intuition to decide which of the following quantites are vectorial and which are scalar.  temperature  pressure  velocity  displacement  length  entropy  density  acceleration  mass     Graphically, a vector is represented as a line segment with an arrowhead placed on one end. The magnitude corresponds to its length and the direction corresponds to the direction that it points. Algebraically, a vector is represented by an -tuple of numbers, called its components. For example, is a vector in -dimensional space. (N.B. Angled brackets denote a vector, whereas round brackets denote a point.)  Graphically, the head of a vector is the end with the arrowhead, and the tail is the other end. When drawing a vector in Euclidean space, the point at which we place the tail is called the initial point , and the point at which we place the head is called the terminal point . If is the initial point and is the terminal point, we often write .   Suppose that the vector is represented as an arrow with terminal point . What is the initial point of the arrow?         The position vector of a point is the vector whose initial point is the origin and whose terminal point is .  Two vectors are equal if they have the same magnitude and direction. Algebraically, this means the two vectors have the same components. Notice that neither the initial nor terminal point is mentioned in the definition of equality. So, graphically, this means the two vectors are equal if they can be superimposed by a translation.  There are two operations that can be performed on vectors: addition and scalar multiplication. They are defined algebraically as:     Properties of vector operations  Let , , and be vectors in and let and be scalars. Then             The vector has the property that . The vector is called the zero vector .     . The vector is called the additive inverse of the vector .                    .       Suppose that and .  Sketch , , and on the same set of axes with initial point at the origin.    Sketch and on the same set of axes with initial point at the origin.    For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the is the best best geometric description of the terminal points of the vectors ?   It's the parallelogram determined by and .  It's the circle with center at the terminal point of and with radius the magnitude of .  It's the line with in the direction of that goes through the terminal point of .  It's the plane spanned by and .      "
+},
+{
+  "id": "sec-Vectors-2",
+  "level": "2",
+  "url": "sec-Vectors.html#sec-Vectors-2",
+  "type": "Definition",
+  "number": "1.2.1",
+  "title": "",
+  "body": "  A vector vector definition is a quantity that possesses the attributes of magnitude and direction.   "
+},
+{
+  "id": "vectors-activity-1",
+  "level": "2",
+  "url": "sec-Vectors.html#vectors-activity-1",
+  "type": "Activity",
+  "number": "1.2.1",
+  "title": "",
+  "body": " Use your physical intuition to decide which of the following quantites are vectorial and which are scalar.  temperature  pressure  velocity  displacement  length  entropy  density  acceleration  mass    "
+},
+{
+  "id": "vectors-activity-2",
+  "level": "2",
+  "url": "sec-Vectors.html#vectors-activity-2",
+  "type": "Activity",
+  "number": "1.2.2",
+  "title": "",
+  "body": " Suppose that the vector is represented as an arrow with terminal point . What is the initial point of the arrow?        "
+},
+{
+  "id": "vectors-activity-3",
+  "level": "2",
+  "url": "sec-Vectors.html#vectors-activity-3",
+  "type": "Activity",
+  "number": "1.2.3",
+  "title": "",
+  "body": " Suppose that and .  Sketch , , and on the same set of axes with initial point at the origin.    Sketch and on the same set of axes with initial point at the origin.    For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the is the best best geometric description of the terminal points of the vectors ?   It's the parallelogram determined by and .  It's the circle with center at the terminal point of and with radius the magnitude of .  It's the line with in the direction of that goes through the terminal point of .  It's the plane spanned by and .     "
+},
+{
+  "id": "sec-Vector-Geometry",
+  "level": "1",
+  "url": "sec-Vector-Geometry.html",
+  "type": "Section",
+  "number": "1.3",
+  "title": "Vector Geometry",
+  "body": " Vector Geometry  "
+},
+{
+  "id": "sec-Lines",
+  "level": "1",
+  "url": "sec-Lines.html",
+  "type": "Section",
+  "number": "1.4",
+  "title": "Lines",
+  "body": " Lines  "
+},
+{
+  "id": "sec-Planes",
+  "level": "1",
+  "url": "sec-Planes.html",
+  "type": "Section",
+  "number": "1.5",
+  "title": "Planes",
+  "body": " Planes  "
+},
+{
+  "id": "sec-Curves",
+  "level": "1",
+  "url": "sec-Curves.html",
+  "type": "Section",
+  "number": "1.6",
+  "title": "Curves",
+  "body": " Curves  "
 },
 {
   "id": "backmatter-2",
