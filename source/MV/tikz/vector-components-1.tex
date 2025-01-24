@@ -3,11 +3,11 @@
     \coordinate (b) at (4,3);
     \coordinate (c) at (4,0);
     \fill (a) circle (0.1);
-    \draw[->] (a)--(b) node[midway, yshift=14.5pt] {$||\textbf{v}||$};
-    \node at (0,-.5) {$A$};
-    \node at (4.25,2.5) {$B$};
-    \draw[densely dashed] (a)--(c);
-    \draw[densely dashed] (b)--(c);
+    \draw[->] (a)--(b) node[midway, yshift=14.5pt] {$|\textbf{v}|$};
+    \node at (-.3,-.3) {$A$};
+    \node at (4.2,3.2) {$B$};
+    \draw[densely dashed] (a)--(c) node[midway, yshift=-7pt] {$a$};
+    \draw[densely dashed] (b)--(c) node[midway, xshift=7pt] {$b$};
     \draw (c) rectangle (3.8,0.2);
     \draw (1,0) arc (0:37:1) node[midway, xshift=-7.5pt, yshift=-2.5pt] {$\theta$};
 \end{tikzpicture}
