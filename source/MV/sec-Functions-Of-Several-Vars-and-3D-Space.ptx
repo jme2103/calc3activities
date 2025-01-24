@@ -255,12 +255,20 @@
     </definition>
 
     <activity xml:id="activity-n1-se3" estimated-time="3">
-        <introduction>
-            <p>
-            insert picture
-            </p>
-        </introduction>
         <statement>
+            <sidebyside>
+                <image width = "25%">
+                    <latex-image>
+                        <xi:include href="./tikz/3d-axes1.tex" parse="text" />
+                    </latex-image>
+                </image>
+                <image width = "25%">
+                    <latex-image>
+                        <xi:include href="./tikz/3d-axes2.tex" parse="text" />
+                    </latex-image>
+                </image>
+            </sidebyside>
+            
             Which of the following best describes the two coordinate systems?
             <ol marker="A.">
                 <li><p>The first one is right-handed, while the second is left-handed.</p></li>
@@ -409,6 +417,85 @@
         </p>
       </statement>
     </definition>
+
+    <activity xml:id="A-9-1-4">
+      <statement>
+        <sidebyside widths="47% 53%" margins="0%">
+          <p>
+            Let <m>P=(x_0, y_0, z_0)</m> and <m>Q=(x_1, y_1, z_1)</m> be two points in <m>\R^3</m>. These two points form opposite vertices of a rectangular box whose sides are planes parallel to the coordinate planes as illustrated in <xref ref="F-9-1-Distance-3D">Figure</xref>, and the distance between <m>P</m> and <m>Q</m> is the length of the blue diagonal shown in <xref ref="F-9-1-Distance-3D">Figure</xref>.
+          </p>
+
+          <figure xml:id="F-9-1-Distance-3D">
+            <caption>The distance formula in <m>\R^3</m>.</caption>
+            <image width="50%" source="images/fig_9_1_distance"/>
+          </figure>
+        </sidebyside>
+
+          <ol marker="a.">
+            <li>
+              <p>
+                Consider the right triangle <m>PRS</m> in the base of the box whose
+                    hypotenuse is shown as the red line in <xref ref="F-9-1-Distance-3D">Figure</xref>. What are the coordinates of the vertices of this triangle? Since this right triangle lies in a plane, we can use the Pythagorean Theorem to find a formula for the length of the hypotenuse of this triangle. Find such a formula, which will be in terms of <m>x_0</m>, <m>y_0</m>, <m>x_1</m>, and <m>y_1</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Now notice that the triangle <m>PRQ</m> whose hypotenuse is the blue segment
+                    connecting the points <m>P</m> and <m>Q</m> with a leg as the hypotenuse <m>PR</m> of the triangle found in part (a) lies entirely in a plane, so we can
+                    again use the Pythagorean Theorem to find the length of its hypotenuse. Explain why the length of this hypotenuse, which is the distance between the points <m>P</m> and <m>Q</m>, is
+                <me>
+                  \sqrt{(x_1-x_0)^2 + (y_1-y_0)^2 + (z_1-z_0)^2}.
+                </me>
+              </p>
+            </li>
+          </ol>
+      </statement>
+
+      <answer>
+        <p>
+          <ol marker="a.">
+            <li>
+              <p>
+                <m>S = (x_{1},y_{0},z_{0})</m> <m>R = (x_{1},y_{1},z_{0})</m>.
+              </p>
+              <p>
+                <m>PR = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}}</m>.
+              </p>
+            </li>
+  
+            <li>
+              <p>
+                <m>PQ = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}}</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </answer>
+
+      <solution>
+        <ol marker="a.">
+          <li>
+            <p>
+              <m>PS = \left( x_{1} - x_{0} \right)</m> <m>SR = (y_{1} - y_{0})</m>.
+            </p>
+            <p>
+              <m>PR = \sqrt{PS^{2} + SR^{2}} = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}}</m>.
+            </p>
+          </li>
+          
+          <li>
+            <p>
+              <m>RQ = (z_{1} - z_{0})</m>.
+            </p>
+            <p>
+              <m>PQ = \sqrt{PR^{2} + RQ^{2}} = \sqrt{\left( \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}} = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}}</m>.
+            </p>
+          </li>
+        </ol> 
+      </solution>
+
+    </activity>
 
     <activity>
     <task>
