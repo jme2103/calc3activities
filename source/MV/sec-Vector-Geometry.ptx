@@ -3,7 +3,271 @@
 <section xml:id="sec-Vector-Geometry" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vector Geometry</title>
 
+    <definition>
+    <title>Dot Product (Algebraic Definition)</title>
+      <statement>
+        <p>
+          The <term>dot product</term><idx><h>dot product</h></idx> of vectors <m>\vu=\langle u_1, u_2,\ldots,u_n \rangle</m> and <m>\vv=\langle v_1, v_2,\ldots,v_n \rangle</m> in <m>\R^n</m> is the scalar 
+          <me>
+            \vu\cdot\vv = u_1v_1+u_2v_2 + \ldots + u_nv_n.
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="ve2-dot-product-compute-1">
+            <statement>
+                <p>
+                    Which option gives the dot product <m>\lrangle{10,-1,2}\cdot\lrangle{-8,4,0}</m>?
+                    <ol marker="A." cols="2">
+                        <li>
+                            <p>
+                                <m>
+                                    \lrangle{2,3,2}
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>7</m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                    \lrangle{-80,-4,0}
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                    -84
+                                </m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </activity>
+
+    <activity>
+    <task>
+      <statement>
+        <p>
+          Sketch the vector <m>\vu=\langle 1,3 \rangle</m> in one color, along with the vectors
+          <ul>
+          <li>
+            <p>
+              <m>\vv=\langle 3, 2 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3, 1 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3, 0 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3,-1 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3,-2 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3,-3 \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vv=\langle 3,-4 \rangle</m>.
+            </p>
+          </li>
+        </ul>
+        in a different color.
+        </p>
+        </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Compute <m>\vu \cdot \vv</m> for each of these vectors. Organize your answers in a table.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Which of the following is a conclusion you may reach from your computations?
+            </p>
+            <ol marker="A.">
+              <li><p>The sign of a dot product depends on the magnitude of the vectors.</p></li>
+              <li><p>The dot product is usually not zero.</p></li>
+              <li><p>As the angle between two vectors increases, their dot product increases.</p></li>
+              <li><p>As the angle between two vectors increases, their dot product decreases.</p></li>
+              <li><p>The dot product is never zero.</p></li>
+            </ol>
+          </statement>
+        </task>
+        
+    </activity>
+
+    <definition xml:id="def-dot-product-geo">
+        <title>Dot Product (Geometric Definition)</title>
+        <idx><h>dot product (geometric definition)</h></idx>            
+        <statement>
+            <p>
+                If the angle between the two vectors <m>\textbf{u}</m> and <m>\textbf{v}</m> is given by <m>\theta</m> (in radians), then
+                <me>
+                    \textbf{u}\cdot\textbf{v} = ||\textbf{u}||\,||\textbf{v}||\cos\theta
+                </me>
+            </p>
+        </statement>
+    </definition>
+
+    <activity xml:id="ve2-dot-product-geo-1">
+            <statement>
+                <p>
+                    Which is the correct angle between the vectors <m>\textbf{i}+\textbf{j}-\textbf{k}</m> and <m>\textbf{i} -2\textbf{j}-3\textbf{k}</m>?
+                    <ol marker="A." cols="2">
+                        <li>
+                            <p>
+                                <m>
+                                  2
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  \inv{\cos} \lrpar{\frac{2}{\sqrt{42}}}
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  \cos \lrpar{\frac{2}{\sqrt{42}}}
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  \frac{\pi}{2}
+                                </m>
+                            </p>
+                        </li>
+                    </ol>
+                </p>
+            </statement>
+        </activity>
+
+        <activity>
+          <statement>
+            
+            <p>
+              If two vectors make a right angle, what is the value of their dot product?
+              <ol marker="A." cols="2">
+                        <li>
+                            <p>
+                                <m>
+                                  \pi
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  0
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  1
+                                </m>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <m>
+                                  \frac{\pi}{2}
+                                </m>
+                            </p>
+                        </li>
+                    </ol>
+            </p>
+          </statement>
+        </activity>
+
+        <assemblage xml:id="Dot-product-orthogonality">
+      <title>The dot product and orthogonality</title>
+      <p>
+              Two vectors are said to be orthogonal when the angle between them is <m>90\dc</m> or <m>\pi/2</m> radians.
+            </p>
+    <p>
+      Two vectors <m>\vu</m> and <m>\vv</m> in <m>\R^n</m> are
+      orthogonal <idx><h>vectors</h><h>orthogonal</h></idx> to each other
+      if and only if <m>\vu \cdot \vv = 0</m>.
+    </p>
+    </assemblage>
     
-  
+
+    <p>
+      More generally, the sign of the dot product gives us useful
+      information about the relative orientation of the vectors. If we remember that
+
+    <md>
+      <mrow>\cos(\theta) \gt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an acute angle,}</mrow>
+      <mrow>\cos(\theta) = 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is a right angle, and}</mrow>
+      <mrow>\cos(\theta) \lt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an obtuse angle,}</mrow>
+    </md>
+      we see that for nonzero vectors <m>\vu</m> and <m>\vv</m>,
+    <md>
+      <mrow> \vu\cdot\vv \gt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an acute angle,}</mrow>
+      <mrow> \vu\cdot\vv = 0 \mathstrut \amp \ \ \ \text{ if }
+        \theta \text{ is a right angle, and}</mrow>
+      <mrow> \vu\cdot\vv \lt  0 \mathstrut \amp \ \ \ \text{ if }
+        \theta \text{ is an obtuse angle.}</mrow>
+    </md>
+    </p>
+
+    <activity>
+            <introduction>
+                <p>
+                    You can think of the <em>components</em> of a vector as giving you the amount
+                    of the vector in the direction of each of the (two or) three axes. For example,
+                    the vector <m>\vv = \lrangle{ a, b }</m> is sketched below.
+                </p>
+                <figure>
+                    <image width = "50%">
+                        <latex-image>
+                            <xi:include href="./tikz/vector-projection.tex" parse="text"/>
+                        </latex-image>
+                    </image>
+                    <caption></caption>
+                </figure>
+                
+            </introduction>
+    </activity>
 
 </section>

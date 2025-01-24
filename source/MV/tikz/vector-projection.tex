@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \coordinate (a) at (0,0);
+    \coordinate (b) at (1,3);
+    \coordinate (c) at (4,1);
+    \coordinate (d) at (1.6470,0.41176);
+    \fill (a) circle (0.1);
+    \draw[-stealth] (a)--(b) node[midway, yshift=14.5pt] {$\textbf{u}$};
+    \draw[-stealth] (a)--(c) node[midway, yshift=14.5pt] {$\textbf{v}$};
+    \node at (-.3,-.3) {$(0,0)$};
+    % \node at (4.2,3.2) {$B$};
+    \draw[densely dashed] (a)--(c) node[midway, yshift=-7pt] {$a$};
+    \draw[densely dashed] (b)--(d) node[midway, xshift=7pt] {$b$};
+    \draw (c) rectangle (3.8,0.2);
+    \draw (0.7,0.175) arc (14.036:71.565:0.7) node[midway, xshift=-5.5pt, yshift=-3.5pt] {$\theta$};
+\end{tikzpicture}

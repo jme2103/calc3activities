@@ -679,8 +679,23 @@
                 </p>
             </statement>
         </activity>
-    
 
+
+      <activity>
+      <statement>
+        <p>
+          Find a vector <m>{\bf a}</m> that has the same direction as <m>\lrangle{-6, 9, 6}</m>, but has length <m>4</m>.
+        </p>
+      </statement>
+      </activity>
+
+      <activity>
+        <statement>
+          <p>
+            Find all vectors having <m>|\vv| = 5</m> and where the <m>{\bf j}</m>-component of <m>\vv</m> is <m>3{\bf j}</m>.
+          </p>
+        </statement>
+      </activity>
 
 
 </section>
