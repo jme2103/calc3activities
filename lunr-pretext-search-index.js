@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Functions of Several Variables and Three Dimensional Space",
-  "body": " Functions of Several Variables and Three Dimensional Space    A function of two independent variables function of two variables is a rule that assigns to each ordered pair in some set exactly one real number .      The domain function domain of a function is the set of all inputs at which the function is defined.      Consider the concentration, C, (in mg\/liter) of a drug in the blood as a function of the amount of drug given, , and the time since injection, . For mg and hours, we have    Which of the following best describes the meaning of in this context?  is the concentration in the blood 3 hours after a 2 mg injection.  is the concentration in the blood 2 hours after a 3 mg injection.  is the change in concentration of a 3 mg dose 2 hours after injection.  is the change in concentration of a 2 mg does 3 hours after injection.       A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.    Write a formula for the cost, , of renting a car as a function of the number of days, , and the number of miles driven, .    Describe the domain of the function.      Which of the following best describes the domain of ?    The domain is all such that  The domain is all except the origin .  The domain is all such that  The domain is all .  The domain is all such that and because sine is not defined for negative numbers.       Identify the domain of the functions below.                                      Use technology to graph the function . Report the domain and the range of the function.      Identify the domain of each of the following functions. Draw a picture of each domain in the -plane.                             Describe a physical or real-world example of a function of two variables. What is its domain?    Describe a physical or real-world example of a function of three variables. What is its domain?      A three-dimensional coordinate system is called right-handed if, after pointing your right thumb in the direction of the positive -axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive -axis to the positive -axis. Otherwise, it's called left-handed.      insert picture   Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.       The graph function graph of a function is the set of points of the form , where the point is in the domain of .      A trace trace of a function of two independent variables and in the direction is a curve of the form , where is a constant. Similarly, a trace of a function of two independent variables and in the direction is a curve of the form , where is a constant.      A level curve level curve (or contour) of a function of two independent variables and is a curve of the form , where is a constant.      Which of the following sets up the vertical trace for for the function ?                            Which of the following is a contour map for the function ?                                    Sketch the contour map for the function for      Which of the following best describes the difference between traces and contours?  There is no difference; they are the same.  Traces are \"vertical\" while contours are \"horizontal.\"  Traces never involve the coordinate, while contours do.  Contours never involve the coordinate, while traces do.       A sphere sphere is the set of all points equidistant from a fixed point. The fixed point is called the center of the sphere, and the distance from the center to any point on the sphere is called the radius of the sphere, and the distance from the center to all the points in the sphere is called the radius .      Find the equation of the sphere is center with radius . Normalize your equation so that the coefficient of is .    Give an equation which describes the intersection of this sphere with the plane .     Quadric Surface   A quadric surface is a surface of the form       There are six common types of quadric surfaces:   Ellipsoid     Elliptic Cone     Elliptic Paraboloid     Hyperboloid of One Sheet     Hyperboloid of Two Sheets     Hyperbolic Paraboloid          Each equation below is a quadric surface. Identify which kind it is.        Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid       "
+  "body": " Functions of Several Variables and Three Dimensional Space    A function of two independent variables function of two variables is a rule that assigns to each ordered pair in some set exactly one real number .      The domain function domain of a function is the set of all inputs at which the function is defined.      Consider the concentration, C, (in mg\/liter) of a drug in the blood as a function of the amount of drug given, , and the time since injection, . For mg and hours, we have    Which of the following best describes the meaning of in this context?  is the concentration in the blood 3 hours after a 2 mg injection.  is the concentration in the blood 2 hours after a 3 mg injection.  is the change in concentration of a 3 mg dose 2 hours after injection.  is the change in concentration of a 2 mg does 3 hours after injection.       A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.    Write a formula for the cost, , of renting a car as a function of the number of days, , and the number of miles driven, .    Describe the domain of the function.      Which of the following best describes the domain of ?    The domain is all such that  The domain is all except the origin .  The domain is all such that  The domain is all .  The domain is all such that and because sine is not defined for negative numbers.       Identify the domain of the functions below.                                      Use technology to graph the function . Report the domain and the range of the function.      Identify the domain of each of the following functions. Draw a picture of each domain in the -plane.                             Describe a physical or real-world example of a function of two variables. What is its domain?    Describe a physical or real-world example of a function of three variables. What is its domain?      A three-dimensional coordinate system is called right-handed if, after pointing your right thumb in the direction of the positive -axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive -axis to the positive -axis. Otherwise, it's called left-handed.             Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.       The graph function graph of a function is the set of points of the form , where the point is in the domain of .      A trace trace of a function of two independent variables and in the direction is a curve of the form , where is a constant. Similarly, a trace of a function of two independent variables and in the direction is a curve of the form , where is a constant.      A level curve level curve (or contour) of a function of two independent variables and is a curve of the form , where is a constant.      Which of the following sets up the vertical trace for for the function ?                            Which of the following is a contour map for the function ?                                    Sketch the contour map for the function for      Which of the following best describes the difference between traces and contours?  There is no difference; they are the same.  Traces are \"vertical\" while contours are \"horizontal.\"  Traces never involve the coordinate, while contours do.  Contours never involve the coordinate, while traces do.       A sphere sphere is the set of all points equidistant from a fixed point. The fixed point is called the center of the sphere, and the distance from the center to any point on the sphere is called the radius of the sphere, and the distance from the center to all the points in the sphere is called the radius .       Let and be two points in . These two points form opposite vertices of a rectangular box whose sides are planes parallel to the coordinate planes as illustrated in Figure , and the distance between and is the length of the blue diagonal shown in Figure .   The distance formula in .       Consider the right triangle in the base of the box whose hypotenuse is shown as the red line in Figure . What are the coordinates of the vertices of this triangle? Since this right triangle lies in a plane, we can use the Pythagorean Theorem to find a formula for the length of the hypotenuse of this triangle. Find such a formula, which will be in terms of , , , and .    Now notice that the triangle whose hypotenuse is the blue segment connecting the points and with a leg as the hypotenuse of the triangle found in part (a) lies entirely in a plane, so we can again use the Pythagorean Theorem to find the length of its hypotenuse. Explain why the length of this hypotenuse, which is the distance between the points and , is            .   .                .   .     .   .        Find the equation of the sphere is center with radius . Normalize your equation so that the coefficient of is .    Give an equation which describes the intersection of this sphere with the plane .     Quadric Surface   A quadric surface is a surface of the form       There are six common types of quadric surfaces:   Ellipsoid     Elliptic Cone     Elliptic Paraboloid     Hyperboloid of One Sheet     Hyperboloid of Two Sheets     Hyperbolic Paraboloid          Each equation below is a quadric surface. Identify which kind it is.        Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid       "
 },
 {
   "id": "sec-Functions-Of-Several-Vars-and-3D-Space-2",
@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.1.8",
   "title": "",
-  "body": "  insert picture   Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.    "
+  "body": "         Which of the following best describes the two coordinate systems?  The first one is right-handed, while the second is left-handed.  The first one is left-handed, while the second is right-handed.  They are both right-handed.  They are both left-handed.    "
 },
 {
   "id": "sec-Functions-Of-Several-Vars-and-3D-Space-13",
@@ -190,11 +190,20 @@ var ptx_lunr_docs = [
   "body": "  A sphere sphere is the set of all points equidistant from a fixed point. The fixed point is called the center of the sphere, and the distance from the center to any point on the sphere is called the radius of the sphere, and the distance from the center to all the points in the sphere is called the radius .   "
 },
 {
-  "id": "sec-Functions-Of-Several-Vars-and-3D-Space-21",
+  "id": "A-9-1-4",
   "level": "2",
-  "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-21",
+  "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#A-9-1-4",
   "type": "Activity",
   "number": "1.1.13",
+  "title": "",
+  "body": "   Let and be two points in . These two points form opposite vertices of a rectangular box whose sides are planes parallel to the coordinate planes as illustrated in Figure , and the distance between and is the length of the blue diagonal shown in Figure .   The distance formula in .       Consider the right triangle in the base of the box whose hypotenuse is shown as the red line in Figure . What are the coordinates of the vertices of this triangle? Since this right triangle lies in a plane, we can use the Pythagorean Theorem to find a formula for the length of the hypotenuse of this triangle. Find such a formula, which will be in terms of , , , and .    Now notice that the triangle whose hypotenuse is the blue segment connecting the points and with a leg as the hypotenuse of the triangle found in part (a) lies entirely in a plane, so we can again use the Pythagorean Theorem to find the length of its hypotenuse. Explain why the length of this hypotenuse, which is the distance between the points and , is            .   .                .   .     .   .     "
+},
+{
+  "id": "sec-Functions-Of-Several-Vars-and-3D-Space-22",
+  "level": "2",
+  "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-22",
+  "type": "Activity",
+  "number": "1.1.14",
   "title": "",
   "body": "  Find the equation of the sphere is center with radius . Normalize your equation so that the coefficient of is .    Give an equation which describes the intersection of this sphere with the plane .   "
 },
@@ -203,7 +212,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#def-quadric-surface",
   "type": "Definition",
-  "number": "1.1.8",
+  "number": "1.1.9",
   "title": "Quadric Surface.",
   "body": " Quadric Surface   A quadric surface is a surface of the form    "
 },
@@ -212,16 +221,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#fact-quadric-surfaces",
   "type": "Fact",
-  "number": "1.1.9",
+  "number": "1.1.10",
   "title": "",
   "body": "  There are six common types of quadric surfaces:   Ellipsoid     Elliptic Cone     Elliptic Paraboloid     Hyperboloid of One Sheet     Hyperboloid of Two Sheets     Hyperbolic Paraboloid       "
 },
 {
-  "id": "sec-Functions-Of-Several-Vars-and-3D-Space-24",
+  "id": "sec-Functions-Of-Several-Vars-and-3D-Space-25",
   "level": "2",
-  "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-24",
+  "url": "sec-Functions-Of-Several-Vars-and-3D-Space.html#sec-Functions-Of-Several-Vars-and-3D-Space-25",
   "type": "Activity",
-  "number": "1.1.14",
+  "number": "1.1.15",
   "title": "",
   "body": "  Each equation below is a quadric surface. Identify which kind it is.        Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid           Ellipsoid    Hyperboloid of One Sheet    Elliptic Cone    Elliptic Paraboloid    Hyperboloid of Two Sheets    Hyperbolic Paraboloid      "
 },
@@ -232,7 +241,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Vectors",
-  "body": " Vectors    A vector vector definition is a quantity that possesses the attributes of magnitude and direction.    If a physical quantity has both magnitude and direction, it is called vectorial . If it has only magnitude, it is called scalar .   Use your physical intuition to decide which of the following quantites are vectorial and which are scalar.  temperature  pressure  velocity  displacement  length  entropy  density  acceleration  mass     Graphically, a vector is represented as a line segment with an arrowhead placed on one end. The magnitude corresponds to its length and the direction corresponds to the direction that it points. Algebraically, a vector is represented by an -tuple of numbers, called its components. For example, is a vector in -dimensional space. (N.B. Angled brackets denote a vector, whereas round brackets denote a point.)  Graphically, the head of a vector is the end with the arrowhead, and the tail is the other end. When drawing a vector in Euclidean space, the point at which we place the tail is called the initial point , and the point at which we place the head is called the terminal point . If is the initial point and is the terminal point, we often write .   Suppose that the vector is represented as an arrow with terminal point . What is the initial point of the arrow?         The position vector of a point is the vector whose initial point is the origin and whose terminal point is .  Two vectors are equal if they have the same magnitude and direction. Algebraically, this means the two vectors have the same components. Notice that neither the initial nor terminal point is mentioned in the definition of equality. So, graphically, this means the two vectors are equal if they can be superimposed by a translation.  There are two operations that can be performed on vectors: addition and scalar multiplication. They are defined algebraically as:     Properties of vector operations  Let , , and be vectors in and let and be scalars. Then             The vector has the property that . The vector is called the zero vector .     . The vector is called the additive inverse of the vector .                    .       Suppose that and .  Sketch , , and on the same set of axes with initial point at the origin.    Sketch and on the same set of axes with initial point at the origin.    For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the is the best best geometric description of the terminal points of the vectors ?   It's the parallelogram determined by and .  It's the circle with center at the terminal point of and with radius the magnitude of .  It's the line with in the direction of that goes through the terminal point of .  It's the plane spanned by and .      "
+  "body": " Vectors    A vector vector definition is a quantity that possesses the attributes of magnitude and direction.    If a physical quantity has both magnitude and direction, it is called vectorial . If it has only magnitude, it is called scalar .   Use your physical intuition to decide which of the following quantites are vectorial and which are scalar.  temperature  pressure  velocity  displacement  length  entropy  density  acceleration  mass     Graphically, a vector is represented as a line segment with an arrowhead placed on one end. The magnitude corresponds to its length and the direction corresponds to the direction that it points. Algebraically, a vector is represented by an -tuple of numbers, called its components. For example, is a vector in -dimensional space. (N.B. Angled brackets denote a vector, whereas round brackets denote a point.)  Graphically, the head of a vector is the end with the arrowhead, and the tail is the other end. When drawing a vector in Euclidean space, the point at which we place the tail is called the initial point , and the point at which we place the head is called the terminal point . If is the initial point and is the terminal point, we often write .   Suppose that the vector is represented as an arrow with terminal point . What is the initial point of the arrow?         The position vector of a point is the vector whose initial point is the origin and whose terminal point is .    You can think of the components of a vector as giving you the amount of the vector in the direction of each of the (two or) three axes. For example, the vector is sketched below.          Which of the follow best describes the distance from to , denoted ?                          Which expression best identifies the direction of the vector, denoted in the diagram, as an angle relative to the positive -axis?                                    Use trigonometry and\/or part (a) to find expressions for the length of and the length of in terms of the direction and the length .    The magnitude of a vector is the distance between its initial and terminal points. You can place the vector anywhere in Euclidean space, and use the resulting magnitude will be the same. For any vector , placing the tail at the origin, , means that the coordinates of the terminal point will be the same as the components of the vector. So, . This gives the formula   Two vectors are equal if they have the same magnitude and direction. Algebraically, this means the two vectors have the same components. Notice that neither the initial nor terminal point is mentioned in the definition of equality. So, graphically, this means the two vectors are equal if they can be superimposed by a translation.  There are two operations that can be performed on vectors: addition and scalar multiplication. They are defined algebraically as:    Properties of vector operations  Let , , and be vectors in and let and be scalars. Then             The vector has the property that . The vector is called the zero vector .     . The vector is called the additive inverse of the vector .                    .       Suppose that and .  Sketch , , and on the same set of axes with initial point at the origin.    Sketch and on the same set of axes with initial point at the origin.    For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the is the best best geometric description of the terminal points of the vectors ?   It's the parallelogram determined by and .  It's the circle with center at the terminal point of and with radius the magnitude of .  It's the line with in the direction of that goes through the terminal point of .  It's the plane spanned by and .        Recall from that the magnitude or length of a two-dimensional vector can be found by computing .    For a three-dimensional vector , how might you compute ?    Find the length of the vector .    What is the length of the vector ?      A unit vector is a vector with unit length, i.e. length exactly 1.      For each vector, find its associated unit vector.                         The unit vector is the vector whose first component 1 and all others are 0, is the one whose second component is 1 with all others 0, and is the one whose third component is 1 with all others 0.     Write each vector as a sum of the standard unit vectors .                                                                           The speed of an object is the magnitude of its associated velocity vector. A football is thrown by a player with an initial speed of 82 miles per hour and an angle of elevation of . Determine the velocity vector in miles per hour and express in component form and in terms of the standard unit vectors. Assume the ball is thrown in the plane.    Which of the following best expresses the horizontal component of the vector?                                    Which option best describes the vertical component of the vector?                                    Use your answers to (a) and (b) to write the velocity vector in component form.    Use your answers to (a) and (b) to write the velocity vector using the standard unit vectors. Remember that the ball is thrown in the plane.    Why would we consider the ball to be thrown in the plane rather than the plane or the plane?      In order to fly from Oklahoma City to Dayton, OH, a plane must fly east of north. A plane leaves Oklahoma City at a ground speed of 525 miles per hour. A 30 mph wind blows from the north during the flight.    What is the ground speed of the plane when the wind begins to blow?    What is the new bearing of the plane?      An object is said to be in static equilibrium if the resultant force of the forces that act on it is zero. Let , , and be three forces acting on an object. Find the resultant force necessary to place the object in static equilibrium.      Find a vector that has the same direction as , but has length .      Find all vectors having and where the -component of is .    "
 },
 {
   "id": "sec-Vectors-2",
@@ -262,13 +271,112 @@ var ptx_lunr_docs = [
   "body": " Suppose that the vector is represented as an arrow with terminal point . What is the initial point of the arrow?        "
 },
 {
+  "id": "ve1-magnitude-direction-1",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-magnitude-direction-1",
+  "type": "Activity",
+  "number": "1.2.3",
+  "title": "",
+  "body": "  You can think of the components of a vector as giving you the amount of the vector in the direction of each of the (two or) three axes. For example, the vector is sketched below.          Which of the follow best describes the distance from to , denoted ?                          Which expression best identifies the direction of the vector, denoted in the diagram, as an angle relative to the positive -axis?                                    Use trigonometry and\/or part (a) to find expressions for the length of and the length of in terms of the direction and the length .   "
+},
+{
   "id": "vectors-activity-3",
   "level": "2",
   "url": "sec-Vectors.html#vectors-activity-3",
   "type": "Activity",
-  "number": "1.2.3",
+  "number": "1.2.4",
   "title": "",
   "body": " Suppose that and .  Sketch , , and on the same set of axes with initial point at the origin.    Sketch and on the same set of axes with initial point at the origin.    For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the following best describes the vector ?   It's the vector along the diagonal of the parallelogram determined by and with initial point at corner opposite the initial points of and .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with initial point at terminal point of .  It's the vector along the diagonal of the parallelogram determined by and with the same initial point as both and .     For any vectors and , which of the is the best best geometric description of the terminal points of the vectors ?   It's the parallelogram determined by and .  It's the circle with center at the terminal point of and with radius the magnitude of .  It's the line with in the direction of that goes through the terminal point of .  It's the plane spanned by and .     "
+},
+{
+  "id": "ve1-activity-unit-vector",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-activity-unit-vector",
+  "type": "Activity",
+  "number": "1.2.5",
+  "title": "",
+  "body": "  Recall from that the magnitude or length of a two-dimensional vector can be found by computing .    For a three-dimensional vector , how might you compute ?    Find the length of the vector .    What is the length of the vector ?   "
+},
+{
+  "id": "def-unit-vector",
+  "level": "2",
+  "url": "sec-Vectors.html#def-unit-vector",
+  "type": "Definition",
+  "number": "1.2.3",
+  "title": "",
+  "body": "  A unit vector is a vector with unit length, i.e. length exactly 1.   "
+},
+{
+  "id": "ve1-vector-computation-5",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-vector-computation-5",
+  "type": "Activity",
+  "number": "1.2.6",
+  "title": "",
+  "body": "  For each vector, find its associated unit vector.                       "
+},
+{
+  "id": "ve1-rmk-ijk",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-rmk-ijk",
+  "type": "Remark",
+  "number": "1.2.4",
+  "title": "",
+  "body": " The unit vector is the vector whose first component 1 and all others are 0, is the one whose second component is 1 with all others 0, and is the one whose third component is 1 with all others 0.  "
+},
+{
+  "id": "ve1-unit-vectors-1",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-unit-vectors-1",
+  "type": "Activity",
+  "number": "1.2.7",
+  "title": "",
+  "body": "  Write each vector as a sum of the standard unit vectors .                                                                        "
+},
+{
+  "id": "ve1-vector-application-1",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-vector-application-1",
+  "type": "Activity",
+  "number": "1.2.8",
+  "title": "",
+  "body": "  The speed of an object is the magnitude of its associated velocity vector. A football is thrown by a player with an initial speed of 82 miles per hour and an angle of elevation of . Determine the velocity vector in miles per hour and express in component form and in terms of the standard unit vectors. Assume the ball is thrown in the plane.    Which of the following best expresses the horizontal component of the vector?                                    Which option best describes the vertical component of the vector?                                    Use your answers to (a) and (b) to write the velocity vector in component form.    Use your answers to (a) and (b) to write the velocity vector using the standard unit vectors. Remember that the ball is thrown in the plane.    Why would we consider the ball to be thrown in the plane rather than the plane or the plane?   "
+},
+{
+  "id": "ve1-vector-application-2",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-vector-application-2",
+  "type": "Activity",
+  "number": "1.2.9",
+  "title": "",
+  "body": "  In order to fly from Oklahoma City to Dayton, OH, a plane must fly east of north. A plane leaves Oklahoma City at a ground speed of 525 miles per hour. A 30 mph wind blows from the north during the flight.    What is the ground speed of the plane when the wind begins to blow?    What is the new bearing of the plane?   "
+},
+{
+  "id": "ve1-vector-application-3",
+  "level": "2",
+  "url": "sec-Vectors.html#ve1-vector-application-3",
+  "type": "Activity",
+  "number": "1.2.10",
+  "title": "",
+  "body": "  An object is said to be in static equilibrium if the resultant force of the forces that act on it is zero. Let , , and be three forces acting on an object. Find the resultant force necessary to place the object in static equilibrium.   "
+},
+{
+  "id": "sec-Vectors-23",
+  "level": "2",
+  "url": "sec-Vectors.html#sec-Vectors-23",
+  "type": "Activity",
+  "number": "1.2.11",
+  "title": "",
+  "body": "  Find a vector that has the same direction as , but has length .   "
+},
+{
+  "id": "sec-Vectors-24",
+  "level": "2",
+  "url": "sec-Vectors.html#sec-Vectors-24",
+  "type": "Activity",
+  "number": "1.2.12",
+  "title": "",
+  "body": "  Find all vectors having and where the -component of is .   "
 },
 {
   "id": "sec-Vector-Geometry",
@@ -277,7 +385,205 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Vector Geometry",
-  "body": " Vector Geometry  "
+  "body": " Vector Geometry   Dot Product (Algebraic Definition)   The dot product dot product of vectors and in is the scalar       Which option gives the dot product ?                            Sketch the vector in one color, along with the vectors    .     .     .     .     .     .     .   in a different color.    Compute for each of these vectors. Organize your answers in a table.    Which of the following is a conclusion you may reach from your computations?   The sign of a dot product depends on the magnitude of the vectors.  The dot product is usually not zero.  As the angle between two vectors increases, their dot product increases.  As the angle between two vectors increases, their dot product decreases.  The dot product is never zero.      Dot Product (Geometric Definition)  dot product (geometric definition)   If the angle between the two vectors and is given by (in radians), then       Which is the correct angle between the vectors and ?                            If two vectors make a right angle, what is the value of their dot product?                           The dot product and orthogonality  Two vectors are said to be orthogonal when the angle between them is or radians.  Two vectors and in are orthogonal vectors orthogonal to each other if and only if .   More generally, the sign of the dot product gives us useful information about the relative orientation of the vectors. If we remember that we see that for nonzero vectors and ,    Properties of the dot product  Let , , and be vectors in . Then    (the dot product is commutative ), and     .    if is a scalar, then .     .        Let and be vectors in with , , and . Use the properties of the dot product to find each of the following.                         , where is the angle between and            For any two vectors and draw the perpendicular line segment from the terminal of to the line containing . If and are -dimensional, you can imagine that this drawing is just what is happening in the plane containing both vectors.        Let denote the length of the perpendicular, and let denote the distance from the initial point of to where the perpendicular meets .    Which of the following is equal to the distance ?                          Which of the following is equal to the distance ?                          Suppose that and . Find the components of the vector that points in the same direction as and has magnitude .     The dot product and projections  Let and be vectors in . The component vector component in the direction of of in the direction of is the scalar and the projection vector projection of onto is the vector    Moreover, since it follows that   This shows that once we have computed , we can find simply by calculating the difference of two known vectors.    Suppose that and . Find the vector projection of onto (i.e. paralle to) and the vector projection of orthogonal (i.e. anti-parallel) to .       Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.   A methane molecule.     As an example of the molecular geometry of a molecule, consider the methane molecule, as illustrated in Figure . According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The bond angle for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point and the hydrogen atoms at the points , , , and . Find the bond angle for methane to the nearest tenth of a degree.     .    The vector from is .  The vector from is .   .   .      When constant force is applied to an object so that the object moves in a straight line from point to point , the work done by the form , acting at an angle from the line of motion, is given by   A constant force of 30 pounds is applied at angle of to pull a handcart 10 feet across the ground. What is the work done by this force?     Cross Product (Algebraic Definition)   The cross product cross product  of vectors and in is the vector      The cross product formula looks complicated, but it can be easily remembered as the result of computing the determinant of a 3x3 matrix.   Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know from linear algebra beacuse it has some entries that are scalars and others that are vectors. However, the formula is not unrelated to linear algebra because you can derive it by solving a system of equations using row reduction.     Let and .    Which vector gives the cross product ?                          Which option gives the cross product ?                          In order to be commutative, it must be true that . Is the cross product commutative? What relationship, if any, can you establish from this task?    Compute and . What geometric relationship holds between and and ?     The cross product of two vectors and produces a third vector, , which is orthogonal to and according to the right-hand rule.     The system of equations from which the cross product is derived comes from the requirement that the cross product be orthogonal to both and .    Properties of the cross product  Let , , and be vectors in , and let be a scalar. Then                   if and are parallel.    The cross product is not associative; that is, in general         What is ?                          What is ?                            Use the results of the previous activity and the properties of the cross product to compute      Cross Product (Geometric Definition)  cross product (geometric definition)   Let and be two vectors, and let be the angle between them. Then,             The parallelogram spanned by and     Which of the following is equal to the length ?                          Which of the following gives the area of the parallelogram spanned by and ?                          How is the cross product of two vectors related to the area of the parallelogram spanned by them?     The cross product of two vectors and is completely determined geometrically by the following three properties:    is orthogonal to both and .    Between the two possible orthogonal directions, the direction is determined by the right-hand rule.    The magnitude of is equal to the area of the parallelogram formed by the two vectors.        Find a unit vector orthogonal to both and        Torque is the tendency of a force to produce rotation about an axis of rotation. Let is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let be the vector representing the force. Then, where represents the torque vector.  A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is . Find the magnitude of the torque about the center of the bolt.    "
+},
+{
+  "id": "sec-Vector-Geometry-2",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-2",
+  "type": "Definition",
+  "number": "1.3.1",
+  "title": "Dot Product (Algebraic Definition).",
+  "body": " Dot Product (Algebraic Definition)   The dot product dot product of vectors and in is the scalar    "
+},
+{
+  "id": "ve2-dot-product-compute-1",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-dot-product-compute-1",
+  "type": "Activity",
+  "number": "1.3.1",
+  "title": "",
+  "body": "  Which option gives the dot product ?                         "
+},
+{
+  "id": "sec-Vector-Geometry-4",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-4",
+  "type": "Activity",
+  "number": "1.3.2",
+  "title": "",
+  "body": "  Sketch the vector in one color, along with the vectors    .     .     .     .     .     .     .   in a different color.    Compute for each of these vectors. Organize your answers in a table.    Which of the following is a conclusion you may reach from your computations?   The sign of a dot product depends on the magnitude of the vectors.  The dot product is usually not zero.  As the angle between two vectors increases, their dot product increases.  As the angle between two vectors increases, their dot product decreases.  The dot product is never zero.    "
+},
+{
+  "id": "def-dot-product-geo",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#def-dot-product-geo",
+  "type": "Definition",
+  "number": "1.3.2",
+  "title": "Dot Product (Geometric Definition).",
+  "body": " Dot Product (Geometric Definition)  dot product (geometric definition)   If the angle between the two vectors and is given by (in radians), then    "
+},
+{
+  "id": "ve2-dot-product-geo-1",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-dot-product-geo-1",
+  "type": "Activity",
+  "number": "1.3.3",
+  "title": "",
+  "body": "  Which is the correct angle between the vectors and ?                         "
+},
+{
+  "id": "sec-Vector-Geometry-7",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-7",
+  "type": "Activity",
+  "number": "1.3.4",
+  "title": "",
+  "body": "  If two vectors make a right angle, what is the value of their dot product?                         "
+},
+{
+  "id": "sec-Vector-Geometry-11",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-11",
+  "type": "Activity",
+  "number": "1.3.5",
+  "title": "",
+  "body": "  Let and be vectors in with , , and . Use the properties of the dot product to find each of the following.                         , where is the angle between and         "
+},
+{
+  "id": "sec-Vector-Geometry-12",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-12",
+  "type": "Activity",
+  "number": "1.3.6",
+  "title": "",
+  "body": "  For any two vectors and draw the perpendicular line segment from the terminal of to the line containing . If and are -dimensional, you can imagine that this drawing is just what is happening in the plane containing both vectors.        Let denote the length of the perpendicular, and let denote the distance from the initial point of to where the perpendicular meets .    Which of the following is equal to the distance ?                          Which of the following is equal to the distance ?                          Suppose that and . Find the components of the vector that points in the same direction as and has magnitude .   "
+},
+{
+  "id": "sec-Vector-Geometry-16",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-16",
+  "type": "Activity",
+  "number": "1.3.7",
+  "title": "",
+  "body": "  Suppose that and . Find the vector projection of onto (i.e. paralle to) and the vector projection of orthogonal (i.e. anti-parallel) to .   "
+},
+{
+  "id": "sec-Vector-Geometry-17",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-17",
+  "type": "Activity",
+  "number": "1.3.8",
+  "title": "",
+  "body": "   Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.   A methane molecule.     As an example of the molecular geometry of a molecule, consider the methane molecule, as illustrated in Figure . According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The bond angle for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point and the hydrogen atoms at the points , , , and . Find the bond angle for methane to the nearest tenth of a degree.     .    The vector from is .  The vector from is .   .   .   "
+},
+{
+  "id": "ve2-dot-product-application",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-dot-product-application",
+  "type": "Activity",
+  "number": "1.3.9",
+  "title": "",
+  "body": "  When constant force is applied to an object so that the object moves in a straight line from point to point , the work done by the form , acting at an angle from the line of motion, is given by   A constant force of 30 pounds is applied at angle of to pull a handcart 10 feet across the ground. What is the work done by this force?   "
+},
+{
+  "id": "sec-Vector-Geometry-19",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-19",
+  "type": "Definition",
+  "number": "1.3.5",
+  "title": "Cross Product (Algebraic Definition).",
+  "body": " Cross Product (Algebraic Definition)   The cross product cross product  of vectors and in is the vector    "
+},
+{
+  "id": "sec-Vector-Geometry-20",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-20",
+  "type": "Remark",
+  "number": "1.3.6",
+  "title": "",
+  "body": " The cross product formula looks complicated, but it can be easily remembered as the result of computing the determinant of a 3x3 matrix.   Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know from linear algebra beacuse it has some entries that are scalars and others that are vectors. However, the formula is not unrelated to linear algebra because you can derive it by solving a system of equations using row reduction.  "
+},
+{
+  "id": "ve2-cross-product-1",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-cross-product-1",
+  "type": "Activity",
+  "number": "1.3.10",
+  "title": "",
+  "body": "  Let and .    Which vector gives the cross product ?                          Which option gives the cross product ?                          In order to be commutative, it must be true that . Is the cross product commutative? What relationship, if any, can you establish from this task?    Compute and . What geometric relationship holds between and and ?   "
+},
+{
+  "id": "sec-Vector-Geometry-22",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-22",
+  "type": "Remark",
+  "number": "1.3.7",
+  "title": "",
+  "body": " The cross product of two vectors and produces a third vector, , which is orthogonal to and according to the right-hand rule.     The system of equations from which the cross product is derived comes from the requirement that the cross product be orthogonal to both and .  "
+},
+{
+  "id": "sec-Vector-Geometry-24",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-24",
+  "type": "Activity",
+  "number": "1.3.11",
+  "title": "",
+  "body": "  What is ?                          What is ?                         "
+},
+{
+  "id": "ve2-cross-product-2",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-cross-product-2",
+  "type": "Activity",
+  "number": "1.3.12",
+  "title": "",
+  "body": "  Use the results of the previous activity and the properties of the cross product to compute    "
+},
+{
+  "id": "def-cross-product-geo",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#def-cross-product-geo",
+  "type": "Definition",
+  "number": "1.3.8",
+  "title": "Cross Product (Geometric Definition).",
+  "body": " Cross Product (Geometric Definition)  cross product (geometric definition)   Let and be two vectors, and let be the angle between them. Then,    "
+},
+{
+  "id": "sec-Vector-Geometry-27",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-27",
+  "type": "Activity",
+  "number": "1.3.13",
+  "title": "",
+  "body": "        The parallelogram spanned by and     Which of the following is equal to the length ?                          Which of the following gives the area of the parallelogram spanned by and ?                          How is the cross product of two vectors related to the area of the parallelogram spanned by them?   "
+},
+{
+  "id": "sec-Vector-Geometry-28",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#sec-Vector-Geometry-28",
+  "type": "Remark",
+  "number": "1.3.10",
+  "title": "",
+  "body": " The cross product of two vectors and is completely determined geometrically by the following three properties:    is orthogonal to both and .    Between the two possible orthogonal directions, the direction is determined by the right-hand rule.    The magnitude of is equal to the area of the parallelogram formed by the two vectors.     "
+},
+{
+  "id": "ve2-cross-product-3",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-cross-product-3",
+  "type": "Activity",
+  "number": "1.3.14",
+  "title": "",
+  "body": "  Find a unit vector orthogonal to both and    "
+},
+{
+  "id": "ve2-cross-product-4",
+  "level": "2",
+  "url": "sec-Vector-Geometry.html#ve2-cross-product-4",
+  "type": "Activity",
+  "number": "1.3.15",
+  "title": "",
+  "body": "   Torque is the tendency of a force to produce rotation about an axis of rotation. Let is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let be the vector representing the force. Then, where represents the torque vector.  A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is . Find the magnitude of the torque about the center of the bolt.   "
 },
 {
   "id": "sec-Lines",
