@@ -6,12 +6,15 @@
     \coordinate (e) at (1.4530,0.3633);
     \coordinate (f) at (1.4045,0.5573);
     \coordinate (g) at (1.5985,0.6058);
+    \coordinate (h) at (5,4);
     \fill (a) circle (0.05);
     % \fill (e) circle (0.05);
     % \fill (f) circle (0.05);
     % \fill (g) circle (0.05);
     \draw[-stealth] (a)--(b) node[midway, xshift=-10pt, yshift=10pt] {$\textbf{u}$};
     \draw[-stealth] (a)--(c) node[pos=0.75, yshift=-10pt] {$\textbf{v}$};
+    \draw[densely dashed] (b)--(h);
+    \draw[densely dashed] (c)--(h);
     % \node at (-.3,-.3) {$(0,0)$};
     % \node at (4.2,3.2) {$B$};
     \draw[densely dashed] (a)--(c);

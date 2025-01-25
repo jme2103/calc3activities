@@ -27,6 +27,11 @@
     \newcommand{\lrpar}[1]{\left(#1\right)}
     \newcommand{\inv}[1]{#1^{-1}}
     \newcommand{\dc}{^\circ}
+    \newcommand{\proj}{\text{proj}}
+    \newcommand{\comp}{\text{comp}}
+    \newcommand{\vi}{\mathbf{i}}
+    \newcommand{\vj}{\mathbf{j}}
+    \newcommand{\vk}{\mathbf{k}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

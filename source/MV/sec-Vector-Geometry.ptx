@@ -251,12 +251,99 @@
     </md>
     </p>
 
+    <assemblage xml:id="Dot-product-properties">
+      <title>Properties of the dot product</title>
+         <p>
+      Let <m>\vu</m>, <m>\vv</m>, and <m>\vw</m> be vectors in <m>\R^n</m>. Then
+      <ol>
+        <li>
+          <p>
+            <m>\vu \cdot \vv = \vv \cdot \vu</m> (the dot product is
+                <em>commutative</em>), and
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(\vu + \vv) \cdot \vw = (\vu \cdot \vw) + (\vv \cdot \vw)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            if <m>c</m> is a scalar, then <m>(c\vu) \cdot \vw = c(\vu \cdot
+                \vw)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\vu \cdot \vu = |\vu|^2</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+    </assemblage>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>\vu</m> and <m>\vv</m> be vectors in <m>\R^5</m> with <m>\vu \cdot \vv = -1</m>,
+          <m>|\vu| = 2</m>, and <m>|\vv| = 3</m>. Use the properties of the dot product to find
+          each of the following.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            <m>\vu \cdot 2 \vv</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\vv \cdot \vv</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>(\vu + \vv) \cdot \vv</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>(2\vu + 4\vv) \cdot (\vu - 7\vv)</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>|\vu| |\vv| \cos \theta</m>, where <m>\theta</m> is the angle between <m>\vu</m> and <m>\vv</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            <m>\theta</m>
+          </p>
+        </statement>
+      </task>
+    </activity>
+
     <activity>
             <introduction>
                 <p>
-                    You can think of the <em>components</em> of a vector as giving you the amount
-                    of the vector in the direction of each of the (two or) three axes. For example,
-                    the vector <m>\vv = \lrangle{ a, b }</m> is sketched below.
+                    For any two vectors <m>\vu</m> and <m>\vv</m> draw the perpendicular line segment from
+                    the terminal of <m>\vu</m> to the line containing <m>\vv</m>. If <m>\vu</m> and <m>\vv</m>
+                    are <m>n</m>-dimensional, you can imagine that this drawing is just what is happening
+                    in the plane containing both vectors.
                 </p>
                 <figure>
                     <image width = "50%">
@@ -266,8 +353,588 @@
                     </image>
                     <caption></caption>
                 </figure>
-                
+                <p>
+                  Let <m>a</m> denote the length of the perpendicular, and let <m>b</m> denote the distance
+                  from the initial point of <m>\vv</m> to where the perpendicular meets <m>\vv</m>.
+                </p>                
             </introduction>
+            <task>
+              <statement>
+                <p>
+                  Which of the following is equal to the distance <m>a</m>?
+                </p>
+                <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>|\vv|\sin \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vv|\cos \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vu|\sin \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vu|\cos \theta</m>
+                    </p>
+                  </li>
+                </ol>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Which of the following is equal to the distance <m>a</m>?
+                </p>
+                <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>\frac{\vu \cdot \vv}{|\vu|}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\frac{\vu \cdot \vv}{|\vv|}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\frac{\vv \cdot \vv}{|\vu|}</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\frac{\vu \cdot \vu}{|\vv|}</m>
+                    </p>
+                  </li>
+                </ol>
+              </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Suppose that <m>\vu = \lrangle{1,3}</m> and <m>\vv = \lrangle{4,1}</m>. Find the components
+                  of the vector that points in the same direction as <m>\vv</m> and has magnitude <m>a</m>.
+                </p>
+              </statement>
+            </task>
     </activity>
+
+    <assemblage xml:id="Dot-product-projection">
+      <title>The dot product and projections</title>
+    <p>
+      Let <m>\vu</m> and <m>\vv</m> be vectors in <m>\R^n</m>. The
+      component<idx><h>vector</h><h>component in the direction of</h></idx> of <m>\vu</m> in
+      the direction of <m>\vv</m> is the scalar
+      <me>
+        \comp_{\vv} \vu = \frac{\vu \cdot \vv}{|\vv|},
+      </me>
+      and the
+      projection<idx><h>vector</h><h>projection</h></idx> of <m>\vu</m> onto <m>\vv</m> is the
+      vector
+      <me>
+        \proj_{\vv} \vu = \frac{\vu \cdot \vv}{\vv\cdot\vv} \vv.
+      </me>
+    </p>
+    </assemblage>
+
+    <p>
+      Moreover, since
+      <me>
+        \vu = \proj_{\vv} \vu + \proj_{\perp \vv} \vu,
+      </me>
+      it follows that
+      <me>
+        \proj_{\perp \vv} \vu = \vu - \proj_{\vv} \vu.
+      </me>
+    </p>
+
+    <p>
+      This shows that once we have computed <m>\proj_{\vv} \vu</m>, we can find
+      <m>\proj_{\perp \vv} \vu</m> simply by calculating the difference of two
+      known vectors.
+    </p>
+
+    <activity>
+      <statement>
+        <p>
+          Suppose that <m>\vu = \lrbrace{1,3,0}</m> and <m>\vv = \lrbrace{-2,-2,5}</m>. Find the
+          vector projection <m>\proj_{\vv} \vu</m> of <m>\vu</m> onto (i.e. paralle to) <m>\vv</m> and the vector projection
+          <m>\proj_{\perp \vv} \vu</m> of <m>\vu</m> orthogonal (i.e. anti-parallel) to <m>\vv</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+        <statement>
+          <sidebyside widths="55% 45%" margins="0%">
+          <p>
+            Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.
+          </p>
+
+          <figure xml:id="F-9-3-methane">
+          <caption>A methane molecule.</caption>
+          <image width="50%" source="images/fig_9_3_methane"/>
+          </figure>
+          </sidebyside>
+
+          <p>
+             As an example of the molecular geometry of a molecule, consider the methane <m>\text{CH}_4</m> molecule, as illustrated in <xref ref="F-9-3-methane">Figure</xref>. According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The <em>bond angle</em> for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point <m>\left(\frac{1}{2}, \frac{1}{2}, \frac{1}{2} \right)</m> and the hydrogen atoms at the points <m>(0,0,0)</m>, <m>(1,1,0)</m>, <m>(1,0,1)</m>, and <m>(0,1,1)</m>. Find the bond angle for methane to the nearest tenth of a degree.  
+          </p>
+        </statement> 
+
+        <answer>
+          <p>
+            <m>109.47^(\circ)</m>.
+          </p>
+        </answer>
+
+        <solution>
+          <p>
+            The vector from <m>(0, 0, 0) to (\frac{1}{2}, \frac{1}{2}, \frac{1}{2})</m> is <m>\va = \langle \frac{-1}{2}, \frac{-1}{2}, \frac{-1}{2} \rangle</m>.
+          </p>
+          <p>
+            The vector from <m>(\frac{1}{2}, \frac{1}{2}, \frac{1}{2}) to (0, 1, 1)</m> is <m>\vb = \langle \frac{-1}{2}, \frac{1}{2}, \frac{1}{2} \rangle</m>.
+          </p>
+
+          <p>
+            <m>|\va| = \sqrt{(\frac{-1}{2})^2 + (\frac{-1}{2})^2 + (\frac{-1}{2})^2} = \sqrt{\frac{3}{4}}, |\vb| = \sqrt{(\frac{-1}{2})^2 + (\frac{1}{2})^2 + (\frac{1}{2})^2} = \sqrt{\frac{3}{4}}</m>.
+          </p>
+
+          <p>
+            <m>\theta = cos^-1(\frac{(\frac{-1}{2})(\frac{-1}{2}) + (\frac{-1}{2})(\frac{1}{2}) + (\frac{-1}{2})(\frac{1}{2})}{(\sqrt{\frac{3}{4}}) * (\sqrt{\frac{3}{4}})}) = 109.47^(\circ)</m>.
+          </p>
+        </solution>
+
+      </activity>
+
+      <activity xml:id="ve2-dot-product-application">
+            <statement>
+                <p>
+                    When constant force is applied to an object so that the object moves in a straight line from point <m>P</m> to point <m>Q</m>, the work <m>W</m> done by the form <m>\textbf{F}</m>, acting at an angle <m>\theta</m> from the line of motion, is given by
+                    <me>
+                        W = \textbf{F}\cdot \textbf{PQ} = ||\textbf{F}||\, ||\textbf{PQ}||\cos\theta
+                    </me>
+                </p>
+                <p>
+                    A constant force of 30 pounds is applied at angle of <m>60\dc</m> to pull a handcart 10 feet across the ground. What is the work done by this force?
+                </p>
+            </statement>
+        </activity>
+
+        <definition>
+        <title>Cross Product (Algebraic Definition)</title>
+      <statement>
+        <p>
+          The <term>cross product</term><idx><h>cross product</h></idx> <m>\vu \times \vv</m> of vectors <m>\vu = u_1\vi + u_2\vj + u_3\vk</m> and <m>\vv = v_1\vi + v_2\vj + v_3\vk</m> in <m>\R^3</m> is the vector 
+          <men xml:id="E_9_4_cross_def">
+            (u_2v_3-u_3v_2)\vi - (u_1v_3-u_3v_1)\vj + (u_1v_2-u_2v_1)\vk.
+          </men>
+        </p>
+      </statement>
+    </definition>
+
+    <remark>
+      <p>
+          The cross product formula looks complicated, but it can be easily remembered as the result
+          of computing the determinant of a 3x3 matrix.
+      </p>
+      <me>
+        \vu\times\vv = 
+        \left|
+          \begin{array}{ccc}
+            \vi \amp  \vj \amp  \vk \\
+            u_1 \amp  u_2 \amp  u_3 \\
+            v_1 \amp  v_2 \amp  v_3
+        \end{array} 
+        \right|.
+      </me>
+      <p>
+        Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know
+        from linear algebra beacuse it has some entries that are scalars and others that are vectors. However,
+        the formula is not unrelated to linear algebra because you can derive it by solving a system of 
+        equations using row reduction.
+      </p>
+    </remark>
+
+    <activity xml:id="ve2-cross-product-1">
+            <introduction>
+                <p>
+                    Let <m>\textbf{a} = \lrangle{-1,2,3}</m> and <m>\textbf{b} = \lrangle{1,0,-1}</m>.
+                </p>
+            </introduction>
+            <task>
+                <statement>
+                    <p>
+                        Which vector gives the cross product <m>\textbf{a}\times\textbf{b}</m>?
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{-2,2,-2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{2,-2,2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{2,2,2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{-2,-2,-2}
+                                    </m>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        Which option gives the cross product <m>\textbf{b}\times\textbf{a}</m>?
+                        <ol>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{-2,2,-2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{2,-2,2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{2,2,2}
+                                    </m>
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <m>
+                                        \lrangle{-2,-2,-2}
+                                    </m>
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </statement>
+            </task>
+            <task>
+                <statement>
+                    <p>
+                        In order to be commutative, it must be true that <m>\textbf{a}\times\textbf{b} = \textbf{b}\times\textbf{a}</m>. Is the cross product commutative? What relationship, if any, can you establish from this task?
+                    </p>
+                </statement>
+            </task>
+            <task>
+              <statement>
+                <p>
+                  Compute <m>(\textbf{a}\times\textbf{b}) \cdot \textbf{a}</m> and <m>(\textbf{a}\times\textbf{b}) \cdot \textbf{b}</m>. What geometric relationship holds
+                  between <m>\textbf{a}\times\textbf{b}</m> and <m>\textbf{a}</m> and <m>\textbf{b}</m>?
+                </p>
+              </statement>
+            </task>
+        </activity>
+
+        <remark>
+            <p>
+                The cross product of two vectors <m>\textbf{a}</m> and <m>\textbf{b}</m> produces a third vector, <m>\textbf{a}\times\textbf{b}</m>, which is orthogonal to <m>\textbf{a}</m> and <m>\textbf{b}</m> according to the right-hand rule.
+            </p>
+            <image width="25%">
+                <latex-image>
+                    <xi:include href="./tikz/cross-product-rhr.tex" parse="text" />
+                </latex-image>
+            </image>
+            <p>
+               The system of equations from which the cross product is derived comes from the requirement that the cross
+                product be orthogonal to both <m>\vu</m> and <m>\vv</m>.
+            </p>
+        </remark>
+
+        <assemblage xml:id="Cross-product-properties">
+      <title>Properties of the cross product</title>
+    <p>
+      Let <m>\vu</m>, <m>\vv</m>, and <m>\vw</m> be vectors in <m>\R^3</m>, and
+      let <m>c</m> be a scalar. Then
+      <ol>
+        <li>
+          <p>
+            <m>\vu \times \vv = -(\vv \times \vu)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(\vu +\vv)\times \vw = (\vu \times \vw) + (\vv \times \vw)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>(c\vu)\times \vw = c(\vu \times \vw) = \vu \times (c\vw)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\vu\times\vv = \vzero</m> if <m>\vu</m> and <m>\vv</m> are parallel.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The cross product is not associative;  that is, in general
+            <me>
+              (\vu\times\vv)\times\vw \neq \vu\times(\vv\times\vw).
+            </me>
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    </assemblage>
+
+    <activity>
+    <task>
+      <statement>
+        <p>
+          What is <m>\vi \times \vj</m>?
+        </p>
+        <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>\vzero</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\vk</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>-\vk</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\vi \vj</m>
+                    </p>
+                  </li>
+                </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is <m>\vi \times \vk</m>?
+        </p>
+        <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>\vzero</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>-\vi</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>\vj</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>-\vj</m>
+                    </p>
+                  </li>
+                </ol>
+      </statement>
+    </task>
+    </activity>
+
+    <activity xml:id="ve2-cross-product-2">
+        <statement>
+            <p>
+                Use the results of the previous activity and the properties of the cross product to compute <me>(3\vj \times 2\vk) \times (-\vi)</me>
+            </p>
+        </statement>
+    </activity>
+    
+
+        
+
+        
+
+        
+
+        
+
+        <definition xml:id="def-cross-product-geo">
+            <title>Cross Product (Geometric Definition)</title>
+            <idx><h>cross product (geometric definition)</h></idx>
+            <statement>
+                <p>
+                    Let <m>\textbf{u}</m> and <m>\textbf{v}</m> be two vectors, and let <m>\theta</m> be the angle between them. Then,
+                    <me>
+                        ||\textbf{u}\times\textbf{v}|| = ||\textbf{u}||\,||\textbf{v}||\sin\theta
+                    </me>
+                </p>
+            </statement>
+        </definition>
+
+        <activity>
+          <introduction>
+            <p>
+              
+            </p>
+            <figure>
+                <image width = "50%">
+                    <latex-image>
+                        <xi:include href="./tikz/vector-projection-cross.tex" parse="text"/>
+                    </latex-image>
+                </image>
+                <caption>The parallelogram spanned by <m>\vu</m> and <m>\vv</m></caption>
+            </figure>
+          </introduction>
+          <task>
+            <statement>
+              <p>
+                Which of the following is equal to the length <m>b</m>?
+              </p>
+              <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>|\vu| \sin \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vv| \sin \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vu| \cos \theta</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vv| \cos \theta</m>
+                    </p>
+                  </li>
+                </ol>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                Which of the following gives the area of the parallelogram spanned by <m>\vu</m> and <m>\vv</m>?
+              </p>
+              <ol marker="A." cols="2">
+                  <li>
+                    <p>
+                      <m>|\vu| \cdot |\vv|</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vv| b</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>|\vu| a</m>
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <m>ab</m>
+                    </p>
+                  </li>
+                </ol>
+            </statement>
+          </task>
+          <task>
+            <statement>
+              <p>
+                How is the cross product of two vectors related to the area of the parallelogram spanned by them?
+              </p>
+            </statement>
+          </task>
+        </activity>
+
+        <remark>
+          <p>
+            The cross product of two vectors <m>\vu</m> and <m>\vv</m> is completely determined geometrically by the following three properties:
+            <ol>
+              <li>
+                <p>
+                  <m>\vu \times \vv</m> is orthogonal to both <m>\vu</m> and <m>\vv</m>.
+                </p>
+              </li>
+              <li>
+                <p>
+                  Between the two possible orthogonal directions, the direction <m>\vu \times \vv</m> is determined by the right-hand rule.
+                </p>
+              </li>
+              <li>
+                <p>
+                  The magnitude of <m>\vu \times \vv</m> is equal to the area of the parallelogram formed by the two vectors.
+                </p>
+              </li>
+            </ol>
+            
+          </p>
+        </remark>
+
+        <activity xml:id="ve2-cross-product-3">
+            <statement>
+                <p>
+                    Find two unit vectors orthogonal to both <m>\textbf{u} = \lrangle{3,5,-1}</m> and <m>\textbf{v} = \lrangle{2,-2,1}</m>
+                </p>
+            </statement>
+        </activity>
+
+        <activity xml:id="ve2-cross-product-4">
+            <statement>
+                <p>
+                    <em>Torque</em> is the tendency of a force to produce rotation about an axis of rotation. Let <m>\textbf{r}</m> is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let <m>\textbf{F}</m> be the vector representing the force. Then, 
+                    <me>
+                    \mathbf{\tau} = \textbf{r}\times\textbf{F}
+                    </me>
+                    where <m>\mathbf{\tau}</m> represents the torque vector.
+                </p>
+                <p>
+                    A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is <m>40\dc</m>. Find the magnitude of the torque about the center of the bolt.
+                </p>
+            </statement>
+        </activity>
 
 </section>
