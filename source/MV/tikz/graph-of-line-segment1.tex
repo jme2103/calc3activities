@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+    \begin{axis}[    
+        grid=major,    
+        xmin=-6, xmax=6,    
+        ymin=-6, ymax=6,
+        axis equal,
+    ]
+    \addplot[domain=0:360, samples=100, color=blue, thick] ({3*cos(\x)}, {3*sin(\x)});
+    \end{axis}
+\end{tikzpicture}

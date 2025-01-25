@@ -3,6 +3,120 @@
 <section xml:id="sec-Curves" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curves</title>
   
-  
+  <definition>
+      <statement>
+        <p>
+          A <term>vector-valued function</term><idx><h>vector-valued function</h><h>definition</h></idx> is a
+          function <me>\vr(t) = \langle x(t), y(t), z(t) \rangle</me> whose input is a real parameter <m>t</m> and whose output is
+          a vector that depends on <m>t</m>. The <term>graph</term><idx><h>graph of a
+          vector-valued function</h><h>definition</h></idx> of a vector-valued function
+          is the set of all terminal points of the output vectors with
+          their initial points at the origin.
+        </p>
+
+        <p>
+          <term>Parametric equations</term><idx><h>parametric equations for a
+          curve</h></idx><idx><h>parameterization</h><h>curve</h></idx> for a curve are equations of the form
+          <me>
+            x = x(t), \ \ \ y = y(t), \ \ \ \text{ and }  \ \ \ \ \ z = z(t)
+          </me>
+          that describe the <m>(x,y,z)</m> coordinates of a point on a curve in <m>\R^3</m>.
+        </p>
+
+        <p>
+          A curve together with a parameterization is called a <term>parametrized curve</term>.
+        </p>
+
+      </statement>
+    </definition>
+
+    <activity>
+      <statement>
+        <p>
+          Which of the following vector-valued functions has this graph? 
+          <image width = "50%">
+              <latex-image>
+                  <xi:include href="./tikz/graph-of-curve.tex" parse="text" />
+              </latex-image>
+          </image>
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+            <p>
+              <m>\vr(t) = \lrangle{ \cos t, \sin t, \frac{2t}{5\pi} }</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vr(t) = \lrangle{ \cos t, \sin t, 4 }</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vr(t) = \lrangle{ \sin t, \frac{2t}{5\pi}, \cos t }</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>\vr(t) = \lrangle{ 2\sin t, \frac{2t}{5\pi}, 2\cos t }</m>
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Which is the graph of the vector-valued function <me>\vr(t) = \lrangle{ 2 + 3\cos(t-\pi), 2 + 3\sin(t-\pi)}</me>
+        </p>
+        <ol marker="A." cols="2">
+            <li>
+              <p>
+                <image width = "75%">
+                <latex-image>
+                    <xi:include href="./tikz/graph-of-line-segment1.tex" parse="text" />
+                </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image width = "75%">
+                <latex-image>
+                    <xi:include href="./tikz/graph-of-line-segment2.tex" parse="text" />
+                </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image width = "75%">
+                <latex-image>
+                    <xi:include href="./tikz/graph-of-line-segment3.tex" parse="text" />
+                </latex-image>
+                </image>
+              </p>
+            </li>
+            <li>
+              <p>
+                <image width = "75%">
+                <latex-image>
+                    <xi:include href="./tikz/graph-of-line-segment4.tex" parse="text" />
+                </latex-image>
+                </image>
+              </p>
+            </li>
+          </ol>
+        </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Which of the following vector-valued functions has this graph?
+        </p>
+      </statement>
+    </activity>
 
 </section>

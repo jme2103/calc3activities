@@ -1,0 +1,17 @@
+% Preamble: \pgfplotsset{width=7cm,compat=1.18}
+\begin{tikzpicture}
+\begin{axis}[view={75}{30},
+    xlabel=$x$,
+    ylabel=$y$,
+    zlabel=$z$]
+    \addplot3+ [no markers,
+        domain=0:5*pi,
+        samples=200,
+        samples y=0, 
+    ] (
+{sin(deg(x))},
+{2*x/(5*pi)},
+{cos(deg(x))}
+);
+\end{axis}
+\end{tikzpicture}

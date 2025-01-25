@@ -21,7 +21,7 @@
   <!-- it defines. -->
   <macros> 
     \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
-    \newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}}
+    \newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
     \newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
     \newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
     \newcommand{\lrpar}[1]{\left(#1\right)}
