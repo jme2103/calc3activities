@@ -385,7 +385,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Vector Geometry",
-  "body": " Vector Geometry   Dot Product (Algebraic Definition)   The dot product dot product of vectors and in is the scalar       Which option gives the dot product ?                            Sketch the vector in one color, along with the vectors    .     .     .     .     .     .     .   in a different color.    Compute for each of these vectors. Organize your answers in a table.    Which of the following is a conclusion you may reach from your computations?   The sign of a dot product depends on the magnitude of the vectors.  The dot product is usually not zero.  As the angle between two vectors increases, their dot product increases.  As the angle between two vectors increases, their dot product decreases.  The dot product is never zero.      Dot Product (Geometric Definition)  dot product (geometric definition)   If the angle between the two vectors and is given by (in radians), then       Which is the correct angle between the vectors and ?                            If two vectors make a right angle, what is the value of their dot product?                           The dot product and orthogonality  Two vectors are said to be orthogonal when the angle between them is or radians.  Two vectors and in are orthogonal vectors orthogonal to each other if and only if .   More generally, the sign of the dot product gives us useful information about the relative orientation of the vectors. If we remember that we see that for nonzero vectors and ,    Properties of the dot product  Let , , and be vectors in . Then    (the dot product is commutative ), and     .    if is a scalar, then .     .        Let and be vectors in with , , and . Use the properties of the dot product to find each of the following.                         , where is the angle between and            For any two vectors and draw the perpendicular line segment from the terminal of to the line containing . If and are -dimensional, you can imagine that this drawing is just what is happening in the plane containing both vectors.        Let denote the length of the perpendicular, and let denote the distance from the initial point of to where the perpendicular meets .    Which of the following is equal to the distance ?                          Which of the following is equal to the distance ?                          Suppose that and . Find the components of the vector that points in the same direction as and has magnitude .     The dot product and projections  Let and be vectors in . The component vector component in the direction of of in the direction of is the scalar and the projection vector projection of onto is the vector    Moreover, since it follows that   This shows that once we have computed , we can find simply by calculating the difference of two known vectors.    Suppose that and . Find the vector projection of onto (i.e. paralle to) and the vector projection of orthogonal (i.e. anti-parallel) to .       Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.   A methane molecule.     As an example of the molecular geometry of a molecule, consider the methane molecule, as illustrated in Figure . According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The bond angle for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point and the hydrogen atoms at the points , , , and . Find the bond angle for methane to the nearest tenth of a degree.     .    The vector from is .  The vector from is .   .   .      When constant force is applied to an object so that the object moves in a straight line from point to point , the work done by the form , acting at an angle from the line of motion, is given by   A constant force of 30 pounds is applied at angle of to pull a handcart 10 feet across the ground. What is the work done by this force?     Cross Product (Algebraic Definition)   The cross product cross product  of vectors and in is the vector      The cross product formula looks complicated, but it can be easily remembered as the result of computing the determinant of a 3x3 matrix.   Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know from linear algebra beacuse it has some entries that are scalars and others that are vectors. However, the formula is not unrelated to linear algebra because you can derive it by solving a system of equations using row reduction.     Let and .    Which vector gives the cross product ?                          Which option gives the cross product ?                          In order to be commutative, it must be true that . Is the cross product commutative? What relationship, if any, can you establish from this task?    Compute and . What geometric relationship holds between and and ?     The cross product of two vectors and produces a third vector, , which is orthogonal to and according to the right-hand rule.     The system of equations from which the cross product is derived comes from the requirement that the cross product be orthogonal to both and .    Properties of the cross product  Let , , and be vectors in , and let be a scalar. Then                   if and are parallel.    The cross product is not associative; that is, in general         What is ?                          What is ?                            Use the results of the previous activity and the properties of the cross product to compute      Cross Product (Geometric Definition)  cross product (geometric definition)   Let and be two vectors, and let be the angle between them. Then,             The parallelogram spanned by and     Which of the following is equal to the length ?                          Which of the following gives the area of the parallelogram spanned by and ?                          How is the cross product of two vectors related to the area of the parallelogram spanned by them?     The cross product of two vectors and is completely determined geometrically by the following three properties:    is orthogonal to both and .    Between the two possible orthogonal directions, the direction is determined by the right-hand rule.    The magnitude of is equal to the area of the parallelogram formed by the two vectors.        Find a unit vector orthogonal to both and        Torque is the tendency of a force to produce rotation about an axis of rotation. Let is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let be the vector representing the force. Then, where represents the torque vector.  A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is . Find the magnitude of the torque about the center of the bolt.    "
+  "body": " Vector Geometry   Dot Product (Algebraic Definition)   The dot product dot product of vectors and in is the scalar       Which option gives the dot product ?                            Sketch the vector in one color, along with the vectors    .     .     .     .     .     .     .   in a different color.    Compute for each of these vectors. Organize your answers in a table.    Which of the following is a conclusion you may reach from your computations?   The sign of a dot product depends on the magnitude of the vectors.  The dot product is usually not zero.  As the angle between two vectors increases, their dot product increases.  As the angle between two vectors increases, their dot product decreases.  The dot product is never zero.      Dot Product (Geometric Definition)  dot product (geometric definition)   If the angle between the two vectors and is given by (in radians), then       Which is the correct angle between the vectors and ?                            If two vectors make a right angle, what is the value of their dot product?                           The dot product and orthogonality  Two vectors are said to be orthogonal when the angle between them is or radians.  Two vectors and in are orthogonal vectors orthogonal to each other if and only if .   More generally, the sign of the dot product gives us useful information about the relative orientation of the vectors. If we remember that we see that for nonzero vectors and ,    Properties of the dot product  Let , , and be vectors in . Then    (the dot product is commutative ), and     .    if is a scalar, then .     .        Let and be vectors in with , , and . Use the properties of the dot product to find each of the following.                         , where is the angle between and            For any two vectors and draw the perpendicular line segment from the terminal of to the line containing . If and are -dimensional, you can imagine that this drawing is just what is happening in the plane containing both vectors.        Let denote the length of the perpendicular, and let denote the distance from the initial point of to where the perpendicular meets .    Which of the following is equal to the distance ?                          Which of the following is equal to the distance ?                          Suppose that and . Find the components of the vector that points in the same direction as and has magnitude .     The dot product and projections  Let and be vectors in . The component vector component in the direction of of in the direction of is the scalar and the projection vector projection of onto is the vector    Moreover, since it follows that   This shows that once we have computed , we can find simply by calculating the difference of two known vectors.    Suppose that and . Find the vector projection of onto (i.e. paralle to) and the vector projection of orthogonal (i.e. anti-parallel) to .       Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.   A methane molecule.     As an example of the molecular geometry of a molecule, consider the methane molecule, as illustrated in Figure . According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The bond angle for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point and the hydrogen atoms at the points , , , and . Find the bond angle for methane to the nearest tenth of a degree.     .    The vector from is .  The vector from is .   .   .      When constant force is applied to an object so that the object moves in a straight line from point to point , the work done by the form , acting at an angle from the line of motion, is given by   A constant force of 30 pounds is applied at angle of to pull a handcart 10 feet across the ground. What is the work done by this force?     Cross Product (Algebraic Definition)   The cross product cross product  of vectors and in is the vector      The cross product formula looks complicated, but it can be easily remembered as the result of computing the determinant of a 3x3 matrix.   Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know from linear algebra beacuse it has some entries that are scalars and others that are vectors. However, the formula is not unrelated to linear algebra because you can derive it by solving a system of equations using row reduction.     Let and .    Which vector gives the cross product ?                          Which option gives the cross product ?                          In order to be commutative, it must be true that . Is the cross product commutative? What relationship, if any, can you establish from this task?    Compute and . What geometric relationship holds between and and ?     The cross product of two vectors and produces a third vector, , which is orthogonal to and according to the right-hand rule.     The system of equations from which the cross product is derived comes from the requirement that the cross product be orthogonal to both and .    Properties of the cross product  Let , , and be vectors in , and let be a scalar. Then                   if and are parallel.    The cross product is not associative; that is, in general         What is ?                          What is ?                            Use the results of the previous activity and the properties of the cross product to compute      Cross Product (Geometric Definition)  cross product (geometric definition)   Let and be two vectors, and let be the angle between them. Then,             The parallelogram spanned by and     Which of the following is equal to the length ?                          Which of the following gives the area of the parallelogram spanned by and ?                          How is the cross product of two vectors related to the area of the parallelogram spanned by them?     The cross product of two vectors and is completely determined geometrically by the following three properties:    is orthogonal to both and .    Between the two possible orthogonal directions, the direction is determined by the right-hand rule.    The magnitude of is equal to the area of the parallelogram formed by the two vectors.        Find two unit vectors orthogonal to both and        Torque is the tendency of a force to produce rotation about an axis of rotation. Let is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let be the vector representing the force. Then, where represents the torque vector.  A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is . Find the magnitude of the torque about the center of the bolt.    "
 },
 {
   "id": "sec-Vector-Geometry-2",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.3.14",
   "title": "",
-  "body": "  Find a unit vector orthogonal to both and    "
+  "body": "  Find two unit vectors orthogonal to both and    "
 },
 {
   "id": "ve2-cross-product-4",
@@ -610,7 +610,115 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.6",
   "title": "Curves",
-  "body": " Curves  "
+  "body": " Curves    A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .      Which of the following vector-valued functions has this graph?                               Which is the graph of the vector-valued function                                     Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?      Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .      A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.      Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .      The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .        The derivative of a vector-valued function  If , then for those values of at which , , and are differentiable.     Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?      For each of the following vector-valued functions, find .    .     .     .     .        Properties of derivatives of vector-valued functions  Let be a differentiable real-valued function of a real variable and let and be differentiable vector-valued functions of the real variable . Then                        .        Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is     Given a differentiable vector-valued function , the tangent line to the curve at the input value is given by Note how analogous the formula for is to the tangent line approximation from single-variable calculus: in that context, for a given function at a value , we found that the tangent line can be expressed by the linear function whose formula is     Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .    "
+},
+{
+  "id": "sec-Curves-2",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-2",
+  "type": "Definition",
+  "number": "1.6.1",
+  "title": "",
+  "body": "  A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .   "
+},
+{
+  "id": "sec-Curves-3",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-3",
+  "type": "Activity",
+  "number": "1.6.1",
+  "title": "",
+  "body": "  Which of the following vector-valued functions has this graph?                            "
+},
+{
+  "id": "sec-Curves-4",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-4",
+  "type": "Activity",
+  "number": "1.6.2",
+  "title": "",
+  "body": "  Which is the graph of the vector-valued function                                  "
+},
+{
+  "id": "sec-Curves-5",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-5",
+  "type": "Activity",
+  "number": "1.6.3",
+  "title": "",
+  "body": "  Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?   "
+},
+{
+  "id": "sec-Curves-6",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-6",
+  "type": "Activity",
+  "number": "1.6.4",
+  "title": "",
+  "body": "  Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .   "
+},
+{
+  "id": "sec-Curves-7",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-7",
+  "type": "Activity",
+  "number": "1.6.5",
+  "title": "",
+  "body": "  A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.   "
+},
+{
+  "id": "sec-Curves-8",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-8",
+  "type": "Activity",
+  "number": "1.6.6",
+  "title": "",
+  "body": "  Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .   "
+},
+{
+  "id": "sec-Curves-9",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-9",
+  "type": "Definition",
+  "number": "1.6.2",
+  "title": "",
+  "body": "  The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .   "
+},
+{
+  "id": "sec-Curves-12",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-12",
+  "type": "Activity",
+  "number": "1.6.7",
+  "title": "",
+  "body": "  Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?   "
+},
+{
+  "id": "sec-Curves-13",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-13",
+  "type": "Activity",
+  "number": "1.6.8",
+  "title": "",
+  "body": "  For each of the following vector-valued functions, find .    .     .     .     .      "
+},
+{
+  "id": "sec-Curves-15",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-15",
+  "type": "Activity",
+  "number": "1.6.9",
+  "title": "",
+  "body": "  Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is    "
+},
+{
+  "id": "sec-Curves-17",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-17",
+  "type": "Activity",
+  "number": "1.6.10",
+  "title": "",
+  "body": "  Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .   "
 },
 {
   "id": "backmatter-2",
