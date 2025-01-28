@@ -32,6 +32,9 @@
     \newcommand{\vi}{\mathbf{i}}
     \newcommand{\vj}{\mathbf{j}}
     \newcommand{\vk}{\mathbf{k}}
+    \newcommand{\vs}{\mathbf{s}}
+    \newcommand{\va}{\mathbf{a}}
+    \newcommand{\vL}{\mathbf{L}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

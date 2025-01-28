@@ -112,11 +112,416 @@
     </activity>
 
     <activity>
+    <introduction>
+      <p>
+        Consider the paraboloid defined by <m>f(x,y) = x^2 + y^2</m>.
+      </p>
+    </introduction>
+    <task>
       <statement>
         <p>
-          Which of the following vector-valued functions has this graph?
+          Which of the following is a parameterization for the <m>x = 2</m> trace of <m>f</m>?
+          <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{ t, 2, 4 + t^2 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{ 4, t^2, t }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{ t, 4, t^2 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{ 2, t, 4 + t^2 }</m>
+              </p>
+            </li>
+          </ol>
         </p>
       </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a parameterization for the <m>y = -1</m> trace of <m>f</m>. What type of curve is this trace?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a parameterization for the level curve <m>f(x,y) = 25</m>. What type of curve is this trace?
+        </p>
+      </statement>
+    </task>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Find a vector function that represent the curve of intersection of the paraboloid <m>z=7x^2 + 2y^2</m> and the
+          cylinder <m>y=4x^2</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+    <introduction>
+      <p>
+        A standard parameterization for the unit circle is <m>\lrangle{ \cos t, \sin t }</m>, for <m>0 \leq t \leq 2\pi</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find a vector-valued function <m>\vr</m> that describes a point traveling along the unit circle so that at time
+          <m>t = 0</m>, the point is at <m>\lrpar{ \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} }</m> and travels clockwise along the circle
+          as <m>t</m> increases.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find a vector-valued function <m>\vr</m> that describes a point traveling along the unit circle so that at time
+          <m>t = 0</m>, the point is at <m>\lrpar{\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}}</m> and travels counter-clockwise along the circle
+          as <m>t</m> increases.
+        </p>
+      </statement>
+    </task>
+    </activity>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>a</m> and <m>b</m> be positive real numbers. You have probably seen the equation <me>\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1</me>
+          that generates an ellipse, centered at <m>(h,k)</m>, with a horizontal axis of length <m>2a</m> and a vertical axis of length <m>2b</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Explain why the vector function <m>\vr(t) = \lrangle{ a\cos t, b\sin t }</m>, <m>0 \leq t \leq 2\pi</m> is one
+            parameterization of the ellipse <m>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a parameterization of the ellipse <m>\frac{x^2}{4} + \frac{y^2}{16} = 1</m> that is traversed counterclockwise.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find a parameterization of the ellipse <m>\frac{(x+3)^2}{9} + \frac{(y-2)^2}{1} = 1</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine the <m>xy</m>-equation of the ellipse parameterized by <me>\vr(t) = \lrangle{ 3 + 4\sin(2t), 1 + 3 \cos(2t)}</me>.
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          The
+          <term>derivative</term><idx><h>vector-valued function</h><h>derivative</h></idx> of a
+          vector-valued function <m>\vr</m> is defined to be
+          <me>
+            \vr'(t) = \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}
+          </me>
+          for those values of <m>t</m> at which the limit exists. We also use the
+          notation <m>\frac{d\vr}{dt}</m> and <m>\frac{d}{dt}[\vr(t)]</m> for
+          <m>\vr'(t)</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      <md>
+        <mrow>\vr'(t) = \mathstrut \amp  \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}</mrow>
+        <mrow> = \mathstrut \amp \lim_{h \to 0} \frac{[x(t+h)-x(t)] \vi + [y(t+h)-y(t)] \vj +
+        [z(t+h)-z(t)] \vk}{h}</mrow>
+        <mrow> = \mathstrut \amp \left(\lim_{h \to 0} \frac{x(t+h)-x(t)}{h}
+        \right) \vi + \left( \lim_{h \to 0} \frac{y(t+h)-y(t)}{h} \right) \vj</mrow>
+        <mrow> \mathstrut \amp  + \left( \lim_{h \to 0} \frac{z(t+h)-z(t)}{h} \right)\vk</mrow>
+        <mrow>\mathstrut \amp = x'(t)\vi + y'(t) \vj + z'(t) \vk.</mrow>
+      </md>
+    </p>
+
+    <assemblage xml:id="Vector-valued-function-derivative">
+      <title>The derivative of a vector-valued function</title>
+     <p>
+      If <m>\vr(t) = x(t) \vi + y(t) \vj + z(t) \vk</m>, then
+      <me>
+        \frac{d}{dt} \vr(t) = x'(t) \vi + y'(t) \vj + z'(t) \vk
+      </me>
+      for those
+      values of <m>t</m> at which <m>x</m>, <m>y</m>, and <m>z</m> are differentiable.
+    </p>
+    </assemblage>
+
+    <activity>
+    <introduction>
+      <p>
+        Consider the following two parameterizations of the unit circle:
+        <me>
+          \vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ -\cos 2t, \sin 2t }
+        </me>
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          What is <m>\vr_1'(\pi)</m>?
+        </p>
+        <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 1, 0 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 0, 1 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ -1, 0 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 0, -1 }</m>
+              </p>
+            </li>
+          </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          What is <m>\vr_2'(\pi)</m>?
+        </p>
+        <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 2, 0 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 0, 2 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ -2, 0 }</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr'(\pi) = \lrangle{ 0, -2 }</m>
+              </p>
+            </li>
+          </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Plot both <m>\vr_1(\pi)</m> and <m>\vr_2(\pi)</m> with their tails located at
+          <m>\vr_1(\pi) = \vr_2(\pi) = \lrangle{ -1 , 0 }</m>. What do you notice?
+        </p>
+      </statement>
+    </task>
+    </activity>
+
+    <activity>
+      <statement> 
+      <p>
+        For each of the following vector-valued functions, find <m>\vr'(t)</m>.
+        <ol marker="a.">
+          <li>
+            <p>
+              <m>\vr(t) = \langle \cos(t), t\sin(t), \ln(t) \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vr(t) = \langle t^2 + 3t, e^{-2t}, \frac{t}{t^2 + 1} \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vr(t) = \langle \tan(t), \cos(t^2), te^{-t} \rangle</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\vr(t) = \langle \sqrt{t^4 + 4}, \sin(3t), \cos(4t) \rangle</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+    </activity>
+
+    <assemblage>
+      <title>Properties of derivatives of vector-valued functions</title>
+    <p>
+      Let <m>f</m> be a differentiable
+      real-valued function of a real variable <m>t</m> and let <m>\vr</m> and <m>\vs</m> be
+      differentiable vector-valued functions of the real variable <m>t</m>. Then
+      <ol>
+        <li>
+          <p>
+            <m>\frac{d}{dt} \left[\vr(t) + \vs(t) \right] = \vr'(t) +
+            \vs'(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\frac{d}{dt} [f(t) \vr(t)] = f(t) \vr'(t) + f'(t) \vr(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\frac{d}{dt} \left[\vr(t) \cdot \vs(t) \right] = \vr'(t)
+            \cdot \vs(t) + \vr(t) \cdot \vs'(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\frac{d}{dt} \left[\vr(t) \times \vs(t) \right] = \vr'(t)
+            \times \vs(t) + \vr(t) \times \vs'(t)</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\frac{d}{dt} \left[\vr(f(t))\right] = f'(t) \vr'(f(t))</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    </assemblage>
+
+    <activity>
+      <introduction>
+        <p>
+          Consider the standard parameterization of the unit circle: <m>\lrangle{ \cos t, \sin t }</m>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find <m>\vr'(t)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find <m>\frac{d}{dt}[\vr(2t)]</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What relationship does the velocity of <m>\vr(t)</m> have with the velocity of <m>\vr(2t)</m>? How about their speeds?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Verify that <m>|\vr(t)| = 1</m> for all <m>t</m> and differentiate this equation to find a geometric relationship between
+            <m>\vr(t)</m> and <m>\vr'(t)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Show that the speed's rate of change is
+            <me>
+              \frac{d}{dt}|\vv(t)| = \comp_{\vv} \va.
+            </me>
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <p>
+      Given a differentiable vector-valued function <m>\vr</m>, the tangent
+      line to the curve at the input value <m>a</m> is given by
+      <men>
+        \vL(t) = \vr(a) + t \vr'(a).
+      </men>
+      Note how analogous the formula for <m>\vL(t)</m> is to the tangent line
+      approximation from single-variable calculus: in that context, for a
+      given function <m>y = f(x)</m> at a value <m>x = a</m>, we found that the
+      tangent line can be expressed by the linear function <m>y = L(x)</m> whose
+      formula is
+      <me>
+        L(x) = f(a) + f'(a)(x-a).
+      </me>
+    </p>
+
+    <activity>
+      <introduction>
+        <p>
+          Suppose a moving object in space has its velocity given by
+          <me>
+            \vv(t) = (-2\sin(2t)) \vi + (2 \cos(t)) \vj + \left(1 - \frac{1}{1+t}\right) \vk.
+          </me>
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find the object's position function <m>\vr(t)</m> if it is at <m>(1.5, -1, 0)</m> at <m>t = 0</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the object's acceleration function <m>{\bf a}(t)</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Determine a vector equation for the tangent line, <m>{\bf L}(t)</m>, to the position curve at <m>t = 1</m>.
+          </p>
+        </statement>
+      </task>
     </activity>
 
 </section>
