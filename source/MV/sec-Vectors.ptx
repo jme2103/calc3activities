@@ -281,9 +281,9 @@
                   describes the vector <m>\vu + \vv</m>?
                 </p>
                 <ol marker="A.">
-                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vv</m>.</p></li>
                   <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
-                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vv</m>.</p></li>
                   <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with the same initial point as both <m>\vu</m> and <m>\vv</m>.</p></li>
                 </ol>
               </statement>
@@ -296,9 +296,9 @@
                   describes the vector <m>\vu - \vv</m>?
                 </p>
                 <ol marker="A.">
-                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at corner opposite the initial points of <m>\vu</m> and <m>\vv</m>.</p></li>
                   <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
-                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vu</m>.</p></li>
+                  <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with initial point at terminal point of <m>\vv</m>.</p></li>
                   <li><p>It's the vector along the diagonal of the parallelogram determined by <m>\vu</m> and <m>\vv</m> with the same initial point as both <m>\vu</m> and <m>\vv</m>.</p></li>
                 </ol>
               </statement>
