@@ -3,5 +3,219 @@
 <section xml:id="sec-Lines" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Lines</title>
 
+    <definition>
+      <statement>
+        <p>
+          A
+          <term>line</term><idx><h>line</h><h>in space</h></idx> in space is the set of
+          terminal points of vectors emanating from a given point <m>P</m> that are
+          parallel to a fixed vector <m>\vv</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <activity>
+      <statement>
+        <p>
+          Which of the following is the line through <m>P(2,-1,3)</m> in the direction of <m>\vv = \lrangle{1,2,-1}</m>?
+        </p>
+        <ol marker="A.">
+          <li><p><m>\lrangle{1,2,-1} + t\lrangle{2,-1,3}</m>.</p></li>
+          <li><p><m>\lrangle{2,-1,3} + t\lrangle{1,2,-1}</m>.</p></li>
+          <li><p><m>t(\lrangle{2,-1,3} - \lrangle{1,2,-1})</m>.</p></li>
+          <li><p><m>t(\lrangle{2,-1,3} + \lrangle{1,2,-1})</m>.</p></li>
+        </ol>
+      </statement>
+    </activity>
+
+    <p>
+      The fixed vector <m>\vv</m> in the definition is called a
+      <em>direction vector</em><idx><h>line</h><h>direction vector</h></idx> for the line. 
+      To find an equation for a line through point <m>P</m> in the direction of vector <m>\vv</m>, observe that
+      any vector parallel to <m>\vv</m> will have the form <m>t \vv</m> for some
+      scalar <m>t</m>. So, any vector emanating from the point <m>P</m> in a direction
+      parallel to the vector <m>\vv</m> will be of the form
+      <men>
+        \overrightarrow{OP} + t \vv
+      </men>
+      for some scalar <m>t</m> (where <m>O</m> is the origin).
+    </p>
+
+    <assemblage>
+      <title>The vector form of a line</title>
+    <p>
+      The <em>vector form</em> of a line<idx><h>line</h><h>vector equation</h></idx> through the point <m>P</m> in the direction of the vector <m>\vv</m> is
+      <men xml:id="eq_9_5_line_vect">
+        \vr(t) = \vr_0 + t\vv,
+      </men>
+      where <m>\vr_0</m> is the position vector <m>\overrightarrow{OP}</m> from the origin to
+      the point <m>P</m>.
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          Let <m>P_1 = (1,2,-1)</m> and <m>P_2 = (-2,1,-2)</m>. Let <m>\mathcal{L}</m> be the line in <m>\R^3</m> through <m>P_1</m> and <m>P_2</m>.
+          <ol marker="a.">
+            <li>
+              <p>
+                Find a direction vector for the line <m>\mathcal{L}</m>.
+              </p>
+           </li>
+
+            <li>
+              <p>
+                Find a vector equation of <m>\mathcal{L}</m> in the form <m>\vr(t) = \vr_0 + t\vv</m>.
+              </p>
+            </li>
+
+           <li>
+              <p>
+                Consider the vector equation <m>\vs(t) = \langle -5, 0, -3 \rangle + t \langle 6, 2, 2 \rangle.</m>  What is the direction of the line given by <m>\vs(t)</m>?  Is this new line parallel to line <m>\mathcal{L}</m>?
+              </p>
+            </li>
+
+           <li>
+              <p>
+                Do <m>\vr(t)</m> and <m>\vs(t)</m> represent the same line, <m>\mathcal{L}</m>?  Explain.
+              </p>
+            </li>
+         </ol>
+        </p>
+      </statement>
+    </activity>
+
+    <p>
+      The three components of the vector function <m>\vr(t) = \vr_0 + t\vv</m> give what is called a
+      <em>parameterization</em> of the line <m>\mathcal{L}</m>. The independent variable <m>t</m> is called a
+      a <em>parameter</em>. Each value of the parameter <m>t</m> corresponds to a point on the line <m>\mathcal{L}</m>.
+    </p>
+
+    <assemblage>
+      <title>The parametric equations of a line</title>
+    <p>
+      The <em>parametric equations</em> for a
+      line<idx><h>line</h><h>parametric equations</h></idx> through the point <m>P = (x_0,
+          y_0, z_0)</m> in the direction of the vector <m>\vv = \langle a,b,c
+          \rangle</m> are
+      <me>
+        x(t) = x_0 + at, \ \ \ \ \ y(t) = y_0 + bt, \ \ \ \ \ z(t) = z_0 + ct.
+      </me>
+    </p>
+    </assemblage>
+
+    <p>
+      Comment about similarity with usual equation of a line.
+    </p>
+
+    <p>
+      Another way to think of a line in 2D is as the set of terminal points of vectors emanating
+      from a given point <m>P</m> that are orthogonal to a fixed vector <m>\vn</m>. In <m>\R^3</m>, 
+      the same statement gives a way to describe planes.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A
+          <term>plane</term><idx><h>plane</h><h>definition</h></idx> <m>p</m> in space is the set of
+          all terminal points of vectors emanating from a given point
+          <m>P_0</m> perpendicular to a fixed vector <m>\vn</m>, as shown in <xref ref="F_9_5_plane_normal">Figure</xref>.
+        </p>
+      </statement>
+    </definition>
+
+    <figure xml:id="F_9_5_plane_normal">
+      <caption>A point <m>P_0</m> on a plane <m>p</m> with a normal vector <m>\vn</m></caption>
+      <image width="73%" source="images/fig_9_5_plane_normal"/>
+    </figure>
+
+
+
+    <activity>
+      <statement>
+          <p>
+            This exercise explores key relationships between a pair of lines. Consider the following two lines: one with parametric equations <m>x(s) = 4-2s</m>, <m>y(s) = -2 + s</m>, <m>z(s) = 1 + 3s</m>, and the other being the line through <m>(-4, 2, 17)</m> in the direction <m>\vv = \langle -2, 1, 5 \rangle</m>.
+            <ol marker="a.">
+              <li>
+                <p>
+                  Find a direction vector for the first line, which is given in parametric form.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find parametric equations for the second line, written in terms of the parameter <m>t</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Show that the two lines intersect at a single point by finding the values of <m>s</m> and <m>t</m> that result in the same point. Then find the point of intersection.  
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find the acute angle formed where the two lines intersect, noting that this angle will be given by the acute angle between their respective direction vectors.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find an equation for the plane that contains both of the lines described in this problem.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </activity>
+
+    <activity>
+      <statement>
+          <p>
+            This exercise explores key relationships between a pair of planes. Consider the following two planes: one with scalar equation <m>4x - 5y + z = -2</m>, and the other which passes through the points <m>(1,1,1)</m>, <m>(0,1,-1)</m>, and <m>(4, 2, -1)</m>.
+            <ol marker="a.">
+              <li>
+                <p>
+                  Find a vector normal to the first plane.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find a scalar equation for the second plane.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find the angle between the planes, where the angle between them is defined by the angle between their respective normal vectors.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Find a point that lies on both planes.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Since these two planes do not have parallel normal vectors, the planes must intersect, and thus must intersect in a line.  Observe that the line of intersection lies in both planes, and thus the direction vector of the line must be perpendicular to each of the respective normal vectors of the two planes.  Find a direction vector for the line of intersection for the two planes.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Determine parametric equations for the line of intersection of the two planes.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+    </activity>
+
     
 </section>
