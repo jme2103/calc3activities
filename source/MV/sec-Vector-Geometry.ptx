@@ -464,7 +464,7 @@
     <activity>
       <statement>
         <p>
-          Suppose that <m>\vu = \lrbrace{1,3,0}</m> and <m>\vv = \lrbrace{-2,-2,5}</m>. Find the
+          Suppose that <m>\vu = \lrangle{1,3,0}</m> and <m>\vv = \lrangle{-2,-2,5}</m>. Find the
           vector projection <m>\proj_{\vv} \vu</m> of <m>\vu</m> onto (i.e. paralle to) <m>\vv</m> and the vector projection
           <m>\proj_{\perp \vv} \vu</m> of <m>\vu</m> orthogonal (i.e. anti-parallel) to <m>\vv</m>.
         </p>
