@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Colophon</title>
+<title>Lines and Planes</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -288,7 +288,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="backmatter.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Vector-Geometry.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-MV.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-Curves.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
 \newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
 \newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
@@ -315,24 +315,168 @@ eBookConfig.enable_chatcodes =  false;
 <div class="ptx-page">
 <div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
-<li class="toc-item toc-chapter">
+<li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
-<ul class="structural toc-item-list">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="colophon" id="backmatter-2"><h2 class="heading hide-type">
-<span class="type">Colophon</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Colophon</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-Lines-and-Planes"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Lines and Planes</span>
 </h2>
-<div class="para" id="backmatter-2-1">This book was authored in PreTeXt.</div></section></div>
+<article class="definition definition-like" id="sec-Lines-and-Planes-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Lines-and-Planes-2-1-1">A <dfn class="terminology">line</dfn> in space is the set of terminal points of vectors emanating from a given point <span class="process-math">\(P\)</span> that are parallel to a fixed vector <span class="process-math">\(\vv\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-Lines-and-Planes-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Lines-and-Planes-3-1-1">Which of the following is the line through <span class="process-math">\(P(2,-1,3)\)</span> in the direction of <span class="process-math">\(\vv = \lrangle{1,2,-1}\text{?}\)</span>
+</div> <ol class="upper-alpha" id="sec-Lines-and-Planes-3-1-2">
+<li id="sec-Lines-and-Planes-3-1-2-1"><div class="para" id="sec-Lines-and-Planes-3-1-2-1-1"><span class="process-math">\(\lrangle{1,2,-1} + t\lrangle{2,-1,3}\text{.}\)</span></div></li>
+<li id="sec-Lines-and-Planes-3-1-2-2"><div class="para" id="sec-Lines-and-Planes-3-1-2-2-1"><span class="process-math">\(\lrangle{2,-1,3} + t\lrangle{1,2,-1}\text{.}\)</span></div></li>
+<li id="sec-Lines-and-Planes-3-1-2-3"><div class="para" id="sec-Lines-and-Planes-3-1-2-3-1"><span class="process-math">\(t(\lrangle{2,-1,3} - \lrangle{1,2,-1})\text{.}\)</span></div></li>
+<li id="sec-Lines-and-Planes-3-1-2-4"><div class="para" id="sec-Lines-and-Planes-3-1-2-4-1"><span class="process-math">\(t(\lrangle{2,-1,3} + \lrangle{1,2,-1})\text{.}\)</span></div></li>
+</ol></article><div class="para logical" id="sec-Lines-and-Planes-4">
+<div class="para">The fixed vector <span class="process-math">\(\vv\)</span> in the definition is called a <em class="emphasis">direction vector</em> for the line. To find an equation for a line through point <span class="process-math">\(P\)</span> in the direction of vector <span class="process-math">\(\vv\text{,}\)</span> observe that any vector parallel to <span class="process-math">\(\vv\)</span> will have the form <span class="process-math">\(t \vv\)</span> for some scalar <span class="process-math">\(t\text{.}\)</span> So, any vector emanating from the point <span class="process-math">\(P\)</span> in a direction parallel to the vector <span class="process-math">\(\vv\)</span> will be of the form</div>
+<div class="displaymath process-math" id="sec-Lines-and-Planes-4-11">
+\begin{equation}
+\overrightarrow{OP} + t \vv\tag{1.4.1}
+\end{equation}
+</div>
+<div class="para">for some scalar <span class="process-math">\(t\)</span> (where <span class="process-math">\(O\)</span> is the origin).</div>
+</div>
+<article class="assemblage assemblage-like" id="sec-Lines-and-Planes-5"><h3 class="heading"><span class="title">The vector form of a line.</span></h3>
+<div class="para logical" id="sec-Lines-and-Planes-5-2">
+<div class="para">The <em class="emphasis">vector form</em> of a line through the point <span class="process-math">\(P\)</span> in the direction of the vector <span class="process-math">\(\vv\)</span> is</div>
+<div class="displaymath process-math" id="eq_9_5_line_vect">
+\begin{equation}
+\vr(t) = \vr_0 + t\vv,\tag{1.4.2}
+\end{equation}
+</div>
+<div class="para">where <span class="process-math">\(\vr_0\)</span> is the position vector <span class="process-math">\(\overrightarrow{OP}\)</span> from the origin to the point <span class="process-math">\(P\text{.}\)</span>
+</div>
+</div></article><article class="activity project-like" id="sec-Lines-and-Planes-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Lines-and-Planes-6-1-1">
+<div class="para">Let <span class="process-math">\(P_1 = (1,2,-1)\)</span> and <span class="process-math">\(P_2 = (-2,1,-2)\text{.}\)</span> Let <span class="process-math">\(\mathcal{L}\)</span> be the line in <span class="process-math">\(\R^3\)</span> through <span class="process-math">\(P_1\)</span> and <span class="process-math">\(P_2\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="sec-Lines-and-Planes-6-1-1-7">
+<li id="sec-Lines-and-Planes-6-1-1-7-1"><div class="para" id="sec-Lines-and-Planes-6-1-1-7-1-1">Find a direction vector for the line <span class="process-math">\(\mathcal{L}\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-6-1-1-7-2"><div class="para" id="sec-Lines-and-Planes-6-1-1-7-2-1">Find a vector equation of <span class="process-math">\(\mathcal{L}\)</span> in the form <span class="process-math">\(\vr(t) = \vr_0 + t\vv\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-6-1-1-7-3"><div class="para" id="sec-Lines-and-Planes-6-1-1-7-3-1">Consider the vector equation <span class="process-math">\(\vs(t) = \langle -5, 0, -3 \rangle + t \langle 6, 2, 2 \rangle.\)</span>  What is the direction of the line given by <span class="process-math">\(\vs(t)\text{?}\)</span>  Is this new line parallel to line <span class="process-math">\(\mathcal{L}\text{?}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-6-1-1-7-4"><div class="para" id="sec-Lines-and-Planes-6-1-1-7-4-1">Do <span class="process-math">\(\vr(t)\)</span> and <span class="process-math">\(\vs(t)\)</span> represent the same line, <span class="process-math">\(\mathcal{L}\text{?}\)</span>  Explain.</div></li>
+</ol>
+</div></article><div class="para" id="sec-Lines-and-Planes-7">The three components of the vector function <span class="process-math">\(\vr(t) = \vr_0 + t\vv\)</span> give what is called a <em class="emphasis">parameterization</em> of the line <span class="process-math">\(\mathcal{L}\text{.}\)</span> The independent variable <span class="process-math">\(t\)</span> is called a a <em class="emphasis">parameter</em>. Each value of the parameter <span class="process-math">\(t\)</span> corresponds to a point on the line <span class="process-math">\(\mathcal{L}\text{.}\)</span>
+</div>
+<article class="assemblage assemblage-like" id="sec-Lines-and-Planes-8"><h3 class="heading"><span class="title">The parametric equations of a line.</span></h3>
+<div class="para logical" id="sec-Lines-and-Planes-8-2">
+<div class="para">The <em class="emphasis">parametric equations</em> for a line through the point <span class="process-math">\(P = (x_0,
+y_0, z_0)\)</span> in the direction of the vector <span class="process-math">\(\vv = \langle a,b,c
+\rangle\)</span> are</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = x_0 + at, \ \ \ \ \ y(t) = y_0 + bt, \ \ \ \ \ z(t) = z_0 + ct.
+\end{equation*}
+</div>
+</div></article><div class="para" id="sec-Lines-and-Planes-9">Comment about similarity with usual equation of a line.</div>
+<div class="para" id="sec-Lines-and-Planes-10">Another way to think of a line in 2D is as the set of terminal points of vectors emanating from a given point <span class="process-math">\(P\)</span> that are orthogonal to a fixed vector <span class="process-math">\(\vn\text{.}\)</span> In <span class="process-math">\(\R^3\text{,}\)</span> the same statement gives a way to describe planes.</div>
+<article class="definition definition-like" id="sec-Lines-and-Planes-11"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Lines-and-Planes-11-1-1">A <dfn class="terminology">plane</dfn> <span class="process-math">\(p\)</span> in space is the set of all terminal points of vectors emanating from a given point <span class="process-math">\(P_0\)</span> perpendicular to a fixed vector <span class="process-math">\(\vn\text{,}\)</span> as shown below.</div></article><figure class="figure figure-like" id="sec-Lines-and-Planes-12"><div class="image-box" style="width: 73%; margin-left: 13.5%; margin-right: 13.5%;"><img src="external/images/fig_9_5_plane_normal.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.4.3<span class="period">.</span></span><span class="space"> </span>A point <span class="process-math">\(P_0\)</span> on a plane <span class="process-math">\(p\)</span> with a normal vector <span class="process-math">\(\vn\)</span></figcaption></figure><article class="assemblage assemblage-like" id="Plane-scalar-equation"><h3 class="heading"><span class="title">Equations of a plane.</span></h3>
+<div class="para logical" id="Plane-scalar-equation-2"><ul class="disc" id="Plane-scalar-equation-2-1">
+<li id="Plane-scalar-equation-2-1-1"><div class="para logical" id="Plane-scalar-equation-2-1-1-1">
+<div class="para">The <em class="emphasis">scalar equation</em> of the plane with normal vector <span class="process-math">\(\vn =\langle a,b,c \rangle\)</span> containing the point <span class="process-math">\(P_0 = (x_0, y_0,z_0)\)</span> is</div>
+<div class="displaymath process-math" id="eq_9_5_plane_norm">
+\begin{equation}
+a(x-x_0) + b(y-y_0) + c(z-z_0) = 0.\tag{1.4.3}
+\end{equation}
+</div>
+</div></li>
+<li id="Plane-scalar-equation-2-1-2"><div class="para logical" id="Plane-scalar-equation-2-1-2-1">
+<div class="para">The <em class="emphasis">vector equation</em> of the plane with normal vector <span class="process-math">\(\vn =\langle a,b,c \rangle\)</span> containing the points <span class="process-math">\(P_0 = (x_0, y_0,z_0)\)</span> and <span class="process-math">\(P = (x,y,z)\)</span> is</div>
+<div class="displaymath process-math" id="eq_9_5_plane_norm_vector">
+\begin{equation}
+\vn \cdot \overrightarrow{P_0P} = 0.\tag{1.4.4}
+\end{equation}
+</div>
+</div></li>
+</ul></div></article><article class="activity project-like" id="sec-Lines-and-Planes-14"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+</h3>
+<ol class="lower-alpha" id="sec-Lines-and-Planes-14-1-1">
+<li id="sec-Lines-and-Planes-14-1-1-1"><div class="para" id="sec-Lines-and-Planes-14-1-1-1-1">Write a scalar equation of the plane <span class="process-math">\(p_1\)</span> passing through the point <span class="process-math">\((0,
+2, 4)\)</span> and perpendicular to the vector <span class="process-math">\(\vn=\langle 2, -1,
+1\rangle\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-14-1-1-2"><div class="para" id="sec-Lines-and-Planes-14-1-1-2-1">Is the point <span class="process-math">\((2, 0, 2)\)</span> on the plane <span class="process-math">\(p_1\text{?}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-14-1-1-3"><div class="para" id="sec-Lines-and-Planes-14-1-1-3-1">Write a scalar equation of the plane <span class="process-math">\(p_2\)</span> that is parallel to <span class="process-math">\(p_1\)</span> and passing through the point <span class="process-math">\((3, 0, 4)\text{.}\)</span> (Hint: Compare normal vectors of the planes.)</div></li>
+<li id="sec-Lines-and-Planes-14-1-1-4"><div class="para" id="sec-Lines-and-Planes-14-1-1-4-1">Write a parametric description of the line <span class="process-math">\(l\)</span> passing through the point <span class="process-math">\((2,0,2)\)</span> and perpendicular to the plane <span class="process-math">\(p_3\)</span> described by the equation <span class="process-math">\(x+2y-2z = 7\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-14-1-1-5"><div class="para" id="sec-Lines-and-Planes-14-1-1-5-1">Find the point at which <span class="process-math">\(l\)</span> intersects the plane <span class="process-math">\(p_3\text{.}\)</span>
+</div></li>
+</ol></article><article class="activity project-like" id="sec-Lines-and-Planes-15"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Lines-and-Planes-15-1-1">
+<div class="para">Let <span class="process-math">\(P_0 = (1,2,-1)\text{,}\)</span> <span class="process-math">\(P_1 = (1, 0 ,-1)\text{,}\)</span> and <span class="process-math">\(P_2 = (0,1,3)\)</span> and let <span class="process-math">\(p\)</span> be the plane containing <span class="process-math">\(P_0\text{,}\)</span> <span class="process-math">\(P_1\text{,}\)</span> and <span class="process-math">\(P_2\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="sec-Lines-and-Planes-15-1-1-8">
+<li id="sec-Lines-and-Planes-15-1-1-8-1"><div class="para" id="sec-Lines-and-Planes-15-1-1-8-1-1">Determine the components of the vectors <span class="process-math">\(\overrightarrow{P_0P_1}\)</span> and <span class="process-math">\(\overrightarrow{P_0P_2}\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-15-1-1-8-2"><div class="para" id="sec-Lines-and-Planes-15-1-1-8-2-1">Find a normal vector <span class="process-math">\(\vn\)</span> to the plane <span class="process-math">\(p\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-15-1-1-8-3"><div class="para" id="sec-Lines-and-Planes-15-1-1-8-3-1">Find a scalar equation of the plane <span class="process-math">\(p\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-15-1-1-8-4"><div class="para" id="sec-Lines-and-Planes-15-1-1-8-4-1">Consider a second plane, <span class="process-math">\(q\text{,}\)</span> with scalar equation <span class="process-math">\(-3(x-1) + 4(y+3) + 2(z-5)=0\text{.}\)</span>  Find two different points on plane <span class="process-math">\(q\text{,}\)</span> as well as a vector <span class="process-math">\(\vm\)</span> that is normal to <span class="process-math">\(q\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-15-1-1-8-5"><div class="para" id="sec-Lines-and-Planes-15-1-1-8-5-1">The angle between two planes is the acute angle between their respective normal vectors.  What is the angle between planes <span class="process-math">\(p\)</span> and <span class="process-math">\(q\text{?}\)</span>
+</div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Lines-and-Planes-16"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Lines-and-Planes-16-1-1">
+<div class="para">This exercise explores key relationships between a pair of lines. Consider the following two lines: one with parametric equations <span class="process-math">\(x(s) = 4-2s\text{,}\)</span> <span class="process-math">\(y(s) = -2 + s\text{,}\)</span> <span class="process-math">\(z(s) = 1 + 3s\text{,}\)</span> and the other being the line through <span class="process-math">\((-4, 2, 17)\)</span> in the direction <span class="process-math">\(\vv = \langle -2, 1, 5 \rangle\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="sec-Lines-and-Planes-16-1-1-6">
+<li id="sec-Lines-and-Planes-16-1-1-6-1"><div class="para" id="sec-Lines-and-Planes-16-1-1-6-1-1">Find a direction vector for the first line, which is given in parametric form.</div></li>
+<li id="sec-Lines-and-Planes-16-1-1-6-2"><div class="para" id="sec-Lines-and-Planes-16-1-1-6-2-1">Find parametric equations for the second line, written in terms of the parameter <span class="process-math">\(t\text{.}\)</span>
+</div></li>
+<li id="sec-Lines-and-Planes-16-1-1-6-3"><div class="para" id="sec-Lines-and-Planes-16-1-1-6-3-1">Show that the two lines intersect at a single point by finding the values of <span class="process-math">\(s\)</span> and <span class="process-math">\(t\)</span> that result in the same point. Then find the point of intersection.</div></li>
+<li id="sec-Lines-and-Planes-16-1-1-6-4"><div class="para" id="sec-Lines-and-Planes-16-1-1-6-4-1">Find the acute angle formed where the two lines intersect, noting that this angle will be given by the acute angle between their respective direction vectors.</div></li>
+<li id="sec-Lines-and-Planes-16-1-1-6-5"><div class="para" id="sec-Lines-and-Planes-16-1-1-6-5-1">Find an equation for the plane that contains both of the lines described in this problem.</div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Lines-and-Planes-17"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Lines-and-Planes-17-1-1">
+<div class="para">This exercise explores key relationships between a pair of planes. Consider the following two planes: one with scalar equation <span class="process-math">\(4x - 5y + z = -2\text{,}\)</span> and the other which passes through the points <span class="process-math">\((1,1,1)\text{,}\)</span> <span class="process-math">\((0,1,-1)\text{,}\)</span> and <span class="process-math">\((4, 2, -1)\text{.}\)</span>
+</div>
+<ol class="lower-alpha" id="sec-Lines-and-Planes-17-1-1-5">
+<li id="sec-Lines-and-Planes-17-1-1-5-1"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-1-1">Find a vector normal to the first plane.</div></li>
+<li id="sec-Lines-and-Planes-17-1-1-5-2"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-2-1">Find a scalar equation for the second plane.</div></li>
+<li id="sec-Lines-and-Planes-17-1-1-5-3"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-3-1">Find the angle between the planes, where the angle between them is defined by the angle between their respective normal vectors.</div></li>
+<li id="sec-Lines-and-Planes-17-1-1-5-4"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-4-1">Find a point that lies on both planes.</div></li>
+<li id="sec-Lines-and-Planes-17-1-1-5-5"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-5-1">Since these two planes do not have parallel normal vectors, the planes must intersect, and thus must intersect in a line.  Observe that the line of intersection lies in both planes, and thus the direction vector of the line must be perpendicular to each of the respective normal vectors of the two planes.  Find a direction vector for the line of intersection for the two planes.</div></li>
+<li id="sec-Lines-and-Planes-17-1-1-5-6"><div class="para" id="sec-Lines-and-Planes-17-1-1-5-6-1">Determine parametric equations for the line of intersection of the two planes.</div></li>
+</ol>
+</div></article></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="backmatter.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><span class="next-button button disabled"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+<a class="previous-button button" href="sec-Vector-Geometry.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-Curves.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

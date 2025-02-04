@@ -586,29 +586,101 @@ var ptx_lunr_docs = [
   "body": "   Torque is the tendency of a force to produce rotation about an axis of rotation. Let is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let be the vector representing the force. Then, where represents the torque vector.  A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is . Find the magnitude of the torque about the center of the bolt.   "
 },
 {
-  "id": "sec-Lines",
+  "id": "sec-Lines-and-Planes",
   "level": "1",
-  "url": "sec-Lines.html",
+  "url": "sec-Lines-and-Planes.html",
   "type": "Section",
   "number": "1.4",
-  "title": "Lines",
-  "body": " Lines  "
+  "title": "Lines and Planes",
+  "body": " Lines and Planes    A line line in space in space is the set of terminal points of vectors emanating from a given point that are parallel to a fixed vector .      Which of the following is the line through in the direction of ?   .  .  .  .     The fixed vector in the definition is called a direction vector line direction vector for the line. To find an equation for a line through point in the direction of vector , observe that any vector parallel to will have the form for some scalar . So, any vector emanating from the point in a direction parallel to the vector will be of the form for some scalar (where is the origin).   The vector form of a line  The vector form of a line line vector equation through the point in the direction of the vector is where is the position vector from the origin to the point .     Let and . Let be the line in through and .   Find a direction vector for the line .    Find a vector equation of in the form .    Consider the vector equation What is the direction of the line given by ? Is this new line parallel to line ?    Do and represent the same line, ? Explain.       The three components of the vector function give what is called a parameterization of the line . The independent variable is called a a parameter . Each value of the parameter corresponds to a point on the line .   The parametric equations of a line  The parametric equations for a line line parametric equations through the point in the direction of the vector are    Comment about similarity with usual equation of a line.  Another way to think of a line in 2D is as the set of terminal points of vectors emanating from a given point that are orthogonal to a fixed vector . In , the same statement gives a way to describe planes.    A plane plane definition  in space is the set of all terminal points of vectors emanating from a given point perpendicular to a fixed vector , as shown below.     A point on a plane with a normal vector     Equations of a plane     The scalar equation of the plane plane scalar equation with normal vector containing the point is     The vector equation of the plane plane vector equation with normal vector containing the points and is           Write a scalar equation of the plane passing through the point and perpendicular to the vector .    Is the point on the plane ?    Write a scalar equation of the plane that is parallel to and passing through the point . (Hint: Compare normal vectors of the planes.)    Write a parametric description of the line passing through the point and perpendicular to the plane described by the equation .    Find the point at which intersects the plane .        Let , , and and let be the plane containing , , and .   Determine the components of the vectors and .    Find a normal vector to the plane .    Find a scalar equation of the plane .    Consider a second plane, , with scalar equation . Find two different points on plane , as well as a vector that is normal to .    The angle between two planes is the acute angle between their respective normal vectors. What is the angle between planes and ?         This exercise explores key relationships between a pair of lines. Consider the following two lines: one with parametric equations , , , and the other being the line through in the direction .   Find a direction vector for the first line, which is given in parametric form.    Find parametric equations for the second line, written in terms of the parameter .    Show that the two lines intersect at a single point by finding the values of and that result in the same point. Then find the point of intersection.    Find the acute angle formed where the two lines intersect, noting that this angle will be given by the acute angle between their respective direction vectors.    Find an equation for the plane that contains both of the lines described in this problem.         This exercise explores key relationships between a pair of planes. Consider the following two planes: one with scalar equation , and the other which passes through the points , , and .   Find a vector normal to the first plane.    Find a scalar equation for the second plane.    Find the angle between the planes, where the angle between them is defined by the angle between their respective normal vectors.    Find a point that lies on both planes.    Since these two planes do not have parallel normal vectors, the planes must intersect, and thus must intersect in a line. Observe that the line of intersection lies in both planes, and thus the direction vector of the line must be perpendicular to each of the respective normal vectors of the two planes. Find a direction vector for the line of intersection for the two planes.    Determine parametric equations for the line of intersection of the two planes.       "
 },
 {
-  "id": "sec-Planes",
-  "level": "1",
-  "url": "sec-Planes.html",
-  "type": "Section",
-  "number": "1.5",
-  "title": "Planes",
-  "body": " Planes  "
+  "id": "sec-Lines-and-Planes-2",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-2",
+  "type": "Definition",
+  "number": "1.4.1",
+  "title": "",
+  "body": "  A line line in space in space is the set of terminal points of vectors emanating from a given point that are parallel to a fixed vector .   "
+},
+{
+  "id": "sec-Lines-and-Planes-3",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-3",
+  "type": "Activity",
+  "number": "1.4.1",
+  "title": "",
+  "body": "  Which of the following is the line through in the direction of ?   .  .  .  .    "
+},
+{
+  "id": "sec-Lines-and-Planes-6",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-6",
+  "type": "Activity",
+  "number": "1.4.2",
+  "title": "",
+  "body": "  Let and . Let be the line in through and .   Find a direction vector for the line .    Find a vector equation of in the form .    Consider the vector equation What is the direction of the line given by ? Is this new line parallel to line ?    Do and represent the same line, ? Explain.      "
+},
+{
+  "id": "sec-Lines-and-Planes-11",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-11",
+  "type": "Definition",
+  "number": "1.4.2",
+  "title": "",
+  "body": "  A plane plane definition  in space is the set of all terminal points of vectors emanating from a given point perpendicular to a fixed vector , as shown below.   "
+},
+{
+  "id": "sec-Lines-and-Planes-12",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-12",
+  "type": "Figure",
+  "number": "1.4.3",
+  "title": "",
+  "body": " A point on a plane with a normal vector   "
+},
+{
+  "id": "sec-Lines-and-Planes-14",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-14",
+  "type": "Activity",
+  "number": "1.4.3",
+  "title": "",
+  "body": "    Write a scalar equation of the plane passing through the point and perpendicular to the vector .    Is the point on the plane ?    Write a scalar equation of the plane that is parallel to and passing through the point . (Hint: Compare normal vectors of the planes.)    Write a parametric description of the line passing through the point and perpendicular to the plane described by the equation .    Find the point at which intersects the plane .     "
+},
+{
+  "id": "sec-Lines-and-Planes-15",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-15",
+  "type": "Activity",
+  "number": "1.4.4",
+  "title": "",
+  "body": "  Let , , and and let be the plane containing , , and .   Determine the components of the vectors and .    Find a normal vector to the plane .    Find a scalar equation of the plane .    Consider a second plane, , with scalar equation . Find two different points on plane , as well as a vector that is normal to .    The angle between two planes is the acute angle between their respective normal vectors. What is the angle between planes and ?      "
+},
+{
+  "id": "sec-Lines-and-Planes-16",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-16",
+  "type": "Activity",
+  "number": "1.4.5",
+  "title": "",
+  "body": "  This exercise explores key relationships between a pair of lines. Consider the following two lines: one with parametric equations , , , and the other being the line through in the direction .   Find a direction vector for the first line, which is given in parametric form.    Find parametric equations for the second line, written in terms of the parameter .    Show that the two lines intersect at a single point by finding the values of and that result in the same point. Then find the point of intersection.    Find the acute angle formed where the two lines intersect, noting that this angle will be given by the acute angle between their respective direction vectors.    Find an equation for the plane that contains both of the lines described in this problem.      "
+},
+{
+  "id": "sec-Lines-and-Planes-17",
+  "level": "2",
+  "url": "sec-Lines-and-Planes.html#sec-Lines-and-Planes-17",
+  "type": "Activity",
+  "number": "1.4.6",
+  "title": "",
+  "body": "  This exercise explores key relationships between a pair of planes. Consider the following two planes: one with scalar equation , and the other which passes through the points , , and .   Find a vector normal to the first plane.    Find a scalar equation for the second plane.    Find the angle between the planes, where the angle between them is defined by the angle between their respective normal vectors.    Find a point that lies on both planes.    Since these two planes do not have parallel normal vectors, the planes must intersect, and thus must intersect in a line. Observe that the line of intersection lies in both planes, and thus the direction vector of the line must be perpendicular to each of the respective normal vectors of the two planes. Find a direction vector for the line of intersection for the two planes.    Determine parametric equations for the line of intersection of the two planes.      "
 },
 {
   "id": "sec-Curves",
   "level": "1",
   "url": "sec-Curves.html",
   "type": "Section",
-  "number": "1.6",
+  "number": "1.5",
   "title": "Curves",
   "body": " Curves    A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .      Which of the following vector-valued functions has this graph?                               Which is the graph of the vector-valued function                                     Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?      Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .      A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.      Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .      The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .        The derivative of a vector-valued function  If , then for those values of at which , , and are differentiable.     Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?      For each of the following vector-valued functions, find .    .     .     .     .        Properties of derivatives of vector-valued functions  Let be a differentiable real-valued function of a real variable and let and be differentiable vector-valued functions of the real variable . Then                        .        Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is     Given a differentiable vector-valued function , the tangent line to the curve at the input value is given by Note how analogous the formula for is to the tangent line approximation from single-variable calculus: in that context, for a given function at a value , we found that the tangent line can be expressed by the linear function whose formula is     Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .    "
 },
@@ -617,7 +689,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-2",
   "type": "Definition",
-  "number": "1.6.1",
+  "number": "1.5.1",
   "title": "",
   "body": "  A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .   "
 },
@@ -626,7 +698,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-3",
   "type": "Activity",
-  "number": "1.6.1",
+  "number": "1.5.1",
   "title": "",
   "body": "  Which of the following vector-valued functions has this graph?                            "
 },
@@ -635,7 +707,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-4",
   "type": "Activity",
-  "number": "1.6.2",
+  "number": "1.5.2",
   "title": "",
   "body": "  Which is the graph of the vector-valued function                                  "
 },
@@ -644,7 +716,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-5",
   "type": "Activity",
-  "number": "1.6.3",
+  "number": "1.5.3",
   "title": "",
   "body": "  Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?   "
 },
@@ -653,7 +725,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-6",
   "type": "Activity",
-  "number": "1.6.4",
+  "number": "1.5.4",
   "title": "",
   "body": "  Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .   "
 },
@@ -662,7 +734,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-7",
   "type": "Activity",
-  "number": "1.6.5",
+  "number": "1.5.5",
   "title": "",
   "body": "  A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.   "
 },
@@ -671,7 +743,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-8",
   "type": "Activity",
-  "number": "1.6.6",
+  "number": "1.5.6",
   "title": "",
   "body": "  Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .   "
 },
@@ -680,7 +752,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-9",
   "type": "Definition",
-  "number": "1.6.2",
+  "number": "1.5.2",
   "title": "",
   "body": "  The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .   "
 },
@@ -689,7 +761,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-12",
   "type": "Activity",
-  "number": "1.6.7",
+  "number": "1.5.7",
   "title": "",
   "body": "  Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?   "
 },
@@ -698,7 +770,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-13",
   "type": "Activity",
-  "number": "1.6.8",
+  "number": "1.5.8",
   "title": "",
   "body": "  For each of the following vector-valued functions, find .    .     .     .     .      "
 },
@@ -707,7 +779,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-15",
   "type": "Activity",
-  "number": "1.6.9",
+  "number": "1.5.9",
   "title": "",
   "body": "  Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is    "
 },
@@ -716,7 +788,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-17",
   "type": "Activity",
-  "number": "1.6.10",
+  "number": "1.5.10",
   "title": "",
   "body": "  Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .   "
 },
