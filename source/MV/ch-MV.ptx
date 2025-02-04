@@ -11,8 +11,7 @@
   <xi:include href="sec-Functions-Of-Several-Vars-and-3D-Space.ptx" />
   <xi:include href="sec-Vectors.ptx" />
   <xi:include href="sec-Vector-Geometry.ptx" />
-  <xi:include href="sec-Lines.ptx" />
-  <xi:include href="sec-Planes.ptx" />
+  <xi:include href="sec-Lines-and-Planes.ptx" />
   <xi:include href="sec-Curves.ptx" />
 
 </chapter>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-Lines" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Lines</title>
+<section xml:id="sec-Lines-and-Planes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Lines and Planes</title>
 
     <definition>
       <statement>
@@ -121,15 +121,120 @@
           A
           <term>plane</term><idx><h>plane</h><h>definition</h></idx> <m>p</m> in space is the set of
           all terminal points of vectors emanating from a given point
-          <m>P_0</m> perpendicular to a fixed vector <m>\vn</m>, as shown in <xref ref="F_9_5_plane_normal">Figure</xref>.
+          <m>P_0</m> perpendicular to a fixed vector <m>\vn</m>, as shown below.
         </p>
       </statement>
     </definition>
 
-    <figure xml:id="F_9_5_plane_normal">
+    <figure>
       <caption>A point <m>P_0</m> on a plane <m>p</m> with a normal vector <m>\vn</m></caption>
       <image width="73%" source="images/fig_9_5_plane_normal"/>
     </figure>
+
+    <assemblage xml:id="Plane-scalar-equation">
+      <title>Equations of a plane</title>
+      <p>
+      <ul>
+        <li>
+          <p>
+            The <em>scalar equation</em> of the plane<idx><h>plane</h><h>scalar equation</h></idx> with normal vector <m>\vn =\langle a,b,c \rangle</m> containing the point <m>P_0 = (x_0, y_0,z_0)</m> is
+            <men xml:id="eq_9_5_plane_norm">
+              a(x-x_0) + b(y-y_0) + c(z-z_0) = 0.
+            </men>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The <em>vector equation</em> of the plane<idx><h>plane</h><h>vector equation</h></idx> with normal vector <m>\vn =\langle a,b,c \rangle</m> containing the points <m>P_0 = (x_0, y_0,z_0)</m> and <m>P = (x,y,z)</m> is
+            <men xml:id="eq_9_5_plane_norm_vector">
+              \vn \cdot \overrightarrow{P_0P} = 0.
+            </men>
+          </p>
+        </li>
+      </ul>
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <ol marker="a.">
+          <li>
+            <p>
+              Write a scalar equation of the plane <m>p_1</m> passing through the point <m>(0,
+                2, 4)</m> and perpendicular to the vector <m>\vn=\langle 2, -1,
+                1\rangle</m>.
+           </p>
+          </li>
+
+          <li>
+            <p>
+              Is the point <m>(2, 0, 2)</m> on the plane <m>p_1</m>?
+            </p>
+         </li>
+
+          <li>
+            <p>
+              Write a scalar equation of the plane <m>p_2</m> that is parallel to <m>p_1</m>
+                and passing through the point <m>(3, 0, 4)</m>. (Hint: Compare normal vectors of the planes.)
+            </p>
+         </li>
+
+         <li>
+            <p>
+              Write a parametric description of the line <m>l</m> passing through the
+                point <m>(2,0,2)</m> and perpendicular to the plane <m>p_3</m> described by the
+                equation <m>x+2y-2z = 7</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find the point at which <m>l</m> intersects the plane <m>p_3</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Let <m>P_0 = (1,2,-1)</m>, <m>P_1 = (1, 0 ,-1)</m>, and <m>P_2 = (0,1,3)</m> and let <m>p</m> be the plane containing <m>P_0</m>, <m>P_1</m>, and <m>P_2</m>.
+          <ol marker="a.">
+            <li>
+              <p>
+                Determine the components of the vectors <m>\overrightarrow{P_0P_1}</m> and <m>\overrightarrow{P_0P_2}</m>.
+              </p>
+           </li>
+
+           <li>
+              <p>
+                Find a normal vector <m>\vn</m> to the plane <m>p</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find a scalar equation of the plane <m>p</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Consider a second plane, <m>q</m>, with scalar equation <m>-3(x-1) + 4(y+3) + 2(z-5)=0</m>.  Find two different points on plane <m>q</m>, as well as a vector <m>\vm</m> that is normal to <m>q</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                The angle between two planes is the acute angle between their respective normal vectors.  What is the angle between planes <m>p</m> and <m>q</m>?
+              </p>
+            </li>
+          </ol>
+       </p>
+      </statement>
+    </activity>
 
 
 
