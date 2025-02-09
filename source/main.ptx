@@ -14,6 +14,7 @@
     <!-- Include chapters -->
     <!-- <xi:include href="./ch-chapter-title.ptx" /> -->
     <xi:include href="./MV/ch-MV.ptx" />
+    <xi:include href="./PD/ch-PD.ptx" />
 
 
     <!-- Include backmatter -->

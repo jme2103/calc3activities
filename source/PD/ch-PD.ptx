@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-PD" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Partial Derivatives</title>
+
+  <introduction>
+    <p>Activities for exploring partial derivatives and their applications.</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-PD-Partial-Derivs.ptx" />
+  <xi:include href="sec-PD-Tangent-Planes.ptx" />
+  <xi:include href="sec-PD-Chain-Rule.ptx" />
+  <xi:include href="sec-PD-Directional-Derivs-and-Grad.ptx" />
+  <xi:include href="sec-PD-Optimization.ptx" />
+  <!-- last section should include critical points, optimization, constratined optimization-->
+
+</chapter>
