@@ -37,6 +37,7 @@
     \newcommand{\vL}{\mathbf{L}}
     \newcommand{\vn}{\mathbf{n}}
     \newcommand{\vm}{\mathbf{m}}
+    \newcommand{\vT}{\mathbf{T}}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

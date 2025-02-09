@@ -27,13 +27,19 @@
           A curve together with a parameterization is called a <term>parametrized curve</term>.
         </p>
 
+        <p>
+          If <m>\mathcal{C}</m> is the graph of a vector-valued function <m>\vr(t)</m>, then we
+          say that <m>\vr(t)</m> is a <term>parameterization</term> of <m>\mathcal{C}</m>.
+        </p>
+
       </statement>
     </definition>
 
     <activity>
       <statement>
         <p>
-          Which of the following vector-valued functions has this graph? 
+          Which of the following vector-valued functions is a parameterization of the curve <m>\mathcal{C}</m>
+          shown below?
           <image width = "50%">
               <latex-image>
                   <xi:include href="./tikz/graph-of-curve.tex" parse="text" />
@@ -68,14 +74,60 @@
     <activity>
       <statement>
         <p>
-          Which is the graph of the vector-valued function <me>\vr(t) = \lrangle{ 2 + 3\cos(t-\pi), 2 + 3\sin(t-\pi)}</me>
+          Which of the following vector-valued function is not a parameterization
+          of the line <m>\mathcal{L}</m> shown below?
+          <image width = "50%">
+          <latex-image>
+              <xi:include href="./tikz/line-param.tex" parse="text" />
+          </latex-image>
+          </image>
+        </p>
+        <ol marker="A." cols="2">
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{-2 + 3t, -1 + 2t}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{1 + 3t, 1 + 2t}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{1 - 3t, 1 - 2t}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{1 + 6t, 1 + 4t}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{-2 + 3t^3, -1 + 2t^3}</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\vr(t) = \lrangle{-2 + \cos(t), -1 + \sin(t)}</m>
+              </p>
+            </li>
+          </ol>
+        </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Which is the graph of the vector-valued function <me>\vr(t) = \lrangle{ -1 + \cos(t), \sin(t)}</me>
         </p>
         <ol marker="A." cols="2">
             <li>
               <p>
                 <image width = "75%">
                 <latex-image>
-                    <xi:include href="./tikz/graph-of-line-segment1.tex" parse="text" />
+                    <xi:include href="./tikz/circ-param-a.tex" parse="text" />
                 </latex-image>
                 </image>
               </p>
@@ -84,7 +136,7 @@
               <p>
                 <image width = "75%">
                 <latex-image>
-                    <xi:include href="./tikz/graph-of-line-segment2.tex" parse="text" />
+                    <xi:include href="./tikz/circ-param-b.tex" parse="text" />
                 </latex-image>
                 </image>
               </p>
@@ -93,7 +145,7 @@
               <p>
                 <image width = "75%">
                 <latex-image>
-                    <xi:include href="./tikz/graph-of-line-segment3.tex" parse="text" />
+                    <xi:include href="./tikz/circ-param-c.tex" parse="text" />
                 </latex-image>
                 </image>
               </p>
@@ -102,7 +154,7 @@
               <p>
                 <image width = "75%">
                 <latex-image>
-                    <xi:include href="./tikz/graph-of-line-segment4.tex" parse="text" />
+                    <xi:include href="./tikz/circ-param-d.tex" parse="text" />
                 </latex-image>
                 </image>
               </p>
@@ -476,6 +528,17 @@
       </task>
     </activity>
 
+    <assemblage>
+      <title><m>\vr'(t)</m> is the direction of the tangent line</title>
+    <p>
+      If <m>\vr(t)</m> is a vector-valued function that parameterizes a curve, then
+      <m>\vr'(t)</m> is a tangent vector to the curve at the point <m>\vr(t)</m>.
+      In terms of motion, if <m>\vr(t)</m> is the position vector of a moving object
+      then <m>\vv(t) = \vr'(t)</m> is the object's velocity vector and <m>\va(t) = \vr''(t)</m> 
+      is the object's acceleration vector.
+    </p>
+    </assemblage>
+
     <p>
       Given a differentiable vector-valued function <m>\vr</m>, the tangent
       line to the curve at the input value <m>a</m> is given by
@@ -522,6 +585,473 @@
           </p>
         </statement>
       </task>
+    </activity>
+
+    <assemblage xml:id="Length-of-a-curve">
+      <title>The length of a curve</title>
+    <p>
+      If <m>\vr(t)</m> defines a smooth curve <m>C</m> on an interval <m>[a,b]</m>, then the <em>length</em><idx><h>arclength</h></idx> <m>L</m> of <m>C</m> is given by
+      <men xml:id="eq_9_8_arclength_2">
+        L = \int_a^b |\vr'(t)| \, dt.
+      </men>
+    </p>
+    </assemblage>
+
+    <activity xml:id="A_9_8_1">
+      <statement> 
+      <p>
+        Here we calculate the arc length of two familiar curves.
+        <ol marker="a.">
+          <li>
+            <p>
+              Use Equation<nbsp/><xref ref="eq_9_8_arclength_2"/> to calculate the circumference of a circle of radius <m>r</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find the exact length of the spiral defined by <m>\vr(t) = \langle \cos(t), \sin(t), t \rangle</m> on the interval <m>[0,2\pi]</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              We can parameterize a circle of radius <m>r</m> centered at the origin by
+              <m>\vr(t) = \langle \cos(t), \sin(t) \rangle</m> for <m>t</m> in the interval <m>[0, 2\pi]</m>.
+              The circumference of this circle is the length of curve defined by <m>r</m>, or
+              <me>
+                \int_0^{2\pi} \lvert \vr'(t) \rvert \, dt = \int_0^{2\pi} \sqrt{(-r\sin(t))^2 + (r\cos(t))^2} \, dt = \int_0^{2\pi} r \, dt = 2 \pi r
+              </me>
+              as expected.
+            </p>
+          </li>
+          <li>
+            <p>
+              The length of curve defined by <m>r</m> on the interval <m>[0,2 \pi]</m> is
+              <me>
+                \int_0^{2\pi} \lvert \vr'(t) \rvert \, dt = \int_0^{2\pi} \sqrt{(-\sin(t))^2 + (\cos(t))^2 + 1^2} \, dt = \int_0^{2\pi} \sqrt{2} \, dt = 2 \pi \sqrt{2}
+              </me>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+
+    <p>
+      We can adapt the arc length formula to curves in 2-space that define
+      <m>y</m> as a function of <m>x</m> as the following activity shows.
+    </p>
+
+    <activity xml:id="A_9_8_3">
+      <statement> 
+      <p>
+        Let <m>y = f(x)</m> define a smooth curve in 2-space. Parameterize this curve and use Equation<nbsp/><xref ref="eq_9_8_arclength_2"/> to show that the length of the curve defined by <m>f</m> on an interval <m>[a,b]</m> is
+        <me>
+          \int_a^b \sqrt{1+[f'(t)]^2} \, dt.
+        </me>
+      </p>
+      </statement>
+      <solution>
+        <p>
+          We can parameterize <m>y=f(x)</m> on <m>[a,b]</m> by
+          <m>\vr(t) = \langle t, f(t) \rangle</m> for <m>t</m> in <m>[a,b]</m>.
+          Then the length of the curve defined by <m>y=f(x)</m> on <m>[a,b]</m> is
+          <me>
+            \int_a^b \lvert \vr'(t) \rvert \, dt =  \int_a^b \lvert \langle 1, f'(t) \rvert \, dt = \int_a^b \sqrt{1+[f'(t)]^2} \, dt
+          </me>.
+        </p>
+      </solution>
+    </activity>
+
+    <example xml:id="ex_9_8_circle_arc_length">
+        <p>
+          Consider a circle of
+          radius <m>5</m> in 2-space centered at the origin. We know that we can
+          parameterize this circle as
+          <me>
+            \vr(t) = \langle 5\cos(t), 5\sin(t) \rangle,
+          </me>
+          where <m>t</m> runs from 0 to <m>2\pi</m>.
+          We see that <m>\vr'(t) = \langle -5\sin(t), 5\cos(t) \rangle</m>, and hence
+          <m>|\vr'(t)| = 5</m>. It then follows that
+          <me>
+            s=L(t) = \int_0^t |\vr'(w)|~dw = \int_0^t 5~dw = 5t.
+          </me>
+        </p>
+
+        <p>
+          Since <m>s=L(t) = 5t</m>, we may solve for <m>t</m> in terms of <m>s</m> to obtain
+          <m>t(s)=L^{-1}(s) 
+            = s/5</m>. We then find the arc length parametrization by composing
+          <me>
+            \vr(t(s))=\vr(L^{-1}(s)) = \left\langle 5\cos\left(\frac s5\right),
+              5\sin\left(\frac s5\right)\right\rangle.
+          </me>
+        </p>
+
+        <p>
+          More generally, for a circle of radius <m>a</m> centered at the origin, a
+          similar computation shows that
+          <men xml:id="eq_9_8_circle_arc_length_parameterization">
+            \left\langle a\cos\left(\frac sa\right), a\sin\left(\frac sa\right)\right\rangle
+          </men>
+          is an arc length parametrization.
+        </p>
+    </example>
+
+    <activity xml:id="A_9_8_4">
+      <statement> 
+      <p>
+        In this activity we parameterize a
+        line in 2-space in terms of arc length. Consider the line with
+        parametric equations
+        <me>
+          x(t) = x_0+at \ \ \ \ \text{ and }  \ \ \ \ y(t) = y_0+bt.
+        </me>
+        <ol marker="a.">
+          <li>
+            <p>
+              To write <m>t</m> in terms of <m>s</m>, evaluate the integral
+              <me>
+                s=L(t) = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw
+              </me>
+              to determine the length of the line from time 0 to time <m>t</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use the formula from (a) for <m>s</m> in terms of <m>t</m> to write <m>t</m>
+                  in terms of <m>s</m>. Then explain why a parameterization of the line
+                  in terms of arc length is
+              <men xml:id="eq_9_8_line_arc_length_parameterization">
+                x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s.
+              </men>
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              The length of the line from time 0 to time <m>t</m> is
+              <md>
+                <mrow>s(t) \amp = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw</mrow>
+                <mrow>\amp = \int_0^t \sqrt{a^2+b^2} \, dw</mrow>
+                <mrow>\amp = \sqrt{a^2+b^2}t</mrow>
+              </md>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We have <m>t = \frac{s}{\sqrt{a^2+b^2}}</m>,
+              and so a parameterization for the line in terms of arc length is
+              <me>
+                x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s
+              </me>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>\mathcal{C}</m> be the curve parameterized by
+          <me>
+            \vr(t) = \left\langle t^2, \frac{8}{3}t^{3/2}, 4t \right\rangle
+          </me>
+          for <m>t \geq 0</m>. We will parameterize <m>\mathcal{C}</m> in terms of arc length.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find the arc length function <m>s(t)</m> for this parameterization of <m>\mathcal{C}</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find an arc length parameterization for <m>\mathcal{C}</m>.
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <example xml:id="ex_9_8_AL_curvature_ex_2">
+      <statement>
+        <p>
+          Let us parameterize the curve defined by
+          <me>
+            \vr(t) = \left\langle t^2, \frac{8}{3}t^{3/2}, 4t \right\rangle
+          </me>
+          for <m>t \geq 0</m> in terms of arc length. To write <m>t</m> in terms of <m>s</m> we find <m>s</m> in terms of <m>t</m>:
+          <md>
+            <mrow>s(t) \amp = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2 +(z'(w))^2} \, dw</mrow>
+            <mrow>\amp = \int_0^t \sqrt{(2w)^2 + (4w^{1/2})^2 + (4)^2} \, dw</mrow>
+            <mrow>\amp = \int_0^t \sqrt{4w^2 + 16w + 16} \, dw</mrow>
+            <mrow>\amp = 2\int_0^t \sqrt{(w+2)^2} \, dw</mrow>
+            <mrow>\amp = 2\int_0^t w+2 \, dw</mrow>
+            <mrow>\amp = \left(w^2+4w\right)\biggm|_{0}^{t}</mrow>
+            <mrow>\amp = t^2+4t.</mrow>
+          </md>
+        </p>
+
+        <p>
+          Since <m>t \geq 0</m>, we can solve the equation <m>s = t^2+4t</m> (or <m>t^2+4t-s=0</m>) for <m>t</m> to obtain <m>t = \frac{-4 +\sqrt{16+4s}}{2} = -2 + \sqrt{4+s}</m>. So we can parameterize our curve in terms of arc length by
+          <me>
+            \vr(s) = \left\langle \left(-2 + \sqrt{4+s}\right)^2, \frac{8}{3}\left(-2 + \sqrt{4+s}\right)^{3/2}, 4\left(-2 + \sqrt{4+s}\right) \right\rangle.
+          </me>
+        </p>
+      </statement>
+    </example>
+
+    <assemblage>
+      <title>Arc Length Parameterizations Usually Exist</title>
+    <p>
+      If <m>\vr(t)</m> defines a smooth curve <m>\mathcal{C}</m> on an interval <m>[a,b]</m> such that <m>|\vr'(t)| \neq 0</m> on the
+      interval <m>[a,b]</m>, then there exists an arc length parameterization <m>\vr(s)</m> of <m>\mathcal{C}</m>.
+    </p>
+    </assemblage>
+
+    <definition>
+      <statement>
+        <p>
+          For a curve with parameterization <m>\vr(t)</m>, the <term>unit tangent vector</term> is
+          <me>
+            \vT(t) = \frac{\vr'(t)}{|\vr'(t)|}.
+          </me>
+          Note that if <m>\vr(s)</m> is the corresponding arc length parameterization, then
+          <me>
+            \vr'(s) = \vT(s).
+          </me>          
+        </p>
+      </statement>
+    </definition>
+
+    <activity>
+      Which of the labelled points on the curve below has the greatest curvature?
+    </activity>
+
+    <definition>
+      <statement>
+        <p>
+          If <m>C</m> is a smooth space curve and
+          <m>s</m> is an arc length parameter for <m>C</m>, then the <term>curvature</term><idx><h>curvature</h></idx>, <m>\kappa</m>, of <m>C</m> is
+          <me>
+            \kappa = \kappa(s) = \left\lvert \frac{d \vT}{ds} \right\rvert.
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="A_9_8_5">
+      <statement>
+    <ol marker="a.">
+      <li>
+      <p>
+          We should expect that the curvature of a line is 0
+          everywhere. To show that our definition of curvature measures this
+          correctly in 2-space, recall that
+          <xref ref="eq_9_8_line_arc_length_parameterization"/> gives us the arc
+          length parameterization
+          <me>
+            x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \
+              y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s
+          </me>
+          of a line. Use this information to explain why the curvature of a line is 0 everywhere. 
+        </p>
+
+      </li>
+
+      <li>
+      <p>
+        Recall that an arc length
+        parameterization of a circle in 2-space of radius <m>a</m> centered at
+        the origin is, from
+        <xref ref="eq_9_8_circle_arc_length_parameterization"/>,
+        <me>
+          \vr(s) = \left\langle a \cos\left(\frac{s}{a}\right),~
+              a \sin\left(\frac{s}{a}\right)\right\rangle.
+        </me>
+      </p>
+
+      <p>
+        Show that the curvature
+        of this circle is the constant <m>\frac{1}{a}</m>. What can you say about the relationship between the size of the radius of a circle and the value of its curvature? Why does this make sense?
+      </p>
+      </li>
+     </ol> 
+      </statement>
+      <solution>
+        <p>
+          We have
+          <me>
+            \vT(s) = \left\langle -\sin\left(\frac{s}{a}\right), \cos\left(\frac{s}{a}\right) \right\rangle
+          </me>.
+        </p>
+        <p>
+          So the curvature of a circle of radius <m>a</m> is
+          <md>
+            <mrow>\kappa \amp = \left\lvert \frac{d \vT}{ds} \right\rvert</mrow>
+            <mrow>\amp = \left\lvert \left\langle -\frac{1}{a}\cos\left(\frac{s}{a}\right), -\frac{1}{a}\sin\left(\frac{s}{a}\right) \right\rangle \right\rvert</mrow>
+            <mrow>\amp = \frac{1}{a}</mrow>
+          </md>.
+        </p>
+        <p>
+          So, as expected, larger circles have smaller curvature.
+        </p>
+      </solution>
+      
+    </activity>
+
+    <p>
+      The definition of curvature relies on our
+      ability to parameterize curves in terms of arc length. Since we have
+      seen that finding an arc length parametrization can be difficult, we
+      would like to be able to express the curvature in terms of a more
+      general parametrization <m>\vr(t)</m>.
+    </p>
+
+    <p>
+      To begin, we need to describe the vector <m>\vT</m>, which is
+      a vector tangent to the curve having unit length. Of course, the
+      velocity vector <m>\vr'(t)</m> is tangent to the curve; we simply need to
+      normalize its length to be one. This means that we may take
+      <men xml:id="eq_9_8_unit_tangent">
+        \vT(t) = \frac{\vr'(t)}{|\vr'(t)|}.
+      </men>
+    </p>
+
+    <p>
+      Then the curvature of the curve defined by <m>\vr</m> is
+      <md>
+        <mrow>\kappa \amp = \left\lvert \frac{d \vT}{ds} \right\rvert</mrow>
+        <mrow>\amp = \left\lvert \frac{d \vT}{dt} \frac{dt}{ds} \right\rvert</mrow>
+        <mrow>\amp = \frac{\left\lvert \frac{d \vT}{dt} \right\rvert}{ \left\lvert \frac{ds}{dt} \right\rvert }</mrow>
+        <mrow>\amp = \frac{\left\lvert \vT'(t) \right\rvert}{ \left\lvert \vr'(t) \right\rvert}.</mrow>
+      </md>
+    </p>
+
+    <p>
+      This last formula allows us to use any parameterization of a curve to
+      calculate its curvature. There is another useful formula, given
+      below, whose derivation is left for the exercises.
+    </p>
+
+    <assemblage xml:id="Curvature">
+      <title>Formulas for curvature</title>
+    <p>
+      If <m>\vr</m> is a vector-valued function defining a
+      smooth space curve <m>C</m>, and if <m>\vr'(t)</m> is not
+      zero and if <m>\vr''(t)</m> exists, then the curvature <m>\kappa</m> of <m>C</m>
+      satisfies
+      <ul>
+        <li>
+          <p>
+            <m>\kappa = \kappa(t) = \frac{\left\lvert \vT'(t) \right\rvert}{ \left\lvert \vr'(t) \right\rvert}</m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m>\kappa = \frac{\lvert \vr'(t) \times \vr''(t) \rvert}{\lvert \vr'(t) \rvert^3}</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+    </assemblage>
+
+    
+
+    <activity xml:id="A_9_8_6">
+      <statement>
+      <p>
+        Use one of the two formulas for <m>\kappa</m> in terms of <m>t</m> to help you answer the following questions.
+        <ol marker="a.">
+          <li>
+            <p>
+              The ellipse <m>\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1</m> has parameterization
+              <me>
+                \vr(t) = \langle a\cos(t), b\sin(t) \rangle.
+              </me>
+              Find the curvature of the ellipse. Assuming <m>0 \lt  b \lt  a</m>, at what points is the curvature the greatest and at what points is the curvature the smallest? Does this agree with your intuition?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The standard helix has parameterization <m>\vr(t) = \cos(t) \vi + \sin(t) \vj + t \vk</m>.  Find the curvature of the helix.  Does the result agree with your intuition?
+            </p>
+          </li>
+        </ol>
+      </p>
+      </statement>
+      <solution>
+        <ol>
+          <li>
+            <p>
+              We have
+              <me>
+                \vT(t) = \left\langle -\frac{a\sin(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}}, \frac{b\cos(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}} \right\rangle
+              </me>
+              and
+              <me>
+                \vT'(t) = \left\langle -\frac{ab^2\cos(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}, -\frac{a^2b\sin(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}} \right\rangle
+              </me>.
+              So the curvature of the ellipse is given by
+              <md>
+                <mrow>\kappa(t) \amp = \frac{1}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{(ab^2\cos(t))^2 +(a^2b\sin(t))^2}</mrow>
+                <mrow>\amp = \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{b^2\cos^(t) + a^2\sin^2(t)}</mrow>
+                <mrow>\amp = \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}</mrow>
+              </md>.
+              If we assume that <m>0 \lt  b \lt  a</m>,
+              then we should expect that ellipse to have the largest curvature at the points
+              <m>(\pm a, 0)</m> and the smallest at the points <m>(0, \pm b)</m>
+              (when <m>t = \frac{\pi}{2} + \pi k</m> for some integer <m>k</m>).
+              The denominator of our curvature function can be written as
+              <me>
+                a^2(1-\cos^2(t)) + b^2 \cos^2(t) = a^2 - (a^2-b^2)\cos^2(t)
+              </me>.
+              The curvature of the ellipse is largest when this denominator is smallest,
+              or when <m>t = 0</m> or <m>t=\pi</m>.
+              These <m>t</m> values correspond to the points <m>(\pm a, 0)</m>.
+              Similarly, the curvature of the ellipse is smallest when the denominator is largest,
+              or when <m>t = \frac{\pi}{2}</m> and <m>t = \frac{3\pi}{2}</m>.
+              These <m>t</m> values correspond to the points <m>(0, \pm b)</m> as expected.
+            </p>
+          </li>
+          <li>
+            <p>
+              Here we have
+              <me>
+                \vr'(t) = (-\sin(t)) \vi + \cos(t) \vj + \vk
+              </me>
+              and
+              <me>
+                \vT(t) = \frac{1}{\sqrt{2}}\left( (-\sin(t)) \vi + \cos(t) \vj + \vk \right)
+              </me>.
+              Then
+              <me>
+                \vT'(t) = \frac{1}{\sqrt{2}}\left( (-\cos(t)) \vi - \sin(t) \vj \right)
+              </me>
+              and so
+              <me>
+                \kappa(t) = \frac{1}{2}
+              </me>.
+            </p>
+          </li>
+        </ol>
+      </solution>
     </activity>
 
 </section>
