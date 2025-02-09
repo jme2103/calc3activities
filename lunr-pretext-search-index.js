@@ -682,7 +682,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Curves",
-  "body": " Curves    A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .      Which of the following vector-valued functions has this graph?                               Which is the graph of the vector-valued function                                     Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?      Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .      A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.      Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .      The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .        The derivative of a vector-valued function  If , then for those values of at which , , and are differentiable.     Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?      For each of the following vector-valued functions, find .    .     .     .     .        Properties of derivatives of vector-valued functions  Let be a differentiable real-valued function of a real variable and let and be differentiable vector-valued functions of the real variable . Then                        .        Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is     Given a differentiable vector-valued function , the tangent line to the curve at the input value is given by Note how analogous the formula for is to the tangent line approximation from single-variable calculus: in that context, for a given function at a value , we found that the tangent line can be expressed by the linear function whose formula is     Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .    "
+  "body": " Curves    A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .  If is the graph of a vector-valued function , then we say that is a parameterization of .      Which of the following vector-valued functions is a parameterization of the curve shown below?                               Which of the following vector-valued function is not a parameterization of the line shown below?                                         Which is the graph of the vector-valued function                                     Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?      Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .      A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.      Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .      The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .        The derivative of a vector-valued function  If , then for those values of at which , , and are differentiable.     Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?      For each of the following vector-valued functions, find .    .     .     .     .        Properties of derivatives of vector-valued functions  Let be a differentiable real-valued function of a real variable and let and be differentiable vector-valued functions of the real variable . Then                        .        Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is      is the direction of the tangent line  If is a vector-valued function that parameterizes a curve, then is a tangent vector to the curve at the point . In terms of motion, if is the position vector of a moving object then is the object's velocity vector and is the object's acceleration vector.   Given a differentiable vector-valued function , the tangent line to the curve at the input value is given by Note how analogous the formula for is to the tangent line approximation from single-variable calculus: in that context, for a given function at a value , we found that the tangent line can be expressed by the linear function whose formula is     Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .     The length of a curve  If defines a smooth curve on an interval , then the length arclength  of is given by      Here we calculate the arc length of two familiar curves.   Use Equation to calculate the circumference of a circle of radius .    Find the exact length of the spiral defined by on the interval .         We can parameterize a circle of radius centered at the origin by for in the interval . The circumference of this circle is the length of curve defined by , or as expected.    The length of curve defined by on the interval is .      We can adapt the arc length formula to curves in 2-space that define as a function of as the following activity shows.    Let define a smooth curve in 2-space. Parameterize this curve and use Equation to show that the length of the curve defined by on an interval is     We can parameterize on by for in . Then the length of the curve defined by on is .     Consider a circle of radius in 2-space centered at the origin. We know that we can parameterize this circle as where runs from 0 to . We see that , and hence . It then follows that   Since , we may solve for in terms of to obtain . We then find the arc length parametrization by composing   More generally, for a circle of radius centered at the origin, a similar computation shows that is an arc length parametrization.     In this activity we parameterize a line in 2-space in terms of arc length. Consider the line with parametric equations    To write in terms of , evaluate the integral to determine the length of the line from time 0 to time .    Use the formula from (a) for in terms of to write in terms of . Then explain why a parameterization of the line in terms of arc length is          The length of the line from time 0 to time is .    We have , and so a parameterization for the line in terms of arc length is .        Let be the curve parameterized by for . We will parameterize in terms of arc length.    Find the arc length function for this parameterization of .    Find an arc length parameterization for .      Let us parameterize the curve defined by for in terms of arc length. To write in terms of we find in terms of :   Since , we can solve the equation (or ) for to obtain . So we can parameterize our curve in terms of arc length by      Arc Length Parameterizations Usually Exist  If defines a smooth curve on an interval such that on the interval , then there exists an arc length parameterization of .     For a curve with parameterization , the unit tangent vector is Note that if is the corresponding arc length parameterization, then     Which of the labelled points on the curve below has the greatest curvature?    If is a smooth space curve and is an arc length parameter for , then the curvature curvature , , of is         We should expect that the curvature of a line is 0 everywhere. To show that our definition of curvature measures this correctly in 2-space, recall that gives us the arc length parameterization of a line. Use this information to explain why the curvature of a line is 0 everywhere.    Recall that an arc length parameterization of a circle in 2-space of radius centered at the origin is, from ,   Show that the curvature of this circle is the constant . What can you say about the relationship between the size of the radius of a circle and the value of its curvature? Why does this make sense?      We have .  So the curvature of a circle of radius is .  So, as expected, larger circles have smaller curvature.    The definition of curvature relies on our ability to parameterize curves in terms of arc length. Since we have seen that finding an arc length parametrization can be difficult, we would like to be able to express the curvature in terms of a more general parametrization .  To begin, we need to describe the vector , which is a vector tangent to the curve having unit length. Of course, the velocity vector is tangent to the curve; we simply need to normalize its length to be one. This means that we may take   Then the curvature of the curve defined by is   This last formula allows us to use any parameterization of a curve to calculate its curvature. There is another useful formula, given below, whose derivation is left for the exercises.   Formulas for curvature  If is a vector-valued function defining a smooth space curve , and if is not zero and if exists, then the curvature of satisfies         .        Use one of the two formulas for in terms of to help you answer the following questions.   The ellipse has parameterization Find the curvature of the ellipse. Assuming , at what points is the curvature the greatest and at what points is the curvature the smallest? Does this agree with your intuition?    The standard helix has parameterization . Find the curvature of the helix. Does the result agree with your intuition?         We have and . So the curvature of the ellipse is given by . If we assume that , then we should expect that ellipse to have the largest curvature at the points and the smallest at the points (when for some integer ). The denominator of our curvature function can be written as . The curvature of the ellipse is largest when this denominator is smallest, or when or . These values correspond to the points . Similarly, the curvature of the ellipse is smallest when the denominator is largest, or when and . These values correspond to the points as expected.    Here we have and . Then and so .      "
 },
 {
   "id": "sec-Curves-2",
@@ -691,7 +691,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "1.5.1",
   "title": "",
-  "body": "  A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .   "
+  "body": "  A vector-valued function vector-valued function definition is a function whose input is a real parameter and whose output is a vector that depends on . The graph graph of a vector-valued function definition of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.   Parametric equations parametric equations for a curve parameterization curve for a curve are equations of the form that describe the coordinates of a point on a curve in .  A curve together with a parameterization is called a parametrized curve .  If is the graph of a vector-valued function , then we say that is a parameterization of .   "
 },
 {
   "id": "sec-Curves-3",
@@ -700,7 +700,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.1",
   "title": "",
-  "body": "  Which of the following vector-valued functions has this graph?                            "
+  "body": "  Which of the following vector-valued functions is a parameterization of the curve shown below?                            "
 },
 {
   "id": "sec-Curves-4",
@@ -709,7 +709,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.2",
   "title": "",
-  "body": "  Which is the graph of the vector-valued function                                  "
+  "body": "  Which of the following vector-valued function is not a parameterization of the line shown below?                                      "
 },
 {
   "id": "sec-Curves-5",
@@ -718,7 +718,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.3",
   "title": "",
-  "body": "  Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?   "
+  "body": "  Which is the graph of the vector-valued function                                  "
 },
 {
   "id": "sec-Curves-6",
@@ -727,7 +727,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.4",
   "title": "",
-  "body": "  Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .   "
+  "body": "  Consider the paraboloid defined by .    Which of the following is a parameterization for the trace of ?                          Find a parameterization for the trace of . What type of curve is this trace?    Find a parameterization for the level curve . What type of curve is this trace?   "
 },
 {
   "id": "sec-Curves-7",
@@ -736,7 +736,7 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.5",
   "title": "",
-  "body": "  A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.   "
+  "body": "  Find a vector function that represent the curve of intersection of the paraboloid and the cylinder .   "
 },
 {
   "id": "sec-Curves-8",
@@ -745,25 +745,25 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.6",
   "title": "",
-  "body": "  Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .   "
+  "body": "  A standard parameterization for the unit circle is , for .    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels clockwise along the circle as increases.    Find a vector-valued function that describes a point traveling along the unit circle so that at time , the point is at and travels counter-clockwise along the circle as increases.   "
 },
 {
   "id": "sec-Curves-9",
   "level": "2",
   "url": "sec-Curves.html#sec-Curves-9",
+  "type": "Activity",
+  "number": "1.5.7",
+  "title": "",
+  "body": "  Let and be positive real numbers. You have probably seen the equation that generates an ellipse, centered at , with a horizontal axis of length and a vertical axis of length .    Explain why the vector function , is one parameterization of the ellipse .    Find a parameterization of the ellipse that is traversed counterclockwise.    Find a parameterization of the ellipse .    Determine the -equation of the ellipse parameterized by .   "
+},
+{
+  "id": "sec-Curves-10",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-10",
   "type": "Definition",
   "number": "1.5.2",
   "title": "",
   "body": "  The derivative vector-valued function derivative of a vector-valued function is defined to be for those values of at which the limit exists. We also use the notation and for .   "
-},
-{
-  "id": "sec-Curves-12",
-  "level": "2",
-  "url": "sec-Curves.html#sec-Curves-12",
-  "type": "Activity",
-  "number": "1.5.7",
-  "title": "",
-  "body": "  Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?   "
 },
 {
   "id": "sec-Curves-13",
@@ -772,25 +772,178 @@ var ptx_lunr_docs = [
   "type": "Activity",
   "number": "1.5.8",
   "title": "",
+  "body": "  Consider the following two parameterizations of the unit circle:     What is ?                          What is ?                          Plot both and with their tails located at . What do you notice?   "
+},
+{
+  "id": "sec-Curves-14",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-14",
+  "type": "Activity",
+  "number": "1.5.9",
+  "title": "",
   "body": "  For each of the following vector-valued functions, find .    .     .     .     .      "
 },
 {
-  "id": "sec-Curves-15",
+  "id": "sec-Curves-16",
   "level": "2",
-  "url": "sec-Curves.html#sec-Curves-15",
+  "url": "sec-Curves.html#sec-Curves-16",
   "type": "Activity",
-  "number": "1.5.9",
+  "number": "1.5.10",
   "title": "",
   "body": "  Consider the standard parameterization of the unit circle: .    Find .    Find .    What relationship does the velocity of have with the velocity of ? How about their speeds?    Verify that for all and differentiate this equation to find a geometric relationship between and .    Show that the speed's rate of change is    "
 },
 {
-  "id": "sec-Curves-17",
+  "id": "sec-Curves-19",
   "level": "2",
-  "url": "sec-Curves.html#sec-Curves-17",
+  "url": "sec-Curves.html#sec-Curves-19",
   "type": "Activity",
-  "number": "1.5.10",
+  "number": "1.5.11",
   "title": "",
   "body": "  Suppose a moving object in space has its velocity given by     Find the object's position function if it is at at .    Find the object's acceleration function .    Determine a vector equation for the tangent line, , to the position curve at .   "
+},
+{
+  "id": "A_9_8_1",
+  "level": "2",
+  "url": "sec-Curves.html#A_9_8_1",
+  "type": "Activity",
+  "number": "1.5.12",
+  "title": "",
+  "body": "  Here we calculate the arc length of two familiar curves.   Use Equation to calculate the circumference of a circle of radius .    Find the exact length of the spiral defined by on the interval .         We can parameterize a circle of radius centered at the origin by for in the interval . The circumference of this circle is the length of curve defined by , or as expected.    The length of curve defined by on the interval is .     "
+},
+{
+  "id": "A_9_8_3",
+  "level": "2",
+  "url": "sec-Curves.html#A_9_8_3",
+  "type": "Activity",
+  "number": "1.5.13",
+  "title": "",
+  "body": "  Let define a smooth curve in 2-space. Parameterize this curve and use Equation to show that the length of the curve defined by on an interval is     We can parameterize on by for in . Then the length of the curve defined by on is .   "
+},
+{
+  "id": "ex_9_8_circle_arc_length",
+  "level": "2",
+  "url": "sec-Curves.html#ex_9_8_circle_arc_length",
+  "type": "Example",
+  "number": "1.5.3",
+  "title": "",
+  "body": " Consider a circle of radius in 2-space centered at the origin. We know that we can parameterize this circle as where runs from 0 to . We see that , and hence . It then follows that   Since , we may solve for in terms of to obtain . We then find the arc length parametrization by composing   More generally, for a circle of radius centered at the origin, a similar computation shows that is an arc length parametrization.  "
+},
+{
+  "id": "A_9_8_4",
+  "level": "2",
+  "url": "sec-Curves.html#A_9_8_4",
+  "type": "Activity",
+  "number": "1.5.14",
+  "title": "",
+  "body": "  In this activity we parameterize a line in 2-space in terms of arc length. Consider the line with parametric equations    To write in terms of , evaluate the integral to determine the length of the line from time 0 to time .    Use the formula from (a) for in terms of to write in terms of . Then explain why a parameterization of the line in terms of arc length is          The length of the line from time 0 to time is .    We have , and so a parameterization for the line in terms of arc length is .     "
+},
+{
+  "id": "sec-Curves-26",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-26",
+  "type": "Activity",
+  "number": "1.5.15",
+  "title": "",
+  "body": "  Let be the curve parameterized by for . We will parameterize in terms of arc length.    Find the arc length function for this parameterization of .    Find an arc length parameterization for .   "
+},
+{
+  "id": "ex_9_8_AL_curvature_ex_2",
+  "level": "2",
+  "url": "sec-Curves.html#ex_9_8_AL_curvature_ex_2",
+  "type": "Example",
+  "number": "1.5.4",
+  "title": "",
+  "body": "  Let us parameterize the curve defined by for in terms of arc length. To write in terms of we find in terms of :   Since , we can solve the equation (or ) for to obtain . So we can parameterize our curve in terms of arc length by    "
+},
+{
+  "id": "sec-Curves-29",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-29",
+  "type": "Definition",
+  "number": "1.5.5",
+  "title": "",
+  "body": "  For a curve with parameterization , the unit tangent vector is Note that if is the corresponding arc length parameterization, then    "
+},
+{
+  "id": "sec-Curves-30",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-30",
+  "type": "Activity",
+  "number": "1.5.16",
+  "title": "",
+  "body": "Which of the labelled points on the curve below has the greatest curvature? "
+},
+{
+  "id": "sec-Curves-31",
+  "level": "2",
+  "url": "sec-Curves.html#sec-Curves-31",
+  "type": "Definition",
+  "number": "1.5.6",
+  "title": "",
+  "body": "  If is a smooth space curve and is an arc length parameter for , then the curvature curvature , , of is    "
+},
+{
+  "id": "A_9_8_5",
+  "level": "2",
+  "url": "sec-Curves.html#A_9_8_5",
+  "type": "Activity",
+  "number": "1.5.17",
+  "title": "",
+  "body": "    We should expect that the curvature of a line is 0 everywhere. To show that our definition of curvature measures this correctly in 2-space, recall that gives us the arc length parameterization of a line. Use this information to explain why the curvature of a line is 0 everywhere.    Recall that an arc length parameterization of a circle in 2-space of radius centered at the origin is, from ,   Show that the curvature of this circle is the constant . What can you say about the relationship between the size of the radius of a circle and the value of its curvature? Why does this make sense?      We have .  So the curvature of a circle of radius is .  So, as expected, larger circles have smaller curvature.   "
+},
+{
+  "id": "A_9_8_6",
+  "level": "2",
+  "url": "sec-Curves.html#A_9_8_6",
+  "type": "Activity",
+  "number": "1.5.18",
+  "title": "",
+  "body": "  Use one of the two formulas for in terms of to help you answer the following questions.   The ellipse has parameterization Find the curvature of the ellipse. Assuming , at what points is the curvature the greatest and at what points is the curvature the smallest? Does this agree with your intuition?    The standard helix has parameterization . Find the curvature of the helix. Does the result agree with your intuition?         We have and . So the curvature of the ellipse is given by . If we assume that , then we should expect that ellipse to have the largest curvature at the points and the smallest at the points (when for some integer ). The denominator of our curvature function can be written as . The curvature of the ellipse is largest when this denominator is smallest, or when or . These values correspond to the points . Similarly, the curvature of the ellipse is smallest when the denominator is largest, or when and . These values correspond to the points as expected.    Here we have and . Then and so .     "
+},
+{
+  "id": "sec-PD-Partial-Derivs",
+  "level": "1",
+  "url": "sec-PD-Partial-Derivs.html",
+  "type": "Section",
+  "number": "2.1",
+  "title": "Partial Derivatives",
+  "body": " Partial Derivatives  "
+},
+{
+  "id": "sec-Tangent-Planes",
+  "level": "1",
+  "url": "sec-Tangent-Planes.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Tangent Planes",
+  "body": " Tangent Planes  "
+},
+{
+  "id": "sec-PD-Chain-Rule",
+  "level": "1",
+  "url": "sec-PD-Chain-Rule.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "The Chain Rule",
+  "body": " The Chain Rule  "
+},
+{
+  "id": "sec-PD-Directional-Derivs-and-Grad",
+  "level": "1",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Directional Derivatives and Gradients",
+  "body": " Directional Derivatives and Gradients  "
+},
+{
+  "id": "sec-PD-Optimization",
+  "level": "1",
+  "url": "sec-PD-Optimization.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Optimization",
+  "body": " Optimization  "
 },
 {
   "id": "backmatter-2",
