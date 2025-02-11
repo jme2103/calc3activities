@@ -265,12 +265,12 @@ eBookConfig.enable_chatcodes =  false;
 #sec-Curves-13-3-1-2 { counter-set: sec-Curves-13-3-1-2 0; }
 #sec-Curves-13-3-1-2 > li::marker { content: ""counter(sec-Curves-13-3-1-2,upper-alpha)"."; }
 #sec-Curves-13-3-1-2 > li { counter-increment: sec-Curves-13-3-1-2; }
-#sec-Curves-14-1-1-2 { counter-set: sec-Curves-14-1-1-2 0; }
-#sec-Curves-14-1-1-2 > li::marker { content: ""counter(sec-Curves-14-1-1-2,lower-alpha)"."; }
-#sec-Curves-14-1-1-2 > li { counter-increment: sec-Curves-14-1-1-2; }
-#sec-Curves-15-2-6 { counter-set: sec-Curves-15-2-6 0; }
-#sec-Curves-15-2-6 > li::marker { content: ""counter(sec-Curves-15-2-6,decimal)"."; }
-#sec-Curves-15-2-6 > li { counter-increment: sec-Curves-15-2-6; }
+#sec-Curves-15-1-1-2 { counter-set: sec-Curves-15-1-1-2 0; }
+#sec-Curves-15-1-1-2 > li::marker { content: ""counter(sec-Curves-15-1-1-2,lower-alpha)"."; }
+#sec-Curves-15-1-1-2 > li { counter-increment: sec-Curves-15-1-1-2; }
+#sec-Curves-16-2-6 { counter-set: sec-Curves-16-2-6 0; }
+#sec-Curves-16-2-6 > li::marker { content: ""counter(sec-Curves-16-2-6,decimal)"."; }
+#sec-Curves-16-2-6 > li { counter-increment: sec-Curves-16-2-6; }
 #A_9_8_1-1-1-1 { counter-set: A_9_8_1-1-1-1 0; }
 #A_9_8_1-1-1-1 > li::marker { content: ""counter(A_9_8_1-1-1-1,lower-alpha)"."; }
 #A_9_8_1-1-1-1 > li { counter-increment: A_9_8_1-1-1-1; }
@@ -515,7 +515,7 @@ x = x(t), \ \ \ y = y(t), \ \ \ \text{ and }  \ \ \ \ \ z = z(t)
 <div class="para">Consider the following two parameterizations of the unit circle:</div>
 <div class="displaymath process-math">
 \begin{equation*}
-\vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ -\cos 2t, \sin 2t }
+\vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ \cos(-2t+\pi), \sin(-2t+\pi) }
 \end{equation*}
 </div>
 </div></div>
@@ -534,53 +534,53 @@ x = x(t), \ \ \ y = y(t), \ \ \ \text{ and }  \ \ \ \ \ z = z(t)
 <li id="sec-Curves-13-3-1-2-3"><div class="para" id="sec-Curves-13-3-1-2-3-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ -2, 0 }\)</span></div></li>
 <li id="sec-Curves-13-3-1-2-4"><div class="para" id="sec-Curves-13-3-1-2-4-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 0, -2 }\)</span></div></li>
 </ol></article><article class="task exercise-like" id="sec-Curves-13-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-Curves-13-4-1-1">Plot both <span class="process-math">\(\vr_1(\pi)\)</span> and <span class="process-math">\(\vr_2(\pi)\)</span> with their tails located at <span class="process-math">\(\vr_1(\pi) = \vr_2(\pi) = \lrangle{ -1 , 0 }\text{.}\)</span> What do you notice?</div></article></article><article class="activity project-like" id="sec-Curves-14"><h3 class="heading">
+<div class="para" id="sec-Curves-13-4-1-1">Plot both <span class="process-math">\(\vr_1(\pi)\)</span> and <span class="process-math">\(\vr_2(\pi)\)</span> with their tails located at <span class="process-math">\(\vr_1(\pi) = \vr_2(\pi) = \lrangle{ -1 , 0 }\text{.}\)</span> What do you notice?</div></article></article><article class="assemblage assemblage-like" id="sec-Curves-14"><h3 class="heading"><span class="title"><span class="process-math">\(\vr'(t)\)</span> is the direction of the tangent line.</span></h3>
+<div class="para" id="sec-Curves-14-2">If <span class="process-math">\(\vr(t)\)</span> is a vector-valued function that parameterizes a curve, then <span class="process-math">\(\vr'(t)\)</span> is a tangent vector to the curve at the point <span class="process-math">\(\vr(t)\text{.}\)</span> In terms of motion, if <span class="process-math">\(\vr(t)\)</span> is the position vector of a moving object then <span class="process-math">\(\vv(t) = \vr'(t)\)</span> is the object’s velocity vector and <span class="process-math">\(\va(t) = \vr''(t)\)</span> is the object’s acceleration vector.</div></article><article class="activity project-like" id="sec-Curves-15"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.9</span><span class="period">.</span>
 </h3>
-<div class="para logical" id="sec-Curves-14-1-1">
+<div class="para logical" id="sec-Curves-15-1-1">
 <div class="para">For each of the following vector-valued functions, find <span class="process-math">\(\vr'(t)\text{.}\)</span>
 </div>
-<ol class="lower-alpha" id="sec-Curves-14-1-1-2">
-<li id="sec-Curves-14-1-1-2-1"><div class="para" id="sec-Curves-14-1-1-2-1-1"><span class="process-math">\(\vr(t) = \langle \cos(t), t\sin(t), \ln(t) \rangle\text{.}\)</span></div></li>
-<li id="sec-Curves-14-1-1-2-2"><div class="para" id="sec-Curves-14-1-1-2-2-1"><span class="process-math">\(\vr(t) = \langle t^2 + 3t, e^{-2t}, \frac{t}{t^2 + 1} \rangle\text{.}\)</span></div></li>
-<li id="sec-Curves-14-1-1-2-3"><div class="para" id="sec-Curves-14-1-1-2-3-1"><span class="process-math">\(\vr(t) = \langle \tan(t), \cos(t^2), te^{-t} \rangle\text{.}\)</span></div></li>
-<li id="sec-Curves-14-1-1-2-4"><div class="para" id="sec-Curves-14-1-1-2-4-1"><span class="process-math">\(\vr(t) = \langle \sqrt{t^4 + 4}, \sin(3t), \cos(4t) \rangle\text{.}\)</span></div></li>
+<ol class="lower-alpha" id="sec-Curves-15-1-1-2">
+<li id="sec-Curves-15-1-1-2-1"><div class="para" id="sec-Curves-15-1-1-2-1-1"><span class="process-math">\(\vr(t) = \langle \cos(t), t\sin(t), \ln(t) \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-2"><div class="para" id="sec-Curves-15-1-1-2-2-1"><span class="process-math">\(\vr(t) = \langle t^2 + 3t, e^{-2t}, \frac{t}{t^2 + 1} \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-3"><div class="para" id="sec-Curves-15-1-1-2-3-1"><span class="process-math">\(\vr(t) = \langle \tan(t), \cos(t^2), te^{-t} \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-4"><div class="para" id="sec-Curves-15-1-1-2-4-1"><span class="process-math">\(\vr(t) = \langle \sqrt{t^4 + 4}, \sin(3t), \cos(4t) \rangle\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="assemblage assemblage-like" id="sec-Curves-15"><h3 class="heading"><span class="title">Properties of derivatives of vector-valued functions.</span></h3>
-<div class="para logical" id="sec-Curves-15-2">
+</div></article><article class="assemblage assemblage-like" id="sec-Curves-16"><h3 class="heading"><span class="title">Properties of derivatives of vector-valued functions.</span></h3>
+<div class="para logical" id="sec-Curves-16-2">
 <div class="para">Let <span class="process-math">\(f\)</span> be a differentiable real-valued function of a real variable <span class="process-math">\(t\)</span> and let <span class="process-math">\(\vr\)</span> and <span class="process-math">\(\vs\)</span> be differentiable vector-valued functions of the real variable <span class="process-math">\(t\text{.}\)</span> Then</div>
-<ol class="decimal" id="sec-Curves-15-2-6">
-<li id="sec-Curves-15-2-6-1"><div class="para" id="sec-Curves-15-2-6-1-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) + \vs(t) \right] = \vr'(t) +
+<ol class="decimal" id="sec-Curves-16-2-6">
+<li id="sec-Curves-16-2-6-1"><div class="para" id="sec-Curves-16-2-6-1-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) + \vs(t) \right] = \vr'(t) +
 \vs'(t)\)</span></div></li>
-<li id="sec-Curves-15-2-6-2"><div class="para" id="sec-Curves-15-2-6-2-1"><span class="process-math">\(\displaystyle \frac{d}{dt} [f(t) \vr(t)] = f(t) \vr'(t) + f'(t) \vr(t)\)</span></div></li>
-<li id="sec-Curves-15-2-6-3"><div class="para" id="sec-Curves-15-2-6-3-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \cdot \vs(t) \right] = \vr'(t)
+<li id="sec-Curves-16-2-6-2"><div class="para" id="sec-Curves-16-2-6-2-1"><span class="process-math">\(\displaystyle \frac{d}{dt} [f(t) \vr(t)] = f(t) \vr'(t) + f'(t) \vr(t)\)</span></div></li>
+<li id="sec-Curves-16-2-6-3"><div class="para" id="sec-Curves-16-2-6-3-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \cdot \vs(t) \right] = \vr'(t)
 \cdot \vs(t) + \vr(t) \cdot \vs'(t)\)</span></div></li>
-<li id="sec-Curves-15-2-6-4"><div class="para" id="sec-Curves-15-2-6-4-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \times \vs(t) \right] = \vr'(t)
+<li id="sec-Curves-16-2-6-4"><div class="para" id="sec-Curves-16-2-6-4-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \times \vs(t) \right] = \vr'(t)
 \times \vs(t) + \vr(t) \times \vs'(t)\)</span></div></li>
-<li id="sec-Curves-15-2-6-5"><div class="para" id="sec-Curves-15-2-6-5-1"><span class="process-math">\(\frac{d}{dt} \left[\vr(f(t))\right] = f'(t) \vr'(f(t))\text{.}\)</span></div></li>
+<li id="sec-Curves-16-2-6-5"><div class="para" id="sec-Curves-16-2-6-5-1"><span class="process-math">\(\frac{d}{dt} \left[\vr(f(t))\right] = f'(t) \vr'(f(t))\text{.}\)</span></div></li>
 </ol>
-</div></article><article class="activity project-like" id="sec-Curves-16"><h3 class="heading">
+</div></article><article class="activity project-like" id="sec-Curves-17"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.10</span><span class="period">.</span>
 </h3>
-<div class="introduction" id="sec-Curves-16-1"><div class="para" id="sec-Curves-16-1-1">Consider the standard parameterization of the unit circle: <span class="process-math">\(\lrangle{ \cos t, \sin t }\text{.}\)</span>
+<div class="introduction" id="sec-Curves-17-1"><div class="para" id="sec-Curves-17-1-1">Consider the standard parameterization of the unit circle: <span class="process-math">\(\lrangle{ \cos t, \sin t }\text{.}\)</span>
 </div></div>
-<article class="task exercise-like" id="sec-Curves-16-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="sec-Curves-16-2-1-1">Find <span class="process-math">\(\vr'(t)\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-Curves-16-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="sec-Curves-16-3-1-1">Find <span class="process-math">\(\frac{d}{dt}[\vr(2t)]\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-Curves-16-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="sec-Curves-16-4-1-1">What relationship does the velocity of <span class="process-math">\(\vr(t)\)</span> have with the velocity of <span class="process-math">\(\vr(2t)\text{?}\)</span> How about their speeds?</div></article><article class="task exercise-like" id="sec-Curves-16-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="sec-Curves-16-5-1-1">Verify that <span class="process-math">\(|\vr(t)| = 1\)</span> for all <span class="process-math">\(t\)</span> and differentiate this equation to find a geometric relationship between <span class="process-math">\(\vr(t)\)</span> and <span class="process-math">\(\vr'(t)\text{.}\)</span>
-</div></article><article class="task exercise-like" id="sec-Curves-16-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para logical" id="sec-Curves-16-6-1-1">
+<article class="task exercise-like" id="sec-Curves-17-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-17-2-1-1">Find <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-17-3-1-1">Find <span class="process-math">\(\frac{d}{dt}[\vr(2t)]\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-17-4-1-1">What relationship does the velocity of <span class="process-math">\(\vr(t)\)</span> have with the velocity of <span class="process-math">\(\vr(2t)\text{?}\)</span> How about their speeds?</div></article><article class="task exercise-like" id="sec-Curves-17-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-Curves-17-5-1-1">Verify that <span class="process-math">\(|\vr(t)| = 1\)</span> for all <span class="process-math">\(t\)</span> and differentiate this equation to find a geometric relationship between <span class="process-math">\(\vr(t)\)</span> and <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="sec-Curves-17-6-1-1">
 <div class="para">Show that the speed’s rate of change is</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \frac{d}{dt}|\vv(t)| = \comp_{\vv} \va.
 \end{equation*}
 </div>
-</div></article></article><article class="assemblage assemblage-like" id="sec-Curves-17"><h3 class="heading"><span class="title"><span class="process-math">\(\vr'(t)\)</span> is the direction of the tangent line.</span></h3>
-<div class="para" id="sec-Curves-17-2">If <span class="process-math">\(\vr(t)\)</span> is a vector-valued function that parameterizes a curve, then <span class="process-math">\(\vr'(t)\)</span> is a tangent vector to the curve at the point <span class="process-math">\(\vr(t)\text{.}\)</span> In terms of motion, if <span class="process-math">\(\vr(t)\)</span> is the position vector of a moving object then <span class="process-math">\(\vv(t) = \vr'(t)\)</span> is the object’s velocity vector and <span class="process-math">\(\va(t) = \vr''(t)\)</span> is the object’s acceleration vector.</div></article><div class="para logical" id="sec-Curves-18">
+</div></article></article><div class="para logical" id="sec-Curves-18">
 <div class="para">Given a differentiable vector-valued function <span class="process-math">\(\vr\text{,}\)</span> the tangent line to the curve at the input value <span class="process-math">\(a\)</span> is given by</div>
 <div class="displaymath process-math" id="sec-Curves-18-3">
 \begin{equation}
