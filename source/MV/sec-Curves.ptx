@@ -332,7 +332,7 @@
       <p>
         Consider the following two parameterizations of the unit circle:
         <me>
-          \vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ -\cos 2t, \sin 2t }
+          \vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ \cos(-2t+\pi), \sin(-2t+\pi) }
         </me>
       </p>
     </introduction>
@@ -403,6 +403,17 @@
       </statement>
     </task>
     </activity>
+
+    <assemblage>
+      <title><m>\vr'(t)</m> is the direction of the tangent line</title>
+    <p>
+      If <m>\vr(t)</m> is a vector-valued function that parameterizes a curve, then
+      <m>\vr'(t)</m> is a tangent vector to the curve at the point <m>\vr(t)</m>.
+      In terms of motion, if <m>\vr(t)</m> is the position vector of a moving object
+      then <m>\vv(t) = \vr'(t)</m> is the object's velocity vector and <m>\va(t) = \vr''(t)</m> 
+      is the object's acceleration vector.
+    </p>
+    </assemblage>
 
     <activity>
       <statement> 
@@ -528,16 +539,7 @@
       </task>
     </activity>
 
-    <assemblage>
-      <title><m>\vr'(t)</m> is the direction of the tangent line</title>
-    <p>
-      If <m>\vr(t)</m> is a vector-valued function that parameterizes a curve, then
-      <m>\vr'(t)</m> is a tangent vector to the curve at the point <m>\vr(t)</m>.
-      In terms of motion, if <m>\vr(t)</m> is the position vector of a moving object
-      then <m>\vv(t) = \vr'(t)</m> is the object's velocity vector and <m>\va(t) = \vr''(t)</m> 
-      is the object's acceleration vector.
-    </p>
-    </assemblage>
+    
 
     <p>
       Given a differentiable vector-valued function <m>\vr</m>, the tangent
