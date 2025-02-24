@@ -2,7 +2,215 @@
 
 <section xml:id="sec-Tangent-Planes" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Tangent Planes</title>
+
+  <!-- TO DO:
+  replace description of the two axes wtih a picture of the two axes
+  -->
   
+  <activity>
+    <introduction>
+      <p>
+        Let <m>f(x) = 3 - x^2</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Which of the following is an equation of the tangent line to the graph of <m>f</m> at the point <m>(1,2)</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+              <p>
+                <m>y = 2x + 4</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>y = -2x + 4</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>y = -2x + 3</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>y = -2x</m>
+              </p>
+          </li>
+      </ol>
+    </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the tangent line to approximate <m>f(1.1)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    This is an example of one of the core ideas in calculus: if you zoom in enough most functions 
+    look like a linear function. The two caveats that we must include are that (1) the function
+    is not too crazy (this property is called <em>differentiability</em>) and (2) the behavior
+    is only valid in a small neighborhood of the point in question (we say the approximation is
+    only valid <em>locally</em>).
+  </p>
+
+  <p>
+    The next activity will guide you to correct linearization for a function of two variables.
+  </p>
+
+  <activity>
+    <introduction>
+      <p>
+        Let <m>f(x,y) = 6 - \frac{x^2}{2} - y^2</m> and focus on the point <m>(x_0, y_0) = (2,1)</m>.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Compute <m>f(2, 1)</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Find parameterizations <m>\vr_1(t)</m> and <m>\vr_2(t)</m> for the traces at <m>x = 2</m> and <m>y = 1</m>
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          On two separate sets of axes, sketch the graphs of the two traces and the tangent vectors to <m>\vr_1'</m> and <m>\vr_2't</m> at the time
+          when they pass through the point <m>(2,1,f(2,1))</m>. One set of axes
+          represents the plane <m>x = 2</m>, and so its horizontal axis should be labelled <m>y</m>. The other represents the plane <m>y = 1</m>, so
+          its horizontal axis should be labelled <m>x</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          The tangent plane to the graph of <m>f</m> at the point <m>(2,1)</m> should contain the two vectors you plotted. Find an equation for this plane.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the equation of the tangent plane to approximate <m>f(2.1, 1.1)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    We now repeat the above procedure for any function <m>f</m> that is differentiable at the point <m>(x_0, y_0)</m>. Consider the two parameterized curves
+    <me>
+      \vr_1(t) = \lrangle{x_0, t, f(x_0, t)} \qquad \vr_2(u) = \lrangle{u, y_0, f(u, y_0)}.
+    </me>
+    Both curves are contained in the graph of <m>f</m>, and, when <m>t = y_0</m> and <m>u = x_0</m>, they intersect at the point <m>(x_0, y_0, f(x_0, y_0))</m>. Their derivatives are
+    <me>
+      \vr_1'(t) = \lrangle{0, 1, f_y(x_0, t)} \qquad \vr_2(t) = \lrangle{1, 0, f_x(t, y_0)}.
+    </me>
+    Because we are holding one of the variables constant in each case, the last component is the appropriate partial derivative. Finally, both vectors <m>\vr_1'(y_0)</m> and
+    <m>\vr_2'(x_0)</m> are tangent of the graph of <m>f</m> at the point <m>(x_0, y_0, f(x_0, y_0))</m>, we can define the tangent plane to be the plane containing these two vectors.
+    First, we take their cross product
+    <me>
+      \vr_1'(y_0) \times \vr_2'(x_0) = \det \begin{bmatrix} \vi \amp \vj \amp \vk \\ 0 \amp 1 \amp f_y(x_0, y_0) \\ 1 \amp 0 \amp f_x(x_0, y_0) \end{bmatrix} =  \lrangle{f_x(x_0, y_0), f_y(x_0, y_0), -1}.
+    </me>
+    Using this the normal vector and <m>(x_0, y_0, f(x_0, y_0))</m> gives the formula below.
+  </p>
+
+  <assemblage xml:id="Tangent-plane">
+    <title>The tangent plane</title>
+  <p>
+    If <m>f(x,y)</m> has continuous first-order partial derivatives, then the equation of the plane tangent to the graph of <m>f</m> at the point <m>(x_0,y_0,f(x_0,y_0))</m> is
+    <men xml:id="eq_10_4_tan_plane">
+      z = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0).
+    </men>
+  </p>
+  </assemblage>
+
+  <activity>
+    <statement>
+      <p>
+        Which of the following is an equation of the tangent plane to <m>z = x^2 - y^2</m> at <m>(5,4)</m>?
+      </p>
+      <ol marker="A." cols="2">
+          <li>
+              <p>
+                <m>z = 10(x - 5) - 39 - 3y^2(y - 4)</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>z = 2x(x - 5) - 39 - 64(y - 4)</m>
+              </p>
+          </li>          
+          <li>
+              <p>
+                <m>z = 10(x - 5) - 39 - 64(y - 4)</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>z = 2x(x - 5) - 3y^2(y - 4)</m>
+              </p>
+          </li>
+      </ol>
+    </statement>
+  </activity>
+  
+  <activity xml:id="A_10_4_1">
+    <statement>
+      <ol marker="a.">
+        <li>
+          <p>
+              Find the equation of the tangent plane to <m>f(x,y) = 2 + 4x - 3y</m> at the point <m>(1,2)</m>. Simplify as much as possible. Does the result surprise you? Explain.  
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the equation of the tangent plane to <m>f(x,y) = x^2y</m> at the point <m>(1,2)</m>.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        An unevenly heated metal plate has temperature <m>T(x,y)</m> in degrees Celsius at the point <m>(x,y)</m>. If
+        <m>T(2,1) = 110</m>, <m>T_x(2,1) = 12</m>, and <m>T_y(2,1) = -14</m>, estimate the temperature at the 
+        point <m>(2.04, 0.95)</m>.
+      </p>
+    </statement>
+  </activity>
+
+  <p>
+    For a function of <m>n</m> variables, the tangent plane is an <m>n</m>-dimensional (affine, linear) subspace <m>\R^{n+1}</m>.
+    When <m>n=1</m>, it's a line in <m>\R^2</m>; when <m>n=2</m>, it's a plane in <m>\R^3</m>. In general, we say that it's
+    a hyperplane in <m>\R^{n+1}</m>. The equation of the tangent hyperplane to a function <m>f(x,y,z)</m> at the point <m>(x_0,y_0,z_0)</m> is
+    <me>
+      z = f(x_0,y_0,z_0) + f_x(x_0,y_0,z_0)(x-x_0) + f_y(x_0,y_0,z_0)(y-y_0) + f_z(x_0,y_0,z_0)(z-z_0).
+    </me>
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Find the tangent hyperplane to <m>f(x,y,z) = zx^2 + y^2</m> at the point <m>(1,2,1)</m>.
+      </p>
+    </statement>
+  </activity>
+
   
 
 </section>

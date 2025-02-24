@@ -2,6 +2,13 @@
 
 <section xml:id="sec-Curves" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Curves</title>
+
+  <!-- TO DO
+    break into subsections for tangent line, arc length, curvature, motion
+    add MC and other activities for finding unit normal, oscillating circle, sketching based on curvature knowledge
+    add links to GGB resources that illustrate 
+    add summary about lines v circles represention a spectrum of infinitesimal behavior
+  -->
   
   <definition>
       <statement>
