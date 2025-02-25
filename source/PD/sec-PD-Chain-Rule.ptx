@@ -3,6 +3,302 @@
 <section xml:id="sec-PD-Chain-Rule" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The Chain Rule</title>
   
+  <!-- TO DO:
+    think about how a flexible extender activity to introduct chain rule as product of matrices
+  -->
+
+  <activity>
+    <statement>
+      <p>
+        Suppose you own a small factory that makes <m>30</m> widgets per hour and you make
+        a profit of <m>\$10.00</m> for each of the widget made. (You are able to sell them
+        as fast as you produce them.) At what rate does your company's profit increase? 
+      </p>
+    </statement>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        Let <m>h(x) = \sqrt{x^2 + 1}</m>. 
+      </p>
+    </introduction>
+    <task workspace="">
+      <statement>
+        <p>
+          For which pair of function <m>f</m> 
+          and <m>g</m> is <m>h(x) = f(g(x))</m>?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+              <p>
+                <m>f(x) = x^2 + 1, \quad g(x) = \sqrt{x}</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x) = \sqrt{x}, \quad g(x) = x^2 + 1</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x) = \sqrt{x + 1}, \quad g(x) = x^2</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x) = \sqrt{x^2 + 1}, \quad g(x) = x</m>
+              </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task workspace="">
+      <statement>
+        <p>
+          Use the chain rule to find <m>h'(x)</m>.
+        </p>
+      </statement>
+    </task>
+    <task workspace="">
+      <statement>
+        <p>
+          Find <m>h'(2)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Suppose that you are on a ship at sea. The vector-valued function 
+    <m>\vr(t) = \langle x(t), y(t) \rangle</m> is your trajectory along the surface of the ocean, 
+    and <m>T(x,y)</m> is the temperature at sea level at the location with coordinates <m>(x,y)</m>.
+    What is the rate of change of the temperature you feel as you sail along your trajectory?
+  </p>
+
+  <p>
+    To answer this question, we will start with an approximation. At a certain time <m>t</m>, the
+    temperature we experience is <m>T(x(t), y(t))</m>. If we let time increase by a small amount <m>\Delta t</m>,
+    then our position coordinates will change by corresponding small amounts <m>\Delta x</m> and <m>\Delta y</m>.
+    We know from single-variable calculus that
+    <me>
+      \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt} \quad \text{and} \quad \lim_{\Delta t \to 0} \frac{\Delta y}{\Delta t} = \frac{dy}{dt}.
+    </me>
+  </p>
+
+  <p>
+    We also know that the small changes in <m>x</m> and <m>y</m> create proportionally small changes in temperature. The change in temperature can be approximated
+    using the tangent plane.
+    <me>
+      \Delta T \approx \frac{\partial T}{\partial x} \Delta x + \frac{\partial T}{\partial y} \Delta y
+    </me>
+    Since we are interested in the rate of change of <m>T</m> with respect to <m>t</m>, divide this equation by <m>\Delta t</m> and take
+    the limit as <m>\Delta t</m> approaches zero.
+    <md>
+      <mrow> \frac{\Delta T}{\Delta t} \amp \approx \frac{\partial T}{\partial x} \frac{\Delta x}{\Delta t} + \frac{\partial T}{\partial y} \frac{\Delta y}{\Delta t} </mrow>
+      <mrow> \lim_{\Delta t \to 0} \frac{\Delta T}{\Delta t} \amp = \frac{\partial T}{\partial x} \lim_{\Delta t \to 0}  \frac{\Delta x}{\Delta t} + \frac{\partial T}{\partial y} \lim_{\Delta t \to 0}  \frac{\Delta y}{\Delta t} </mrow>
+      <mrow> \frac{d T}{d t} \amp = \frac{\partial T}{\partial x} \frac{d x}{d t} + \frac{\partial T}{\partial y} \frac{d y}{d t} </mrow>
+    </md>
+  </p>
   
+  <p>
+    In other words, we have found a formula for the derivative of the composition <m>T(\vr(t))</m>, in terms of the vector-valued
+    function <m>\vr(t)</m> (inside function) and multivariable function <m>T(x,y)</m> (outside function).
+  </p>
+
+  <assemblage>
+    <title>The Chain Rule</title>
+    <p>
+    Let <m>z = f(x,y)</m>, where <m>f</m> is a differentiable function of the independent variables <m>x</m> and <m>y</m>, and let <m>x</m> and <m>y</m> each be differentiable functions of an independent variable <m>t</m>. Then
+    <men xml:id="E_10_5_chain_rule">
+      \frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt}.
+    </men>
+  </p>
+  </assemblage>
+
+  <activity>
+    <statement>
+      <p>
+        In the following questions, we apply the Chain Rule in several different contexts.
+      </p>
+      <ol marker="a.">
+        <li>
+          <p>
+            Suppose that we have a function <m>z</m> defined by <m>z(x,y) = x^2+xy^3</m>.  In addition, suppose that <m>x</m> and <m>y</m> are restricted to points that move around the plane by following a circle of radius <m>2</m> centered at the origin that is parameterized by
+            <me>
+            x(t) = 2\cos(t),
+                \ 
+                \mbox{and } 
+                \ 
+                y(t) = 2\sin(t).
+            </me>
+          </p>
+            <ol marker="i.">
+              <li>
+                <p>
+                  Use the Chain Rule to find the resulting instantaneous rate of change <m>\frac{dz}{dt}</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Substitute <m>x(t)</m> for <m>x</m> and <m>y(t)</m> for <m>y</m> in the rule for <m>z</m> to write <m>z</m> in terms of <m>t</m> and calculate <m>\frac{dz}{dt}</m> directly. Compare to the result of part (i.).
+                </p>
+              </li>
+            </ol>
+        </li>
+
+        <!-- <li>
+          <p>
+            Suppose that the temperature on a metal plate is given by the function <m>T</m> with
+          <me>
+            T(x,y) = 100-(x^2 + 4y^2),
+          </me>
+          where the temperature is measured in degrees Fahrenheit
+              and <m>x</m> and <m>y</m> are each measured in feet.
+        </p>
+          <ol marker="i.">
+            <li>
+              <p>
+                Find <m>T_x</m> and <m>T_y</m>.  What are the units on these partial
+                    derivatives?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Suppose an ant is walking along the <m>x</m>-axis at the rate
+                    of 2 feet per minute toward the origin.  When the ant is at
+                    the point <m>(2,0)</m>, what is the
+                    instantaneous rate of change in the temperature <m>dT/dt</m> that
+                    the ant experiences.  Include units on
+                    your response.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Suppose instead that the ant walks along an ellipse
+                    with <m>x = 6\cos(t)</m> and <m>y = 3\sin(t)</m>, where
+                    <m>t</m> is measured in minutes.  Find <m>\frac{dT}{dt}</m> at
+                    <m>t = \pi/6</m>, <m>t=\pi/4</m>, and <m>t = \pi/3</m>.  What does this
+                    seem to tell you about the path along which the ant is
+                    walking?
+              </p>
+            </li>
+          </ol>
+      </li> -->
+
+      <li>
+        <p>
+          Suppose that you are walking along a surface whose elevation is given by a function <m>f</m>.  Furthermore, suppose that if you consider how your location corresponds to points in the <m>xy</m>-plane, you know that when you pass the point <m>(2,1)</m>, your velocity vector is <m>\vv=\langle -1,2\rangle</m>.  If some contours of <m>f</m> are as
+              shown in <xref ref="F_10_5_contour">Figure</xref>, estimate the rate of change
+              <m>df/dt</m> when you pass through <m>(2,1)</m>.
+
+          <figure xml:id="F_10_5_contour">
+            <caption>Some contours of <m>f</m>.</caption>
+            <image width="50%" source="images/fig_10_3_activity_contour"/>
+          </figure>
+
+        </p>
+      </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <p>
+    Note that the chain rule has the obvious extension to function of <m>f(x,y,z)</m> of three variables composed with 
+    a vector-valued function <m>\vr(t) \lrangle{x(t), y(t), z(t)}</m>. In fact, any mutivariable function 
+    <m>f:\R^n \to \R</m> can be composed with <m>n</m> different multivariable
+    functions <m>u_i : \R^m \to \R</m>. Instead of writing a version of the chain rule for each case, we can write a
+    single general version of the chain rule that covers all of these cases. If <m>z = f(x_1, \ldots, x_n)</m> and
+    <m>x_i = u_i(t_1, \ldots, t_m)</m>, then
+    <me>
+      \frac{\partial z}{\partial t_j} = \frac{\partial z}{\partial x_1} \frac{\partial x_1}{\partial t_j} + \frac{\partial z}{\partial x_2} \frac{\partial x_2}{\partial t_j} + \cdots + \frac{\partial z}{\partial x_n} \frac{\partial x_n}{\partial t_j}.
+    </me>
+  </p>
+
+  <p>
+    To keep track of all the dependencies among the variables, it's helpful to use a tree diagram. 
+    <figure xml:id="F_10_5_tree_1">
+      <caption>A tree diagram illustrating dependencies.</caption>
+      <sidebyside widths="50% 50%">
+      <image source="images/fig_10_5_tree_3"/>
+      <image source="images/fig_10_5_tree_1"/>
+      </sidebyside>
+    </figure>
+    To represent the Chain Rule, we label every edge of the diagram with the
+    appropriate derivative or partial derivative, as seen at right in <xref ref="F_10_5_tree_1">Figure</xref>. To calculate an overall derivative according to the Chain Rule, we
+    construct the product of the derivatives along all paths connecting
+    the variables and then add all of these products.
+    For example, the
+    diagram at right in <xref ref="F_10_5_tree_1">Figure</xref> illustrates the Chain Rule
+    <me>
+      \frac{dz}{dt} = \frac{\partial z}{\partial x}\frac{dx}{dt} +
+      \frac{\partial z}{\partial y}\frac{dy}{dt}.
+    </me>
+  </p>
+
+  <activity xml:id="PA_10_13">
+    <statement>
+      <ol marker="a.">
+        <li>
+          <p>
+            <xref ref="F_10_5_tree_2">Figure</xref> shows the tree diagram we construct when (a) <m>z</m> depends on <m>w</m>, <m>x</m>, and <m>y</m>, (b) <m>w</m>, <m>x</m>, and <m>y</m> each depend on <m>u</m> and <m>v</m>, and (c) <m>u</m> and <m>v</m> depend on <m>t</m>.
+
+            <figure xml:id="F_10_5_tree_2">
+              <caption>Three levels of dependencies</caption>
+              <image width="50%" source="images/fig_10_5_tree_2"/>
+            </figure>
+
+            <ol marker="i.">
+              <li>
+                <p>
+                  Label the edges with the appropriate derivatives.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Use the Chain Rule to write <m>\frac{dz}{dt}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Suppose that <m>z=x^2 - 2xy^2</m> and that
+            <md>
+              <mrow>x\amp =r\cos(\theta)</mrow>
+              <mrow>y\amp =r\sin(\theta).</mrow>
+            </md>
+            <ol marker="i.">
+              <li>
+                <p>
+                  Construct a tree diagram representing the dependencies of <m>z</m> on <m>x</m> and <m>y</m> and <m>x</m> and <m>y</m> on <m>r</m> and <m>\theta</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Use the tree diagram to find <m>\frac{\partial z}{\partial r}</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Now suppose that <m>r = 3</m> and <m>\theta=\pi/6</m>. Find the values of <m>x</m> and <m>y</m> that correspond to these given values of <m>r</m> and <m>\theta</m>, and then use the Chain Rule to find the value of the partial derivative <m>\frac{\partial z}{\partial \theta}|_{(3,\frac{\pi}{6})}</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+
 
 </section>
