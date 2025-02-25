@@ -140,7 +140,7 @@
   <activity>
     <statement>
       <p>
-        Which of the following is an equation of the tangent plane to <m>z = x^2 - y^2</m> at <m>(5,4)</m>?
+        Which of the following is an equation of the tangent plane to <m>z = x^2 - y^3</m> at <m>(5,4)</m>?
       </p>
       <ol marker="A." cols="2">
           <li>
@@ -150,12 +150,12 @@
           </li>
           <li>
               <p>
-                <m>z = 2x(x - 5) - 39 - 64(y - 4)</m>
+                <m>z = 2x(x - 5) - 39 - 48(y - 4)</m>
               </p>
           </li>          
           <li>
               <p>
-                <m>z = 10(x - 5) - 39 - 64(y - 4)</m>
+                <m>z = 10(x - 5) - 39 - 48(y - 4)</m>
               </p>
           </li>
           <li>
