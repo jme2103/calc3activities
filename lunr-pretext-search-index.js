@@ -1087,7 +1087,52 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "The Chain Rule",
-  "body": " The Chain Rule  "
+  "body": " The Chain Rule     Suppose you own a small factory that makes widgets per hour and you make a profit of for each of the widget made. (You are able to sell them as fast as you produce them.) At what rate does your company's profit increase?      Let .    For which pair of function and is ?                          Use the chain rule to find .    Find .    Suppose that you are on a ship at sea. The vector-valued function is your trajectory along the surface of the ocean, and is the temperature at sea level at the location with coordinates . What is the rate of change of the temperature you feel as you sail along your trajectory?  To answer this question, we will start with an approximation. At a certain time , the temperature we experience is . If we let time increase by a small amount , then our position coordinates will change by corresponding small amounts and . We know from single-variable calculus that   We also know that the small changes in and create proportionally small changes in temperature. The change in temperature can be approximated using the tangent plane. Since we are interested in the rate of change of with respect to , divide this equation by and take the limit as approaches zero.   In other words, we have found a formula for the derivative of the composition , in terms of the vector-valued function (inside function) and multivariable function (outside function).   The Chain Rule  Let , where is a differentiable function of the independent variables and , and let and each be differentiable functions of an independent variable . Then      In the following questions, we apply the Chain Rule in several different contexts.    Suppose that we have a function defined by . In addition, suppose that and are restricted to points that move around the plane by following a circle of radius centered at the origin that is parameterized by     Use the Chain Rule to find the resulting instantaneous rate of change .    Substitute for and for in the rule for to write in terms of and calculate directly. Compare to the result of part (i.).       Suppose that you are walking along a surface whose elevation is given by a function . Furthermore, suppose that if you consider how your location corresponds to points in the -plane, you know that when you pass the point , your velocity vector is . If some contours of are as shown in Figure , estimate the rate of change when you pass through .  Some contours of .         Note that the chain rule has the obvious extension to function of of three variables composed with a vector-valued function . In fact, any mutivariable function can be composed with different multivariable functions . Instead of writing a version of the chain rule for each case, we can write a single general version of the chain rule that covers all of these cases. If and , then   To keep track of all the dependencies among the variables, it's helpful to use a tree diagram.  A tree diagram illustrating dependencies.      To represent the Chain Rule, we label every edge of the diagram with the appropriate derivative or partial derivative, as seen at right in Figure . To calculate an overall derivative according to the Chain Rule, we construct the product of the derivatives along all paths connecting the variables and then add all of these products. For example, the diagram at right in Figure illustrates the Chain Rule        Figure shows the tree diagram we construct when (a) depends on , , and , (b) , , and each depend on and , and (c) and depend on .  Three levels of dependencies      Label the edges with the appropriate derivatives.    Use the Chain Rule to write .       Suppose that and that    Construct a tree diagram representing the dependencies of on and and and on and .    Use the tree diagram to find .    Now suppose that and . Find the values of and that correspond to these given values of and , and then use the Chain Rule to find the value of the partial derivative .         "
+},
+{
+  "id": "sec-PD-Chain-Rule-2",
+  "level": "2",
+  "url": "sec-PD-Chain-Rule.html#sec-PD-Chain-Rule-2",
+  "type": "Activity",
+  "number": "2.3.1",
+  "title": "",
+  "body": "  Suppose you own a small factory that makes widgets per hour and you make a profit of for each of the widget made. (You are able to sell them as fast as you produce them.) At what rate does your company's profit increase?   "
+},
+{
+  "id": "sec-PD-Chain-Rule-3",
+  "level": "2",
+  "url": "sec-PD-Chain-Rule.html#sec-PD-Chain-Rule-3",
+  "type": "Activity",
+  "number": "2.3.2",
+  "title": "",
+  "body": "  Let .    For which pair of function and is ?                          Use the chain rule to find .    Find .   "
+},
+{
+  "id": "sec-PD-Chain-Rule-9",
+  "level": "2",
+  "url": "sec-PD-Chain-Rule.html#sec-PD-Chain-Rule-9",
+  "type": "Activity",
+  "number": "2.3.3",
+  "title": "",
+  "body": "  In the following questions, we apply the Chain Rule in several different contexts.    Suppose that we have a function defined by . In addition, suppose that and are restricted to points that move around the plane by following a circle of radius centered at the origin that is parameterized by     Use the Chain Rule to find the resulting instantaneous rate of change .    Substitute for and for in the rule for to write in terms of and calculate directly. Compare to the result of part (i.).       Suppose that you are walking along a surface whose elevation is given by a function . Furthermore, suppose that if you consider how your location corresponds to points in the -plane, you know that when you pass the point , your velocity vector is . If some contours of are as shown in Figure , estimate the rate of change when you pass through .  Some contours of .        "
+},
+{
+  "id": "F_10_5_tree_1",
+  "level": "2",
+  "url": "sec-PD-Chain-Rule.html#F_10_5_tree_1",
+  "type": "Figure",
+  "number": "2.3.2",
+  "title": "",
+  "body": " A tree diagram illustrating dependencies.      "
+},
+{
+  "id": "PA_10_13",
+  "level": "2",
+  "url": "sec-PD-Chain-Rule.html#PA_10_13",
+  "type": "Activity",
+  "number": "2.3.4",
+  "title": "",
+  "body": "     Figure shows the tree diagram we construct when (a) depends on , , and , (b) , , and each depend on and , and (c) and depend on .  Three levels of dependencies      Label the edges with the appropriate derivatives.    Use the Chain Rule to write .       Suppose that and that    Construct a tree diagram representing the dependencies of on and and and on and .    Use the tree diagram to find .    Now suppose that and . Find the values of and that correspond to these given values of and , and then use the Chain Rule to find the value of the partial derivative .        "
 },
 {
   "id": "sec-PD-Directional-Derivs-and-Grad",
