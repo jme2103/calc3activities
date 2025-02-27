@@ -30,6 +30,7 @@
     \newcommand{\dc}{^\circ}
     \newcommand{\proj}{\text{proj}}
     \newcommand{\comp}{\text{comp}}
+    \newcommand{\vz}{{\bf z}}
     \newcommand{\vi}{\mathbf{i}}
     \newcommand{\vj}{\mathbf{j}}
     \newcommand{\vk}{\mathbf{k}}
