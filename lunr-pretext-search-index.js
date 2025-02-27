@@ -1141,7 +1141,79 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Directional Derivatives and Gradients",
-  "body": " Directional Derivatives and Gradients  "
+  "body": " Directional Derivatives and Gradients  The partial derivatives (and , , , etc) answer the question, \"What is the rate of change of in the positive (and , , , etc) direction?\" In this section, we will see an efficient way to answer this question for any direction in the domain.  We start by fixing a point in the domain of and a direction, i.e. a unit vector . Then is a line (parameterized by arc length) that passes through at time in the direction of .  The composition is a function . Its derivative at will be the rate of change of we are looking for. Moreover, the chain gives as the form of the derivative. Lastly, we note that and . This expression gives the directional derivative of at in the direction of    Calculating a directional derivative  Given a differentiable function and a unit vector , we may compute by      Let .   Determine and .    Use Equation to determine and . What familiar function is ? What familiar function is ? (Recall that is the unit vector in the positive -direction and is the unit vector in the positive -direction.)    Use Equation to find the derivative of in the direction of the vector at the point . Remember that a unit direction vector is needed.       The vector whose components are the values of the partial derivatives of is called the gradient of . It is denoted by With this notation, the directional derivative can be viewed as a dot product.   The directional derivative and the gradient  Given a differentiable function and a unit vector , we may compute by      Let's consider the function defined by . Some contours for this function are shown in Figure .   Contours of .      Find the gradient .    For each of the following points , evaluate the gradient and sketch the gradient vector with its tail at . Some of the vectors are too long to fit onto the plot, but we'd like to draw them to scale; to do so, scale each vector by a factor of 1\/4.                                         What do you notice about the relationship between the gradient at and the contour passing through that point?    Does increase or decrease in the direction of ? Provide a justification for your response.      Using the geometric definition of the dot product gives a lot of information about the rate of change of at .    The sign of is determined by .          In this activity we investigate how the gradient is related to the directions of greatest increase and decrease of a function. Let be a differentiable function and a unit vector.   Let be the angle between and . Use the relationship between the dot product and the angle between two vectors to explain why     At the point , the only quantity in Equation that can change is (which determines the direction of travel). Explain why makes the quantity as large as possible.    When , in what direction does the unit vector point relative to ? Why? What does this tell us about the direction of greatest increase of at the point ?    In what direction, relative to , does decrease most rapidly at the point ?    State the unit vectors and (in terms of ) that provide the directions of greatest increase and decrease for the function at the point . What important assumption must we make regarding in order for these vectors to exist?         Consider the function defined by .   Find the gradient and sketch it on Figure .  A plot for the gradient .       Sketch the unit vector on Figure with its tail at . Now find the directional derivative .    What is the slope of the graph of in the direction ? What does the sign of the directional derivative tell you?    Consider the vector and sketch on Figure with its tail at . Find a unit vector pointing in the same direction of . Without computing , what do you know about the sign of this directional derivative? Now verify your observation by computing .    In which direction (that is, for what unit vector ) is the greatest? What is the slope of the graph in this direction?    Corresponding, in which direction is least? What is the slope of the graph in this direction?    Sketch two unit vectors for which and then find component representations of these vectors.    Suppose you are standing at the point . In which direction should you move to cause to increase as rapidly as possible? At what rate does increase in this direction?       Here is a list of important facts to know abou the gradient or a function :   The gradient is a vector in the domain of .    When it's not zero, points in the direction of greatest increase at , and is the instantaneous rate of change of in that direction.    When it's not zero, is orthogonal to the contour through .    The gradient is our first example of a vector field, i.e. a function that assigns to each point in the domain a vector.       The temperature at a point is given by where is measured in degrees Celsius and , , and are measured in meters.    In which direction (given as a unit vector) does the temperature increase most rapidly at the point ?    A thermometer is placed at the point and starts moving toward the point . What is the rate of change of the temperature that the thermometer reads?    Just as the gradient of a function of two variables is orthogonal to the level curves of the function, the gradient of a function of three variables is orthogonal to the level surfaces of the function. This gives a quick way to find the equations of tangent lines to curves and tangent planes to surfaces.    The circle is not the graph of any function. Thinking of as a function of is not helpful to find the tangent lines at . However, we can think if the this circle as the level set of a function of two variables.    The circle is not a level curve (contour) of which of the following functions?                          Choose any function for which the circle is a level set, find for that function, and use it to find the equation of the line tangent to the circle at .      The surface is an elliptic paraboloid. (It opens in the positive -direction.)    Find a function for which this surface is a level set.    Compute the gradient of your function .    Use the fact that the gradient is orthogonal to the level sets to find an equation of the tangent plane to the surface at the point .    "
+},
+{
+  "id": "A_10_6_2",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#A_10_6_2",
+  "type": "Activity",
+  "number": "2.4.1",
+  "title": "",
+  "body": "  Let .   Determine and .    Use Equation to determine and . What familiar function is ? What familiar function is ? (Recall that is the unit vector in the positive -direction and is the unit vector in the positive -direction.)    Use Equation to find the derivative of in the direction of the vector at the point . Remember that a unit direction vector is needed.      "
+},
+{
+  "id": "A_10_6_10",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#A_10_6_10",
+  "type": "Activity",
+  "number": "2.4.2",
+  "title": "",
+  "body": "  Let's consider the function defined by . Some contours for this function are shown in Figure .   Contours of .      Find the gradient .    For each of the following points , evaluate the gradient and sketch the gradient vector with its tail at . Some of the vectors are too long to fit onto the plot, but we'd like to draw them to scale; to do so, scale each vector by a factor of 1\/4.                                         What do you notice about the relationship between the gradient at and the contour passing through that point?    Does increase or decrease in the direction of ? Provide a justification for your response.     "
+},
+{
+  "id": "F_10_6_gradient_sign",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#F_10_6_gradient_sign",
+  "type": "Figure",
+  "number": "2.4.2",
+  "title": "",
+  "body": " The sign of is determined by .       "
+},
+{
+  "id": "A_10_6_3",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#A_10_6_3",
+  "type": "Activity",
+  "number": "2.4.3",
+  "title": "",
+  "body": "  In this activity we investigate how the gradient is related to the directions of greatest increase and decrease of a function. Let be a differentiable function and a unit vector.   Let be the angle between and . Use the relationship between the dot product and the angle between two vectors to explain why     At the point , the only quantity in Equation that can change is (which determines the direction of travel). Explain why makes the quantity as large as possible.    When , in what direction does the unit vector point relative to ? Why? What does this tell us about the direction of greatest increase of at the point ?    In what direction, relative to , does decrease most rapidly at the point ?    State the unit vectors and (in terms of ) that provide the directions of greatest increase and decrease for the function at the point . What important assumption must we make regarding in order for these vectors to exist?      "
+},
+{
+  "id": "A_10_6_11",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#A_10_6_11",
+  "type": "Activity",
+  "number": "2.4.4",
+  "title": "",
+  "body": "  Consider the function defined by .   Find the gradient and sketch it on Figure .  A plot for the gradient .       Sketch the unit vector on Figure with its tail at . Now find the directional derivative .    What is the slope of the graph of in the direction ? What does the sign of the directional derivative tell you?    Consider the vector and sketch on Figure with its tail at . Find a unit vector pointing in the same direction of . Without computing , what do you know about the sign of this directional derivative? Now verify your observation by computing .    In which direction (that is, for what unit vector ) is the greatest? What is the slope of the graph in this direction?    Corresponding, in which direction is least? What is the slope of the graph in this direction?    Sketch two unit vectors for which and then find component representations of these vectors.    Suppose you are standing at the point . In which direction should you move to cause to increase as rapidly as possible? At what rate does increase in this direction?      "
+},
+{
+  "id": "sec-PD-Directional-Derivs-and-Grad-15",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#sec-PD-Directional-Derivs-and-Grad-15",
+  "type": "Activity",
+  "number": "2.4.5",
+  "title": "",
+  "body": "  The temperature at a point is given by where is measured in degrees Celsius and , , and are measured in meters.    In which direction (given as a unit vector) does the temperature increase most rapidly at the point ?    A thermometer is placed at the point and starts moving toward the point . What is the rate of change of the temperature that the thermometer reads?   "
+},
+{
+  "id": "sec-PD-Directional-Derivs-and-Grad-17",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#sec-PD-Directional-Derivs-and-Grad-17",
+  "type": "Activity",
+  "number": "2.4.6",
+  "title": "",
+  "body": "  The circle is not the graph of any function. Thinking of as a function of is not helpful to find the tangent lines at . However, we can think if the this circle as the level set of a function of two variables.    The circle is not a level curve (contour) of which of the following functions?                          Choose any function for which the circle is a level set, find for that function, and use it to find the equation of the line tangent to the circle at .   "
+},
+{
+  "id": "sec-PD-Directional-Derivs-and-Grad-18",
+  "level": "2",
+  "url": "sec-PD-Directional-Derivs-and-Grad.html#sec-PD-Directional-Derivs-and-Grad-18",
+  "type": "Activity",
+  "number": "2.4.7",
+  "title": "",
+  "body": "  The surface is an elliptic paraboloid. (It opens in the positive -direction.)    Find a function for which this surface is a level set.    Compute the gradient of your function .    Use the fact that the gradient is orthogonal to the level sets to find an equation of the tangent plane to the surface at the point .   "
 },
 {
   "id": "sec-PD-Optimization",
