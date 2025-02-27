@@ -39,6 +39,7 @@
     \newcommand{\vn}{\mathbf{n}}
     \newcommand{\vm}{\mathbf{m}}
     \newcommand{\vT}{\mathbf{T}}
+    \DeclareMathOperator{\grad}{grad}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

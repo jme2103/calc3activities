@@ -3,6 +3,446 @@
 <section xml:id="sec-PD-Directional-Derivs-and-Grad" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Directional Derivatives and Gradients</title>
   
+  <p>
+    The partial derivatives <m>f_x</m> (and <m>f_y</m>, <m>f_z</m>, <m>f_{x_i}</m>, etc) 
+    answer the question, "What is the rate of change of <m>f</m> in the positive <m>x</m>
+    (and <m>y</m>, <m>z</m>, <m>x_i</m>, etc) direction?" In this section, we will see
+    an efficient way to answer this question for any direction in the domain.
+  </p>
+
+  <p>
+    We start by fixing a point <m>(x_0, y_0)</m> in the domain of <m>f</m> and a direction, 
+    i.e. a unit vector <m>\vu = \lrangle{u_1, u_2}</m>. Then 
+    <me>\vr(t) = \lrangle{x_0, y_0} + t\vu = \lrangle{x_0 + u_1t, y_0 + u_2t}</me>
+    is a line (parameterized by arc length) that passes through <m>(x_0, y_0)</m> at time
+    <m>t = 0</m> in the direction of <m>\vu</m>.
+  </p>
+
+  <p>
+    The composition <m>f(\vr(t))</m> is a function <m>\R \to \R</m>. Its derivative at <m>t = 0</m>
+    will be the rate of change of <m>f</m> we are looking for. Moreover, the chain gives
+    <me>
+      \frac{d}{dt}\bigg|_{t = 0} f(\vr(t)) = \frac{\partial f}{\partial x}(x_0,y_0) \frac{dx}{dt}\bigg|_{t = 0} + \frac{\partial f}{\partial y}(x_0,y_0) \frac{dy}{dt}\bigg|_{t = 0}
+    </me>
+    as the form of the derivative. Lastly, we note that <m>dx/dt = u_1</m> and <m>dy/dt = u_2</m>.
+    This expression gives the <dfn>directional derivative</dfn> of <m>f</m> at <m>(x_0, y_0)</m> in
+    the direction of <m>\vu</m>
+  </p>
+
+  <assemblage xml:id="Directional-derivative">
+    <title>Calculating a directional derivative</title>
+  <p>
+    Given a differentiable function <m>f = f(x,y)</m> and a unit vector <m>\vu = \langle u_1, u_2 \rangle</m>, we may compute <m>D_{\vu}f(x,y)</m> by
+    <men xml:id="eq_10_6_DD">
+      D_{\vu}f(x,y) = f_x(x,y)u_1 + f_y(x,y)u_2.
+    </men>
+  </p>
+  </assemblage>
+
+  <activity xml:id="A_10_6_2">
+    <statement>
+      <p>
+        Let <m>f(x,y) = 3xy-x^2y^3</m>.
+        <ol marker="a.">
+          <li>
+            <p>
+              Determine <m>f_x(x,y)</m> and <m>f_y(x,y)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use Equation<nbsp/><xref ref="eq_10_6_DD"/> to determine <m>D_{\vi} f(x,y)</m> and <m>D_{\vj} f(x,y)</m>. What familiar function is <m>D_{\vi} f</m>? What familiar function is <m>D_{\vj} f</m>? (Recall that <m>\vi</m> is the unit vector in the positive <m>x</m>-direction and <m>\vj</m> is the unit vector in the positive <m>y</m>-direction.)
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Use Equation<nbsp/><xref ref="eq_10_6_DD"/> to find the derivative of <m>f</m> in the direction of the vector <m>\vv = \langle 2, 3 \rangle</m> at the point <m>(1,-1)</m>.  Remember that a unit direction vector is needed.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </activity>
+
+  <p>
+    The vector whose components are the values of the partial derivatives of <m>f</m> is called the <dfn>gradient</dfn> of <m>f</m>. It is denoted by 
+    <me>
+      \nabla f(x_0, y_0) = \grad(f) (x_0,y_0) = \lrangle{f_x(x_0,y_0),f_y(x_0,y_0)}.
+    </me>
+    With this notation, the directional derivative can be viewed as a dot product.
+  </p>
   
+  <assemblage xml:id="Directional-derivative-gradient">
+      <title>The directional derivative and the gradient</title>
+  <p>
+    Given a differentiable function <m>f = f(x,y)</m> and a unit vector <m>\vu = \langle u_1, u_2 \rangle</m>, we may compute <m>D_{\vu}f(x,y)</m> by
+    <men xml:id="eq_10_6_DD_grad">
+      D_{\vu}f(x,y) = \nabla f(x,y) \cdot \vu.
+    </men>
+  </p>
+  </assemblage>
+
+  <activity xml:id="A_10_6_10">
+    <statement>
+      <p>
+        Let's consider the function <m>f</m> defined by <m>f(x,y) = x^2 - y^2</m>. Some contours for this function are shown in <xref ref="F_10_6_activity_1">Figure</xref>.
+      </p>
+
+      <figure xml:id="F_10_6_activity_1">
+        <caption>Contours of <m>f(x,y) = x^2 - y^2</m>.</caption>
+        <image width="50%" source="images/fig_10_6_contours_1"/>
+      </figure>
+
+      <ol marker="a.">
+        <li>
+          <p>
+            Find the gradient <m>\nabla f (x,y)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            For each of the following points <m>(x_0,y_0)</m>, evaluate the gradient <m>\nabla f(x_0,y_0)</m> and sketch the gradient vector with its tail at
+                <m>(x_0,y_0)</m>.  Some of the vectors are too long
+                to fit onto the plot, but we'd like to draw them to scale;  to do so, scale each vector by a factor of 1/4.
+            <ul>
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (2,0)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (0,2)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (2,2)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (2,1)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (-3,2)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (-2,-4)</m>
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  <m>(x_0,y_0) = (0,0)</m>
+                </p>
+              </li>
+            </ul>
+          </p>
+        </li>
+
+        <li>
+          <p>
+            What do you notice about the relationship between the gradient at
+                <m>(x_0,y_0)</m> and the contour passing through that point?
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Does <m>f</m> increase or decrease in the direction of <m>\nabla
+                f(x_0,y_0)</m>?  Provide a justification for your response.
+          </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <p>
+    Using the geometric definition of the dot product gives a lot of information
+    about the rate of change of <m>f</m> at <m>(x_0, y_0)</m>.
+    <me>
+      \nabla f(x_0,y_0) \cdot \vu = |\nabla f(x_0,y_0)||\vu|\cos(\theta) = |\nabla f(x_0,y_0)|\cos(\theta)
+    </me>
+  </p>
+
+  <figure xml:id="F_10_6_gradient_sign">
+    <caption>The sign of <m>D_{\vu} f(x_0,y_0)</m> is determined by <m>\theta</m>.</caption>
+    <sidebyside widths="33% 33% 33%">
+    <image source="images/fig_10_6_gradient_angle_1"/>
+    <image source="images/fig_10_6_gradient_angle_2"/>
+    <image source="images/fig_10_6_gradient_angle_3"/>
+    </sidebyside>
+  </figure>
+
+  <activity xml:id="A_10_6_3">
+    <statement>
+      <p>
+        In this activity we investigate how the gradient is related to the directions of greatest increase and decrease of a function. Let <m>f</m> be a differentiable function and <m>\vu</m> a unit vector.
+        <ol marker="a.">
+          <li>
+            <p>
+              Let <m>\theta</m> be the angle between <m>\nabla f(x_0,y_0)</m> and <m>\vu</m>.  Use the relationship between the dot product and the angle between two vectors to explain why
+              <men xml:id="eq_10_6_DD_grad2">
+                D_{\vu} f(x_0,y_0) = |\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle | \cos(\theta).
+              </men>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              At the point <m>(x_0,y_0)</m>, the only quantity in Equation<nbsp/><xref ref="eq_10_6_DD_grad2"/> that can change is <m>\theta</m> (which determines the direction <m>\vu</m> of travel). Explain why <m>\theta = 0</m> makes the quantity
+              <me>
+                |\langle f_x(x_0,y_0), f_y(x_0,y_0) \rangle| \cos(\theta)
+              </me>
+              as large as possible.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              When <m>\theta = 0</m>, in what direction does the unit vector <m>\vu</m> point relative to <m>\nabla f(x_0,y_0)</m>? Why? What does this tell us about the direction of greatest increase of <m>f</m> at the point <m>(x_0,y_0)</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              In what direction, relative to <m>\nabla f(x_0,y_0)</m>, does <m>f</m> decrease most rapidly at the point <m>(x_0,y_0)</m>?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              State the unit vectors <m>\vu</m> and <m>\vv</m> (in terms of <m>\nabla f(x_0,y_0)</m>) that provide the directions of greatest increase and decrease for the function <m>f</m> at the point <m>(x_0,y_0)</m>.  What important assumption must we make regarding <m>\nabla f(x_0,y_0)</m> in order for these vectors to exist?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </activity>
+
+  <activity xml:id="A_10_6_11">
+    <statement>
+      <p>
+        Consider the function <m>f</m> defined by <m>f(x,y) = -x + 2xy - y</m>.
+        <ol marker="a.">
+          <li>
+            <p>
+              Find the gradient <m>\nabla f(1,2)</m> and sketch it on <xref ref="F_10_6_activity_empty">Figure</xref>.
+
+              <figure xml:id="F_10_6_activity_empty">
+                <caption>A plot for the gradient <m>\nabla f(1,2)</m>.</caption>
+                <image width="50%" source="images/fig_10_6_activity_empty"/>
+              </figure>
+
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Sketch the unit vector <m>\vz = \left\langle-\frac1{\sqrt{2}},
+                  -\frac1{\sqrt{2}}\right\rangle</m> on <xref ref="F_10_6_activity_empty">Figure</xref> with its tail at <m>(1,2)</m>.
+                Now find the directional derivative <m>D_{\vz}f(1,2)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is the slope of the graph of <m>f</m> in the direction <m>\vz</m>?  
+                What does the sign of the directional derivative tell you?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Consider the vector <m>\vv = \langle 2,-1\rangle</m> and sketch <m>\vv</m>
+                on <xref ref="F_10_6_activity_empty">Figure</xref> with its tail at <m>(1,2)</m>.
+                Find a unit vector <m>\vw</m> pointing in the same direction of <m>\vv</m>.
+                Without computing <m>D_{\vw}f(1,2)</m>, what do you know about the sign
+                of this directional derivative?  Now verify your observation by
+                computing <m>D_{\vw}f(1,2)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              In which direction (that is, for what unit vector <m>\vu</m>) is <m>D_{\vu}f(1,2)</m>
+                the greatest?  What is the slope of the graph in this direction?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Corresponding, in which direction is <m>D_{\vu}f(1,2)</m> least?  What is the slope of the graph in this direction?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Sketch two unit vectors <m>\vu</m> for which <m>D_{\vu}f(1,2) = 0</m> and
+                then find component representations of these vectors.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Suppose you are standing at the point <m>(3,3)</m>.  In which
+                direction should you move to cause <m>f</m> to increase as rapidly as
+                possible?  At what rate does <m>f</m> increase in this direction?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </activity>
+
+  <p>
+    Here is a list of important facts to know abou the gradient or a function <m>f</m>:
+    <ul>
+      <li>
+        <p>
+          The gradient is a vector in the domain of <m>f</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          When it's not zero, <m>\nabla f(x_0,y_0)</m> points in the direction of greatest increase at <m>(x_0,y_0)</m>, 
+          and <m>|\nabla f(x_0,y_0)|</m> is the instantaneous rate of change of <m>f</m> in that direction.
+        </p>
+      </li>
+      <li>
+        <p>
+          When it's not zero, <m>\nabla f(x_0,y_0)</m> is orthogonal to the contour through <m>(x_0,y_0)</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          The gradient is our first example of a vector field, i.e. a function that assigns to each point in the domain
+          a vector.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <activity>
+    <introduction>
+      <p>
+        The temperature at a point <m>(x,y,z)</m> is given by
+        <me>
+          T(x,y,z) = 200e^{-x^2 - y^2/4 - z^2 / 9},
+        </me>
+        where <m>T</m> is measured in degrees Celsius and <m>x</m>, <m>y</m>, and <m>z</m> are measured in meters.
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          In which direction (given as a unit vector) does the temperature increase most rapidly at the point <m>(-1,1,1)</m>?
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          A thermometer is placed at the point <m>(-1,1,1)</m> and starts moving toward the point <m>(3, -3, 5)</m>.
+          What is the rate of change of the temperature that the thermometer reads?
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    Just as the gradient of a function of two variables is orthogonal to the level curves of the function, the gradient
+    of a function of three variables is orthogonal to the level surfaces of the function. This gives a quick way to
+    find the equations of tangent lines to curves and tangent planes to surfaces.
+  </p>
+
+  <activity>
+    <introduction>
+      <p>
+        The circle <m>x^2 + y^2 = 4</m> is not the graph of any function. Thinking of <m>y</m> as a function of <m>x</m> 
+        is not helpful to find the tangent lines at <m>(\pm 2, 0)</m>. However, we can think if the this circle as the level set
+        of a function of two variables. 
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          The circle <m>x^2 + y^2 = 4</m> is <em>not</em> a level curve (contour) of which of the following functions?
+        </p>
+        <ol marker="A." cols="2">
+          <li>
+              <p>
+                <m>f(x,y) = x^2 + y^2 - 4</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x, y) = 42 - x^2 - y^2</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x, y) = x^2 - y^2</m>
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f(x, y) = x^2 + y^2</m>
+              </p>
+          </li>
+        </ol>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Choose any function for which the circle is a level set, find <m>\nabla f(2,0)</m> for that function, and use
+          it to find the equation of the line tangent to the circle at <m>(2,0)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
+
+  <activity>
+    <introduction>
+      <p>
+        The surface <m>y = \frac{3}{2} x^2 + \frac{3}{2} z^2 - 5</m> is an elliptic paraboloid. (It opens in the positive <m>y</m>-direction.)
+      </p>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Find a function <m>f(x,y,z)</m> for which this surface is a level set.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Compute the gradient of your function <m>\nabla f(x,y,z)</m>.
+        </p>
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Use the fact that the gradient is orthogonal to the level sets to find an equation of the tangent plane to the surface at the point <m>(1,-2,1)</m>.
+        </p>
+      </statement>
+    </task>
+  </activity>
 
 </section>
