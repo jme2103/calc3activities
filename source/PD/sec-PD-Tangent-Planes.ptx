@@ -197,9 +197,9 @@
   <p>
     For a function of <m>n</m> variables, the tangent plane is an <m>n</m>-dimensional (affine, linear) subspace <m>\R^{n+1}</m>.
     When <m>n=1</m>, it's a line in <m>\R^2</m>; when <m>n=2</m>, it's a plane in <m>\R^3</m>. In general, we say that it's
-    a hyperplane in <m>\R^{n+1}</m>. The equation of the tangent hyperplane to a function <m>f(x,y,z)</m> at the point <m>(x_0,y_0,z_0)</m> is
+    a hyperplane in <m>\R^{n+1}</m>. The equation of the tangent hyperplane to a function <m>w = f(x,y,z)</m> at the point <m>(x_0,y_0,z_0)</m> is
     <me>
-      z = f(x_0,y_0,z_0) + f_x(x_0,y_0,z_0)(x-x_0) + f_y(x_0,y_0,z_0)(y-y_0) + f_z(x_0,y_0,z_0)(z-z_0).
+      w = f(x_0,y_0,z_0) + f_x(x_0,y_0,z_0)(x-x_0) + f_y(x_0,y_0,z_0)(y-y_0) + f_z(x_0,y_0,z_0)(z-z_0).
     </me>
   </p>
 
