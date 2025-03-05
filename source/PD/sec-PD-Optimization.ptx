@@ -210,6 +210,206 @@
       </statement>
     </activity>
 
+    <activity>
+      <statement>
+        <p>
+          Let <m>S</m> be the subset of <m>\R^2</m> defined by <me>-\sqrt{1 - x^2} \leq y \lt \sqrt{1 - x^2}</me>.
+          <image width = "50%">
+              <latex-image>
+                  <xi:include href="./tikz/optimization-subset2.tex" parse="text" />
+              </latex-image>
+          </image>
+          What is true of <m>S</m>?
+          <ol marker="A." cols="1">
+            <li>
+                <p>
+                  <m>S</m> is closed.
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>S</m> is open.
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>S</m> is both open and closed.
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>S</m> neither open nor closed.
+                </p>
+            </li>
+          </ol> 
+        </p>
+      </statement>
+    </activity>
+
+    <assemblage>
+      <title>Boundary of Set</title>
+      <p>
+        A point <m>(x,y)</m> in <m>\R^2</m> is called a <em>boundary point of <m>S</m></em>
+        if every open disk centered at <m>(x,y)</m> contains points both in 
+        <m>S</m> and not in <m>S</m>.
+      </p>
+      <p>
+        The subset of <m>\R^2</m> of all boundary points of <m>S</m> is called the <em>boundary</em> 
+        of <m>S</m> and is denoted by <m>\partial S</m>.
+      </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          Let <m>S</m> be the subset of <m>\R^2</m> defined by <me>y \leq x \lt 1</me> <me>-1 \leq y \leq 1</me>.
+          <image width = "50%">
+              <latex-image>
+                  <xi:include href="./tikz/optimization-subset3.tex" parse="text" />
+              </latex-image>
+          </image>
+          Which of the following is <em>not</em> a boundary point of <m>S</m>?
+          <ol marker="A." cols="2">
+            <li>
+                <p>
+                  <m>(-1,-1)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>(0,0)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>(1,1)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>(0,-1)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>(0,1)</m>
+                </p>
+            </li>
+            <li>
+                <p>
+                  <m>(1,-1)</m>
+                </p>
+            </li>
+          </ol> 
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>S</m> be the subset of <m>\R</m> defined by <me>
+            -3 \lt x \leq 2
+          </me>
+          
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Is <m>S</m> open, closed, both, or neither? Justify your answer.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Find the set <m>\partial S</m>.
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <assemblage>
+      <title>Bounded Set</title>
+      <p>
+        A subset <m>S</m> of <m>\R^2</m> is called <em>bounded</em> if
+        there is some open disk <m>D</m> such that <m>S</m> is a subset of <m>D</m>. 
+        In other words, the disk completely covers <m>S</m>.
+      </p>
+    </assemblage>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>S</m> be the subset of <m>\R^2</m> defined by <me>x - 1 \lt y \leq x + 1</me>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Sketch the set <m>S</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>S</m> open, closed, both, or neither? Justify your answer.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What is <m>\partial S</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is the <m>S</m> bounded?
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity>
+      <introduction>
+        <p>
+          Let <m>S</m> be the subset of <m>\R^2</m> defined by <me>y^2 - 1 \leq x \leq y + 1</me>.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Sketch the set <m>S</m>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is <m>S</m> open, closed, both, or neither? Justify your answer.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            What is <m>\partial S</m>?
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Is the <m>S</m> bounded?
+          </p>
+        </statement>
+      </task>
+    </activity>
 
 
   </subsection>

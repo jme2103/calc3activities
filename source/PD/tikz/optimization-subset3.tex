@@ -10,7 +10,8 @@
         axis on top=true,
         restrict y to domain=-10:10,
     ]
-    \filldraw[blue!20] (axis cs:0,0) circle (1);
-    \draw[blue!80, ultra thick] (axis cs:0,0) circle (1);
+    \filldraw[blue!20] (axis cs:-1,-1) -- (axis cs:1,-1) -- (axis cs:1,1) -- cycle;
+    \draw[blue!80, ultra thick] (axis cs:-1,-1) -- (axis cs:1,-1);
+    \draw[blue!80, ultra thick] (axis cs:-1,-1) -- (axis cs:1,1);
     \end{axis}
 \end{tikzpicture}
