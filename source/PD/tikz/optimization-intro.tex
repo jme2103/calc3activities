@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+    \begin{axis}[    
+        grid=major,
+        xtick={-3,-2,...,3},
+        ytick={-3,-2,...,3},
+        xmin=-3, xmax=3,    
+        ymin=-3, ymax=3,
+        axis equal,
+        axis lines=center,
+        restrict y to domain=-10:10,
+    ]
+    \addplot[domain=-4:4, samples=100, color=blue, thick] {0.33*x^3 + 0.5*x^2 - 2*x - 1};
+    % \addplot coordinates {(2, 3)};
+    \end{axis}
+\end{tikzpicture}

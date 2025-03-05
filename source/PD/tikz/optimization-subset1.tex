@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \begin{axis}[    
+        grid=major,
+        xtick={-3,-2,...,3},
+        ytick={-3,-2,...,3},
+        xmin=-2, xmax=2,    
+        ymin=-2, ymax=2,
+        axis equal,
+        axis lines=center,
+        axis on top=true,
+        restrict y to domain=-10:10,
+    ]
+    \filldraw[blue!20] (axis cs:0,0) circle (1);
+    \draw[blue!80, very thick] (axis cs:0,0) circle (1);
+    \end{axis}
+\end{tikzpicture}

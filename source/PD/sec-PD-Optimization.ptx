@@ -3,6 +3,230 @@
 <section xml:id="sec-PD-Optimization" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Optimization</title>
   
-  
+  <subsection xml:id="subsec-PD-Optimization-Intro">
+    <title>Review of Single-Variable Optimization</title>
+  <activity>
+    <introduction>
+      <p>
+        Let <m>f(x)</m> be the cubic function whose graph is shown below.
+      </p>
+      <image width = "50%">
+          <latex-image>
+              <xi:include href="./tikz/optimization-intro.tex" parse="text" />
+          </latex-image>
+      </image>
+    </introduction>
+    <task>
+      <statement>
+        <p>
+          Which of the following statements is true of the <em>local extrema</em> or <em>relative extrema</em>
+          of <m>f</m>?
+        </p>
+        <ol marker="A." cols="1">
+          <li>
+              <p>
+                <m>f</m> does not have any local extrema.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a local max at <m>x = -2</m> and a local min at <m>x = 1</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a local max at <m>x = 1</m> and a local min at <m>x = -2</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a local max at <m>x = -2</m> and a local min at <m>x = 0</m>.
+              </p>
+          </li>
+        </ol> 
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Which of the following statements is true of the <em>global extrema</em> or
+          <em>absolute extrema</em> of <m>f</m> on the interval <m>[0, 2]</m>?
+        </p>
+        <ol marker="A." cols="1">
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 0</m> and global max at <m>x = 2</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 2</m> and global max at <m>x = 0</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 1</m> and global max at <m>x = 2</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 1</m> and no global max.
+              </p>
+          </li>
+        </ol> 
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Which of the following statements is true of the <em>global extrema</em> or
+          <em>absolute extrema</em> of <m>f</m> on the interval <m>[0, 2)</m>?
+        </p>
+        <ol marker="A." cols="1">
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 0</m> and global max at <m>x = 2</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 2</m> and global max at <m>x = 0</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 1</m> and global max at <m>x = 2</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global min at <m>x = 1</m> and no global max.
+              </p>
+          </li>
+        </ol> 
+      </statement>
+    </task>
+    <task>
+      <statement>
+        <p>
+          Which of the following statements is true of the <em>global extrema</em> or
+          <em>absolute extrema</em> of <m>f</m> on the interval <m>(-\infty, 2)</m>?
+        </p>
+        <ol marker="A." cols="1">
+          <li>
+              <p>
+                <m>f</m> does not have any global extrema.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global max at <m>x = -2</m> and a global min at <m>x = 1</m>.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global max at <m>x = -2</m> and no global min.
+              </p>
+          </li>
+          <li>
+              <p>
+                <m>f</m> has a global max at <m>x = 1</m> and a global min at <m>x = -4</m>.
+              </p>
+          </li>
+        </ol> 
+      </statement>
+    </task>
+  </activity>
+
+  <p>
+    When optimizing a function of a single variable, we have several tools at our disposal which are
+    straightforward to apply. Fermat's Theorem states that a continuous function will always have a 
+    global max or min when considered over a closed and bounded interval. (However, as we saw above it may or may
+    may not have a global extrema when the interval is not closed or not bounded.) We also know that the global extrema
+    will occur either at critical points (i.e. values of <m>x</m> where <m>f'(x) = 0</m> or <m>f'(x)</m> 
+    is undefined) or at the endpoints of the closed interval. Thus we may find the global extrema by
+    evaluating <m>f</m> at the critical points and the endpoints of the interval, and then locating
+    the largest and smallest values. (This is known as the <em>closed interval method</em>.)
+  </p>
+
+  <p>
+    The same principles apply when locating the global extrema of a function of two variables. However,
+    we must extend the notions of <em>closed and bounded interval</em>, <em>endpoint</em>, and <em>critical point</em>
+    appropriately to <m>\R^n</m>.
+  </p>
+
+  </subsection>
+
+  <subsection xml:id="subsec-PD-closed-sets">
+    <title>Closed and Bounded Subsets of <m>\R^n</m></title>
+    <p>
+      Let <m>(x_0,y_0)</m> be a fixed point in <m>\R^2</m> and let <m>r</m> be a positive real number. We
+      will denote the set of all points in <m>\R^2</m> that are within a distance <m>r</m> of <m>(x_0,y_0)</m> by
+      <me>
+        B_r(x_0,y_0) = \{(x,y) \in \R^2 : \sqrt{(x-x_0)^2 + (y-y_0)^2} \lt r\}.
+      </me>
+      These sets are called <em>open disks</em> or <em>open balls</em>. Open disks in
+      <m>\R^n</m> are defined similarly: <m>B_r(\vx_0) = \{ \vx \in \R^n : |\vx - \vx_0| \lt r \}</m>. A subset <m>S</m> of <m>\R^2</m> is 
+      said to be <em>open</em> if for every point <m>(x,y) \in S</m> there exists
+      a positive real number <m>r</m> such that <m>B_r(x,y) \subseteq S</m>. A subset <m>S</m> of <m>\R^2</m> is said to be
+      <em>closed</em> if its complement is open.
+    </p>
+
+    <activity>
+      <statement>
+        <p>
+          Let <m>S</m> be the subset of <m>\R^2</m> defined by <m>x^2 + y^2 \leq 1</m>.
+          <image width = "50%">
+              <latex-image>
+                  <xi:include href="./tikz/optimization-subset1.tex" parse="text" />
+              </latex-image>
+          </image>
+          Which is the best reason <m>S</m> is closed?
+          <ol marker="A." cols="1">
+            <li>
+                <p>
+                  At every point inside of <m>S</m>, you can center a small open disk that
+                  is contained in <m>S</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                  At every point outside of <m>S</m>, you can center a small open disk that
+                  does not touch <m>S</m>.
+                </p>
+            </li>
+            <li>
+                <p>
+                  The distance of every point outside of <m>S</m> to the origin is more than 1.
+                </p>
+            </li>
+            <li>
+                <p>
+                  The distance of every point inside of <m>S</m> to the origin is less than 1.
+                </p>
+            </li>
+          </ol> 
+        </p>
+      </statement>
+    </activity>
+
+
+
+  </subsection>
+
+  <subsection xml:id="subsec-PD-critical-points">
+    <title>Critical Points and The Second Derivative Test</title>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-optimization">
+    <title>Optimization on Closed and Bounded Domains</title>
+    
+  </subsection>
+
+  <subsection xml:id="subsec-Lagrange">
+    <title>Lagrange Multipliers</title>
+    
+  </subsection>
 
 </section>

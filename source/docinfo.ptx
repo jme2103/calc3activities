@@ -40,6 +40,7 @@
     \newcommand{\vn}{\mathbf{n}}
     \newcommand{\vm}{\mathbf{m}}
     \newcommand{\vT}{\mathbf{T}}
+    \newcommand{\vx}{\mathbf{x}}
     \DeclareMathOperator{\grad}{grad}
   </macros>
 
@@ -53,7 +54,7 @@
         \usetikzlibrary{decorations.markings}
         \usetikzlibrary{decorations.pathreplacing}
         \usetikzlibrary{calc}
-        \pgfplotsset{compat=1.15}
+        \pgfplotsset{compat=1.18}
         \usepgfplotslibrary{fillbetween}
         \usepgfplotslibrary{polar}
 	</latex-image-preamble>
