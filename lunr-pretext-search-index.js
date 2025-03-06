@@ -1222,7 +1222,133 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.5",
   "title": "Optimization",
-  "body": " Optimization  "
+  "body": " Optimization   Review of Single-Variable Optimization    Let be the cubic function whose graph is shown below.       Which of the following statements is true of the local extrema or relative extrema of ?     does not have any local extrema.     has a local max at and a local min at .     has a local max at and a local min at .     has a local max at and a local min at .      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     has a global min at and global max at .     has a global min at and global max at .     has a global min at and global max at .     has a global min at and no global max.      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     has a global min at and global max at .     has a global min at and global max at .     has a global min at and global max at .     has a global min at and no global max.      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     does not have any global extrema.     has a global max at and a global min at .     has a global max at and no global min.     has a global max at and a global min at .      When optimizing a function of a single variable, we have several tools at our disposal which are straightforward to apply. The Extreme Value Theorem states that a continuous function will always have a global max or min when considered over a closed and bounded interval. (However, as we saw above it may or may may not have a global extrema when the interval is not closed or not bounded.) We also know that the global extrema will occur either at critical points (i.e. values of where or is undefined) or at the endpoints of the closed interval. Thus we may find the global extrema by evaluating at the critical points and the endpoints of the interval, and then locating the largest and smallest values. (This is known as the closed interval method .)    Let be a function of two variables and .   The function has a local maximum at a point provided that for all points near . In this situation we say that is a local maximum value .    The function has a local minimum at a point provided that for all points near . In this situation we say that is a local minimum value .    An absolute maximum point is a point for which for all points in the domain of . The value of at an absolute maximum point is the maximum value of .    An absolute minimum point is a point such that for all points in the domain of . The value of at an absolute minimum point is the minimum value of .       The same principles apply when locating the global extrema of a function of two variables. However, we must extend the notions of closed and bounded interval , endpoint , and critical point appropriately to .    Closed and Bounded Subsets of  Let be a fixed point in and let be a positive real number. We will denote the set of all points in that are within a distance of by These sets are called open disks or open balls . Open disks in are defined similarly: . A subset of is said to be open if for every point there exists a positive real number such that . A subset of is said to be closed if its complement is open.    Let be the subset of defined by .   Which is the best reason is closed?   At every point inside of , you can center a small open disk that is contained in .    At every point outside of , you can center a small open disk that does not touch .    The distance of every point outside of to the origin is more than 1.    The distance of every point inside of to the origin is less than 1.         Let be the subset of defined by .   What is true of ?    is closed.     is open.     is both open and closed.     neither open nor closed.        Boundary of Set  A point in is called a boundary point of if every open disk centered at contains points both in and not in .  The subset of of all boundary points of is called the boundary of and is denoted by .     Let be the subset of defined by  .   Which of the following is not a boundary point of ?                                      Let be the subset of defined by     Is open, closed, both, or neither? Justify your answer.    Find the set .     Bounded Set  A subset of is called bounded if there is some open disk such that is a subset of . In other words, the disk completely covers .     Let be the subset of defined by .    Sketch the set     Is open, closed, both, or neither? Justify your answer.    What is ?    Is the bounded?      Let be the subset of defined by .    Sketch the set     Is open, closed, both, or neither? Justify your answer.    What is ?    Is the bounded?    The extreme value theorem applies to continuous functions on closed, finite intervals in . Now that we know what a closed and bounded subset of is we can state the analogous result for function so variables.   The Extreme Value Theorem  Let be a continuous function on a closed and bounded region . Then has an absolute maximum and an absolute minimum in .     Critical Points and The Second Derivative Test  Fermat's Theorem from calculus states that any local extremum of a function must occur at a point where the derivative is zero. This helps locate global extrema because we know that they must occur either at (a) points with zero derivative, (b) endpoints of the closed interval, or (c) points where the derivative is undefined.  This observation motivates the definition of critical points. A point in the domain of is a critical point if either or is undefined.    A critical point critical point  of a function is a point in the domain of at which and , or such that one of or fails to exist.      Find the critical points of each of the following functions. Then, using appropriate technology, plot the graphs of the surfaces near each critical point and compare the graph to your work.                        .        Let's consider what the graph of a function looks like near some critical points . Below is the graph and a contour plot for the function near the critical point . Notice that is a local maximum.   A local maximum.           Next, is the graph and a contour plot for the function near the critical point . Notice that it is a local minumum.   A local minimum.           Finally, consider the graph and contour plot for the function near the critical point . Notice that if you travel through the critical point in one direction it appears as a local maximum, but in the other direction it appears as a local minimum. We call this a saddle point .   A saddle point.           Just as in the single-variable case, not every critical point corresponds to a local extremum. Consider, for example, the function at the origin. In order, to identify which local extrema are maxima, which are minima, and which are neither, we can use the second derivative test. If is a critical point of the function , then implies that it's a local minimum, implies that it's a local maximum, and does not provide any additional information.  For functions of two variables, we will use a version of the second deriviative test that takes into account all the second derivatives of the function.   The Second Derivative Test  Suppose is a critical point of the function for which and . Let be the quantity defined by    If and , then has a local maximum at .    If and , then has a local minimum at .    If , then has a saddle point at .    If , then this test yields no information about what happens at .     The quantity is called the discriminant discriminant of the function at .   Recall that we can collect all the second derivatives of a function into a symmetric matrix called the Hessian matrix . The discriminant , described above, is the determinant of the Hessian matrix.   Recall, also, that every symmetric matrix is diagonalizable over the real numbers. Let and be the eigenvalues of . Also, the determinant of a matrix is the product of its eigenvalues. Thus, we can write If both eigenvalues are negative or positive, their product will be positive, and we are in the first case. Essentially, we are able to say that the function is concave down or concave up when viewed from any direction. If the eigenvalues have different signs, their product will be negative, and there will be on direction from which it's concave up and one from whic it's concave down.    Find the critical points of the following functions and use the Second Derivative Test to classify the critical points.              .          Optimization on Closed and Bounded Domains    Lagrange Multipliers   "
+},
+{
+  "id": "subsec-PD-Optimization-Intro-2",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-Optimization-Intro-2",
+  "type": "Activity",
+  "number": "2.5.1",
+  "title": "",
+  "body": "  Let be the cubic function whose graph is shown below.       Which of the following statements is true of the local extrema or relative extrema of ?     does not have any local extrema.     has a local max at and a local min at .     has a local max at and a local min at .     has a local max at and a local min at .      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     has a global min at and global max at .     has a global min at and global max at .     has a global min at and global max at .     has a global min at and no global max.      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     has a global min at and global max at .     has a global min at and global max at .     has a global min at and global max at .     has a global min at and no global max.      Which of the following statements is true of the global extrema or absolute extrema of on the interval ?     does not have any global extrema.     has a global max at and a global min at .     has a global max at and no global min.     has a global max at and a global min at .     "
+},
+{
+  "id": "subsec-PD-Optimization-Intro-4",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-Optimization-Intro-4",
+  "type": "Definition",
+  "number": "2.5.1",
+  "title": "",
+  "body": "  Let be a function of two variables and .   The function has a local maximum at a point provided that for all points near . In this situation we say that is a local maximum value .    The function has a local minimum at a point provided that for all points near . In this situation we say that is a local minimum value .    An absolute maximum point is a point for which for all points in the domain of . The value of at an absolute maximum point is the maximum value of .    An absolute minimum point is a point such that for all points in the domain of . The value of at an absolute minimum point is the minimum value of .      "
+},
+{
+  "id": "subsec-PD-closed-sets-3",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-3",
+  "type": "Activity",
+  "number": "2.5.2",
+  "title": "",
+  "body": "  Let be the subset of defined by .   Which is the best reason is closed?   At every point inside of , you can center a small open disk that is contained in .    At every point outside of , you can center a small open disk that does not touch .    The distance of every point outside of to the origin is more than 1.    The distance of every point inside of to the origin is less than 1.      "
+},
+{
+  "id": "subsec-PD-closed-sets-4",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-4",
+  "type": "Activity",
+  "number": "2.5.3",
+  "title": "",
+  "body": "  Let be the subset of defined by .   What is true of ?    is closed.     is open.     is both open and closed.     neither open nor closed.      "
+},
+{
+  "id": "subsec-PD-closed-sets-6",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-6",
+  "type": "Activity",
+  "number": "2.5.4",
+  "title": "",
+  "body": "  Let be the subset of defined by  .   Which of the following is not a boundary point of ?                                   "
+},
+{
+  "id": "subsec-PD-closed-sets-7",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-7",
+  "type": "Activity",
+  "number": "2.5.5",
+  "title": "",
+  "body": "  Let be the subset of defined by     Is open, closed, both, or neither? Justify your answer.    Find the set .   "
+},
+{
+  "id": "subsec-PD-closed-sets-9",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-9",
+  "type": "Activity",
+  "number": "2.5.6",
+  "title": "",
+  "body": "  Let be the subset of defined by .    Sketch the set     Is open, closed, both, or neither? Justify your answer.    What is ?    Is the bounded?   "
+},
+{
+  "id": "subsec-PD-closed-sets-10",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-closed-sets-10",
+  "type": "Activity",
+  "number": "2.5.7",
+  "title": "",
+  "body": "  Let be the subset of defined by .    Sketch the set     Is open, closed, both, or neither? Justify your answer.    What is ?    Is the bounded?   "
+},
+{
+  "id": "subsec-PD-critical-points-4",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-critical-points-4",
+  "type": "Definition",
+  "number": "2.5.2",
+  "title": "",
+  "body": "  A critical point critical point  of a function is a point in the domain of at which and , or such that one of or fails to exist.   "
+},
+{
+  "id": "A_10_7_3",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#A_10_7_3",
+  "type": "Activity",
+  "number": "2.5.8",
+  "title": "",
+  "body": "  Find the critical points of each of the following functions. Then, using appropriate technology, plot the graphs of the surfaces near each critical point and compare the graph to your work.                        .       "
+},
+{
+  "id": "subsec-PD-critical-points-7",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-critical-points-7",
+  "type": "Figure",
+  "number": "2.5.3",
+  "title": "",
+  "body": " A local maximum.          "
+},
+{
+  "id": "subsec-PD-critical-points-9",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-critical-points-9",
+  "type": "Figure",
+  "number": "2.5.4",
+  "title": "",
+  "body": " A local minimum.          "
+},
+{
+  "id": "subsec-PD-critical-points-11",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#subsec-PD-critical-points-11",
+  "type": "Figure",
+  "number": "2.5.5",
+  "title": "",
+  "body": " A saddle point.          "
+},
+{
+  "id": "A_10_7_5",
+  "level": "2",
+  "url": "sec-PD-Optimization.html#A_10_7_5",
+  "type": "Activity",
+  "number": "2.5.9",
+  "title": "",
+  "body": "  Find the critical points of the following functions and use the Second Derivative Test to classify the critical points.              .       "
 },
 {
   "id": "backmatter-2",
