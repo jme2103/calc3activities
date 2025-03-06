@@ -533,7 +533,7 @@
         </p>
       </statement>
 
-      <solution>
+      <!-- <solution>
         <ol marker="a.">
           <li>
             <p>
@@ -605,7 +605,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
     </activity>
 
     <p>
@@ -794,7 +794,7 @@
         </p>
       </statement>
 
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -919,7 +919,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
     </activity>
   </subsection>
