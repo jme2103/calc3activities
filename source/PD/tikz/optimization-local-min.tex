@@ -1,0 +1,14 @@
+\begin{tikzpicture}
+\begin{axis}[
+    % parameter,
+    % hide axis,
+    colormap/cool,
+]
+\addplot3[
+    mesh,
+    samples=50,
+    domain=-8:8,
+]
+{3*x^2 + y^2};
+\end{axis}
+\end{tikzpicture}

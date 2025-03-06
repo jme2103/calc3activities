@@ -42,6 +42,7 @@
     \newcommand{\vT}{\mathbf{T}}
     \newcommand{\vx}{\mathbf{x}}
     \DeclareMathOperator{\grad}{grad}
+    \DeclareMathOperator{\hess}{Hess}
   </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->

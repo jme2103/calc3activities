@@ -140,7 +140,7 @@
 
   <p>
     When optimizing a function of a single variable, we have several tools at our disposal which are
-    straightforward to apply. Fermat's Theorem states that a continuous function will always have a 
+    straightforward to apply. The Extreme Value Theorem states that a continuous function will always have a 
     global max or min when considered over a closed and bounded interval. (However, as we saw above it may or may
     may not have a global extrema when the interval is not closed or not bounded.) We also know that the global extrema
     will occur either at critical points (i.e. values of <m>x</m> where <m>f'(x) = 0</m> or <m>f'(x)</m> 
@@ -149,11 +149,48 @@
     the largest and smallest values. (This is known as the <em>closed interval method</em>.)
   </p>
 
+  <definition>
+    <statement>
+      <p>
+        Let <m>f</m> be a function of two variables <m>x</m> and <m>y</m>.
+        <ul>
+          <li>
+            <p>
+              The function <m>f</m> has a <em>local maximum</em> at a point <m>(x_0,y_0)</m> provided that <m>f(x,y) \leq f(x_0,y_0)</m> for all points <m>(x,y)</m> near <m>(x_0,y_0)</m>.  In this situation we say that <m>f(x_0, y_0)</m> is a <em>local maximum
+                          value</em>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The function <m>f</m> has a <em>local minimum</em> at a point <m>(x_0,y_0)</m> provided that <m>f(x,y) \geq f(x_0,y_0)</m> for all points <m>(x,y)</m> near <m>(x_0,y_0)</m>. In this situation we say that <m>f(x_0, y_0)</m> is a <em>local minimum value</em>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An <em>absolute maximum point</em> is a point <m>(x_0,y_0)</m> for  which <m>f(x,y)\leq f(x_0,y_0)</m> for all points <m>(x,y)</m> in the
+                        domain of <m>f</m>. The value of <m>f</m> at an absolute maximum point is the <em>maximum value</em> of <m>f</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              An <em>absolute minimum point</em> is a point such that <m>f(x,y) \geq f(x_0,y_0)</m> for all points <m>(x,y)</m> in the domain of <m>f</m>. The value of <m>f</m> at an absolute minimum point is the <em>minimum value</em> of <m>f</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
   <p>
     The same principles apply when locating the global extrema of a function of two variables. However,
     we must extend the notions of <em>closed and bounded interval</em>, <em>endpoint</em>, and <em>critical point</em>
     appropriately to <m>\R^n</m>.
   </p>
+
+
 
   </subsection>
 
@@ -411,12 +448,480 @@
       </task>
     </activity>
 
+    <p>
+      The extreme value theorem applies to continuous functions on closed, finite
+      intervals in <m>\R</m>. Now that we know what a closed and bounded subset of <m>\R^n</m> is
+      we can state the analogous result for function so <m>n</m> variables.
+    </p>
+
+    <assemblage xml:id="Extreme-value-theorem">
+      <title>The Extreme Value Theorem</title>
+    <p>
+      Let <m>f= f(x,y)</m>
+      be a continuous function on a closed and bounded region <m>R</m>. Then
+      <m>f</m> has an absolute maximum and an absolute minimum in <m>R</m>.
+    </p>
+    </assemblage>
 
   </subsection>
 
   <subsection xml:id="subsec-PD-critical-points">
     <title>Critical Points and The Second Derivative Test</title>
+
+    <p>
+      Fermat's Theorem from calculus states that any local extremum of a function
+      must occur at a point where the derivative is zero. This helps locate global
+      extrema because we know that they must occur either at (a) points with zero
+      derivative, (b) endpoints of the closed interval, or (c) points where the
+      derivative is undefined.
+    </p>
+
+    <p>
+      This observation motivates the definition of critical points. A point <m>x_0</m>
+      in the domain of <m>f</m> is a <em>critical point</em> if either <m>f'(x_0) = 0</m>
+      or <m>f'(x_0)</m> is undefined.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          A <term>critical point</term><idx><h>critical point</h></idx>
+          <m>(x_0,y_0)</m> of a function <m>f=f(x,y)</m> is a point in the domain of <m>f</m>
+          at which <m>f_x(x_0,y_0) = 0</m> and
+          <m>f_y(x_0,y_0) = 0</m>, or such that one of
+          <m>f_x(x_0,y_0)</m> or <m>f_y(x_0,y_0)</m>
+          fails to exist.
+        </p>
+      </statement>
+    </definition>
+
+    <activity xml:id="A_10_7_3">
+      <statement>
+        <p>
+          Find the critical points of each of the following functions. Then, using appropriate technology, plot the graphs of the surfaces near each critical point and compare the graph to your work.
+          <ol marker="a.">
+            <li>
+              <p>
+                <m>f(x,y) = 2+x^2+y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = 2 + x^2 - y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = 2x-x^2-\frac{1}{4}y^2</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = |x| + |y|</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = 2xy - 4x + 2y - 3</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <solution>
+        <ol marker="a.">
+          <li>
+            <p>
+              We determine the points in the domain of <m>f</m> where
+              <m>\nabla f = \vzero</m> or <m>\nabla f</m> does not exist.
+              In this example,
+              <me>
+                \nabla f = \langle 2x, 2y \rangle
+              </me>,
+              and so <m>\nabla f = \vzero</m> when <m>x = 0</m> and <m>y = 0</m>.
+              Thus, <m>(0,0)</m> is the only critical point of <m>f</m>.
+              The graph of <m>f</m> is a paraboloid that opens in the positive <m>z</m>-direction,
+              so we should expect only one critical point
+              (at which <m>f</m> has an absolute minimum value).
+            </p>
+          </li>
+          <li>
+            <p>
+              We determine the points in the domain of <m>f</m> where
+              <m>\nabla f = \vzero</m> or <m>\nabla f</m> does not exist.
+              In this example,
+              <me>
+                \nabla f = \langle 2x, -2y \rangle
+              </me>,
+              and so <m>\nabla f = \vzero</m> when <m>x = 0</m> and <m>y = 0</m>.
+              Thus, <m>(0,0)</m> is the only critical point of <m>f</m>.
+              The graph of <m>f</m> is a hyberbolic paraboloid that makes a saddle shape around the origin,
+              so we should expect only one critical point
+              (at which <m>f</m> has neither an absolute maximum nor an absolute minimum value).
+            </p>
+          </li>
+          <li>
+            <p>
+              For this function,
+              <me>
+                \nabla f = \left\langle 2-2x, -\frac{1}{2}y \right\rangle
+              </me>.
+              So <m>\nabla f = \vzero</m> when <m>2-2x = 0</m> and <m>y = 0</m>,
+              or at the point <m>(1,0)</m>.
+              Thus, <m>(1,0)</m> is the only critical point of <m>f</m>.
+              The graph of <m>f</m> is a paraboloid that opens in the negative <m>z</m>-direction,
+              so we should expect only one critical point
+              (at which <m>f</m> has an absolute maximum value).
+            </p>
+          </li>
+          <li>
+            <p>
+              Recall that if <m>g(x) = |x|</m>,
+              then <m>g'(x) = \begin{cases}1 \amp \text{ if }  x > 1 \\ -1 \amp \text{ if }  x \lt  1 \end{cases}</m> and <m>g'(0)</m> does not exist.
+              In this case we will never have <m>\nabla f = \vzero</m>,
+              but <m>\nabla f</m> will fail to exist when <m>x=0</m> or <m>y=0</m>.
+              This gives us infinitely many critical points <mdash/> all points of the form <m>(0,y)</m> or <m>(x,0)</m>.
+              The graph of <m>f</m> has sharp folds along the <m>x</m>-axis or <m>y</m>-axis,
+              so we should expect that <m>f</m> is not differentiable at those points.
+              The graph of <m>f</m> also indicates that <m>f</m> has an absolute minimum value at the point <m>(0,0)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              For this function,
+              <me>
+                \nabla f = \left\langle 2y - 4, 2x + 2 \right\rangle
+              </me>.
+              So <m>\nabla f = \vzero</m> when <m>2(y - 2) = 0</m> and <m>2(x + 1) = 0</m>,
+              or at the point <m>(-1, 2)</m>.
+              Thus, <m>(-1, 2)</m> is the only critical point of <m>f</m>.
+              The graph of <m>f</m> is a hyperbolic paraboloid, so we can expect that it has only one critical point
+              (at which <m>f</m> has neither an absolute maximum nor an absolute minimum value).
+            </p>
+          </li>
+        </ol>
+      </solution>
+    </activity>
+
+    <p>
+      Let's consider what the graph of a function <m>f(x,y)</m> looks like near some critical points <m>(x_0,y_0)</m>.
+      Below is the graph and a contour plot for the function <m>f(x,y) = 10 - (x^2 + y^2)</m> near the critical point <m>(0,0)</m>.
+      Notice that <m>(0,0)</m> is a local maximum.
+    </p>
+
+    <figure>
+      <caption>A local maximum.</caption>
+      <sidebyside widths="50% 50%">
+      <image width = "50%">
+          <latex-image>
+              <xi:include href="./tikz/optimization-local-max.tex" parse="text" />
+          </latex-image>
+      </image>
+      <image width = "50%">
+          <sageplot>
+              x = var('x')
+              y = var('y')
+              f(x,y) = 10 - (x^2 + y^2)
+              contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
+          </sageplot>
+      </image>
+      </sidebyside>
+    </figure>
+
+    <p>
+      Next, is the graph and a contour plot for the function <m>f(x,y) =  3x^2 + y^2</m> near the critical point <m>(0,0)</m>.
+      Notice that it is a local minumum.
+    </p>
+
+    <figure>
+      <caption>A local minimum.</caption>
+      <sidebyside widths="50% 50%">
+      <image width = "50%">
+          <latex-image>
+              <xi:include href="./tikz/optimization-local-min.tex" parse="text" />
+          </latex-image>
+      </image>
+      <image width = "50%">
+          <sageplot>
+              x = var('x')
+              y = var('y')
+              f(x,y) = 3*x^2 + y^2
+              contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
+          </sageplot>
+      </image>
+      </sidebyside>
+    </figure>
+
+    <p>
+      Finally, consider the graph and contour plot for the function <m>f(x,y) = x^2 - y^2</m> 
+      near the critical point <m>(0,0)</m>. Notice that if you travel through the critical point
+      in one direction it appears as a local maximum, but in the other direction it appears as 
+      a local minimum. We call this a <em>saddle point</em>.
+    </p>
+
+    <figure>
+      <caption>A saddle point.</caption>
+      <sidebyside widths="50% 50%">
+      <image width = "50%">
+          <latex-image>
+              <xi:include href="./tikz/optimization-saddle.tex" parse="text" />
+          </latex-image>
+      </image>
+      <image width = "50%">
+          <sageplot>
+              x = var('x')
+              y = var('y')
+              f(x,y) = x^2 - y^2
+              contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
+          </sageplot>
+      </image>
+      </sidebyside>
+    </figure>
+
+    <p>
+      Just as in the single-variable case, not every critical point corresponds to a local extremum. Consider,
+      for example, the function <m>f(x) = x^3</m> at the origin. In order, to identify which local extrema
+      are maxima, which are minima, and which are neither, we can use the second derivative test. If <m>x_0</m> 
+      is a critical point of the function <m>f</m>, then <m>f''(x_0) \gt 0</m> implies that it's a local minimum,
+      <m>f'(x_0) \lt 0</m> implies that it's a local maximum, and <m>f''(x_0) = 0</m> does not provide any additional
+      information.
+    </p>
+
+    <p>
+      For functions of two variables, we will use a version of the second deriviative test that takes into account
+      all the second derivatives of the function.
+    </p>
+
+    <assemblage xml:id="Second-derivative-test">
+      <title>The Second Derivative Test</title>
+    <p>
+      Suppose <m>(x_0,y_0)</m> is a critical point of
+      the function <m>f</m> for which <m>f_x(x_0,y_0) = 0</m> and
+      <m>f_y(x_0,y_0) = 0</m>. Let <m>D</m> be the quantity defined by
+      <me>
+        D = f_{xx}(x_0,y_0) f_{yy}(x_0,y_0) - f_{xy}(x_0,y_0)^2.
+      </me>
+      <ul>
+        <li>
+          <p>
+            If <m>D&gt;0</m> and <m>f_{xx}(x_0,y_0) \lt  0</m>, then <m>f</m> has a local maximum at <m>(x_0,y_0)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If <m>D&gt;0</m> and <m>f_{xx}(x_0,y_0) &gt; 0</m>, then <m>f</m> has a local minimum at <m>(x_0,y_0)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If <m>D \lt  0</m>, then <m>f</m> has a saddle point at <m>(x_0,y_0)</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            If <m>D = 0</m>, then this test yields no information about what happens at <m>(x_0,y_0)</m>.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      The quantity <m>D</m> is called the
+      <em>discriminant</em><idx><h>discriminant</h></idx> of the function <m>f</m> at
+      <m>(x_0,y_0)</m>.
+    </p>
+    </assemblage>
     
+    <p>
+      Recall that we can collect all the second derivatives of a function into a symmetric 
+      matrix called the <em>Hessian matrix</em>.
+      <me>
+        \hess(f) = \begin{bmatrix} f_{xx} \amp f_{xy} \\ f_{yx} \amp f_{yy} \end{bmatrix}.
+      </me>
+      The discriminant <m>D</m>, described above, is the determinant of the Hessian matrix.
+      <me>
+        D = \det(\hess(f))
+      </me>
+    </p>
+
+    <p>
+      Recall, also, that every symmetric matrix is diagonalizable over the real numbers. Let
+      <m>\lambda_1</m> and <m>\lambda_2</m> be the eigenvalues of <m>\hess(f)</m>. Also,
+      the determinant of a matrix is the product of its eigenvalues. Thus, we can write
+      <me>
+        D = \lambda_1 \lambda_2.
+      </me>
+      If both eigenvalues are negative or positive, their product will be positive, and we 
+      are in the first case. Essentially, we are able to say that the function is concave down
+      or concave up when viewed from any direction. If the eigenvalues have different signs,
+      their product will be negative, and there will be on direction from which it's concave up
+      and one from whic it's concave down.
+    </p>
+
+    <activity xml:id="A_10_7_5">
+      <statement>
+        <p>
+          Find the critical points of the
+          following functions and use the Second Derivative Test to classify
+          the critical points.
+          <ol marker="a.">
+            <li>
+              <p>
+                <m>f(x,y) = 3x^3+y^2-9x+4y</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = xy + \frac{2}{x} + \frac{4}{y}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>f(x,y) = x^3 + y^3 - 3xy</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <answer>
+        <ol marker="a.">
+          <li>
+            <p>
+               <m>f</m> has a relative minimum at <m>(1,-2)</m> and a saddle point at <m>(-1,-2)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+               <m>f</m> has a relative minimum at <m>(1,2)</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f</m> has a saddle point at <m>(0, 0)</m> and a relative minimum at <m>(1,1)</m> 
+            </p>
+          </li>
+        </ol>
+      </answer>
+
+
+      <solution>
+        <ol marker="a.">
+          <li>
+            <p>
+              To find the critical points,
+              we determine the points in the domain of <m>f</m> where
+              <m>\nabla f = \vzero</m> or <m>\nabla f</m> does not exist.
+              Now
+              <me>
+                \nabla f = \langle 9x^2-9, 2y+4 \rangle
+              </me>,
+              and so <m>\nabla f = \vzero</m> when <m>9x^2-9 = 0</m> and <m>2y+4 = 0</m>.
+              The critical points of <m>f</m> are then <m>(1,-2)</m> and <m>(-1,-2)</m>.
+              To classify these critical points with the Second Derivative Test,
+              we need the second order partial derivatives of <m>f</m>.
+              Differentiating the first order partial derivatives gives us
+              <me>
+                \frac{\partial^2 f}{\partial x^2} = 18x, \ \ \ \frac{\partial^2 f}{\partial y^2} = 2, \ \ \text{ and }  \ \ \frac{\partial^2 f}{\partial x \partial y} = 0
+              </me>.
+              Then
+              <me>
+                D(1,-2) = f_{xx}(1,-2)f_{yy}(1,-2) - \left(f_{xy}(1,-2)\right)^2 = (18)(2) - (0)^2 = 36
+              </me>.
+              That <m>D(1,-2) \gt 0</m> and
+              <m>f_{xx}(1,-2) \gt 0</m> tells us that <m>f</m> has a relative minimum at <m>(1,-2)</m>.
+              Also,
+              <me>
+                D(-1,-2) = f_{xx}(-1,-2)f_{yy}(-1,-2) - \left(f_{xy}(-1,-2)\right)^2 = (-18)(2) - (0)^2 = -36
+              </me>.
+              That <m>D(-1,-2) \lt  0</m> tells us that <m>f</m> has a saddle point at <m>(-1,-2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              To find the critical points,
+              we determine the points in the domain of <m>f</m> (<m>x \neq 0</m> and <m>y \neq 0</m>) where
+              <m>\nabla f = \vzero</m> or <m>\nabla f</m> does not exist.
+              Now
+              <me>
+                \nabla f = \left\langle y-\frac{2}{x^2}, x-\frac{4}{y^2} \right\rangle
+              </me>,
+              and so <m>\nabla f = \vzero</m> when
+              <md>
+                <mrow>y-\frac{2}{x^2} \amp = 0</mrow>
+                <mrow>x-\frac{4}{y^2} \amp = 0</mrow>
+              </md>.
+              The first equation tells us that <m>y = \frac{2}{x^2}</m>.
+              Substituting into the second equation shows that
+              <md>
+                <mrow>x - \frac{4}{\left(\frac{2}{x^2}\right)^2} \amp = 0</mrow>
+                <mrow>x - \frac{4x^4}{4} \amp = 0</mrow>
+                <mrow>x - x^4 \amp = 0</mrow>
+                <mrow>x(1-x^3) \amp = 0</mrow>
+              </md>.
+              So <m>x = 0</m> or <m>1-x^3 = 1</m>.
+              This gives us <m>x=0</m> or <m>x=1</m>.
+              Now <m>x=0</m> is not in the domain of <m>f</m>,
+              so we only consider <m>x=1</m>.
+              Then <m>y = \frac{2}{1^2} = 2</m>.
+              Thus, the only critical point of <m>f</m> is <m>(1,2)</m>.
+              To classify this critical point with the Second Derivative Test,
+              we need the second order partial derivatives of <m>f</m>.
+              Differentiating the first order partial derivatives gives us
+              <me>
+                \frac{\partial^2 f}{\partial x^2} = \frac{4}{x^3}, \ \ \ \frac{\partial^2 f}{\partial y^2} = \frac{8}{y^3}, \ \ \text{ and }  \ \ \frac{\partial^2 f}{\partial x \partial y} = 1
+              </me>.
+              Then
+              <me>
+                D(1,2) = f_{xx}(1,2)f_{yy}(1,2) - \left(f_{xy}(1,2)\right)^2 = (4)(1) - (1)^2 = 3
+              </me>.
+              That <m>D(1,2) \gt 0</m> and
+              <m>f_{xx}(1,2) \gt 0</m> tells us that <m>f</m> has a relative minimum at <m>(1,2)</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              To find the critical points,
+              we determine the points in the domain of <m>f</m> where
+              <m>\nabla f = \vzero</m> or <m>\nabla f</m> does not exist.
+              Now
+              <me>
+                \nabla f = \langle 3x^2-3y, 3y^2 - 3x \rangle
+              </me>,
+              and so <m>\nabla f = \vzero</m> when <m>3x^2-3y = 0</m> and <m>3y^2 - 3x = 0</m>. Solving these equations simultaneously yields the critical points of <m>(0, 0)</m> and <m>(1, 1)</m>.
+              To classify these critical points with the Second Derivative Test,
+              we need the second order partial derivatives of <m>f</m>.
+              Differentiating the first order partial derivatives gives us
+              <me>
+                \frac{\partial^2 f}{\partial x^2} = 6x, \ \ \ \frac{\partial^2 f}{\partial y^2} = 6y, \ \ \text{ and }  \ \ \frac{\partial^2 f}{\partial x \partial y} = -3
+              </me>.
+              Then
+              <me>
+                D(0, 0) = f_{xx}(0, 0)f_{yy}(0 0) - \left(f_{xy}(0, 0)\right)^2 = (0)(0) - (-3)^2 = -9
+              </me>.
+              That <m>D(0, 0) \lt 0</m> tells us that <m>f</m> has a saddle point at <m>(0, 0)</m>.
+              Also, 
+              <me>
+                D(1,1) = f_{xx}(1, 1)f_{yy}(1, 1) - \left(f_{xy}(1, 1)\right)^2 = (6)(6) - (-3)^2 = 36 - 9 = 27
+              </me>.
+              Since <m>D(1, 1) \gt  0</m>   and
+              <m>f_{xx}(1,1) \gt 0</m>, we determine that <m>f</m> has a local minimum at <m>(1, 1)</m>.
+            </p>
+          </li>
+        </ol>
+      </solution>
+
+    </activity>
   </subsection>
 
   <subsection xml:id="subsec-optimization">
