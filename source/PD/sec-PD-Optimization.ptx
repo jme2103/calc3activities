@@ -926,11 +926,512 @@
 
   <subsection xml:id="subsec-optimization">
     <title>Optimization on Closed and Bounded Domains</title>
+
+    <p>
+      Just as in the 1D case, to find the absolute extrema of a differentiable function
+      on a closed and bounded set, it suffices to search for critical points in the
+      interior of the set and use single-variable calculus to find the extrema on the boundary.
+      The largest and smallest of these values will the the absolute maximum and minimum of the function.
+    </p>
+
+    <p>
+      From this example, we see that we use the following procedure for determining the absolute maximum and absolute minimum of a function on a closed and bounded domain.
+      <ul>
+        <li>
+          <title>Step 1:</title>
+          <p>
+            Find all critical points of the function in the interior of the domain.
+          </p>
+        </li>
+
+        <li>
+          <title>Step 2:</title>
+          <p>
+            Find all the critical points of the function on the boundary of the domain. Working on the boundary of the domain reduces this part of the problem to one or more single variable optimization problems. Note that there may be endpoints on portions of the boundary that need to be considered. 
+          </p>
+        </li>
+
+        <li>
+          <title>Step 3:</title>
+          <p>
+            Evaluate the function at each of the points found in Steps 1 and 2.
+          </p>
+        </li>
+
+        <li>
+          <title>Step 4:</title>
+          <p>
+            The maximum value of the function is the largest value obtained in Step 3, and the minimum value of the function is the smallest value obtained in Step 3.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <activity>
+      <introduction>
+        <p>
+          Suppose the temperature <m>T</m> at each point of a circular plate <m>x^2 + y^2 \leq 1</m> is given by
+          <me>
+            T(x,y) = 2x^2 + y^2 - y
+          </me>
+          The set <m>S = \{ (x,y) : x^2 + y^2 \leq 1 \}</m> is closed and bounded, so we know that <m>T</m> attains
+          both an absolute maximum and an absolute minimum. Find the hottest and coldest points on the plate.
+        </p>
+        <figure xml:id="F_10_7_temperature">
+          <caption>Domain of the temperature <m>T(x,y) = 2x^2+y^2-y</m> and its graph.</caption>
+          <sidebyside widths="50% 50%">
+          <image source="images/fig_10_7_temperature_domain"/>
+          <image source="images/fig_10_7_temperature"/>
+          </sidebyside>
+        </figure>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Find all the critical points of <m>T</m> in the interior of <m>S</m>.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Parameterize the boundary <m>\partial S</m> and use single-variable calculus to find 
+            the extreme values of <m>T</m> on it.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Which point among those found in the previous two tasks is the hottest? Which is the coldest?
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Let <m>f(x,y) = x^2-3y^2-4x+6y</m> with
+          triangular domain <m>R</m> whose vertices are at <m>(0,0)</m>, <m>(4,0)</m>, and
+          <m>(0,4)</m>. The domain <m>R</m> and a graph of <m>f</m> on the domain appear
+          in <xref ref="F_10_7_Optimize_ex2">Figure</xref>.
+        </p>
+
+        <figure xml:id="F_10_7_Optimize_ex2">
+          <caption>The domain of <m>f(x,y) = x^2-3y^2-4x+6y</m> and
+                its graph.</caption>
+          <sidebyside widths="50% 50%">
+          <image source="images/fig_10_7_activity_optim_domain"/>
+          <image source="images/fig_10_7_activity_optim"/>
+          </sidebyside>
+        </figure>
+
+        <ol marker="a.">
+          <li>
+            <p>
+              Find all of the critical points of <m>f</m> in <m>R</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Parameterize the horizontal leg of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <m>f</m> on that leg.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Parameterize the vertical leg of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <m>f</m> on that leg.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Parameterize the hypotenuse of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <m>f</m> on the hypotenuse.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Find the absolute maximum and absolute minimum values of <m>f</m> on <m>R</m>.
+            </p>
+          </li>
+        </ol>
+      </statement>
+    </activity>
+
+    <p>
+      Sometimes it is possible to locate an absolute extremum on a non-closed or non-bounded set. For example, it's easy to see that <m>f(x) = x^2</m>
+      the local minumum at <m>x = 0</m> is also an absolute minimum. Just note that <m>f'(x) \lt 0</m> for <m>x \lt 0</m> and <m>f'(x) \gt 0</m> for 
+      <m>x \gt 0</m>. Hence <m>f</m> is always decreasing to the left of the local minimum and always increasing to the right. This means that the local 
+      minimum is also an absolute minimum. A similar argument can be made for multivariable functions. If a function has a unique local extremum
+      which is either a local maximum or a local minimum, then it is also an absolute extremum.
+    </p>
+
+    <p>
+      If you are attempting to find the extrema of the distance function <m>d(x,y) = \sqrt{x^2 + y^2}</m>, it's often easier
+      to work with the square of the distance function <me>d^2(x,y) = x^2 + y^2</me>. You can prove that both functions will have the same
+      extrema, but the partial derivatives will have a simpler form.
+    </p>
+
+    <activity>
+      <statement>
+        <p>
+          Find the point on the plane <m>2x + 3y + z = 2</m> that is closest to the origin.
+        </p>
+      </statement>
+    </activity>
+
     
   </subsection>
 
   <subsection xml:id="subsec-Lagrange">
     <title>Lagrange Multipliers</title>
+
+    <p>
+      According to U.S. postal regulations, the girth plus the length of a parcel sent by mail 
+      may not exceed 108 inches, where by “girth” we mean the perimeter of the smallest end. Our 
+      goal is to find the largest possible volume of a rectangular parcel with a square end that 
+      can be sent by mail. We can think of this problem as a constrained optimization problem.
+      We wish to optimize the volume of the parcel, but we are constrained by the fac that the
+      girth plus the length of the parcel must not exceed 108 inches. The function to be optimized is
+      <me>
+        f(x,y) = x^2y,
+      </me>
+      and, assuming that the volume is actually maximized when the sum of the girth and the length 
+      is exactly 108 inches, the constraint is <m>4x + y = 108</m>. Another way to think of the 
+      constraint is as a contour of the function
+      <me>
+        g(x,y) = 4x + y.
+      </me>
+      at the level <m>108</m>. The constraint is shown below in red, along with several contours 
+      of <m>f</m>.
+      <figure xml:id="F_10_8_preview">
+        <caption>Contours of <m>f</m> and the constraint equation <m>g(x,y) = 108</m>.</caption>
+        <image width="50%" source="images/fig_10_8_postal"/>
+      </figure>
+      It's clear that the maximum we seek is somewhere between points <m>C</m> and <m>D</m>. Also, the
+      maximum is characterized by the constaint and the contours being parallel (i.e. having parallel
+      tangent lines). Equivalently, the gradient vectors of both <m>f</m> and <m>g</m> will be
+      parallel at this point. Solving the equation
+      <me>
+        \nabla f = \lambda \nabla g
+      </me>
+      will give us the point where the maximum volume is attained, and this method is called the
+      method of Lagrange multipliers.
+    </p>
+
+    <assemblage xml:id="Lagrange-multipliers">
+      <title>The method of Lagrange multipliers</title>
+    <p>
+      The general technique for optimizing a function <m>f = f(x,y)</m> subject to a constraint <m>g(x,y)=c</m> is to solve the system <m>\nabla f = \lambda \nabla g</m> and <m>g(x,y)=c</m> for <m>x</m>, <m>y</m>, and <m>\lambda</m>. We then evaluate the function <m>f</m> at each point <m>(x,y)</m> that results from a solution to the system in order to find the optimum values of <m>f</m> subject to the constraint.
+    </p>
+    </assemblage>
+
+    <activity xml:id="A_10_8_1">
+      <statement>
+        <p>
+          A cylindrical soda can holds about 355 cc of liquid. In this activity, we want to find the dimensions of such a can that will minimize the surface area. For the sake of simplicity, assume the can is a perfect cylinder. 
+          <ol marker="a.">
+            <li>
+              <p>
+                What are the variables in this problem? Based on the context, what restriction(s), if any, are there on these variables?
+              </p>
+            </li>
+
+            <li>
+              <p>
+                What quantity do we want to optimize in this problem? What equation describes the constraint? (You need to decide which of these functions plays the role of <m>f</m> and which plays the role of <m>g</m> in our discussion of Lagrange multipliers.)
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Find <m>\lambda</m> and the values of your variables that satisfy <m>\nabla f = \lambda \nabla g</m> in the context of this problem.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Determine the dimensions of the pop can that give the desired solution to this constrained optimization problem.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+
+      <answer>
+        <ol marker="a.">
+          <li>
+            <p>
+              Assume the pop can is cylindrical.
+              Let <m>r</m> by the radius and <m>h</m> the height of the can.
+              The volume <m>V</m> of the can is constant at 355 cc of liquid.
+              The radius and height can be any positive numbers as long as the volume is 355.
+            </p>
+          </li>
+          <li>
+            <p>
+              We want to minimize the surface area <m>A</m> of the can, where
+              <me>
+                A(r,h) = 2\pi r^2 + 2\pi r h
+              </me>.
+              The volume of the can is <m>V(r,h) = \pi r^2 h</m>, so our constraint is
+              <me>
+                355 = V(r,h) = \pi r^2 h
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              We find 
+              <me>
+                r \approx 3.84 \text{ cm } 
+              </me>.
+              This makes
+              <me>
+                h = \frac{355}{\pi r^2} \approx 7.66 \text{ cm }
+              </me>
+              and
+              <me>
+                \lambda = \frac{2}{r} \approx 0.52
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              To minimize the surface area under the assumptions we have made,
+              the radius should be approximately 3.84 cm and the height approximately 7.66 cm.
+            </p>
+          </li>
+        </ol>
+      </answer>
+
+
+      <solution>
+        <ol marker="a.">
+          <li>
+            <p>
+              Assume the pop can is cylindrical.
+              Let <m>r</m> by the radius and <m>h</m> the height of the can.
+              The volume <m>V</m> of the can is constant at 355 cc of liquid.
+              The radius and height can be any positive numbers as long as the volume is 355.
+            </p>
+          </li>
+          <li>
+            <p>
+              We want to minimize the surface area <m>A</m> of the can, where
+              <me>
+                A(r,h) = 2\pi r^2 + 2\pi r h
+              </me>.
+              The volume of the can is <m>V(r,h) = \pi r^2 h</m>, so our constraint is
+              <me>
+                355 = V(r,h) = \pi r^2 h
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              To solve this constrained optimization problem,
+              we need to find the values of <m>\lambda</m>,
+              <m>r</m>, and <m>h</m> that satisfy
+              <md>
+                <mrow>\nabla A \amp = \lambda \nabla V</mrow>
+                <mrow>\left\langle 4\pi r + 2\pi h, 2 \pi r \right\rangle \amp = \lambda \left\langle 2\pi rh, \pi r^2 \right\rangle</mrow>
+              </md>.
+              So we have to solve the equations
+              <md>
+                <mrow>\pi r^2h \amp = 355</mrow>
+                <mrow>4\pi r + 2\pi h \amp = \lambda 2\pi rh</mrow>
+                <mrow>2 \pi r \amp = \lambda \pi r^2</mrow>
+              </md>.
+              Since <m>r \gt 0</m>, these equations simplify to
+              <md>
+                <mrow>2\pi r^2h \amp = 355</mrow>
+                <mrow>2r + h \amp = \lambda rh</mrow>
+                <mrow>2 \amp = \lambda r</mrow>
+              </md>.
+              So
+              <men xml:id="eq_LM_example1">
+                \lambda = \frac{2}{r} = \frac{2r+h}{rh}
+              </men>.
+              Now
+              <me>
+                h = \frac{355}{\pi r^2}
+              </me>,
+              so equation <xref ref="eq_LM_example1"/> becomes
+              <me>
+                \frac{2}{r} = \frac{r+h}{rh} = \frac{2\pi r^3+355}{355r}
+              </me>.
+              Applying some algebra yields
+              <md>
+                <mrow>\frac{2}{r} \amp = \frac{2\pi r^3+355}{355r}</mrow>
+                <mrow>710 \amp = 2\pi r^3 + 355</mrow>
+                <mrow>r^3 \amp = \frac{355}{2\pi}</mrow>
+                <mrow>r \amp = \sqrt[3]{\frac{355}{2\pi}}</mrow>
+                <mrow>r \amp \approx 3.84 \text{ cm } </mrow>
+              </md>.
+              This makes
+              <me>
+                h = \frac{355}{\pi r^2} \approx 7.66 \text{ cm }
+              </me>
+              and
+              <me>
+                \lambda = \frac{2}{r} \approx 0.52
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              To minimize the surface area under the assumptions we have made,
+              the radius should be approximately 3.84 cm and the height approximately 7.66 cm.
+            </p>
+          </li>
+        </ol>
+      </solution>
+
+
+    </activity>
+
+    <p>
+      The method of Lagrange multipliers also works for functions of more than two variables.
+    </p>
+
+    <activity>
+      <statement>
+        <p>
+          Use the method of Lagrange multipliers to find the point on the plane <m>2x + 3y + z = 2</m> that is closest to the origin. (We 
+          already solved this problem using other methods above.)
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          Find the points in <m>\R^3</m> that are farthest from the origin and that lie on both the cylinder <m>y^2 + z^2 = 1</m>
+          and the plane <m>x + 2y + 3x = 0</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <activity xml:id="A_10_8_2">
+      <statement>
+        <p>
+          Use the method of Lagrange
+          multipliers to find the dimensions of the least
+          expensive packing crate with a volume of 240 cubic feet when the
+          material for the top costs $2 per square foot, the bottom is $3
+          per square foot and the sides are $1.50 per square foot.
+        </p>
+      </statement>
+
+      <answer>
+        <p>
+          To minimize the cost of this crate,
+          the crate should be a box of approximate dimensions <m>5.24 \times 5.24 \times 8.74</m> feet.
+        </p>
+      </answer>
+
+
+      <solution>
+        <p>
+          We want to minimize the cost <m>C</m> of the crate.
+          Let <m>x</m> be the length,
+          <m>y</m> the width, and <m>z</m> the height of the crate.
+          The volume <m>V = xyz</m> of the crate is to be 240 cubic feet,
+          so <m>x \gt 0</m>, <m>y \gt 0</m>, and <m>z \gt 0</m>.
+          The area of the top and bottom of the crate is <m>2xy</m>,
+          so the cost of the top of the crate is <m>2xy</m> and the cost of the bottom is <m>3xy</m>.
+          The area of the sides of the crate is
+          <m>2xz + 2yz</m> and so the cost of the sides is <m>1.5(2xz+2yz)</m>.
+          Thus, the total cost of the crate is
+          <me>
+            C(x,y,z) = 5xy + 3(xz+yz)
+          </me>.
+        </p>
+        <p>
+          The volume of the crate is to be 240 cubic feet, so our constraint is
+          <me>
+            240 = V(x,y,z) = xyz
+          </me>.
+        </p>
+        <p>
+          Now
+          <me>
+            \nabla C = \lambda \nabla V
+          </me>
+          implies
+          <me>
+            \nabla C = \langle 5y+3z, 5x+3z, 3(x+y) \rangle = \lambda \langle yz, xz, xy \rangle
+          </me>.
+        </p>
+        <p>
+          So we need to solve the system of equations
+          <md>
+            <mrow>xyz \amp = 240</mrow>
+            <mrow>5y+3z \amp = \lambda(yz)</mrow>
+            <mrow>5x+3z \amp = \lambda(xz)</mrow>
+            <mrow>3(x+y) \amp = \lambda(xy)</mrow>
+          </md>.
+        </p>
+        <p>
+          The last three equations give us
+          <me>
+            \lambda = \frac{5}{z} + \frac{3}{y} = \frac{5}{z}+\frac{3}{x} = \frac{3}{x}+\frac{3}{y}
+          </me>.
+        </p>
+        <p>
+          Using the fact that <m>z = \frac{240}{xy}</m> we have
+          <me>
+            \frac{xy}{48}+\frac{3}{y} = \frac{xy}{248}+\frac{3}{x} = \frac{3}{y}+\frac{3}{x}
+          </me>.
+        </p>
+        <p>
+          Using the equation
+          <me>
+            \frac{xy}{48}+\frac{3}{y} =  \frac{3}{y}+\frac{3}{x}
+          </me>
+          gives us
+          <me>
+            y = \frac{144}{x^2}
+          </me>.
+        </p>
+        <p>
+          Then we substitute into the equation
+          <md>
+            <mrow>\frac{xy}{48}+\frac{3}{x} \amp = \frac{3}{y}+\frac{3}{x}</mrow>
+            <mrow>\frac{xy}{48} \amp = \frac{3}{y}</mrow>
+            <mrow>\frac{3}{x} \amp = \frac{x^2}{48}</mrow>
+            <mrow>x^3 \amp = 144</mrow>
+            <mrow>x \amp = \sqrt[3]{144}</mrow>
+            <mrow>x \amp \approx 5.24 \text{ ft } </mrow>
+          </md>.
+        </p>
+        <p>
+          Then
+          <me>
+            y = \frac{144}{x^2} = \sqrt[3]{144} \approx 5.24 \text{ ft }
+          </me>
+          and
+          <me>
+            z = \frac{240}{xy} = \approx 8.74 \text{ ft }
+          </me>.
+        </p>
+        <p>
+          Also,
+          <me>
+            \lambda = \frac{3}{x}+\frac{3}{y} \approx 1.15
+          </me>.
+        </p>
+        <p>
+          So to minimize the cost of this crate,
+          the crate should be a box of approximate dimensions <m>5.24 \times 5.24 \times 8.74</m> feet.
+        </p>
+      </solution>
+    </activity>
+
     
   </subsection>
 
