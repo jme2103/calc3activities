@@ -1161,7 +1161,7 @@
         </p>
       </statement>
 
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -1289,7 +1289,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
 
     </activity>
@@ -1327,7 +1327,7 @@
         </p>
       </statement>
 
-      <answer>
+      <!-- <answer>
         <p>
           To minimize the cost of this crate,
           the crate should be a box of approximate dimensions <m>5.24 \times 5.24 \times 8.74</m> feet.
@@ -1429,7 +1429,7 @@
           So to minimize the cost of this crate,
           the crate should be a box of approximate dimensions <m>5.24 \times 5.24 \times 8.74</m> feet.
         </p>
-      </solution>
+      </solution> -->
     </activity>
 
     
