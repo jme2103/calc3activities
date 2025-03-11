@@ -1311,7 +1311,7 @@
       <statement>
         <p>
           Find the points in <m>\R^3</m> that are farthest from the origin and that lie on both the cylinder <m>y^2 + z^2 = 1</m>
-          and the plane <m>x + 2y + 3x = 0</m>.
+          and the plane <m>x + 2y + 3z = 0</m>.
         </p>
       </statement>
     </activity>
