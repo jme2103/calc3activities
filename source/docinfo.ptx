@@ -58,6 +58,7 @@
         \pgfplotsset{compat=1.18}
         \usepgfplotslibrary{fillbetween}
         \usepgfplotslibrary{polar}
+        \usepackage{pgfmath}
 	</latex-image-preamble>
   
   <!-- It is possible to rename elements: -->

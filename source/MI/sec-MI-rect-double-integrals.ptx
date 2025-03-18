@@ -186,5 +186,396 @@
   </activity>
 
   </subsection>
+
+<subsection xml:id="subsec-double-integrals-over-rectangles">
+  <title>Double Integrals Over Rectangules</title>
+  
+  <p>
+    We will extend the above process outlined above to define double integrals. Instead 
+    of a function of one variables, we will have a function of two variables <m>f(x,y)</m>,
+    and instead of an interval of real numbers, we will have a rectangle in the plane.
+  </p>
+
+  <p>
+    But first, let's consider an example. Emmy is wants to know how much of a toxic pollutant
+    is present in the soil of a rectangular plot of land. To get an estimate, she first divides
+    the plot into subrectangles. In each subrectangle, she extracts a soil sample and measures
+    the concentration of the pollutant. 
+  </p>
+
+  <image width = "50%">
+      <latex-image>
+          <xi:include href="./tikz/intro-example.tex" parse="text" />
+      </latex-image>
+  </image>
+
+<p>
+  Let <m>(x_i^*, y_i^*)</m> be the location of the sample from the <m>ij</m>-th subrectangle and
+  let <m>f(x,y)</m> be the concentration of the pollutant at location <m>(x,y)</m>. Emmy now knows
+  the value of the function at many evenly spaced points throughout the plot of land. Making the
+  assumption that the concentration of the pollutant in each subrectangle is roughly the same as 
+  the concentration at the sample location <m>(x_i^*, y_i^*)</m>, she can approximate the total
+  amount of the pollutant as
+  <me>
+    \text{total quantity of pollutant} \approx \sum_{i=1}^6 \sum_{j=1}^4 f(x_i^*, y_i^*) \Delta A,
+  </me>
+  where <m>\Delta A</m> is the area of each subrectangle. Clearly, Emmy's approximation will get
+  better and better as divides the plot into more and more subrectangles. This is the idea behind
+  double integrals.
+</p>
+
+<definition>
+  <statement>
+    <p>
+      Let <m>f</m> be a continuous function on a rectangle <m>R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}</m>. A <term>double Riemann sum for <m>f</m> over <m>R</m></term><idx><h>double Riemann sum</h></idx> is created as follows.
+      <ul>
+        <li>
+          <p>
+            Partition the interval <m>[a, b]</m> into <m>m</m> subintervals of equal length <m>\Delta x = \frac{b-a}{m}</m>. Let <m>x_0</m>, <m>x_1</m>, <m>\ldots</m>, <m>x_m</m> be the endpoints of these subintervals, where <m>a = x_0\lt x_1\lt x_2 \lt  \cdots \lt  x_m = b</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Partition the interval <m>[c, d]</m> into <m>n</m> subintervals of equal length <m>\Delta y = \frac{d-c}{n}</m>. Let <m>y_0</m>, <m>y_1</m>, <m>\ldots</m>, <m>y_n</m> be the endpoints of these subintervals, where <m>c = y_0\lt y_1\lt y_2 \lt  \cdots \lt  y_n = d</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            These two partitions create a partition of the rectangle <m>R</m> into <m>mn</m> subrectangles <m>R_{ij}</m> with opposite vertices <m>(x_{i-1},y_{j-1})</m> and <m>(x_i, y_j)</m> for <m>i</m> between <m>1</m> and <m>m</m> and <m>j</m> between <m>1</m> and <m>n</m>. These rectangles all have equal area <m>\Delta A = \Delta x \cdot \Delta y</m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Choose a point <m>(x_{ij}^*, y_{ij}^*)</m> in each rectangle <m>R_{ij}</m>. Then, a double Riemann sum for <m>f</m> over <m>R</m> is given by
+            <me>
+              \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.
+            </me>
+          </p>
+        </li>
+      </ul>
+    </p>
+  </statement>
+</definition>
+
+<activity>
+  <introduction>
+    <p>
+      Let <m>f(x,y) = x + 2y</m> and let <m>R = [0,2] \times [1,3]</m>. Draw a 
+      picture of <m>R</m> and the grid that results from paritioning <m>[0,2]</m>
+      into 2 subintervals and <m>[1,3]</m> into 2 subintervals.
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+         What are the Caresian coordinates of <m>(x_2, y_1)</m>?
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+            <p>
+              <m>(2,2)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(0,1)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(1,2)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(2,3)</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+         What is the value of <m>\Delta A</m>?
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+            <p>
+              <m>1</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>2</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>4</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>6</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+         If we take our sample points <m>(x_i^*, y_j^*)</m> to be the center of each
+         rectangle, what is <m>(x_1^*, y_2^*)</m>?
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+            <p>
+              <m>(0.5,2.5)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(0.5,1.5)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(1,2)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(2.5,0.5)</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Write out all the terms of the Riemann sum
+        <me>
+          \sum_{j=1}^n \sum_{i=1}^m f(x_{i}^*, y_{j}^*) \cdot \Delta A
+        </me>
+        for this scenario without any simlificiation. Then use a calculator
+        to compute the numerical value of the Riemann and give an interpreation
+        of it.
+      </p>
+    </statement>
+  </task>
+</activity>
+
+<definition>
+  <statement>
+    <p>
+      Let <m>R</m> be a rectangular region in the <m>xy</m>-plane and <m>f</m> a continuous function over <m>R</m>. With terms defined as in a double Riemann sum, the <term>double integral of <m>f</m> over <m>R</m></term><idx><h>double integral</h><h>definition</h></idx> is
+      <me>
+        \iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.
+      </me>
+    </p>
+  </statement>
+</definition>
+
+<activity xml:id="A_11_1_3">
+<statement>
+  <p>
+    Let <m>f(x,y) = \sqrt{4-y^2}</m> on the rectangular domain <m>R = [1,7] \times [-2,2]</m>. Partition <m>[1,7]</m> into 3 equal length subintervals and <m>[-2,2]</m> into 2 equal length subintervals. A table of values of <m>f</m> at some points in <m>R</m> is given in <xref ref="DI_11_1_TOV">Table</xref>, and a graph of <m>f</m> with the indicated partitions is shown in <xref ref="F_11_1_DI_example">Figure</xref>.
+  </p>
+  
+
+    <sidebyside>
+    <table xml:id="DI_11_1_TOV">
+    <title>Table of values of <m>f(x,y) =  \sqrt{4-y^2}</m>.</title>
+      <tabular halign="center" bottom="minor" top="minor">
+        <row bottom="medium">
+          <cell/>
+          <cell><m>-2</m></cell>
+          <cell><m>-1</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>1</m></cell>
+          <cell><m>2</m></cell>
+        </row>
+        <row>
+          <cell>
+          <m>1</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>2</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>3</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>4</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>5</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>6</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+        <row>
+          <cell><m>7</m></cell>
+          <cell><m>0</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>2</m></cell>
+          <cell><m>\sqrt{3}</m></cell>
+          <cell><m>0</m></cell>
+        </row>
+      </tabular>
+    </table>
+    
+  <figure xml:id="F_11_1_DI_example">
+    <caption>Graph of <m>f(x,y) =  \sqrt{4-y^2}</m> on <m>R</m>.</caption>
+
+      <image width="100%" source="images/fig_11_1_cylinder"/>
+  </figure>
+    </sidebyside>
+
+
+  <ol marker="a.">
+    <li>
+      <p>
+        Sketch the region <m>R</m> in the plane using the values in <xref ref="DI_11_1_TOV">Table</xref> as the partitions. 
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Calculate the double Riemann sum using the given partition of <m>R</m> and the values of <m>f</m> in the upper right corner of each subrectangle.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        Use geometry to calculate the exact value of <m>\iint_R f(x,y) \, dA</m> and compare it to your approximation. Describe one way we could obtain a better approximation using the given data.  
+      </p>
+    </li>
+  </ol>
+</statement>
+</activity>
+
+<p>
+  The integral from single-variable calculus can be interpreted as measuring <em>area under the curve</em>.
+  When the curve lies above the <m>x</m>-axis, the definite integral is measuring the area above the
+  <m>x</m>-axis, below the graph <m>y = f(x)</m>, and between <m>x = a</m> and <m>x=b</m>. Every Riemann 
+  sum will be positive and hence their limit, the definite integral, will also be positive. This is good
+  because the quantity <em>area</em> is usually considered to be a positive quantity.
+</p>
+
+<p>
+  When the graph crosses the <m>x</m>-axis somewhere inside the interval <m>[a,b]</m>, then you need to be 
+  careful about how you count the area. You are still measuring the area between the <m>x</m>-axis
+  and the graph <m>y = f(x)</m>, but now the area of the part of the region below the <m>x</m>-axis gets
+  counted with a negative sign. This is why the integral of <m>f(x) = x</m> over <m>[-2,2]</m> is zero. The
+  total amount of area above below the <m>x</m>-axis is the same. Sometimes, we use the phrases <em>net area</em> 
+  or <em>signed area</em>to describe what the definite integral measures.
+</p>
+
+<p>
+  A similar interpretation can be given to the double integral. The double integral of a function <m>f(x,y)</m>
+  over a rectangle <m>R</m> is the <em>net volume</em> or <em>signed volume</em> between the graph of 
+  <m>z=f(x,y)</m> and the <m>xy</m>-plane. Again, this is simply a consequence of the function <m>f(x,y)</m>
+  taking on negative values, causing some terms in the Riemann sum to be negative.
+</p>
+
+<p>
+  Double integrals satisfy many of the same properties as single integrals, and their justifications are
+  essentially the same.
+</p>
+
+<assemblage xml:id="Double-integral-properties">
+  <title>Properties of Double Integrals</title>
+<p>
+  Let <m>f</m> and <m>g</m> be continuous functions on a rectangle <m>R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}</m>, and let <m>k</m> be a constant. Then
+  <ol>
+    <li>
+      <p>
+        <m>\iint_R (f(x,y) + g(x,y)) \, dA = \iint_R f(x,y) \, dA + \iint_R g(x,y) \, dA</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>\iint_R kf(x,y) \, dA = k \iint_R f(x,y) \, dA</m>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        If <m>f(x,y) \geq g(x,y)</m> on <m>R</m>, then <m>\iint_R f(x,y) \, dA \geq \iint_R g(x,y) \, dA</m>.
+      </p>
+    </li>
+  </ol>
+</p>
+</assemblage>
+
+<activity>
+  <statement>
+    <p>
+      Below is a the contour plot of a function <m>f(x,y)</m>. Estimate the value of the double integral
+      <me>
+        \iint_R f(x,y) \, dA
+      </me>
+      where <m>R = [-1,1] \times [-1,1]</m> using a Riemann sum with 4 subrectangles. Interpret your answer
+      in terms of the signed volume between the graph of <m>z=f(x,y)</m> and the <m>xy</m>-plane. What do
+      you think the exact value of this double integral is?
+    </p>
+    <image width = "50%">
+        <sageplot>
+            x = var('x')
+            y = var('y')
+            f(x,y) = x^2 - y^2
+            contour_plot(f,(x,-1,1),(y,-1,1),fill=False, cmap='hsv', labels=True)
+        </sageplot>
+    </image>
+  </statement>
+</activity>
+
+</subsection>
+
+<subsection xml:id="subsec-iterated-ntegrals">
+  <title>Iterated Integrals</title>
+  
+  <p>
+    hello world!
+  </p>
+</subsection>
   
 </section>
