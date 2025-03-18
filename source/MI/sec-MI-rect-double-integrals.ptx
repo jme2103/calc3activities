@@ -2,6 +2,189 @@
 
 <section xml:id="sec-MI-rect-double-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Introduction to Double Integrals</title>
+
+  <subsection xml:id="subsec-review-single-variable-riemann-integrals">
+    <title>Review of Riemann Integrals in One Variable</title>
+    
   
+  <p>
+    Before defining double and triple integrals, let's review how Riemann integral are
+    defined in single-variable calculus. First, we fix and interval <m>[a,b]</m> over which
+    we wish integrate a function <m>f(x)</m>. Next, we partition the interval into <m>n</m>
+    subintervals <m>[x_{i-1},x_i]</m> of equal length <m>\Delta x</m>. 
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Which of the following expressions is the length of each subinterval?
+      </p>
+      <ol marker="A." cols="1">
+        <li>
+            <p>
+              <m>\Delta x = \frac{b-a}{n}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\Delta x = \frac{b-a}{n-1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\Delta x = \frac{b-a}{n+1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\Delta x = b-a</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Which of the following expressions is a formula for the endpoints of the subintervals?
+      </p>
+      <ol marker="A." cols="1">
+        <li>
+            <p>
+              <m>x_i = a + i \Delta x</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i = a + i \lrpar{ \frac{b-a}{n} }</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i = i \Delta x</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i = i (b-a)</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <p>
+    Next, we choose a <term>sample point</term> denoted <m>x_i^*</m> in each subinterval <m>[x_{i-1},x_i]</m>. 
+    Often, we take the sample point to be the left endpoint, righ endpoint, or midpoint of the subinterval.
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        For each sample point decide if it's a left endpoint, right endpoint, midpoint, or something else of
+        the subinterval <m>[x_{i-1},x_i]</m>.
+      </p>
+      <ol marker="A." cols="2">
+        <li>
+            <p>
+              <m>x_i^* = x_{i-1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i^* = x_i</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i^* = \frac{x_{i-1}+x_i}{2}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i^* = x_{i-1} + \frac{\Delta x}{3}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i^* = x_{i+1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>x_i^* = a</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <p>
+    Now, we use the sample points to form a <term>Riemann sum</term>
+    <me>
+      \sum_{i=1}^n f(x_i^*) \Delta x.
+    </me>
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Which of the following is a Riemann sum of the function <m>f(x) = x^2 + 1</m> over
+        the interval <m>[5,11]</m> with <m>n=7</m> subintervals and using sample points that 
+        are the right endpoints of the subintervals?
+      </p>
+      <ol marker="A." cols="1">
+        <li>
+            <p>
+              <m>\sum_{i = 1}^7 \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\sum_{i = 5}^{11} \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\sum_{i = 1}^7 \lrpar{\lrpar{ i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\sum_{i = 1}^7 \lrpar{ 5 + i \frac{11-5}{7} } \frac{11-5}{7}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\sum_{i = 1}^7 \lrpar{\lrpar{ 5 + (i-1) \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
+            </p>
+        </li>
+      </ol>
+    </statement>
+  </activity>
+
+  <p>
+    Finally, we the Riemann integral is defined as the limit of Riemann sums as the number of subintervals
+    goes to infinity.
+    <me>
+      \int_a^b f(x) \ dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x
+    </me>
+    It's not obvious (i.e. it requires a proof) that this definition is independent of the choice of sample points.
+    In other words, if this limit exists, then you can choose <em>any</em> sample points and the limit will be the same.    
+  </p>
+
+  <activity>
+    <statement>
+      <p>
+        Use the limit definition the Riemann integral to show that 
+        <me>
+          \int_a^b x \ dx = \frac{1}{2}(b^2 - a^2).
+        </me>        
+      </p>
+    </statement>
+  </activity>
+
+  </subsection>
   
 </section>
