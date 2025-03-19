@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-MI-rect-double-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction to Double Integrals</title>
+<section xml:id="sec-MI-double-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Double Integrals</title>
 
   <subsection xml:id="subsec-review-single-variable-riemann-integrals">
     <title>Review of Riemann Integrals in One Variable</title>
