@@ -3,5 +3,16 @@
 <section xml:id="sec-MI-double-integrals-polar-and-apps" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Double Integrals in Polar Coordinates and Applications</title>
   
+  <p>
+    asdf
+  
+
+  <image width = "50%">
+      <latex-image>
+          <xi:include href="./tikz/polar-cartesian-overlay.tex" parse="text" />
+      </latex-image>
+  </image>
+
+  </p>
   
 </section>
