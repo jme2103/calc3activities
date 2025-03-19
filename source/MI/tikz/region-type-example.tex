@@ -1,0 +1,21 @@
+\begin{tikzpicture}
+    \begin{axis}[grid]
+    \addplot [
+        name path = parab,
+        domain=0:2, 
+        samples=100, 
+        color=red,
+        line width=1pt,
+    ]
+    {x^2};
+    \addplot [
+        name path = line,
+        domain=0:2, 
+        samples=100, 
+        color=blue,
+        line width=1pt,
+        ]
+        {2*x};
+    \addplot[color=blue!20, opacity=0.5] fill between[of = parab and line];
+    \end{axis}
+\end{tikzpicture}
