@@ -546,7 +546,7 @@
 </p>
 </assemblage>
 
-<activity>
+<activity xml:id="riem-sum-from-contour-plot">
   <statement>
     <p>
       Below is a the contour plot of a function <m>f(x,y)</m>. Estimate the value of the double integral
@@ -574,8 +574,322 @@
   <title>Iterated Integrals</title>
   
   <p>
-    hello world!
+    To compute the partial derivative of a function <m>f(x_1, \ldots, x_n)</m> of 
+    many variables with respect to <m>x_k</m>, we think of the other independent 
+    variables as constants. In other words we now have a function
+    <me>
+      g(x_k) = f(c_1, \ldots, c_{k-1}, x_k, c_{k+1}, \ldots, c_n)
+    </me>
+    of a single variable, and we can take its derivative in exactly the same way
+    as in single-variable calculus. One can ask the same question about double
+    integrals. What happens if we think of <m>y</m> (or <m>x</m>) as a constant
+    and integrate with respect to <m>x</m> (or <m>y</m>)?
   </p>
+
+  <p>
+    The result of integrating <m>f(x,y)</m> with respect to <m>y</m> is a function
+    of <m>x</m> only. 
+    <me>
+      A(x) = \int_{c}^{d} f(x,y) \, dy.
+    </me>
+    So, it can be integrated with respect to <m>x</m>
+    <me>
+      \int_{a}^{b} A(x) \, dx = \int_{a}^{b} \lrpar{\int_{c}^{d} f(x,y) \, dy} \, dx = \int_{a}^{b} \int_{c}^{d} f(x,y) \, dy \, dx.
+    </me>
+    This process is of nesting integrals is called an <term>iterated integral</term>.
+  </p>
+
+  <p>
+    You probably have a few burning questions now. First, does the order in which we 
+    integrate matter? If I integrate with respect to <m>x</m> first and then <m>y</m>
+    does that change the number I get at the end? Also, note that at no point in the 
+    discussion above is a double integral mentioned. You are probably asking yourself,
+    how is an interated integral over a over a rectangle related to a double of
+    the same function of the same rectangle? The answer to both of these questions is
+    answered simply and beautifully by Fubini's Theorem.
+  </p>
+
+  <assemblage xml:id="Fubini-theorem">
+    <title>Fubini's Theorem</title>
+  <p>
+    If <m>f = f(x,y)</m> is a continuous function on a rectangle <m>R = [a,b] \times [c,d]</m>, then
+    <me>
+      \iint_R f(x,y) \, dA = \int_c^d \int_a^b f(x,y) \, dx \, dy = \int_a^b \int_c^d f(x,y) \, dy \, dx.
+    </me>
+  </p>
+  </assemblage>
+
+  
+
+  <activity xml:id="A_11_2_1">
+    <statement>
+      <p>
+        Let <m>f(x,y) = 25-x^2-y^2</m> on the rectangular domain <m>R = [-3,3] \times [-4,4]</m>.
+        <ol marker="a.">
+          <li>
+            <p>
+              Viewing <m>x</m> as a fixed constant, use the Fundamental Theorem of Calculus to evaluate the integral
+              <me>
+                A(x) = \int_{-4}^4 f(x,y) \, dy.
+              </me>
+              Note that you will be integrating with respect to <m>y</m>, and holding <m>x</m> constant.  Your result should be a function of <m>x</m> only.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Next, use your result from (a) along with the Fundamental Theorem of Calculus to determine the value of <m>\int_{-3}^3 A(x) \, dx</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              What is the value of <m>\iint_R f(x,y) \, dA</m>? What are two different ways we may interpret the meaning of this value?
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+    <answer>
+      <ol marker="a.">
+        <li>
+          <p>
+            <m> \frac{472}{3} - 8x^2</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>800</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            Using the results of parts (a) and (b) we have
+            <me>
+              \iint_R f(x,y) \, dA = \int_{-3}^3 \int_{-4}^4 f(x,y) \, dy \, dx = 800
+            </me>.
+            Since <m>f(x,y) \geq 0</m> on <m>R</m>,
+            this result tells us that the volume of the solid bounded above the graph of <m>f</m> and below by the rectangle <m>R</m> is 800.
+            The area of <m>R</m> is 48,
+            so this result also tells us that the average value of <m>f</m> on <m>R</m> is <m>\frac{800}{48}</m>.
+          </p>
+        </li>
+      </ol>
+    </answer>
+
+    <solution>
+      <ol marker="a.">
+        <li>
+          <p>
+            Treating <m>x</m> as a constant we have
+            <md>
+              <mrow>A(x) \amp = \int_{-4}^4 f(x,y) \, dy</mrow>
+              <mrow>\amp = \int_{-4}^4 25-x^2-y^2 \, dy</mrow>
+              <mrow>\amp = \left[ (25-x^2)y - \frac{y^3}{3} \right] \mid_{-4}^4</mrow>
+              <mrow>\amp = 8(25-x^2) - \frac{128}{3}</mrow>
+              <mrow>\amp = \frac{472}{3} - 8x^2</mrow>
+            </md>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Then
+            <md>
+              <mrow>\int_{-3}^3 A(x) \, dx \amp = \int_{-3}^3 \frac{472}{3} - 8x^2 \, dx</mrow>
+              <mrow>\amp =  \left[ \frac{472}{3}x - \frac{8}{3}x^3 \right] \mid_{-3}^3</mrow>
+              <mrow>\amp = 944 - 144</mrow>
+              <mrow>\amp = 800</mrow>
+            </md>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Using the results of parts (a) and (b) we have
+            <me>
+              \iint_R f(x,y) \, dA = \int_{-3}^3 \int_{-4}^4 f(x,y) \, dy \, dx = 800
+            </me>.
+            Since <m>f(x,y) \geq 0</m> on <m>R</m>,
+            this result tells us that the volume of the solid bounded above the graph of <m>f</m> and below by the rectangle <m>R</m> is 800.
+            The area of <m>R</m> is 48,
+            so this result also tells us that the average value of <m>f</m> on <m>R</m> is <m>\frac{800}{48}</m>.
+          </p>
+        </li>
+      </ol>
+    </solution>
+
+  </activity>
+
+  <activity>
+    <statement>
+      <p>
+        Use Fubini's Theorem to evaluate the double integral
+        <me>
+          \iint_R (x^2 - y^2) \, dA
+        </me>
+        where <m>R = [-1,1] \times [-1,1]</m>. (The contour plot of
+        this function was used to estimate the value of this integral
+        in <xref ref="riem-sum-from-contour-plot">Activity</xref>.
+        Does the exact value determined here match your estimate?)
+      </p>
+    </statement>
+  </activity>
+
+  <activity xml:id="A_11_2_2">
+    <statement>
+      <p>
+        Let <m>f(x,y) = x+y^2</m> on the rectangle <m>R = [0,2] \times [0,3]</m>.
+        <ol marker="a.">
+          <li>
+            <p>
+              Evaluate <m>\iint_R f(x,y) \, dA</m> using an iterated integral.  Choose an order for integration by deciding whether you want to integrate first with respect to <m>x</m> or <m>y</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Evaluate <m>\iint_R f(x,y) \, dA</m> using the iterated integral whose order of integration is the opposite of the order you chose in (a).
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+
+    <answer>
+      <ol marker="a.">
+        <li>
+          <p>
+            <m>24</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>24</m>
+          </p>
+        </li>
+      </ol>
+    </answer>
+
+    <solution>
+      <ol marker="a.">
+        <li>
+          <p>
+            We evaluate <m> \iint_R f(x,y) \, dA</m> as an iterated integral,
+            integrating first with respect to <m>x</m>, then <m>y</m>:
+            <md>
+              <mrow>\iint_R f(x,y) \, dA \amp =  \int_{0}^{3} \int_{0}^{2} x+y^2 \, dx \, dy</mrow>
+              <mrow>\amp = \int_{0}^{3}  \left[ \frac{x^2}{2} + xy^2 \right] \mid_{0}^{2}  \, dy</mrow>
+              <mrow>\amp = \int_{0}^{3} \left[ 2 + 2y^2 \right]  \, dy</mrow>
+              <mrow>\amp = \left[ 2y + \frac{2}{3}y^3 \right] \mid_{0}^{3}</mrow>
+              <mrow>\amp = 24</mrow>
+            </md>.
+          </p>
+        </li>
+        <li>
+          <p>
+            We evaluate <m> \iint_R f(x,y) \, dA</m> as an iterated integral,
+            integrating first with respect to <m>y</m>, then <m>x</m>:
+            <md>
+              <mrow>\iint_R f(x,y) \, dA \amp =  \int_{0}^{2} \int_{0}^{3} x+y^2 \, dy \, dx</mrow>
+              <mrow>\amp = \int_{0}^{2}  \left[ xy + \frac{y^3}{3} \right] \mid_{0}^{3}  \, dx</mrow>
+              <mrow>\amp = \int_{0}^{2} \left[ 3x + 9 \right]  \, dx</mrow>
+              <mrow>\amp =  \left[ \frac{3}{2}x^2 + 9x \right] \mid_{0}^{2}</mrow>
+              <mrow>\amp = 24</mrow>
+            </md>.
+          </p>
+        </li>
+      </ol>
+    </solution>
+
+  </activity>
+
+
+
+</subsection>
+
+<subsection xml:id="subsec-double-integrals-over-general-regions">
+  <title>Double Integrals Over General Regions</title>
+  
+  <p>
+    Technically speaking, both the definition of the double integral and interated integrals
+    depended crucially on the fact that the region of integration was a rectangle. Suppose we
+    wish to integrate <m>f(x,y)</m> over a more general, non-rectangular region <m>D</m>. We
+    start by defining a new function that equal <m>f</m> inside of <m>D</m> and equals zero 
+    outside of it.
+    <me>
+      F(x,y) = \begin{cases} f(x,y) &amp; \text{ if } (x,y) \in D \\ 0 &amp; \text{ if } (x,y) \notin D \end{cases}
+    </me>
+    Then we define the integral of <m>f</m> over <m>D</m> to be the integral of <m>F</m> over 
+    some rectangle <m>R</m> that contains <m>D</m>. 
+    <me>
+      \iint_D f(x,y) \, dA = \iint_R F(x,y) \, dA.
+    </me>
+    Note that this requires that <m>D</m> be bounded. In practice, we just ignore everything that is in <m>R</m> 
+    but not in <m>D</m>, since these regions contribute <m>0</m> to the value of the integral.
+  </p>
+
+  <p>
+    This introduces a new complication to our main tool for evaluating double integrals, iterated integrals.
+    The bounds of integration may now depend on where we are in the region <m>D</m>. For example, suppose
+    <m>D</m> is the triangle in the first quadrant with vertices at <m>(0,0)</m>, <m>(1,0)</m>, and <m>(0,1)</m>.
+    If we wish to integrate with respect to <m>y</m> first, the when <m>x = 0.3</m>, the bounds of integration
+    should be <m>[0, 0.7]</m>. And when <m>x = 0.6</m>, then the bounds of integration should be <m>[0, 0.4]</m>.
+  </p>
+
+  <image width = "50%">
+      <latex-image>
+          <xi:include href="./tikz/slices-example.tex" parse="text" />
+      </latex-image>
+  </image>
+
+  <p>
+    In the figure, each vertical red line segment represents a trace of the region <m>D</m> at a fixed value of <m>x</m>
+    along which we are integrating with respect to <m>y</m>. Although the bounds change for different values of
+    <m>x</m>, they change in a predictable way. In fact, the upper bound of integration is a simple function of <m>x</m>.
+    For any vertical trace, the lower bound of integration is <m>y = 0</m> and the upper bound is <m>y = 1-x</m>. So, the
+    first integral is
+    <me>
+      \int_{y = 0}^{y = 1-x} f(x,y) \, dy.
+    </me>
+    The result of this integral is still just a function of <m>x</m>, and the range of <m>x</m> values that we want to
+    include in our integral is <m>[0,1]</m>. So, the second integral is
+    <me>
+      \int_{x = 0}^{x = 1} \int_{y = 0}^{y = 1-x} f(x,y) \, dy \, dx.
+    </me>    
+  </p>
+
+  <p>
+    This procedure works if <m>D</m> is bounded by two vertical lines and the graphs of two functions of <m>x</m>. In other
+    words, if <m>D</m> can be described as <m>a \leq x \leq b</m> and <m>g_1(x) \leq y \leq g_2(x)</m>. In this case,
+    <me>
+      \iint_D f(x,y) \, dA = \int_{x=a}^{x=b} \int_{y=g_1(x)}^{y=g_2(x)} f(x,y) \, dy \, dx.
+    </me>
+    These types of regions are sometimes called <term>type I</term> regions. Alternatively, turning your head 90 degrees, you can also
+    imagine regions that are bounded by two horizontal lines and the graphs of two functions of <m>y</m>. These are called
+    <term>Type II</term> regions and are described by <m>c \leq y \leq d</m> and <m>h_1(y) \leq x \leq h_2(y)</m>. In this case,
+    <me>
+      \iint_D f(x,y) \, dA = \int_{y=c}^{y=d} \int_{x=h_1(y)}^{x=h_2(y)} f(x,y) \, dx \, dy.
+    </me>
+  </p>
+
+  <p>
+    In an iterated double integral:
+    <ul>
+      <li>
+        <p>
+          the limits on the outer integral must be constants;
+        </p>
+      </li>
+
+      <li>
+        <p>
+          the limits on the inner integral must be constants or in terms of only the remaining variable <mdash/> that is, if the inner integral is with respect to <m>y</m>, then its limits may only involve <m>x</m> and constants, and vice versa.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+
 </subsection>
   
 </section>
