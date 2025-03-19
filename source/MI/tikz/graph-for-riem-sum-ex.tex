@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        % parameter,
+        % hide axis,
+        colormap/cool,
+        view={115}{30},
+    ]
+    \addplot3[
+        mesh,
+        samples=50,
+        domain=1:7,
+        y domain = -2:2,
+    ]
+    {(4-y^2)^(1/2))};
+    \end{axis}
+    \end{tikzpicture}

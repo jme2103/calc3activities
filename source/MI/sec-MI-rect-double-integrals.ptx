@@ -464,7 +464,11 @@
   <figure xml:id="F_11_1_DI_example">
     <caption>Graph of <m>f(x,y) =  \sqrt{4-y^2}</m> on <m>R</m>.</caption>
 
-      <image width="100%" source="images/fig_11_1_cylinder"/>
+      <image width = "70%">
+          <latex-image>
+              <xi:include href="./tikz/graph-for-riem-sum-ex.tex" parse="text" />
+          </latex-image>
+      </image>
   </figure>
     </sidebyside>
 
