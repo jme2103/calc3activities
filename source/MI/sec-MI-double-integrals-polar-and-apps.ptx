@@ -3,8 +3,11 @@
 <section xml:id="sec-MI-double-integrals-polar-and-apps" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Double Integrals in Polar Coordinates and Applications</title>
   
+  <subsection xml:id="subsec-polar-integrals">
+    <title>Double Integrals in Polar Coordinates</title>
+
   <p>
-    asdf
+    As a first attempt
   
 
   <image width = "50%">
@@ -14,5 +17,84 @@
   </image>
 
   </p>
+
+<assemblage xml:id="Polar-coordinates">
+    <title>Converting between rectangular and polar coordinates</title>
+  <p>
+    <ul>
+      <li>
+        <title>Converting from rectangular to polar.</title>
+        <p>
+          If we are given the rectangular coordinates <m>(x,y)</m> of a point <m>P</m>, then the polar coordinates <m>(r,\theta)</m> of <m>P</m> satisfy
+          <me>
+            r = \sqrt{x^2+y^2} \ \ \ \ \ \text{ and }  \ \ \ \ \ \tan(\theta) = \frac{y}{x}, \text{ assuming }  x \neq 0.
+          </me>
+        </p>
+      </li>
+
+      <li>
+        <title>Converting from polar to rectangular.</title>
+        <p>
+          If we are given the polar coordinates <m>(r,\theta)</m> of a point <m>P</m>, then the rectangular coordinates <m>(x,y)</m> of <m>P</m> satisfy
+          <me>
+            x = r\cos(\theta)  \ \ \ \ \ \text{ and }  \ \ \ \ \ y = r\sin(\theta).
+          </me>
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  </assemblage>
+  <p> 
+    <em>Note:</em> The angle <m>\theta</m> in the polar coordinates of a point is not unique. We could replace <m>\theta</m> with <m>\theta  + 2 \pi</m> and still be at the same terminal point. In addition, the sign of <m>\tan(\theta)</m> does not uniquely determine the quadrant in which <m>\theta</m> lies, so we have to determine the value of <m>\theta</m> from the location of the point. In other words, more care has to be paid when using polar coordinates than rectangular coordinates. 
+  </p>  
+
+  <p>
+    In order to define a double integral in polar coordinates, we will begin by setting
+    up a Riemann sum in the same way as we did for the Cartesian case. A rectangle in polar coordinates
+    <m>[a,b] \times [c,d]</m> looks like part of an annulus. The radius satisfies
+    <m>a \leq r \leq b</m> and the angle satisfies <m>c \leq \theta \leq d</m>. Divide each interval
+    into many small subintervals, <m>[r_i, r_{i+1}]</m> and <m>[\theta_i, \theta_{i+1}]</m>, and choose 
+    a sample point <m>(r_i^*, \theta_i^j)</m> in each subset <m>[r_i, r_{i+1}]</m> and <m>[\theta_j, \theta_{j+1}]</m>.
+    Our first <alert>incorrect attempt</alert> would be
+    <me>
+      \iint_R f(r,\theta) \, dA = \lim_{n,m \to \infty} \sum_{i=1}^n \sum_{j=1}^m f(r_i^*, \theta_j^*) \Delta r \Delta \theta
+    </me>
+    where <m>\Delta r = r_{i+1}-r_i</m> and <m>\Delta \theta = \theta_{j+1}-\theta_j</m>. It's easy
+    to see that this is incorrect. The unit circle is the polar rectangle <m>[0,1] \times [0,2\pi]</m>. By
+    taking <m>f(r,\theta) = 1</m>, this definition of a polar integral would give the area as <m>2\pi</m>. This is
+    clear incorrect because we know that the area is <m>\pi</m>. The problem is that <m>\Delta r \Delta \theta</m> 
+    does not converge to the area element <m>dA</m> as their sizes approach zero.
+  </p>
+
+  <p>
+    To fix this, we need to account for the distortion of the area of small rectangles in polar coordinates.
+    The area <m>\Delta A</m> of <m>[r_i, r_{i+1}] \times [\theta_j, \theta_{j+1}]</m> is
+    <md>
+      <mrow> \Delta A \amp = \frac{\theta_{i+1}-\theta_i}{2\pi} \cdot \pi(r_{i+1}^2-r_i^2) </mrow> 
+      <mrow> \amp = \frac{\theta_{i+1}-\theta_i}{2\pi} \cdot \pi (r_{i+1}+r_i)(r_{i+1}-r_i) </mrow>
+      <mrow> \amp = \frac{\Delta \theta}{2} \cdot (r_{i+1}+r_i)\Delta r. </mrow>
+    </md>
+    In the limit, as the number of subintervals approaches infinity, all the deltas will become the letter
+    <m>d</m>, and the endpoints of each subinterval will approach a single value. So, the limit will be
+    <me>
+      dA = \frac{d\theta}{2}(r + r)dr = r \, dr \, d\theta.
+    </me>
+    In contast to the area element in Cartesian coordinates, <m>dA = dx \, dy</m>, this is the area 
+    element in polar coordinates. 
+  </p>
+
+  <assemblage xml:id="Double-integral-polar">
+    <title>Double integrals in polar coordinates</title>
+  <p>
+    The double integral <m>\iint_D f(x,y) \, dA</m> in rectangular coordinates can be converted to a double integral in polar coordinates<idx><h>iterated integral</h><h>polar coordinates</h></idx> as <m>\iint_D f(r\cos(\theta), r\sin(\theta)) \, r \, dr \, d\theta</m>.
+  </p>
+  </assemblage>
+
+  </subsection>
+
+  <subsection xml:id="subsec-applications">
+    <title>Applications of Double Integrals</title>
+  </subsection>
   
 </section>
