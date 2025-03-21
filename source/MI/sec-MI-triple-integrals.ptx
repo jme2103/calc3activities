@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-MI-triple-integrals" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Triple Integrals</title>
+  
+<subsection xml:id="subsec-triple-integrals-cartesian">
+  <title>Triple Integrals in Cartesian Coordinates</title>
+  
+</subsection>
+
+<subsection xml:id="subsec-triple-integrals-cylindrical">
+  <title>Triple Integrals in cylindrical Coordinates</title>
+  
+</subsection>
+
+<subsection xml:id="subsec-triple-integrals-spherical">
+  <title>Triple Integrals in Spherical Coordinates</title>
+  
+</subsection>
+  
+</section>
