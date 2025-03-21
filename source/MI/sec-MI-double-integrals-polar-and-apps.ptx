@@ -609,6 +609,277 @@
 
   <subsection xml:id="subsec-applications">
     <title>Applications of Double Integrals</title>
+
+    
+
+    <assemblage xml:id="Double-integral-area">
+      <title>The double integral and area</title>
+    <p>
+      Given a closed, bounded region <m>D</m> in the plane, the area of <m>D</m>, denoted <m>A(D)</m>, is given by the double integral
+      <me>
+        A(D) = \iint_D 1 \, dA.
+      </me>
+    </p>
+    </assemblage>
+
+    <activity xml:id="A_11_4_1">
+      <statement>
+        <p>
+          Find the area of the bounded region <m>D</m> between the curves
+          <me>
+            y = 1-x^2 \ \ \ \ \ \text{ and }  \ \ \ \ \ y=x-1.
+          </me>
+        </p>
+
+        <!-- <p>
+          A picture of this region is shown in <xref ref="F_11_4_Area_ex_1">Figure</xref>.
+          <ol marker="a.">
+            <li>
+              <p>
+                The volume of a solid with constant height is given by the area of the base times the height.  Hence, we may interpret the area of the region <m>D</m> as the volume of a solid with base <m>D</m> and of uniform height 1. That is, the area of <m>D</m> is given by <m>\iint_D 1 \, dA</m>. Write an iterated integral whose value is <m>\iint_D 1 \, dA</m>. (Hint: Which order of integration might be more efficient? Why?)
+
+                <figure xml:id="F_11_4_Area_ex_1">
+                  <caption>The graphs of <m>y = 1-x^2</m> and <m>y=x-1</m>.</caption>
+                  <image width="50%" source="images/fig_11_4_area"/>
+                </figure>
+                
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Evaluate the iterated integral from (a). What does the result tell you? 
+              </p>
+            </li>
+          </ol>
+        </p> -->
+      </statement>
+      
+      <answer>
+        <ol marker="a.">
+          <li>
+            <p>
+              <me>
+               \int_{-2}^1 \int_{x-1}^{1-x^2} 1 \, dy \, dx
+              </me>
+            </p>
+          </li>
+          <li>
+            <p>
+              The value of the iterated integral is the area of <m>D</m>: <m>\frac{9}{2}</m> square units.
+            </p>
+          </li>
+        </ol>
+      </answer>
+
+      <solution>
+        <ol marker="a.">
+          <li>
+            <p>
+              The double integral
+              <me>
+                \int \int_D 1 \, dA
+              </me>
+              gives the volume of the solid of uniform height 1 and base area equal to the area of <m>D</m>,
+              so this integral also gives the area of <m>D</m>.
+              To set up this integral, we need to describe the region <m>D</m>.
+              If we integrate with respect to <m>y</m>,
+              then the graph of <m>y=1-x^2</m> forms the top of <m>D</m> and the graph of <m>y=x-1</m> forms the bottom.
+              To find the limits on <m>x</m>,
+              we need to determine the points of intersections of the two curves.
+              Now <m>y=1-x^2</m> and <m>y=x-1</m> intersect when
+              <m>x^2+x-2 = (x-1)(x+2) = 0</m> or when <m>x=-2</m> and <m>x=1</m>.
+              Therefore, the area of <m>D</m> is given by the iterated integral
+              <me>
+                \int \int_D 1 \, dA = \int_{-2}^1 \int_{x-1}^{1-x^2} 1 \, dy \, dx
+              </me>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Evaluating the iterated integral gives us
+              <md>
+                <mrow>\int \int_D 1 \, dA \amp = \int_{-2}^1 \int_{x-1}^{1-x^2} 1 \, dy \, dx</mrow>
+                <mrow> \amp =  \int_{-2}^1 \left (y\mid_{x-1}^{1-x^2} \right ) \, dx </mrow>
+                <mrow> \amp = \int_{-2}^1 \left ( (1-x^2) - (x-1)  \right ) \, dx</mrow>
+                <mrow>\amp = \int_{-2}^1 2-x-x^2 \, dx</mrow>
+                <mrow>\amp = \left[2x-\frac{x^2}{2}-\frac{x^3}{3}\right]\mid_{-2}^1</mrow>
+                <mrow>\amp = \frac{7}{6} - \left(-\frac{10}{3}\right)</mrow>
+                <mrow>\amp = \frac{9}{2}</mrow>
+              </md>.
+              Thus the area of <m>D</m> is <m>\frac{9}{2}</m> square units.
+            </p>
+          </li>
+        </ol>
+      </solution>
+
+    </activity>
+
+    <assemblage xml:id="Double-integral-avg-value">
+      <title>The double integral and average Values</title>
+    <p>
+      The average value of a function <m>f(x,y)</m> on a closed, bounded region <m>D</m> 
+      in the plane is given by
+      <me>
+        \frac{1}{A(D)} \iint_D f(x,y) \, dA.
+      </me>
+      where <m>A(D)</m> is the area of <m>D</m>..
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          The rectangle <m>R = [-2,2] \times [0,2]</m> describes a metal place whose temperature 
+          is given by <m>T(x,y) = 5x^2y^3</m>. Find the average temperature of the plate.
+        </p>
+      </statement>
+    </activity>
+
+    <assemblage xml:id="Lamina-mass">
+      <title>The mass of a lamina</title>
+    <p>
+      If <m>\delta(x, y)</m> describes the density of a lamina defined by a planar region <m>D</m>, then the <em>mass</em><idx><h>double integral</h><h>mass of lamina</h></idx> of <m>D</m> is given by the double integral <m>\iint_D \delta(x,y) \, dA</m>.
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          Charge is distributed over the triangular region <m>D</m> with vertices at <m>(0,1)</m>, <m>(1,1)</m>, and <m>(1,0)</m>
+          so that the density at <m>(x,y)</m> is <m>\sigma(x,y) = xy</m>. Find the total charge.
+        </p>
+      </statement>
+    </activity>
+
+    <assemblage xml:id="Lamina-center-of-mass">
+      <title>The center of mass of a lamina</title>
+    <p>
+      The coordinates <m>(\overline{x}, \overline{y})</m> of the <em>center of mass of a lamina</em><idx><h>center of mass</h><h>of a lamina</h></idx> <m>D</m> with density <m>\delta = \delta(x,y)</m> are given by
+      <me>
+        \overline{x} = \frac{\iint_D x\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA} \ \ \ \ \ \text{ and }  \ \ \ \ \ \overline{y} = \frac{\iint_D y\delta(x,y) \, dA}{\iint_D \delta(x,y) \, dA}.
+      </me>
+      Notice that the denominator is the mass of the lamina.
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          Find the mass and center of mass of a triangular lamina with vertices at <m>(0,0)</m>, <m>(1,0)</m>, 
+          and <m>(0,2)</m> if the density function is <m>\delta(x,y) = 1 + 3x + y</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+      <statement>
+        <p>
+          The density at any point on a semicircular lamina is proportional to the
+          distance from the center of the circle. Find the center of mass of the lamina.
+        </p>
+      </statement>
+    </activity>
+
+    <assemblage xml:id="prob-density">
+      <title>Probability density functions</title>
+    <p>
+      A function <m>f</m> of a single variable is a probability density function (of a continuous
+      random variable) if <m>f(x) \geq 0</m>, <m>\int_{-\infty}^\infty f(x) \, dx = 1</m>, and
+      <me>
+        \mathbb{P}(a \leq X \leq b) = \int_a^b f(x) \, dx
+      </me>
+    </p>
+    <p>
+      A function <m>f</m> of two variables is a joint density function (for random variables <m>X</m> and <m>Y</m>) 
+      if <m>f(x,y) \geq 0</m>,
+      <me>
+        \iint_{\R^2} f(x,y) \, dA = 1,
+      </me>
+      and
+      <me>
+        \mathbb{P}((X,Y) \in D) = \iint_D f(x,y) \, dA.
+      </me>
+      
+    </p>
+    </assemblage>
+
+    <activity>
+      <statement>
+        <p>
+          If the joint density function for <m>X</m> and <m>Y</m> is given by
+          <me>
+            f(x,y) = \begin{cases} C(x + 2y) \amp \text{ if } 0 \leq x \leq 10, \, 0 \leq y \leq 10 \\ 0 \amp \text{ otherwise} \end{cases}
+          </me>
+          find the value of the constant <m>C</m> that makes <m>f</m> a probability density function. Then find <m>\mathbb{P}(X \leq 7, Y \geq 2)</m>.
+        </p>
+      </statement>
+    </activity>
+
+    <activity>
+      <introduction>
+        <p>
+          In this activity, you will determine the appropriate constant <m>k \geq 0</m> so that
+          the function 
+          <me>
+            f(x) = k e^{-x^2}
+          </me>
+          is a probability density function. Notice that <m>f(x) \geq 0</m>, so we only need to 
+          make sure that <m>\int_{-\infty}^{\infty} e^{-x^2} \, dx = 1</m>. You will arrive at the
+          correct value for <m>k</m> via a somewhat circuitous route that involves a double integral.
+        </p>
+        <p>
+          As the probability density function for the normal distribution, this functions plays an
+          enormous role in statistics, probability, physics, biology, and many other fields. It's
+          vitally imporant that are able to compute with it.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Let <m>D_R</m> be the disk of radius <m>R</m> centered at the origin and let
+            <m>g(x,y) = e^{-x^2 - y^2}</m>. Compute
+            <me>
+              \iint_{D_R} g(x,y) \, dA
+            </me>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Take the limit as <m>R \to \infty</m> of your answer to the previous question to
+            determine
+            <me>
+              \iint_{\R^2} g(x,y) \, dA = \lim_{R \to \infty} \iint_{D_R} g(x,y) \, dA
+            </me>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Now think about the integral <m>\iint_{\R^2} g(x,y) \, dA</m> as an iterated integral
+            in Cartesian coordinates. Explain why
+            <me>
+              \iint_{\R^2} g(x,y) \, dA = \lrpar{\int_{-\infty}^{\infty} e^{-x^2} \, dx}^2.
+            </me>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Conclude that <m>k = \sqrt{\pi}</m>
+          </p>
+        </statement>
+      </task>
+    </activity>
+
+
+
+
+
   </subsection>
   
 </section>
