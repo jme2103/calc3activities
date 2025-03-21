@@ -825,8 +825,10 @@
             f(x) = k e^{-x^2}
           </me>
           is a probability density function. Notice that <m>f(x) \geq 0</m>, so we only need to 
-          make sure that <m>\int_{-\infty}^{\infty} e^{-x^2} \, dx = 1</m>. You will arrive at the
-          correct value for <m>k</m> via a somewhat circuitous route that involves a double integral.
+          make sure that <m>\int_{-\infty}^{\infty} e^{-x^2} \, dx = 1</m>. In a previous activity
+          we noticed that you cannot express an antiderivative for <m>f</m> in terms of elementary
+          functions. Instead, you will arrive at the correct value for <m>k</m> via a somewhat 
+          circuitous route that involves a double integral in polar coordinates.
         </p>
         <p>
           As the probability density function for the normal distribution, this functions plays an
