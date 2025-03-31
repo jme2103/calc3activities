@@ -20,11 +20,7 @@
         Which of the following expressions is the length of each subinterval?
       </p>
       <ol marker="A." cols="1">
-        <li>
-            <p>
-              <m>\Delta x = \frac{b-a}{n}</m>
-            </p>
-        </li>
+        
         <li>
             <p>
               <m>\Delta x = \frac{b-a}{n-1}</m>
@@ -33,6 +29,11 @@
         <li>
             <p>
               <m>\Delta x = \frac{b-a}{n+1}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\Delta x = \frac{b-a}{n}</m>
             </p>
         </li>
         <li>
@@ -50,14 +51,15 @@
         Which of the following expressions is a formula for the endpoints of the subintervals?
       </p>
       <ol marker="A." cols="1">
+        
         <li>
             <p>
-              <m>x_i = a + i \Delta x</m>
+              <m>x_i = a + i \lrpar{ \frac{b-a}{n} }</m>
             </p>
         </li>
         <li>
             <p>
-              <m>x_i = a + i \lrpar{ \frac{b-a}{n} }</m>
+              <m>x_i = a + i \Delta x</m>
             </p>
         </li>
         <li>
@@ -88,7 +90,18 @@
       <ol marker="A." cols="2">
         <li>
             <p>
+              <m>x_i^* = a</m>
+            </p>
+        </li>
+        <li>
+            <p>
               <m>x_i^* = x_{i-1}</m>
+            </p>
+        </li>
+        
+        <li>
+            <p>
+              <m>x_i^* = x_{i-1} + \frac{\Delta x}{3}</m>
             </p>
         </li>
         <li>
@@ -103,19 +116,10 @@
         </li>
         <li>
             <p>
-              <m>x_i^* = x_{i-1} + \frac{\Delta x}{3}</m>
-            </p>
-        </li>
-        <li>
-            <p>
               <m>x_i^* = x_{i+1}</m>
             </p>
         </li>
-        <li>
-            <p>
-              <m>x_i^* = a</m>
-            </p>
-        </li>
+        
       </ol>
     </statement>
   </activity>
@@ -135,11 +139,7 @@
         are the right endpoints of the subintervals?
       </p>
       <ol marker="A." cols="1">
-        <li>
-            <p>
-              <m>\sum_{i = 1}^7 \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
-            </p>
-        </li>
+        
         <li>
             <p>
               <m>\sum_{i = 5}^{11} \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
@@ -148,6 +148,11 @@
         <li>
             <p>
               <m>\sum_{i = 1}^7 \lrpar{\lrpar{ i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>\sum_{i = 1}^7 \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}</m>
             </p>
         </li>
         <li>
@@ -165,7 +170,7 @@
   </activity>
 
   <p>
-    Finally, we the Riemann integral is defined as the limit of Riemann sums as the number of subintervals
+    Finally, the Riemann integral is defined as the limit of Riemann sums as the number of subintervals
     goes to infinity.
     <me>
       \int_a^b f(x) \ dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x
@@ -210,14 +215,14 @@
   </image>
 
 <p>
-  Let <m>(x_i^*, y_i^*)</m> be the location of the sample from the <m>ij</m>-th subrectangle and
+  Let <m>(x_{ij}^*, y_{ij}^*)</m> be the location of the sample from the <m>ij</m>-th subrectangle and
   let <m>f(x,y)</m> be the concentration of the pollutant at location <m>(x,y)</m>. Emmy now knows
   the value of the function at many evenly spaced points throughout the plot of land. Making the
   assumption that the concentration of the pollutant in each subrectangle is roughly the same as 
-  the concentration at the sample location <m>(x_i^*, y_i^*)</m>, she can approximate the total
+  the concentration at the sample location <m>(x_{ij}^*, y_{ij}^*)</m>, she can approximate the total
   amount of the pollutant as
   <me>
-    \text{total quantity of pollutant} \approx \sum_{i=1}^6 \sum_{j=1}^4 f(x_i^*, y_i^*) \Delta A,
+    \text{total quantity of pollutant} \approx \sum_{i=1}^6 \sum_{j=1}^4 f(x_{ij}^*, y_{ij}^*) \Delta A,
   </me>
   where <m>\Delta A</m> is the area of each subrectangle. Clearly, Emmy's approximation will get
   better and better as divides the plot into more and more subrectangles. This is the idea behind
@@ -274,11 +279,7 @@
          What are the Caresian coordinates of <m>(x_2, y_1)</m>?
       </p>
       <ol marker="A." cols="2">
-        <li>
-            <p>
-              <m>(2,2)</m>
-            </p>
-        </li>
+        
         <li>
             <p>
               <m>(0,1)</m>
@@ -292,6 +293,11 @@
         <li>
             <p>
               <m>(2,3)</m>
+            </p>
+        </li>
+        <li>
+            <p>
+              <m>(2,2)</m>
             </p>
         </li>
       </ol>
@@ -329,15 +335,11 @@
   <task>
     <statement>
       <p>
-         If we take our sample points <m>(x_i^*, y_j^*)</m> to be the center of each
-         rectangle, what is <m>(x_1^*, y_2^*)</m>?
+         If we take our sample points <m>(x_{ij}^*, y_{ij}^*)</m> to be the center of each
+         rectangle, what is <m>(x_{12}^*, y_{12}^*)</m>?
       </p>
       <ol marker="A." cols="2">
-        <li>
-            <p>
-              <m>(0.5,2.5)</m>
-            </p>
-        </li>
+        
         <li>
             <p>
               <m>(0.5,1.5)</m>
@@ -353,6 +355,11 @@
               <m>(2.5,0.5)</m>
             </p>
         </li>
+        <li>
+            <p>
+              <m>(0.5,2.5)</m>
+            </p>
+        </li>
       </ol>
     </statement>
   </task>
@@ -361,7 +368,7 @@
       <p>
         Write out all the terms of the Riemann sum
         <me>
-          \sum_{j=1}^n \sum_{i=1}^m f(x_{i}^*, y_{j}^*) \cdot \Delta A
+          \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A
         </me>
         for this scenario without any simlificiation. Then use a calculator
         to compute the numerical value of the Riemann and give an interpreation
@@ -557,9 +564,10 @@
       <me>
         \iint_R f(x,y) \, dA
       </me>
-      where <m>R = [-1,1] \times [-1,1]</m> using a Riemann sum with 4 subrectangles. Interpret your answer
-      in terms of the signed volume between the graph of <m>z=f(x,y)</m> and the <m>xy</m>-plane. What do
-      you think the exact value of this double integral is?
+      where <m>R = [-1,1] \times [-1,1]</m> using a Riemann sum with 4 subrectangles (i.e. each interval <m>[-1,1]</m>
+      should be divided into two subintervals) and sample points taken at the lower-left corners of each subrectangle. 
+      Interpret your answer in terms of the signed volume between the graph of <m>z=f(x,y)</m> and the <m>xy</m>-plane. 
+      What do you think the exact value of this double integral is?
     </p>
     <image width = "50%">
         <sageplot>
@@ -628,7 +636,7 @@
       <p>
          Which is the correct first step in computing the iterated integral below?
           <me>
-              \int_1^2\int_0^3 x^2y^2\, dx\, dy
+              \int_1^2\int_0^3 x^2y^3\, dx\, dy
           </me>
           <ol marker="A." cols="2">
               <li>
@@ -696,7 +704,7 @@
       </p>
     </statement>
 
-    <answer>
+    <!-- <answer>
       <ol marker="a.">
         <li>
           <p>
@@ -761,7 +769,7 @@
           </p>
         </li>
       </ol>
-    </solution>
+    </solution> -->
 
   </activity>
 
@@ -800,7 +808,7 @@
       </p>
     </statement>
 
-    <answer>
+    <!-- <answer>
       <ol marker="a.">
         <li>
           <p>
@@ -844,7 +852,7 @@
           </p>
         </li>
       </ol>
-    </solution>
+    </solution> -->
 
   </activity>
 
@@ -1047,18 +1055,6 @@
   </task>
   </activity>
 
-  <activity>
-  <statement>
-    <p>
-      Let <m>f(x,y) = x^2y</m> be defined on the triangle <m>D</m> with vertices <m>(0,0)</m>, <m>(2,0)</m>, and <m>(2,3)</m>.
-      Compute <me>
-        \iint_D f(x,y) \, dA.
-      </me>
-      
-    </p>
-  </statement>
-  </activity>
-
   <activity xml:id="mi-double-integrals-calculate4">
     <introduction>
         <p>
@@ -1076,18 +1072,18 @@
         <statement>
             <p>
                 If we consider region as Type I, which integral will compute the volume of the prism? 
-                <ol marker="A." cols="1">
+                <ol marker="A." cols="2">
                     <li>
                         <p>
                             <m>
-                                \ds \int_{x=0}^{x=1}\int_{y=1}^{y=x} (5-y-x) \, dx\, dy
+                                \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dx\, dy
                             </m>
                         </p>
                     </li>
                     <li>
                         <p>
                             <m>
-                                \ds \int_{x=0}^{x=1}\int_{y=1}^{y=x} (5-y-x) \, dy\, dx
+                                \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dy\, dx
                             </m>
                         </p>
                     </li>
@@ -1117,14 +1113,14 @@
                     <li>
                         <p>
                             <m>
-                                \ds \int_{x=0}^{x=1}\int_{y=1}^{y=x} (5-y-x) \, dx\, dy
+                                \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dx\, dy
                             </m>
                         </p>
                     </li>
                     <li>
                         <p>
                             <m>
-                                \ds \int_{x=0}^{x=1}\int_{y=1}^{y=x} (5-y-x) \, dy\, dx
+                                \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dy\, dx
                             </m>
                         </p>
                     </li>
@@ -1155,10 +1151,21 @@
     </task>
 </activity>
 
+<activity>
+  <statement>
+    <p>
+      Let <m>f(x,y) = x^2y</m> be defined on the triangle <m>D</m> with vertices <m>(0,0)</m>, <m>(2,0)</m>, and <m>(2,3)</m>.
+      Compute <me>
+        \iint_D f(x,y) \, dA.
+      </me>
+    </p>
+  </statement>
+</activity>
+
 <activity xml:id="A_11_3_2">
       <statement>
         <p>
-          Consider the iterated integral <m>\int_{x=0}^{x=1} \int_{y=x}^{y=\sqrt{x}} (4x+10y) \, dy \, dx</m>.
+          Consider the iterated integral <me>\int_{x=0}^{x=1} \int_{y=x}^{y=\sqrt{x}} (4x+10y) \, dy \, dx</me>.
           <ol marker="a.">
             <li>
               <p>
@@ -1199,7 +1206,7 @@
         </p>
       </statement>
 
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -1306,7 +1313,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
     </activity>
 
@@ -1356,11 +1363,6 @@
           <ol marker="a.">
           <li>
             <p>
-              We cannot apply the FTC because there is no formula for the antiderivative of <m>e^{y^2}</m>.
-            </p>
-          </li>
-          <li>
-            <p>
               We cannot use <m>u</m>-substitution because there is no factor of <m>y</m> in the integrand.
             </p>
           </li>
@@ -1387,7 +1389,7 @@
       <task>
         <statement>
           <p>
-            Rewrite the integral in the opposite order using <m>dA = dx \, dy</m>. (Hint: You may need more than one integral.)
+            Rewrite the integral in the opposite order using <m>dA = dx \, dy</m>.
           </p>
         </statement>
       </task>
@@ -1527,5 +1529,6 @@
 
 
 </subsection>
-  
+
+
 </section>
