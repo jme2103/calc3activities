@@ -1423,49 +1423,256 @@ var ptx_lunr_docs = [
   "body": "  Use the method of Lagrange multipliers to find the dimensions of the least expensive packing crate with a volume of 240 cubic feet when the material for the top costs $2 per square foot, the bottom is $3 per square foot and the sides are $1.50 per square foot.    "
 },
 {
-  "id": "sec-MI-rect-double-integrals",
+  "id": "sec-MI-double-integrals",
   "level": "1",
-  "url": "sec-MI-rect-double-integrals.html",
+  "url": "sec-MI-double-integrals.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Introduction to Double Integrals",
-  "body": " Introduction to Double Integrals  "
+  "title": "Double Integrals",
+  "body": " Double Integrals   Review of Riemann Integrals in One Variable  Before defining double and triple integrals, let's review how Riemann integral are defined in single-variable calculus. First, we fix and interval over which we wish integrate a function . Next, we partition the interval into subintervals of equal length .    Which of the following expressions is the length of each subinterval?                            Which of the following expressions is a formula for the endpoints of the subintervals?                          Next, we choose a sample point denoted in each subinterval . Often, we take the sample point to be the left endpoint, righ endpoint, or midpoint of the subinterval.    For each sample point decide if it's a left endpoint, right endpoint, midpoint, or something else of the subinterval .                                    Now, we use the sample points to form a Riemann sum      Which of the following is a Riemann sum of the function over the interval with subintervals and using sample points that are the right endpoints of the subintervals?                               Finally, the Riemann integral is defined as the limit of Riemann sums as the number of subintervals goes to infinity. It's not obvious (i.e. it requires a proof) that this definition is independent of the choice of sample points. In other words, if this limit exists, then you can choose any sample points and the limit will be the same.    Use the limit definition the Riemann integral to show that       Double Integrals Over Rectangules  We will extend the above process outlined above to define double integrals. Instead of a function of one variables, we will have a function of two variables , and instead of an interval of real numbers, we will have a rectangle in the plane.  But first, let's consider an example. Emmy is wants to know how much of a toxic pollutant is present in the soil of a rectangular plot of land. To get an estimate, she first divides the plot into subrectangles. In each subrectangle, she extracts a soil sample and measures the concentration of the pollutant.     Let be the location of the sample from the -th subrectangle and let be the concentration of the pollutant at location . Emmy now knows the value of the function at many evenly spaced points throughout the plot of land. Making the assumption that the concentration of the pollutant in each subrectangle is roughly the same as the concentration at the sample location , she can approximate the total amount of the pollutant as where is the area of each subrectangle. Clearly, Emmy's approximation will get better and better as divides the plot into more and more subrectangles. This is the idea behind double integrals.    Let be a continuous function on a rectangle . A double Riemann sum for over double Riemann sum is created as follows.   Partition the interval into subintervals of equal length . Let , , , be the endpoints of these subintervals, where .    Partition the interval into subintervals of equal length . Let , , , be the endpoints of these subintervals, where .    These two partitions create a partition of the rectangle into subrectangles with opposite vertices and for between and and between and . These rectangles all have equal area .    Choose a point in each rectangle . Then, a double Riemann sum for over is given by          Let and let . Draw a picture of and the grid that results from paritioning into 2 subintervals and into 2 subintervals.    What are the Caresian coordinates of ?                          What is the value of ?                          If we take our sample points to be the center of each rectangle, what is ?                          Write out all the terms of the Riemann sum for this scenario without any simlificiation. Then use a calculator to compute the numerical value of the Riemann and give an interpreation of it.      Let be a rectangular region in the -plane and a continuous function over . With terms defined as in a double Riemann sum, the double integral of over double integral definition is       Let on the rectangular domain . Partition into 3 equal length subintervals and into 2 equal length subintervals. A table of values of at some points in is given in Table , and a graph of with the indicated partitions is shown in Figure .    Table of values of .                                                                       Graph of on .         Sketch the region in the plane using the values in Table as the partitions.    Calculate the double Riemann sum using the given partition of and the values of in the upper right corner of each subrectangle.    Use geometry to calculate the exact value of and compare it to your approximation. Describe one way we could obtain a better approximation using the given data.      The integral from single-variable calculus can be interpreted as measuring area under the curve . When the curve lies above the -axis, the definite integral is measuring the area above the -axis, below the graph , and between and . Every Riemann sum will be positive and hence their limit, the definite integral, will also be positive. This is good because the quantity area is usually considered to be a positive quantity.  When the graph crosses the -axis somewhere inside the interval , then you need to be careful about how you count the area. You are still measuring the area between the -axis and the graph , but now the area of the part of the region below the -axis gets counted with a negative sign. This is why the integral of over is zero. The total amount of area above below the -axis is the same. Sometimes, we use the phrases net area or signed area to describe what the definite integral measures.  A similar interpretation can be given to the double integral. The double integral of a function over a rectangle is the net volume or signed volume between the graph of and the -plane. Again, this is simply a consequence of the function taking on negative values, causing some terms in the Riemann sum to be negative.  Double integrals satisfy many of the same properties as single integrals, and their justifications are essentially the same.   Properties of Double Integrals  Let and be continuous functions on a rectangle , and let be a constant. Then    .     .    If on , then .        Below is a the contour plot of a function . Estimate the value of the double integral where using a Riemann sum with 4 subrectangles (i.e. each interval should be divided into two subintervals) and sample points taken at the lower-left corners of each subrectangle. Interpret your answer in terms of the signed volume between the graph of and the -plane. What do you think the exact value of this double integral is?         Iterated Integrals  To compute the partial derivative of a function of many variables with respect to , we think of the other independent variables as constants. In other words we now have a function of a single variable, and we can take its derivative in exactly the same way as in single-variable calculus. One can ask the same question about double integrals. What happens if we think of (or ) as a constant and integrate with respect to (or )?  The result of integrating with respect to is a function of only. So, it can be integrated with respect to  This process is of nesting integrals is called an iterated integral .  You probably have a few burning questions now. First, does the order in which we integrate matter? If I integrate with respect to first and then does that change the number I get at the end? Also, note that at no point in the discussion above is a double integral mentioned. You are probably asking yourself, how is an interated integral over a over a rectangle related to a double of the same function of the same rectangle? The answer to both of these questions is answered simply and beautifully by Fubini's Theorem.   Fubini's Theorem  If is a continuous function on a rectangle , then      Which is the correct first step in computing the iterated integral below?                             Let on the rectangular domain .   Viewing as a fixed constant, use the Fundamental Theorem of Calculus to evaluate the integral Note that you will be integrating with respect to , and holding constant. Your result should be a function of only.    Next, use your result from (a) along with the Fundamental Theorem of Calculus to determine the value of .    What is the value of ? What are two different ways we may interpret the meaning of this value?          Use Fubini's Theorem to evaluate the double integral where . (The contour plot of this function was used to estimate the value of this integral in Activity . Does the exact value determined here match your estimate?)      Let on the rectangle .   Evaluate using an iterated integral. Choose an order for integration by deciding whether you want to integrate first with respect to or .    Evaluate using the iterated integral whose order of integration is the opposite of the order you chose in (a).          Compute , where      Notice that when you integrate a function that can be written over a rectangle, the double integral is the product of two single integrals.      Double Integrals Over General Regions  Technically speaking, both the definition of the double integral and interated integrals depended crucially on the fact that the region of integration was a rectangle. Suppose we wish to integrate over a more general, non-rectangular region . We start by defining a new function that equal inside of and equals zero outside of it. Then we define the integral of over to be the integral of over some rectangle that contains . Note that this requires that be bounded. In practice, we just ignore everything that is in but not in , since these regions contribute to the value of the integral.  This introduces a new complication to our main tool for evaluating double integrals, iterated integrals. The bounds of integration may now depend on where we are in the region . For example, suppose is the triangle in the first quadrant with vertices at , , and . If we wish to integrate with respect to first, the when , the bounds of integration should be . And when , then the bounds of integration should be .     In the figure, each vertical red line segment represents a trace of the region at a fixed value of along which we are integrating with respect to . Although the bounds change for different values of , they change in a predictable way. In fact, the upper bound of integration is a simple function of . For any vertical trace, the lower bound of integration is and the upper bound is . So, the first integral is The result of this integral is still just a function of , and the range of values that we want to include in our integral is . So, the second integral is   This procedure works if is bounded by two vertical lines and the graphs of two functions of . In other words, if can be described as and . In this case, These types of regions are sometimes called type I regions. Alternatively, turning your head 90 degrees, you can also imagine regions that are bounded by two horizontal lines and the graphs of two functions of . These are called type II regions and are described by and . In this case,   In an iterated double integral:   the limits on the outer integral must be constants;    the limits on the inner integral must be constants or in terms of only the remaining variable that is, if the inner integral is with respect to , then its limits may only involve and constants, and vice versa.       The image below is a Type I and a Type II region; call it .       Which set describes as a Type II region?    and       and       and       and         Which set describes as a Type I region?    and       and       and       and           The base of a prism is the triangle in the plane bounded by the axis, the line , and the line . The top of the prism lies in the plane .    Sketch and label the region.    If we consider region as Type I, which integral will compute the volume of the prism?                          If we consider region as Type II, which integral will compute the volume of the prism?                          Choose to use (b) or (c) to compute the value of the integral.      Let be defined on the triangle with vertices , , and . Compute       Consider the iterated integral .   Sketch the region of integration, , for which     Determine the equivalent iterated integral that results from integrating in the opposite order ( , instead of ). That is, determine the limits of integration for which     Evaluate one of the two iterated integrals above. Explain what the value you obtained tells you.    Set up and evaluate a single definite integral to determine the exact area of , .    Determine the exact average value of over .          Consider the iterated integral .     Which of the following best describes why you cannot proceed with evaluating this iterated integral?    We cannot use -substitution because there is no factor of in the integrand.    We cannot apply integration by parts because the integrand is not a product.    We cannot integrate nest exponents like .      If , sketch the region .    Rewrite the integral in the opposite order using .    Use the FTC to evaluate the integral you found in the previous part. What lesson do you take from this?      No substitution will work to integrate because of the square in the exponent. Using parts only makes the integral more complicated, and we have no other techniques to apply to this integrand.    The domain of integration is shown below.          Evaluating the iterated integral yields . Since on , this integral tells us the volume of the solid bounded above by the surface and below by the region .    We need to be flexible when setting up iterated integrals sometimes one order of integration is very difficult (or impossible) while the other order is easier. So it is important to practice changing the order of integration in iterated integrals.        No substitution will work to integrate because of the square in the exponent. Using parts only makes the integral more complicated, and we have no other techniques to apply to this integrand.    The domain of integration is shown below.     When we first integrate with respect to , we can see that the cross sections go from to . The limits on are then to , giving us .    Evaluating the iterated integral yields . Since on , this integral tells us the volume of the solid bounded above by the surface and below by the region .    We need to be flexible when setting up iterated integrals sometimes one order of integration is very difficult (or impossible) while the other order is easier. So it is important to practice changing the order of integration in iterated integrals.        Consider the region bounded by the curves and .    Use techniques from Calculus I to find the area between the curves.    Let denote the region. Compute . What do you notice?      The area of a closed, bounded plane region is given by      "
 },
 {
-  "id": "sec-MI-iterated-integrals",
-  "level": "1",
-  "url": "sec-MI-iterated-integrals.html",
-  "type": "Section",
-  "number": "3.2",
-  "title": "Iterated Integrals",
-  "body": " Iterated Integrals  "
+  "id": "subsec-review-single-variable-riemann-integrals-3",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-3",
+  "type": "Activity",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Which of the following expressions is the length of each subinterval?                         "
 },
 {
-  "id": "sec-MI-gen-double-integrals",
-  "level": "1",
-  "url": "sec-MI-gen-double-integrals.html",
-  "type": "Section",
-  "number": "3.3",
-  "title": "Double Integrals Over General Regions",
-  "body": " Double Integrals Over General Regions  "
+  "id": "subsec-review-single-variable-riemann-integrals-4",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-4",
+  "type": "Activity",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Which of the following expressions is a formula for the endpoints of the subintervals?                         "
 },
 {
-  "id": "sec-MI-parametric-surfaces",
-  "level": "1",
-  "url": "sec-MI-parametric-surfaces.html",
-  "type": "Section",
-  "number": "3.4",
-  "title": "Parametric Surfaces",
-  "body": " Parametric Surfaces  "
+  "id": "subsec-review-single-variable-riemann-integrals-5",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-5",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "sample point "
 },
 {
-  "id": "sec-MI-change-of-vars",
-  "level": "1",
-  "url": "sec-MI-change-of-vars.html",
-  "type": "Section",
-  "number": "3.5",
-  "title": "Change of Variables",
-  "body": " Change of Variables  "
+  "id": "subsec-review-single-variable-riemann-integrals-6",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-6",
+  "type": "Activity",
+  "number": "3.1.3",
+  "title": "",
+  "body": "  For each sample point decide if it's a left endpoint, right endpoint, midpoint, or something else of the subinterval .                                   "
+},
+{
+  "id": "subsec-review-single-variable-riemann-integrals-7",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Riemann sum "
+},
+{
+  "id": "subsec-review-single-variable-riemann-integrals-8",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-8",
+  "type": "Activity",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Which of the following is a Riemann sum of the function over the interval with subintervals and using sample points that are the right endpoints of the subintervals?                              "
+},
+{
+  "id": "subsec-review-single-variable-riemann-integrals-10",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals-10",
+  "type": "Activity",
+  "number": "3.1.5",
+  "title": "",
+  "body": "  Use the limit definition the Riemann integral to show that    "
+},
+{
+  "id": "subsec-double-integrals-over-rectangles-6",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles-6",
+  "type": "Definition",
+  "number": "3.1.1",
+  "title": "",
+  "body": "  Let be a continuous function on a rectangle . A double Riemann sum for over double Riemann sum is created as follows.   Partition the interval into subintervals of equal length . Let , , , be the endpoints of these subintervals, where .    Partition the interval into subintervals of equal length . Let , , , be the endpoints of these subintervals, where .    These two partitions create a partition of the rectangle into subrectangles with opposite vertices and for between and and between and . These rectangles all have equal area .    Choose a point in each rectangle . Then, a double Riemann sum for over is given by       "
+},
+{
+  "id": "subsec-double-integrals-over-rectangles-7",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles-7",
+  "type": "Activity",
+  "number": "3.1.6",
+  "title": "",
+  "body": "  Let and let . Draw a picture of and the grid that results from paritioning into 2 subintervals and into 2 subintervals.    What are the Caresian coordinates of ?                          What is the value of ?                          If we take our sample points to be the center of each rectangle, what is ?                          Write out all the terms of the Riemann sum for this scenario without any simlificiation. Then use a calculator to compute the numerical value of the Riemann and give an interpreation of it.   "
+},
+{
+  "id": "subsec-double-integrals-over-rectangles-8",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles-8",
+  "type": "Definition",
+  "number": "3.1.2",
+  "title": "",
+  "body": "  Let be a rectangular region in the -plane and a continuous function over . With terms defined as in a double Riemann sum, the double integral of over double integral definition is    "
+},
+{
+  "id": "A_11_1_3",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#A_11_1_3",
+  "type": "Activity",
+  "number": "3.1.7",
+  "title": "",
+  "body": "  Let on the rectangular domain . Partition into 3 equal length subintervals and into 2 equal length subintervals. A table of values of at some points in is given in Table , and a graph of with the indicated partitions is shown in Figure .    Table of values of .                                                                       Graph of on .         Sketch the region in the plane using the values in Table as the partitions.    Calculate the double Riemann sum using the given partition of and the values of in the upper right corner of each subrectangle.    Use geometry to calculate the exact value of and compare it to your approximation. Describe one way we could obtain a better approximation using the given data.     "
+},
+{
+  "id": "riem-sum-from-contour-plot",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#riem-sum-from-contour-plot",
+  "type": "Activity",
+  "number": "3.1.8",
+  "title": "",
+  "body": "  Below is a the contour plot of a function . Estimate the value of the double integral where using a Riemann sum with 4 subrectangles (i.e. each interval should be divided into two subintervals) and sample points taken at the lower-left corners of each subrectangle. Interpret your answer in terms of the signed volume between the graph of and the -plane. What do you think the exact value of this double integral is?      "
+},
+{
+  "id": "subsec-iterated-ntegrals-3",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-iterated-ntegrals-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "iterated integral "
+},
+{
+  "id": "subsec-iterated-ntegrals-6",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-iterated-ntegrals-6",
+  "type": "Activity",
+  "number": "3.1.9",
+  "title": "",
+  "body": "  Which is the correct first step in computing the iterated integral below?                          "
+},
+{
+  "id": "A_11_2_1",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#A_11_2_1",
+  "type": "Activity",
+  "number": "3.1.10",
+  "title": "",
+  "body": "  Let on the rectangular domain .   Viewing as a fixed constant, use the Fundamental Theorem of Calculus to evaluate the integral Note that you will be integrating with respect to , and holding constant. Your result should be a function of only.    Next, use your result from (a) along with the Fundamental Theorem of Calculus to determine the value of .    What is the value of ? What are two different ways we may interpret the meaning of this value?       "
+},
+{
+  "id": "subsec-iterated-ntegrals-8",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-iterated-ntegrals-8",
+  "type": "Activity",
+  "number": "3.1.11",
+  "title": "",
+  "body": "  Use Fubini's Theorem to evaluate the double integral where . (The contour plot of this function was used to estimate the value of this integral in Activity . Does the exact value determined here match your estimate?)   "
+},
+{
+  "id": "A_11_2_2",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#A_11_2_2",
+  "type": "Activity",
+  "number": "3.1.12",
+  "title": "",
+  "body": "  Let on the rectangle .   Evaluate using an iterated integral. Choose an order for integration by deciding whether you want to integrate first with respect to or .    Evaluate using the iterated integral whose order of integration is the opposite of the order you chose in (a).       "
+},
+{
+  "id": "mi-double-integrals-cartesian-rectangle-calculate4",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#mi-double-integrals-cartesian-rectangle-calculate4",
+  "type": "Activity",
+  "number": "3.1.13",
+  "title": "",
+  "body": "  Compute , where    "
+},
+{
+  "id": "subsec-iterated-ntegrals-11",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-iterated-ntegrals-11",
+  "type": "Remark",
+  "number": "3.1.5",
+  "title": "",
+  "body": " Notice that when you integrate a function that can be written over a rectangle, the double integral is the product of two single integrals.   "
+},
+{
+  "id": "subsec-double-integrals-over-general-regions-6",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions-6",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "type I type II "
+},
+{
+  "id": "subsec-double-integrals-over-general-regions-8",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions-8",
+  "type": "Activity",
+  "number": "3.1.14",
+  "title": "",
+  "body": "  The image below is a Type I and a Type II region; call it .       Which set describes as a Type II region?    and       and       and       and         Which set describes as a Type I region?    and       and       and       and        "
+},
+{
+  "id": "mi-double-integrals-calculate4",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#mi-double-integrals-calculate4",
+  "type": "Activity",
+  "number": "3.1.15",
+  "title": "",
+  "body": "  The base of a prism is the triangle in the plane bounded by the axis, the line , and the line . The top of the prism lies in the plane .    Sketch and label the region.    If we consider region as Type I, which integral will compute the volume of the prism?                          If we consider region as Type II, which integral will compute the volume of the prism?                          Choose to use (b) or (c) to compute the value of the integral.   "
+},
+{
+  "id": "subsec-double-integrals-over-general-regions-10",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions-10",
+  "type": "Activity",
+  "number": "3.1.16",
+  "title": "",
+  "body": "  Let be defined on the triangle with vertices , , and . Compute    "
+},
+{
+  "id": "A_11_3_2",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#A_11_3_2",
+  "type": "Activity",
+  "number": "3.1.17",
+  "title": "",
+  "body": "  Consider the iterated integral .   Sketch the region of integration, , for which     Determine the equivalent iterated integral that results from integrating in the opposite order ( , instead of ). That is, determine the limits of integration for which     Evaluate one of the two iterated integrals above. Explain what the value you obtained tells you.    Set up and evaluate a single definite integral to determine the exact area of , .    Determine the exact average value of over .       "
+},
+{
+  "id": "A_11_3_3",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#A_11_3_3",
+  "type": "Activity",
+  "number": "3.1.18",
+  "title": "",
+  "body": "  Consider the iterated integral .     Which of the following best describes why you cannot proceed with evaluating this iterated integral?    We cannot use -substitution because there is no factor of in the integrand.    We cannot apply integration by parts because the integrand is not a product.    We cannot integrate nest exponents like .      If , sketch the region .    Rewrite the integral in the opposite order using .    Use the FTC to evaluate the integral you found in the previous part. What lesson do you take from this?      No substitution will work to integrate because of the square in the exponent. Using parts only makes the integral more complicated, and we have no other techniques to apply to this integrand.    The domain of integration is shown below.          Evaluating the iterated integral yields . Since on , this integral tells us the volume of the solid bounded above by the surface and below by the region .    We need to be flexible when setting up iterated integrals sometimes one order of integration is very difficult (or impossible) while the other order is easier. So it is important to practice changing the order of integration in iterated integrals.        No substitution will work to integrate because of the square in the exponent. Using parts only makes the integral more complicated, and we have no other techniques to apply to this integrand.    The domain of integration is shown below.     When we first integrate with respect to , we can see that the cross sections go from to . The limits on are then to , giving us .    Evaluating the iterated integral yields . Since on , this integral tells us the volume of the solid bounded above by the surface and below by the region .    We need to be flexible when setting up iterated integrals sometimes one order of integration is very difficult (or impossible) while the other order is easier. So it is important to practice changing the order of integration in iterated integrals.     "
+},
+{
+  "id": "mi-double-integrals-calculate7",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#mi-double-integrals-calculate7",
+  "type": "Activity",
+  "number": "3.1.19",
+  "title": "",
+  "body": "  Consider the region bounded by the curves and .    Use techniques from Calculus I to find the area between the curves.    Let denote the region. Compute . What do you notice?   "
+},
+{
+  "id": "subsec-double-integrals-over-general-regions-14",
+  "level": "2",
+  "url": "sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions-14",
+  "type": "Remark",
+  "number": "3.1.6",
+  "title": "",
+  "body": "  The area of a closed, bounded plane region is given by    "
 },
 {
   "id": "backmatter-2",
