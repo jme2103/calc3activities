@@ -9,8 +9,8 @@
 
   <!-- include sections -->
   <xi:include href="sec-MI-double-integrals.ptx" />
-  <!-- <xi:include href="sec-MI-double-integrals-polar-and-apps.ptx" />
-  <xi:include href="sec-MI-parametric-surfaces.ptx" />
+  <xi:include href="sec-MI-double-integrals-polar-and-apps.ptx" />
+  <!-- <xi:include href="sec-MI-parametric-surfaces.ptx" />
   <xi:include href="sec-MI-triple-integrals.ptx" />
   <xi:include href="sec-MI-change-of-vars.ptx" /> -->
 

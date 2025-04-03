@@ -112,7 +112,7 @@
   <activity>
       <introduction>
           <p>
-              Consider <m>f(x,y) = x+y</m> and the region <m>R = \lrpar{(x,y) \mid 4\leq x^2 + y^2 \leq 9, x\geq 0}</m>
+              Consider <m>f(x,y) = x+y</m> and the region <m>R = \lrbrace{(x,y) \mid 4\leq x^2 + y^2 \leq 9, x\geq 0}</m>
           </p>
       </introduction>
       <task>
@@ -123,6 +123,42 @@
           </statement>
       </task>
       <task>
+          <statement>
+              <p>
+                  Which of the following best describes the region <m>R</m>?
+                  <ol marker="A." cols="2">
+                      <li>
+                          <p>
+                              Type I
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Type II
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Both Type I and Type II
+                          </p>
+                      </li>
+                      <li>
+                          <p>
+                              Neither Type I nor Type II
+                          </p>
+                      </li>
+                  </ol>
+              </p>
+          </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Set up (but don't evaluate) the double integral <m>\ds \iint_R f(x,y)\, dA</m> as a sum of iterated integrals.
+          </p>
+        </statement>
+      </task>
+      <!-- <task>
           <statement>
               <p>
                   If we integrate in rectangular coordinates, should we express <m>R</m> as a Type I or Type II region? Why?
@@ -187,7 +223,7 @@
                   </ol>
               </p>
           </statement>
-      </task>
+      </task> -->
   </activity>
 
   <p>
@@ -212,8 +248,8 @@
     To fix this, we need to account for the distortion of the area of small rectangles in polar coordinates.
     The area <m>\Delta A</m> of <m>[r_i, r_{i+1}] \times [\theta_j, \theta_{j+1}]</m> is
     <md>
-      <mrow> \Delta A \amp = \frac{\theta_{i+1}-\theta_i}{2\pi} \cdot \pi(r_{i+1}^2-r_i^2) </mrow> 
-      <mrow> \amp = \frac{\theta_{i+1}-\theta_i}{2\pi} \cdot \pi (r_{i+1}+r_i)(r_{i+1}-r_i) </mrow>
+      <mrow> \Delta A \amp = \frac{\theta_{j+1}-\theta_j}{2\pi} \cdot \pi(r_{i+1}^2-r_i^2) </mrow> 
+      <mrow> \amp = \frac{\theta_{j+1}-\theta_j}{2\pi} \cdot \pi (r_{i+1}+r_i)(r_{i+1}-r_i) </mrow>
       <mrow> \amp = \frac{\Delta \theta}{2} \cdot (r_{i+1}+r_i)\Delta r. </mrow>
     </md>
     In the limit, as the number of subintervals approaches infinity, all the deltas will become the letter
@@ -259,11 +295,6 @@
           <ol marker="a.">
           <li>
             <p>
-              We cannot evaluate this iterated integral, because <m>e^{x^2 + y^2}</m> does not have an elementary antiderivative with respect to either <m>x</m> or <m>y</m>.
-            </p>
-          </li>
-          <li>
-            <p>
               We cannot describe the unit disk <m>D</m> Cartesian coordinates.
             </p>
           </li>
@@ -275,6 +306,11 @@
           <li>
             <p>
               The bounds of integration are not constants.
+            </p>
+          </li>
+          <li>
+            <p>
+              We cannot evaluate this iterated integral, because <m>e^{x^2 + y^2}</m> does not have an elementary antiderivative with respect to either <m>x</m> or <m>y</m>.
             </p>
           </li>
           </ol>
@@ -352,7 +388,7 @@
         </p>
       </statement>
       
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -422,7 +458,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
     </activity>
 
@@ -465,7 +501,7 @@
         </p>
       </statement>
 
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -547,7 +583,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
     </activity>
 
@@ -582,6 +618,13 @@
           </statement>
       </task>
       <task>
+        <statement>
+          <p>
+            What is the area enclosed by the cardioid?
+          </p>
+        </statement>
+      </task>
+      <!-- <task>
           <statement>
               <p>
                   What are the bounds on <m>r</m>?
@@ -594,16 +637,27 @@
                   Set up and evaluate <m>\ds \iint_D r^2\cos\theta\,r\,dr\,d\theta</m>
               </p>
           </statement>
-      </task>
+      </task> -->
   </activity>
 
-  <activity xml:id="mi-double-integral-polar-calculate4">
+  <activity>
+    <statement>
+      <p>
+        Evaluate the iterated integral <me>
+          \int_{0}^{2} \int_0^{\sqrt{4-x^2}} e^{-x^2-y^2} \, dy \, dx
+        </me>
+         by converting to polar coordinates.
+      </p>
+    </statement>
+  </activity>
+
+  <!-- <activity xml:id="mi-double-integral-polar-calculate4">
       <statement>
           <p>
               Convert the integral <m>\ds \int_0^1\int_{y\sqrt{5}}^{\sqrt{1-y^2}} xy^2\,dx\,dy</m> to polar coordinates and evaluate.
           </p>
       </statement>
-  </activity>
+  </activity> -->
 
   </subsection>
 
@@ -655,7 +709,7 @@
         </p> -->
       </statement>
       
-      <answer>
+      <!-- <answer>
         <ol marker="a.">
           <li>
             <p>
@@ -711,7 +765,7 @@
             </p>
           </li>
         </ol>
-      </solution>
+      </solution> -->
 
     </activity>
 
