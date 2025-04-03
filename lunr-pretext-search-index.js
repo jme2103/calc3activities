@@ -1675,6 +1675,204 @@ var ptx_lunr_docs = [
   "body": "  The area of a closed, bounded plane region is given by    "
 },
 {
+  "id": "sec-MI-double-integrals-polar-and-apps",
+  "level": "1",
+  "url": "sec-MI-double-integrals-polar-and-apps.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Double Integrals in Polar Coordinates and Applications",
+  "body": " Double Integrals in Polar Coordinates and Applications   Double Integrals in Polar Coordinates  The Cartesian coordinates of a point in the plane are a systematic and very convenient way to label all the points in the plane. However, there are other reasonable ways to describe the location of a point. One such way is to use polar coordinates . Standing at the origin, facing the positive -direction, you first turn counter-clockwise units (usually measured in radians or degress) and then walk straight units. It's good to think of the plane as being covered simultaneously by two grids: the Cartesian in gray and the polar in blue. Every point the plane now lies simultaneously on both grids.          What are the Cartesian and polar coordinates of the points and ?     Converting between rectangular and polar coordinates     Converting from rectangular to polar.  If we are given the rectangular coordinates of a point , then the polar coordinates of satisfy     Converting from polar to rectangular.  If we are given the polar coordinates of a point , then the rectangular coordinates of satisfy        Note: The angle in the polar coordinates of a point is not unique. We could replace with and still be at the same terminal point. In addition, the sign of does not uniquely determine the quadrant in which lies, so we have to determine the value of from the location of the point. In other words, more care has to be paid when using polar coordinates than rectangular coordinates.    Find a polar equation for the circle       Convert the following polar equations to Cartesian equations:                     Sketch the polar rectangular region       Consider and the region     Sketch and label .    Which of the following best describes the region ?   Type I    Type II    Both Type I and Type II    Neither Type I nor Type II       Set up (but don't evaluate) the double integral as a sum of iterated integrals.     In order to define a double integral in polar coordinates, we will begin by setting up a Riemann sum in the same way as we did for the Cartesian case. A rectangle in polar coordinates looks like part of an annulus. The radius satisfies and the angle satisfies . Divide each interval into many small subintervals, and , and choose a sample point in each subset and . Our first incorrect attempt would be where and . It's easy to see that this is incorrect. The unit circle is the polar rectangle . By taking , this definition of a polar integral would give the area as . This is clear incorrect because we know that the area is . The problem is that does not converge to the area element as their sizes approach zero.  To fix this, we need to account for the distortion of the area of small rectangles in polar coordinates. The area of is In the limit, as the number of subintervals approaches infinity, all the deltas will become the letter , and the endpoints of each subinterval will approach a single value. So, the limit will be In contast to the area element in Cartesian coordinates, , this is the area element in polar coordinates.   Double integrals in polar coordinates  The double integral in rectangular coordinates can be converted to a double integral in polar coordinates iterated integral polar coordinates as .     Sketch the region and then evaluate       Let on the disk . We will evaluate .    Which of the following best describes why you cannot proceed with evaluating the iterated integral     We cannot describe the unit disk Cartesian coordinates.    The bounds of integration sqauare roots.    The bounds of integration are not constants.    We cannot evaluate this iterated integral, because does not have an elementary antiderivative with respect to either or .      Express the integral as an iterated integral in polar coordinates and compute the integral.    While there is no firm rule for when polar coordinates can or should be used, they are a natural alternative anytime the domain of integration may be expressed simply in polar form, and\/or when the integrand involves expressions such as     Let and let be the unit disk on the plane    Convert into a function of and .    Describe using polar coordinates.    Set up and evaluate the integral       Let and .   Sketch the region and then write the double integral of over as an iterated integral in rectangular coordinates.    Write the double integral of over as an iterated integral in polar coordinates.    Evaluate one of the iterated integrals. Why is the final value you found not surprising?          Consider the circle given by as shown in Figure .  The graphs of and , for use in Activity .      Determine a polar curve in the form that traces out the circle . (Hint: Recall that a circle centered at the origin of radius can be described by the equations and .)    Find the exact average value of over the interior of the circle .    Find the volume under the surface over the region , where is the region bounded above by the line and below by the circle (this is the shaded region in Figure ).    Explain why in both (b) and (c) it is advantageous to use polar coordinates.          Show that the volume of a sphere of radius is given by by using a polar double integral.      Evaluate the integral , where is the region bounded by the polar axis and the lower portion of the cardioid     The plot of is given below. Use it to find the bounds on .       What is the area enclosed by the cardioid?       Evaluate the iterated integral by converting to polar coordinates.       Applications of Double Integrals   The double integral and area  Given a closed, bounded region in the plane, the area of , denoted , is given by the double integral      Find the area of the bounded region between the curves        The double integral and average Values  The average value of a function on a closed, bounded region in the plane is given by where is the area of ..     The rectangle describes a metal place whose temperature is given by . Find the average temperature of the plate.     The mass of a lamina  If describes the density of a lamina defined by a planar region , then the mass double integral mass of lamina of is given by the double integral .     Charge is distributed over the triangular region with vertices at , , and so that the density at is . Find the total charge.     The center of mass of a lamina  The coordinates of the center of mass of a lamina center of mass of a lamina  with density are given by Notice that the denominator is the mass of the lamina.     Find the mass and center of mass of a triangular lamina with vertices at , , and if the density function is .      The density at any point on a semicircular lamina is proportional to the distance from the center of the circle. Find the center of mass of the lamina.     Probability density functions  A function of a single variable is a probability density function (of a continuous random variable) if , , and   A function of two variables is a joint density function (for random variables and ) if , and      If the joint density function for and is given by find the value of the constant that makes a probability density function. Then find .      In this activity, you will determine the appropriate constant so that the function is a probability density function. Notice that , so we only need to make sure that . In a previous activity we noticed that you cannot express an antiderivative for in terms of elementary functions. Instead, you will arrive at the correct value for via a somewhat circuitous route that involves a double integral in polar coordinates.  As the probability density function for the normal distribution, this functions plays an enormous role in statistics, probability, physics, biology, and many other fields. It's vitally imporant that are able to compute with it.    Let be the disk of radius centered at the origin and let . Compute     Take the limit as of your answer to the previous question to determine     Now think about the integral as an iterated integral in Cartesian coordinates. Explain why     Conclude that      "
+},
+{
+  "id": "fig-polar-cartesian-overlay",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#fig-polar-cartesian-overlay",
+  "type": "Figure",
+  "number": "3.2.1",
+  "title": "",
+  "body": "     "
+},
+{
+  "id": "subsec-polar-integrals-4",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-4",
+  "type": "Activity",
+  "number": "3.2.1",
+  "title": "",
+  "body": "  What are the Cartesian and polar coordinates of the points and ?   "
+},
+{
+  "id": "subsec-polar-integrals-7",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-7",
+  "type": "Activity",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  Find a polar equation for the circle    "
+},
+{
+  "id": "subsec-polar-integrals-8",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-8",
+  "type": "Activity",
+  "number": "3.2.3",
+  "title": "",
+  "body": "  Convert the following polar equations to Cartesian equations:                  "
+},
+{
+  "id": "mi-double-integral-polar-region1",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#mi-double-integral-polar-region1",
+  "type": "Activity",
+  "number": "3.2.4",
+  "title": "",
+  "body": "  Sketch the polar rectangular region    "
+},
+{
+  "id": "subsec-polar-integrals-10",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-10",
+  "type": "Activity",
+  "number": "3.2.5",
+  "title": "",
+  "body": "  Consider and the region     Sketch and label .    Which of the following best describes the region ?   Type I    Type II    Both Type I and Type II    Neither Type I nor Type II       Set up (but don't evaluate) the double integral as a sum of iterated integrals.    "
+},
+{
+  "id": "mi-double-integral-polar-calculate1",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#mi-double-integral-polar-calculate1",
+  "type": "Activity",
+  "number": "3.2.6",
+  "title": "",
+  "body": "  Sketch the region and then evaluate    "
+},
+{
+  "id": "subsec-polar-integrals-15",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-15",
+  "type": "Activity",
+  "number": "3.2.7",
+  "title": "",
+  "body": "  Let on the disk . We will evaluate .    Which of the following best describes why you cannot proceed with evaluating the iterated integral     We cannot describe the unit disk Cartesian coordinates.    The bounds of integration sqauare roots.    The bounds of integration are not constants.    We cannot evaluate this iterated integral, because does not have an elementary antiderivative with respect to either or .      Express the integral as an iterated integral in polar coordinates and compute the integral.   "
+},
+{
+  "id": "mi-double-integral-polar-convert1",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#mi-double-integral-polar-convert1",
+  "type": "Activity",
+  "number": "3.2.8",
+  "title": "",
+  "body": "  Let and let be the unit disk on the plane    Convert into a function of and .    Describe using polar coordinates.    Set up and evaluate the integral    "
+},
+{
+  "id": "A_11_5_4",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#A_11_5_4",
+  "type": "Activity",
+  "number": "3.2.9",
+  "title": "",
+  "body": "  Let and .   Sketch the region and then write the double integral of over as an iterated integral in rectangular coordinates.    Write the double integral of over as an iterated integral in polar coordinates.    Evaluate one of the iterated integrals. Why is the final value you found not surprising?       "
+},
+{
+  "id": "A_11_5_5",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#A_11_5_5",
+  "type": "Activity",
+  "number": "3.2.10",
+  "title": "",
+  "body": "  Consider the circle given by as shown in Figure .  The graphs of and , for use in Activity .      Determine a polar curve in the form that traces out the circle . (Hint: Recall that a circle centered at the origin of radius can be described by the equations and .)    Find the exact average value of over the interior of the circle .    Find the volume under the surface over the region , where is the region bounded above by the line and below by the circle (this is the shaded region in Figure ).    Explain why in both (b) and (c) it is advantageous to use polar coordinates.       "
+},
+{
+  "id": "mi-double-integral-polar-calculate2",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#mi-double-integral-polar-calculate2",
+  "type": "Activity",
+  "number": "3.2.11",
+  "title": "",
+  "body": "  Show that the volume of a sphere of radius is given by by using a polar double integral.   "
+},
+{
+  "id": "mi-double-integral-polar-calculate3",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#mi-double-integral-polar-calculate3",
+  "type": "Activity",
+  "number": "3.2.12",
+  "title": "",
+  "body": "  Evaluate the integral , where is the region bounded by the polar axis and the lower portion of the cardioid     The plot of is given below. Use it to find the bounds on .       What is the area enclosed by the cardioid?    "
+},
+{
+  "id": "subsec-polar-integrals-22",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals-22",
+  "type": "Activity",
+  "number": "3.2.13",
+  "title": "",
+  "body": "  Evaluate the iterated integral by converting to polar coordinates.   "
+},
+{
+  "id": "A_11_4_1",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#A_11_4_1",
+  "type": "Activity",
+  "number": "3.2.14",
+  "title": "",
+  "body": "  Find the area of the bounded region between the curves      "
+},
+{
+  "id": "subsec-applications-5",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-5",
+  "type": "Activity",
+  "number": "3.2.15",
+  "title": "",
+  "body": "  The rectangle describes a metal place whose temperature is given by . Find the average temperature of the plate.   "
+},
+{
+  "id": "subsec-applications-7",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-7",
+  "type": "Activity",
+  "number": "3.2.16",
+  "title": "",
+  "body": "  Charge is distributed over the triangular region with vertices at , , and so that the density at is . Find the total charge.   "
+},
+{
+  "id": "subsec-applications-9",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-9",
+  "type": "Activity",
+  "number": "3.2.17",
+  "title": "",
+  "body": "  Find the mass and center of mass of a triangular lamina with vertices at , , and if the density function is .   "
+},
+{
+  "id": "subsec-applications-10",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-10",
+  "type": "Activity",
+  "number": "3.2.18",
+  "title": "",
+  "body": "  The density at any point on a semicircular lamina is proportional to the distance from the center of the circle. Find the center of mass of the lamina.   "
+},
+{
+  "id": "subsec-applications-12",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-12",
+  "type": "Activity",
+  "number": "3.2.19",
+  "title": "",
+  "body": "  If the joint density function for and is given by find the value of the constant that makes a probability density function. Then find .   "
+},
+{
+  "id": "subsec-applications-13",
+  "level": "2",
+  "url": "sec-MI-double-integrals-polar-and-apps.html#subsec-applications-13",
+  "type": "Activity",
+  "number": "3.2.20",
+  "title": "",
+  "body": "  In this activity, you will determine the appropriate constant so that the function is a probability density function. Notice that , so we only need to make sure that . In a previous activity we noticed that you cannot express an antiderivative for in terms of elementary functions. Instead, you will arrive at the correct value for via a somewhat circuitous route that involves a double integral in polar coordinates.  As the probability density function for the normal distribution, this functions plays an enormous role in statistics, probability, physics, biology, and many other fields. It's vitally imporant that are able to compute with it.    Let be the disk of radius centered at the origin and let . Compute     Take the limit as of your answer to the previous question to determine     Now think about the integral as an iterated integral in Cartesian coordinates. Explain why     Conclude that    "
+},
+{
   "id": "backmatter-2",
   "level": "1",
   "url": "backmatter-2.html",
