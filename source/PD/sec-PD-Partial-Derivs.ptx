@@ -158,12 +158,12 @@
                     Now consider an unevenly heated plate, whose corner lies at the origin, as in the image below.
                 </p>
                 <image>
-                    <sageplot>
+                    <!-- <sageplot>
                         p = Graphics()
                         p += polygon(([(0,0),(0,3),(5,3),(5,0)]),alpha = 0.25, gridlines=True, axes_labels = (r'$x$',r'$y$'), fontsize=10)
                         p += polygon(([(0,0),(0,3),(5,3),(5,0)]),fill=False,color='black')
                         p
-                    </sageplot>
+                    </sageplot> -->
                 </image>
                 <p>
                     The temperature at certain points is given by the table below.

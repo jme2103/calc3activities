@@ -623,12 +623,12 @@
           </latex-image>
       </image>
       <image width = "50%">
-          <sageplot>
+          <!-- <sageplot>
               x = var('x')
               y = var('y')
               f(x,y) = 10 - (x^2 + y^2)
               contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
-          </sageplot>
+          </sageplot> -->
       </image>
       </sidebyside>
     </figure>
@@ -647,12 +647,12 @@
           </latex-image>
       </image>
       <image width = "50%">
-          <sageplot>
+          <!-- <sageplot>
               x = var('x')
               y = var('y')
               f(x,y) = 3*x^2 + y^2
               contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
-          </sageplot>
+          </sageplot> -->
       </image>
       </sidebyside>
     </figure>
@@ -673,12 +673,12 @@
           </latex-image>
       </image>
       <image width = "50%">
-          <sageplot>
+          <!-- <sageplot>
               x = var('x')
               y = var('y')
               f(x,y) = x^2 - y^2
               contour_plot(f,(x,-8,8),(y,-8,8),fill=False, cmap='hsv', labels=True)
-          </sageplot>
+          </sageplot> -->
       </image>
       </sidebyside>
     </figure>
