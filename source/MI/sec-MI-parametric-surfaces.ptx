@@ -76,6 +76,82 @@
     </task>
   </activity>
 
+  <activity xml:id="A_11_6_10">
+    <statement> 
+    <p>
+      In this activity, we seek a
+      parametrization of the sphere of radius <m>R</m> centered at the origin, as
+      shown on the left in <xref ref="F_11_6_sphere">Figure</xref>.
+      Notice that this sphere may be obtained by revolving a half-circle
+      contained in the <m>xz</m>-plane about the <m>z</m>-axis, as shown on the right.
+    </p>
+
+    <figure xml:id="F_11_6_sphere">
+      <caption>A sphere obtained by revolving a half-circle.</caption>
+      <sidebyside widths="50% 50%">
+      <image source="images/fig_11_6_sphere"/>
+      <image source="images/fig_11_6_sphere_half"/>
+      </sidebyside>
+    </figure>
+
+    <ol marker="a.">
+      <li>
+        <p>
+          Begin by writing a parametrization of this half-circle using
+              the parameter <m>s</m>:
+
+          <me>
+            x(s) = \ldots \ \ \ \ \ \ \ \ \ 
+                z(s) = \ldots.
+          </me>
+          Be sure to state the domain of the parameter <m>s</m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+          By revolving the points on this half-circle about the
+              <m>z</m>-axis, obtain a parametrization <m>\vr(s,t)</m> of the points on the
+              sphere of radius <m>R</m>.  Be sure to include the domain of both
+              parameters <m>s</m> and <m>t</m>. (Hint: What is the radius of the circle obtained when revolving a point on the half-circle around the <m>z</m> axis?)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Draw the surface defined by your parameterization with
+              appropriate technology.
+        </p>
+      </li>
+    </ol>
+    </statement>
+    <!-- <solution>
+      <ol marker="a.">
+        <li>
+          <p>
+            The parameterization of the half-circle is <m>x = R\cos(s)</m>,
+            <m>y = 0</m>,
+            <m>z=R\sin(s)</m> for <m>-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            A parameterization of the curve obtained by revolving the point
+            <m>(R\cos(s), 0, R\sin(s))</m> around the <m>z</m>-axis is <m>x=r\cos(t)</m>,
+            <m>y=r\sin(t)</m>, <m>z=R\sin(s)</m> for <m>0 \leq t \leq 2\pi</m>,
+            where <m>r</m> is the distance from the point to the <m>z</m>-axis.
+            Note that this distance is just
+            <m>R\cos(s)</m>, So a parameterization of the sphere of radius <m>R</m> centered at the origin is
+            <me>
+              \vr(s,t) = \langle R\cos(s)\cos(t), R\cos(s)\sin(t), R\sin(s) \rangle
+            </me>
+            for  <m>-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}</m> and <m>0 \leq t \leq 2\pi</m>.
+          </p>
+        </li>
+      </ol>
+    </solution> -->
+  </activity>
+
   <activity>
     <introduction>
       <p>
@@ -127,81 +203,7 @@
     </task>
   </activity>
 
-  <activity xml:id="A_11_6_10">
-    <statement> 
-    <p>
-      In this activity, we seek a
-      parametrization of the sphere of radius <m>R</m> centered at the origin, as
-      shown on the left in <xref ref="F_11_6_sphere">Figure</xref>.
-      Notice that this sphere may be obtained by revolving a half-circle
-      contained in the <m>xz</m>-plane about the <m>z</m>-axis, as shown on the right.
-    </p>
-
-    <figure xml:id="F_11_6_sphere">
-      <caption>A sphere obtained by revolving a half-circle.</caption>
-      <sidebyside widths="50% 50%">
-      <image source="images/fig_11_6_sphere"/>
-      <image source="images/fig_11_6_sphere_half"/>
-      </sidebyside>
-    </figure>
-
-    <ol marker="a.">
-      <li>
-        <p>
-          Begin by writing a parametrization of this half-circle using
-              the parameter <m>s</m>:
-
-          <me>
-            x(s) = \ldots \ \ \ \ \ \ \ \ \ 
-                z(s) = \ldots.
-          </me>
-          Be sure to state the domain of the parameter <m>s</m>.
-        </p>
-      </li>
-
-      <li>
-        <p>
-          By revolving the points on this half-circle about the
-              <m>z</m>-axis, obtain a parametrization <m>\vr(s,t)</m> of the points on the
-              sphere of radius <m>R</m>.  Be sure to include the domain of both
-              parameters <m>s</m> and <m>t</m>. (Hint: What is the radius of the circle obtained when revolving a point on the half-circle around the <m>z</m> axis?)
-        </p>
-      </li>
-
-      <li>
-        <p>
-          Draw the surface defined by your parameterization with
-              appropriate technology.
-        </p>
-      </li>
-    </ol>
-    </statement>
-    <solution>
-      <ol marker="a.">
-        <li>
-          <p>
-            The parameterization of the half-circle is <m>x = R\cos(s)</m>,
-            <m>y = 0</m>,
-            <m>z=R\sin(s)</m> for <m>-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            A parameterization of the curve obtained by revolving the point
-            <m>(R\cos(s), 0, R\sin(s))</m> around the <m>z</m>-axis is <m>x=r\cos(t)</m>,
-            <m>y=r\sin(t)</m>, <m>z=R\sin(s)</m> for <m>0 \leq t \leq 2\pi</m>,
-            where <m>r</m> is the distance from the point to the <m>z</m>-axis.
-            Note that this distance is just
-            <m>R\cos(s)</m>, So a parameterization of the sphere of radius <m>R</m> centered at the origin is
-            <me>
-              \vr(s,t) = \langle R\cos(s)\cos(t), R\cos(s)\sin(t), R\sin(s) \rangle
-            </me>
-            for  <m>-\frac{\pi}{2} \leq s \leq \frac{\pi}{2}</m> and <m>0 \leq t \leq 2\pi</m>.
-          </p>
-        </li>
-      </ol>
-    </solution>
-  </activity>
+  
 
   <assemblage xml:id="assemblage-param-of-graph">
     <title>Parameterization of the Graph of a Function</title>
@@ -260,11 +262,16 @@
     <m>\vr_t \Delta t</m>.
   </p>
 
+  <figure xml:id="F_11_6_approx">
+    <caption>Approximation surface area with a parallelogram.</caption>
+    <image width="50%" source="images/fig_11_6_approx"/>
+  </figure>
+
   <p>
     From vector geometry, we know that the area of a parallelogram spanned by two vectors is the 
     magnitude of their cross product. So, we get that
     <me>
-      \Delta S = | (\vr_s \Delta s) \times (\vr_t \Delta t) |   = | \vr_s \times \vr_t | \Delta s \Delta t =  = | \vr_s \times \vr_t | \Delta A.
+      \Delta S = | (\vr_s \Delta s) \times (\vr_t \Delta t) |   = | \vr_s \times \vr_t | \Delta s \Delta t = | \vr_s \times \vr_t | \Delta A.
     </me>
     where the second equality comes from the fact that <m>\Delta s</m> and <m>\Delta t</m> are 
     positive scalars, which, by the properties of the cross product and magnitude, can be moved outside.
@@ -337,7 +344,7 @@
       </ol>
     </p>
     </statement>
-    <solution>
+    <!-- <solution>
       <p>
         <ol marker="a.">
           <li>
@@ -379,7 +386,7 @@
           </li>
         </ol>
       </p>
-    </solution>
+    </solution> -->
   </activity>
 
   <p>
@@ -414,7 +421,7 @@
       </ol>
     </p>
     </statement>
-    <solution>
+    <!-- <solution>
       <p>
       <ol marker="a.">
         <li>
@@ -461,7 +468,7 @@
         </li>
       </ol>
       </p>
-    </solution>
+    </solution> -->
   </activity>
   
 </section>
