@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-VC" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Fundamental Theorems of Vector Calculus</title>
+
+  <introduction>
+    <p>Activities for exploring the fundamental theorems of vector calculus.</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-VC-line-integrals.ptx" />
+  
+</chapter>

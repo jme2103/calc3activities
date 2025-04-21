@@ -16,6 +16,7 @@
     <xi:include href="./MV/ch-MV.ptx" />
     <xi:include href="./PD/ch-PD.ptx" />
     <xi:include href="./MI/ch-MI.ptx" />
+    <xi:include href="./VC/ch-VC.ptx" />
 
 
     <!-- Include backmatter -->
