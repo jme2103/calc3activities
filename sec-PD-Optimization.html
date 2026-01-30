@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Optimization</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Calculus III">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Jonathan Epstein">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
+<p class="byline">Jonathan Epstein</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-PD-Directional-Derivs-and-Grad.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-PD.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-MI.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} 
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrpar}[1]{\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\dc}{^\circ}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vT}{\mathbf{T}}
+\newcommand{\vx}{\mathbf{x}}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-PD.html" class="internal"><span class="codenumber">2</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Partial-Derivs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Tangent-Planes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Chain-Rule.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Directional-Derivs-and-Grad.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Directional Derivatives and Gradients</span></a></div></li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-PD-Optimization.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Optimization</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-Optimization-Intro" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Review of Single-Variable Optimization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-closed-sets" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-critical-points" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Critical Points and The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-optimization" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Optimization on Closed and Bounded Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-Lagrange" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MI.html" class="internal"><span class="codenumber">3</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Review of Riemann Integrals in One Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Double Integrals Over Rectangules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-iterated-ntegrals" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Double Integrals Over General Regions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Double Integrals in Polar Coordinates and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-applications" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-parametric-surfaces.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-triple-integrals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Triple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cartesian" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Triple Integrals in Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cylindrical" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Triple Integrals in cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-spherical" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-change-of-vars.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Change of Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-VC.html" class="internal"><span class="codenumber">4</span> <span class="title">Fundamental Theorems of Vector Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-VC-line-integrals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Line Integrals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-PD-Optimization"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">2.5</span><span class="space"> </span><span class="title">Optimization</span>
+</h2>
+<section class="subsection" id="subsec-PD-Optimization-Intro"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="space"> </span><span class="title">Review of Single-Variable Optimization</span>
+</h3>
+<article class="activity project-like" id="subsec-PD-Optimization-Intro-2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-PD-Optimization-Intro-2-1">
+<div class="para" id="subsec-PD-Optimization-Intro-2-1-1">Let <span class="process-math">\(f(x)\)</span> be the cubic function whose graph is shown below.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-PD-Optimization-Intro-2-1-2.svg" role="img" class="contained"></div>
+</div>
+<article class="task exercise-like" id="subsec-PD-Optimization-Intro-2-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-PD-Optimization-Intro-2-2-1-1">Which of the following statements is true of the <em class="emphasis">local extrema</em> or <em class="emphasis">relative extrema</em> of <span class="process-math">\(f\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1" id="subsec-PD-Optimization-Intro-2-2-1-2">
+<li id="subsec-PD-Optimization-Intro-2-2-1-2-1"><div class="para" id="subsec-PD-Optimization-Intro-2-2-1-2-1-1">
+<span class="process-math">\(f\)</span> does not have any local extrema.</div></li>
+<li id="subsec-PD-Optimization-Intro-2-2-1-2-2"><div class="para" id="subsec-PD-Optimization-Intro-2-2-1-2-2-1">
+<span class="process-math">\(f\)</span> has a local max at <span class="process-math">\(x = -2\)</span> and a local min at <span class="process-math">\(x = 1\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-2-1-2-3"><div class="para" id="subsec-PD-Optimization-Intro-2-2-1-2-3-1">
+<span class="process-math">\(f\)</span> has a local max at <span class="process-math">\(x = 1\)</span> and a local min at <span class="process-math">\(x = -2\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-2-1-2-4"><div class="para" id="subsec-PD-Optimization-Intro-2-2-1-2-4-1">
+<span class="process-math">\(f\)</span> has a local max at <span class="process-math">\(x = -2\)</span> and a local min at <span class="process-math">\(x = 0\text{.}\)</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="subsec-PD-Optimization-Intro-2-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-PD-Optimization-Intro-2-3-1-1">Which of the following statements is true of the <em class="emphasis">global extrema</em> or <em class="emphasis">absolute extrema</em> of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0, 2]\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1" id="subsec-PD-Optimization-Intro-2-3-1-2">
+<li id="subsec-PD-Optimization-Intro-2-3-1-2-1"><div class="para" id="subsec-PD-Optimization-Intro-2-3-1-2-1-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 0\)</span> and global max at <span class="process-math">\(x = 2\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-3-1-2-2"><div class="para" id="subsec-PD-Optimization-Intro-2-3-1-2-2-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 2\)</span> and global max at <span class="process-math">\(x = 0\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-3-1-2-3"><div class="para" id="subsec-PD-Optimization-Intro-2-3-1-2-3-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 1\)</span> and global max at <span class="process-math">\(x = 2\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-3-1-2-4"><div class="para" id="subsec-PD-Optimization-Intro-2-3-1-2-4-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 1\)</span> and no global max.</div></li>
+</ol></article><article class="task exercise-like" id="subsec-PD-Optimization-Intro-2-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-PD-Optimization-Intro-2-4-1-1">Which of the following statements is true of the <em class="emphasis">global extrema</em> or <em class="emphasis">absolute extrema</em> of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\([0, 2)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1" id="subsec-PD-Optimization-Intro-2-4-1-2">
+<li id="subsec-PD-Optimization-Intro-2-4-1-2-1"><div class="para" id="subsec-PD-Optimization-Intro-2-4-1-2-1-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 0\)</span> and global max at <span class="process-math">\(x = 2\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-4-1-2-2"><div class="para" id="subsec-PD-Optimization-Intro-2-4-1-2-2-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 2\)</span> and global max at <span class="process-math">\(x = 0\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-4-1-2-3"><div class="para" id="subsec-PD-Optimization-Intro-2-4-1-2-3-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 1\)</span> and global max at <span class="process-math">\(x = 2\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-4-1-2-4"><div class="para" id="subsec-PD-Optimization-Intro-2-4-1-2-4-1">
+<span class="process-math">\(f\)</span> has a global min at <span class="process-math">\(x = 1\)</span> and no global max.</div></li>
+</ol></article><article class="task exercise-like" id="subsec-PD-Optimization-Intro-2-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-PD-Optimization-Intro-2-5-1-1">Which of the following statements is true of the <em class="emphasis">global extrema</em> or <em class="emphasis">absolute extrema</em> of <span class="process-math">\(f\)</span> on the interval <span class="process-math">\((-\infty, 2)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1" id="subsec-PD-Optimization-Intro-2-5-1-2">
+<li id="subsec-PD-Optimization-Intro-2-5-1-2-1"><div class="para" id="subsec-PD-Optimization-Intro-2-5-1-2-1-1">
+<span class="process-math">\(f\)</span> does not have any global extrema.</div></li>
+<li id="subsec-PD-Optimization-Intro-2-5-1-2-2"><div class="para" id="subsec-PD-Optimization-Intro-2-5-1-2-2-1">
+<span class="process-math">\(f\)</span> has a global max at <span class="process-math">\(x = -2\)</span> and a global min at <span class="process-math">\(x = 1\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-2-5-1-2-3"><div class="para" id="subsec-PD-Optimization-Intro-2-5-1-2-3-1">
+<span class="process-math">\(f\)</span> has a global max at <span class="process-math">\(x = -2\)</span> and no global min.</div></li>
+<li id="subsec-PD-Optimization-Intro-2-5-1-2-4"><div class="para" id="subsec-PD-Optimization-Intro-2-5-1-2-4-1">
+<span class="process-math">\(f\)</span> has a global max at <span class="process-math">\(x = 1\)</span> and a global min at <span class="process-math">\(x = -4\text{.}\)</span>
+</div></li>
+</ol></article></article><div class="para" id="subsec-PD-Optimization-Intro-3">When optimizing a function of a single variable, we have several tools at our disposal which are straightforward to apply. The Extreme Value Theorem states that a continuous function will always have a global max or min when considered over a closed and bounded interval. (However, as we saw above it may or may may not have a global extrema when the interval is not closed or not bounded.) We also know that the global extrema will occur either at critical points (i.e. values of <span class="process-math">\(x\)</span> where <span class="process-math">\(f'(x) = 0\)</span> or <span class="process-math">\(f'(x)\)</span> is undefined) or at the endpoints of the closed interval. Thus we may find the global extrema by evaluating <span class="process-math">\(f\)</span> at the critical points and the endpoints of the interval, and then locating the largest and smallest values. (This is known as the <em class="emphasis">closed interval method</em>.)</div>
+<article class="definition definition-like" id="subsec-PD-Optimization-Intro-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-PD-Optimization-Intro-4-1-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be a function of two variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\text{.}\)</span>
+</div>
+<ul class="disc" id="subsec-PD-Optimization-Intro-4-1-1-4">
+<li id="subsec-PD-Optimization-Intro-4-1-1-4-1"><div class="para" id="subsec-PD-Optimization-Intro-4-1-1-4-1-1">The function <span class="process-math">\(f\)</span> has a <em class="emphasis">local maximum</em> at a point <span class="process-math">\((x_0,y_0)\)</span> provided that <span class="process-math">\(f(x,y) \leq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> near <span class="process-math">\((x_0,y_0)\text{.}\)</span>  In this situation we say that <span class="process-math">\(f(x_0, y_0)\)</span> is a <em class="emphasis">local maximum value</em>.</div></li>
+<li id="subsec-PD-Optimization-Intro-4-1-1-4-2"><div class="para" id="subsec-PD-Optimization-Intro-4-1-1-4-2-1">The function <span class="process-math">\(f\)</span> has a <em class="emphasis">local minimum</em> at a point <span class="process-math">\((x_0,y_0)\)</span> provided that <span class="process-math">\(f(x,y) \geq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> near <span class="process-math">\((x_0,y_0)\text{.}\)</span> In this situation we say that <span class="process-math">\(f(x_0, y_0)\)</span> is a <em class="emphasis">local minimum value</em>.</div></li>
+<li id="subsec-PD-Optimization-Intro-4-1-1-4-3"><div class="para" id="subsec-PD-Optimization-Intro-4-1-1-4-3-1">An <em class="emphasis">absolute maximum point</em> is a point <span class="process-math">\((x_0,y_0)\)</span> for  which <span class="process-math">\(f(x,y)\leq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> The value of <span class="process-math">\(f\)</span> at an absolute maximum point is the <em class="emphasis">maximum value</em> of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-Optimization-Intro-4-1-1-4-4"><div class="para" id="subsec-PD-Optimization-Intro-4-1-1-4-4-1">An <em class="emphasis">absolute minimum point</em> is a point such that <span class="process-math">\(f(x,y) \geq f(x_0,y_0)\)</span> for all points <span class="process-math">\((x,y)\)</span> in the domain of <span class="process-math">\(f\text{.}\)</span> The value of <span class="process-math">\(f\)</span> at an absolute minimum point is the <em class="emphasis">minimum value</em> of <span class="process-math">\(f\text{.}\)</span>
+</div></li>
+</ul>
+</div></article><div class="para" id="subsec-PD-Optimization-Intro-5">The same principles apply when locating the global extrema of a function of two variables. However, we must extend the notions of <em class="emphasis">closed and bounded interval</em>, <em class="emphasis">endpoint</em>, and <em class="emphasis">critical point</em> appropriately to <span class="process-math">\(\R^n\text{.}\)</span>
+</div></section><section class="subsection" id="subsec-PD-closed-sets"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="space"> </span><span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span>
+</h3>
+<div class="para logical" id="subsec-PD-closed-sets-2">
+<div class="para">Let <span class="process-math">\((x_0,y_0)\)</span> be a fixed point in <span class="process-math">\(\R^2\)</span> and let <span class="process-math">\(r\)</span> be a positive real number. We will denote the set of all points in <span class="process-math">\(\R^2\)</span> that are within a distance <span class="process-math">\(r\)</span> of <span class="process-math">\((x_0,y_0)\)</span> by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+B_r(x_0,y_0) = \{(x,y) \in \R^2 : \sqrt{(x-x_0)^2 + (y-y_0)^2} \lt r\}.
+\end{equation*}
+</div>
+<div class="para">These sets are called <em class="emphasis">open disks</em> or <em class="emphasis">open balls</em>. Open disks in <span class="process-math">\(\R^n\)</span> are defined similarly: <span class="process-math">\(B_r(\vx_0) = \{ \vx \in \R^n : |\vx - \vx_0| \lt r \}\text{.}\)</span> A subset <span class="process-math">\(S\)</span> of <span class="process-math">\(\R^2\)</span> is said to be <em class="emphasis">open</em> if for every point <span class="process-math">\((x,y) \in S\)</span> there exists a positive real number <span class="process-math">\(r\)</span> such that <span class="process-math">\(B_r(x,y) \subseteq S\text{.}\)</span> A subset <span class="process-math">\(S\)</span> of <span class="process-math">\(\R^2\)</span> is said to be <em class="emphasis">closed</em> if its complement is open.</div>
+</div>
+<article class="activity project-like" id="subsec-PD-closed-sets-3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-PD-closed-sets-3-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R^2\)</span> defined by <span class="process-math">\(x^2 + y^2 \leq 1\text{.}\)</span> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-PD-closed-sets-3-1-1-4.svg" role="img" class="contained"></div> Which is the best reason <span class="process-math">\(S\)</span> is closed?</div>
+<ol class="upper-alpha ol-marker-1" id="subsec-PD-closed-sets-3-1-1-6">
+<li id="subsec-PD-closed-sets-3-1-1-6-1"><div class="para" id="subsec-PD-closed-sets-3-1-1-6-1-1">At every point inside of <span class="process-math">\(S\text{,}\)</span> you can center a small open disk that is contained in <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-closed-sets-3-1-1-6-2"><div class="para" id="subsec-PD-closed-sets-3-1-1-6-2-1">At every point outside of <span class="process-math">\(S\text{,}\)</span> you can center a small open disk that does not touch <span class="process-math">\(S\text{.}\)</span>
+</div></li>
+<li id="subsec-PD-closed-sets-3-1-1-6-3"><div class="para" id="subsec-PD-closed-sets-3-1-1-6-3-1">The distance of every point outside of <span class="process-math">\(S\)</span> to the origin is more than 1.</div></li>
+<li id="subsec-PD-closed-sets-3-1-1-6-4"><div class="para" id="subsec-PD-closed-sets-3-1-1-6-4-1">The distance of every point inside of <span class="process-math">\(S\)</span> to the origin is less than 1.</div></li>
+</ol>
+</div></article><article class="activity project-like" id="subsec-PD-closed-sets-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-PD-closed-sets-4-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R^2\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-\sqrt{1 - x^2} \leq y \lt \sqrt{1 - x^2}\text{.}
+\end{equation*}
+</div>
+<div class="para">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-PD-closed-sets-4-1-1-4.svg" role="img" class="contained"></div> What is true of <span class="process-math">\(S\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1" id="subsec-PD-closed-sets-4-1-1-6">
+<li id="subsec-PD-closed-sets-4-1-1-6-1"><div class="para" id="subsec-PD-closed-sets-4-1-1-6-1-1">
+<span class="process-math">\(S\)</span> is closed.</div></li>
+<li id="subsec-PD-closed-sets-4-1-1-6-2"><div class="para" id="subsec-PD-closed-sets-4-1-1-6-2-1">
+<span class="process-math">\(S\)</span> is open.</div></li>
+<li id="subsec-PD-closed-sets-4-1-1-6-3"><div class="para" id="subsec-PD-closed-sets-4-1-1-6-3-1">
+<span class="process-math">\(S\)</span> is both open and closed.</div></li>
+<li id="subsec-PD-closed-sets-4-1-1-6-4"><div class="para" id="subsec-PD-closed-sets-4-1-1-6-4-1">
+<span class="process-math">\(S\)</span> neither open nor closed.</div></li>
+</ol>
+</div></article><article class="assemblage assemblage-like" id="subsec-PD-closed-sets-5"><h4 class="heading"><span class="title">Boundary of Set.</span></h4>
+<div class="para" id="subsec-PD-closed-sets-5-2">A point <span class="process-math">\((x,y)\)</span> in <span class="process-math">\(\R^2\)</span> is called a <em class="emphasis">boundary point of <span class="process-math">\(S\)</span></em> if every open disk centered at <span class="process-math">\((x,y)\)</span> contains points both in <span class="process-math">\(S\)</span> and not in <span class="process-math">\(S\text{.}\)</span>
+</div>
+<div class="para" id="subsec-PD-closed-sets-5-3">The subset of <span class="process-math">\(\R^2\)</span> of all boundary points of <span class="process-math">\(S\)</span> is called the <em class="emphasis">boundary</em> of <span class="process-math">\(S\)</span> and is denoted by <span class="process-math">\(\partial S\text{.}\)</span>
+</div></article><article class="activity project-like" id="subsec-PD-closed-sets-6"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-PD-closed-sets-6-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R^2\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y \leq x \lt 1
+\end{equation*}
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-1 \leq y \leq 1\text{.}
+\end{equation*}
+</div>
+<div class="para">
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-PD-closed-sets-6-1-1-5.svg" role="img" class="contained"></div> Which of the following is <em class="emphasis">not</em> a boundary point of <span class="process-math">\(S\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="subsec-PD-closed-sets-6-1-1-8">
+<li id="subsec-PD-closed-sets-6-1-1-8-1"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-1-1"><span class="process-math">\(\displaystyle (-1,-1)\)</span></div></li>
+<li id="subsec-PD-closed-sets-6-1-1-8-2"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-2-1"><span class="process-math">\(\displaystyle (0,0)\)</span></div></li>
+<li id="subsec-PD-closed-sets-6-1-1-8-3"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-3-1"><span class="process-math">\(\displaystyle (1,1)\)</span></div></li>
+<li id="subsec-PD-closed-sets-6-1-1-8-4"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-4-1"><span class="process-math">\(\displaystyle (0,-1)\)</span></div></li>
+<li id="subsec-PD-closed-sets-6-1-1-8-5"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-5-1"><span class="process-math">\(\displaystyle (0,1)\)</span></div></li>
+<li id="subsec-PD-closed-sets-6-1-1-8-6"><div class="para" id="subsec-PD-closed-sets-6-1-1-8-6-1"><span class="process-math">\(\displaystyle (1,-1)\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="subsec-PD-closed-sets-7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-PD-closed-sets-7-1"><div class="para logical" id="subsec-PD-closed-sets-7-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+-3 \lt x \leq 2
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="subsec-PD-closed-sets-7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-7-2-1-1">Is <span class="process-math">\(S\)</span> open, closed, both, or neither? Justify your answer.</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-7-3-1-1">Find the set <span class="process-math">\(\partial S\text{.}\)</span>
+</div></article></article><article class="assemblage assemblage-like" id="subsec-PD-closed-sets-8"><h4 class="heading"><span class="title">Bounded Set.</span></h4>
+<div class="para" id="subsec-PD-closed-sets-8-2">A subset <span class="process-math">\(S\)</span> of <span class="process-math">\(\R^2\)</span> is called <em class="emphasis">bounded</em> if there is some open disk <span class="process-math">\(D\)</span> such that <span class="process-math">\(S\)</span> is a subset of <span class="process-math">\(D\text{.}\)</span> In other words, the disk completely covers <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="activity project-like" id="subsec-PD-closed-sets-9"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-PD-closed-sets-9-1"><div class="para logical" id="subsec-PD-closed-sets-9-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R^2\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x - 1 \lt y \leq x + 1\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="subsec-PD-closed-sets-9-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-9-2-1-1">Sketch the set <span class="process-math">\(S\)</span>
+</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-9-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-9-3-1-1">Is <span class="process-math">\(S\)</span> open, closed, both, or neither? Justify your answer.</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-9-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-9-4-1-1">What is <span class="process-math">\(\partial S\text{?}\)</span>
+</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-9-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-9-5-1-1">Is the <span class="process-math">\(S\)</span> bounded?</div></article></article><article class="activity project-like" id="subsec-PD-closed-sets-10"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.7</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-PD-closed-sets-10-1"><div class="para logical" id="subsec-PD-closed-sets-10-1-1">
+<div class="para">Let <span class="process-math">\(S\)</span> be the subset of <span class="process-math">\(\R^2\)</span> defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+y^2 - 1 \leq x \leq y + 1\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="subsec-PD-closed-sets-10-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-10-2-1-1">Sketch the set <span class="process-math">\(S\)</span>
+</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-10-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-10-3-1-1">Is <span class="process-math">\(S\)</span> open, closed, both, or neither? Justify your answer.</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-10-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-10-4-1-1">What is <span class="process-math">\(\partial S\text{?}\)</span>
+</div></article><article class="task exercise-like" id="subsec-PD-closed-sets-10-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="subsec-PD-closed-sets-10-5-1-1">Is the <span class="process-math">\(S\)</span> bounded?</div></article></article><div class="para" id="subsec-PD-closed-sets-11">The extreme value theorem applies to continuous functions on closed, finite intervals in <span class="process-math">\(\R\text{.}\)</span> Now that we know what a closed and bounded subset of <span class="process-math">\(\R^n\)</span> is we can state the analogous result for function so <span class="process-math">\(n\)</span> variables.</div>
+<article class="assemblage assemblage-like" id="Extreme-value-theorem"><h4 class="heading"><span class="title">The Extreme Value Theorem.</span></h4>
+<div class="para" id="Extreme-value-theorem-2">Let <span class="process-math">\(f= f(x,y)\)</span> be a continuous function on a closed and bounded region <span class="process-math">\(R\text{.}\)</span> Then <span class="process-math">\(f\)</span> has an absolute maximum and an absolute minimum in <span class="process-math">\(R\text{.}\)</span>
+</div></article></section><section class="subsection" id="subsec-PD-critical-points"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.3</span><span class="space"> </span><span class="title">Critical Points and The Second Derivative Test</span>
+</h3>
+<div class="para" id="subsec-PD-critical-points-2">Fermat’s Theorem from calculus states that any local extremum of a function must occur at a point where the derivative is zero. This helps locate global extrema because we know that they must occur either at (a) points with zero derivative, (b) endpoints of the closed interval, or (c) points where the derivative is undefined.</div>
+<div class="para" id="subsec-PD-critical-points-3">This observation motivates the definition of critical points. A point <span class="process-math">\(x_0\)</span> in the domain of <span class="process-math">\(f\)</span> is a <em class="emphasis">critical point</em> if either <span class="process-math">\(f'(x_0) = 0\)</span> or <span class="process-math">\(f'(x_0)\)</span> is undefined.</div>
+<article class="definition definition-like" id="subsec-PD-critical-points-4"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">2.5.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-PD-critical-points-4-1-1">A <dfn class="terminology">critical point</dfn> <span class="process-math">\((x_0,y_0)\)</span> of a function <span class="process-math">\(f=f(x,y)\)</span> is a point in the domain of <span class="process-math">\(f\)</span> at which <span class="process-math">\(f_x(x_0,y_0) = 0\)</span> and <span class="process-math">\(f_y(x_0,y_0) = 0\text{,}\)</span> or such that one of <span class="process-math">\(f_x(x_0,y_0)\)</span> or <span class="process-math">\(f_y(x_0,y_0)\)</span> fails to exist.</div></article><article class="activity project-like" id="A_10_7_3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_10_7_3-1-1">
+<div class="para">Find the critical points of each of the following functions. Then, using appropriate technology, plot the graphs of the surfaces near each critical point and compare the graph to your work.</div>
+<ol class="lower-alpha ol-marker-2" id="A_10_7_3-1-1-1">
+<li id="A_10_7_3-1-1-1-1"><div class="para" id="A_10_7_3-1-1-1-1-1"><span class="process-math">\(\displaystyle f(x,y) = 2+x^2+y^2\)</span></div></li>
+<li id="A_10_7_3-1-1-1-2"><div class="para" id="A_10_7_3-1-1-1-2-1"><span class="process-math">\(\displaystyle f(x,y) = 2 + x^2 - y^2\)</span></div></li>
+<li id="A_10_7_3-1-1-1-3"><div class="para" id="A_10_7_3-1-1-1-3-1"><span class="process-math">\(\displaystyle f(x,y) = 2x-x^2-\frac{1}{4}y^2\)</span></div></li>
+<li id="A_10_7_3-1-1-1-4"><div class="para" id="A_10_7_3-1-1-1-4-1"><span class="process-math">\(\displaystyle f(x,y) = |x| + |y|\)</span></div></li>
+<li id="A_10_7_3-1-1-1-5"><div class="para" id="A_10_7_3-1-1-1-5-1"><span class="process-math">\(f(x,y) = 2xy - 4x + 2y - 3\text{.}\)</span></div></li>
+</ol>
+</div></article><div class="para" id="subsec-PD-critical-points-6">Let’s consider what the graph of a function <span class="process-math">\(f(x,y)\)</span> looks like near some critical points <span class="process-math">\((x_0,y_0)\text{.}\)</span> Below is the graph and a contour plot for the function <span class="process-math">\(f(x,y) = 10 - (x^2 + y^2)\)</span> near the critical point <span class="process-math">\((0,0)\text{.}\)</span> Notice that <span class="process-math">\((0,0)\)</span> is a local maximum.</div>
+<figure class="figure figure-like" id="subsec-PD-critical-points-7"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="generated/latex-image/subsec-PD-critical-points-7-2-1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;">
+          
+      </div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.3<span class="period">.</span></span><span class="space"> </span>A local maximum.</figcaption></figure><div class="para" id="subsec-PD-critical-points-8">Next, is the graph and a contour plot for the function <span class="process-math">\(f(x,y) =  3x^2 + y^2\)</span> near the critical point <span class="process-math">\((0,0)\text{.}\)</span> Notice that it is a local minumum.</div>
+<figure class="figure figure-like" id="subsec-PD-critical-points-9"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="generated/latex-image/subsec-PD-critical-points-9-2-1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;">
+          
+      </div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.4<span class="period">.</span></span><span class="space"> </span>A local minimum.</figcaption></figure><div class="para" id="subsec-PD-critical-points-10">Finally, consider the graph and contour plot for the function <span class="process-math">\(f(x,y) = x^2 - y^2\)</span> near the critical point <span class="process-math">\((0,0)\text{.}\)</span> Notice that if you travel through the critical point in one direction it appears as a local maximum, but in the other direction it appears as a local minimum. We call this a <em class="emphasis">saddle point</em>.</div>
+<figure class="figure figure-like" id="subsec-PD-critical-points-11"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="generated/latex-image/subsec-PD-critical-points-11-2-1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;">
+          
+      </div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.5<span class="period">.</span></span><span class="space"> </span>A saddle point.</figcaption></figure><div class="para" id="subsec-PD-critical-points-12">Just as in the single-variable case, not every critical point corresponds to a local extremum. Consider, for example, the function <span class="process-math">\(f(x) = x^3\)</span> at the origin. In order, to identify which local extrema are maxima, which are minima, and which are neither, we can use the second derivative test. If <span class="process-math">\(x_0\)</span> is a critical point of the function <span class="process-math">\(f\text{,}\)</span> then <span class="process-math">\(f''(x_0) \gt 0\)</span> implies that it’s a local minimum, <span class="process-math">\(f'(x_0) \lt 0\)</span> implies that it’s a local maximum, and <span class="process-math">\(f''(x_0) = 0\)</span> does not provide any additional information.</div>
+<div class="para" id="subsec-PD-critical-points-13">For functions of two variables, we will use a version of the second deriviative test that takes into account all the second derivatives of the function.</div>
+<article class="assemblage assemblage-like" id="Second-derivative-test"><h4 class="heading"><span class="title">The Second Derivative Test.</span></h4>
+<div class="para logical" id="Second-derivative-test-2">
+<div class="para">Suppose <span class="process-math">\((x_0,y_0)\)</span> is a critical point of the function <span class="process-math">\(f\)</span> for which <span class="process-math">\(f_x(x_0,y_0) = 0\)</span> and <span class="process-math">\(f_y(x_0,y_0) = 0\text{.}\)</span> Let <span class="process-math">\(D\)</span> be the quantity defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = f_{xx}(x_0,y_0) f_{yy}(x_0,y_0) - f_{xy}(x_0,y_0)^2.
+\end{equation*}
+</div>
+<ul class="disc" id="Second-derivative-test-2-7">
+<li id="Second-derivative-test-2-7-1"><div class="para" id="Second-derivative-test-2-7-1-1">If <span class="process-math">\(D&gt;0\)</span> and <span class="process-math">\(f_{xx}(x_0,y_0) \lt  0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a local maximum at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="Second-derivative-test-2-7-2"><div class="para" id="Second-derivative-test-2-7-2-1">If <span class="process-math">\(D&gt;0\)</span> and <span class="process-math">\(f_{xx}(x_0,y_0) &gt; 0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a local minimum at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="Second-derivative-test-2-7-3"><div class="para" id="Second-derivative-test-2-7-3-1">If <span class="process-math">\(D \lt  0\text{,}\)</span> then <span class="process-math">\(f\)</span> has a saddle point at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+<li id="Second-derivative-test-2-7-4"><div class="para" id="Second-derivative-test-2-7-4-1">If <span class="process-math">\(D = 0\text{,}\)</span> then this test yields no information about what happens at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></li>
+</ul>
+</div>
+<div class="para" id="Second-derivative-test-3">The quantity <span class="process-math">\(D\)</span> is called the <em class="emphasis">discriminant</em> of the function <span class="process-math">\(f\)</span> at <span class="process-math">\((x_0,y_0)\text{.}\)</span>
+</div></article><div class="para logical" id="subsec-PD-critical-points-15">
+<div class="para">Recall that we can collect all the second derivatives of a function into a symmetric matrix called the <em class="emphasis">Hessian matrix</em>.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\hess(f) = \begin{bmatrix} f_{xx} \amp f_{xy} \\ f_{yx} \amp f_{yy} \end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">The discriminant <span class="process-math">\(D\text{,}\)</span> described above, is the determinant of the Hessian matrix.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = \det(\hess(f))
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="subsec-PD-critical-points-16">
+<div class="para">Recall, also, that every symmetric matrix is diagonalizable over the real numbers. Let <span class="process-math">\(\lambda_1\)</span> and <span class="process-math">\(\lambda_2\)</span> be the eigenvalues of <span class="process-math">\(\hess(f)\text{.}\)</span> Also, the determinant of a matrix is the product of its eigenvalues. Thus, we can write</div>
+<div class="displaymath process-math">
+\begin{equation*}
+D = \lambda_1 \lambda_2.
+\end{equation*}
+</div>
+<div class="para">If both eigenvalues are negative or positive, their product will be positive, and we are in the first case. Essentially, we are able to say that the function is concave down or concave up when viewed from any direction. If the eigenvalues have different signs, their product will be negative, and there will be on direction from which it’s concave up and one from whic it’s concave down.</div>
+</div>
+<article class="activity project-like" id="A_10_7_5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_10_7_5-1-1">
+<div class="para">Find the critical points of the following functions and use the Second Derivative Test to classify the critical points.</div>
+<ol class="lower-alpha ol-marker-2" id="A_10_7_5-1-1-1">
+<li id="A_10_7_5-1-1-1-1"><div class="para" id="A_10_7_5-1-1-1-1-1"><span class="process-math">\(\displaystyle f(x,y) = 3x^3+y^2-9x+4y\)</span></div></li>
+<li id="A_10_7_5-1-1-1-2"><div class="para" id="A_10_7_5-1-1-1-2-1"><span class="process-math">\(\displaystyle f(x,y) = xy + \frac{2}{x} + \frac{4}{y}\)</span></div></li>
+<li id="A_10_7_5-1-1-1-3"><div class="para" id="A_10_7_5-1-1-1-3-1"><span class="process-math">\(f(x,y) = x^3 + y^3 - 3xy\text{.}\)</span></div></li>
+</ol>
+</div></article></section><section class="subsection" id="subsec-optimization"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.4</span><span class="space"> </span><span class="title">Optimization on Closed and Bounded Domains</span>
+</h3>
+<div class="para" id="subsec-optimization-2">Just as in the 1D case, to find the absolute extrema of a differentiable function on a closed and bounded set, it suffices to search for critical points in the interior of the set and use single-variable calculus to find the extrema on the boundary. The largest and smallest of these values will the the absolute maximum and minimum of the function.</div>
+<div class="para logical" id="subsec-optimization-3">
+<div class="para">From this example, we see that we use the following procedure for determining the absolute maximum and absolute minimum of a function on a closed and bounded domain.</div>
+<ul class="disc" id="subsec-optimization-3-1">
+<li id="subsec-optimization-3-1-1">
+<span class="heading"><span class="title">Step 1:.</span></span><div class="para" id="subsec-optimization-3-1-1-2">Find all critical points of the function in the interior of the domain.</div>
+</li>
+<li id="subsec-optimization-3-1-2">
+<span class="heading"><span class="title">Step 2:.</span></span><div class="para" id="subsec-optimization-3-1-2-2">Find all the critical points of the function on the boundary of the domain. Working on the boundary of the domain reduces this part of the problem to one or more single variable optimization problems. Note that there may be endpoints on portions of the boundary that need to be considered.</div>
+</li>
+<li id="subsec-optimization-3-1-3">
+<span class="heading"><span class="title">Step 3:.</span></span><div class="para" id="subsec-optimization-3-1-3-2">Evaluate the function at each of the points found in Steps 1 and 2.</div>
+</li>
+<li id="subsec-optimization-3-1-4">
+<span class="heading"><span class="title">Step 4:.</span></span><div class="para" id="subsec-optimization-3-1-4-2">The maximum value of the function is the largest value obtained in Step 3, and the minimum value of the function is the smallest value obtained in Step 3.</div>
+</li>
+</ul>
+</div>
+<article class="activity project-like" id="subsec-optimization-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.10</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-optimization-4-1">
+<div class="para logical" id="subsec-optimization-4-1-1">
+<div class="para">Suppose the temperature <span class="process-math">\(T\)</span> at each point of a circular plate <span class="process-math">\(x^2 + y^2 \leq 1\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+T(x,y) = 2x^2 + y^2 - y
+\end{equation*}
+</div>
+<div class="para">The set <span class="process-math">\(S = \{ (x,y) : x^2 + y^2 \leq 1 \}\)</span> is closed and bounded, so we know that <span class="process-math">\(T\)</span> attains both an absolute maximum and an absolute minimum. Find the hottest and coldest points on the plate.</div>
+</div>
+<figure class="figure figure-like" id="F_10_7_temperature"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/images/fig_10_7_temperature_domain.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/images/fig_10_7_temperature.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.6<span class="period">.</span></span><span class="space"> </span>Domain of the temperature <span class="process-math">\(T(x,y) = 2x^2+y^2-y\)</span> and its graph.</figcaption></figure>
+</div>
+<article class="task exercise-like" id="subsec-optimization-4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-optimization-4-2-1-1">Find all the critical points of <span class="process-math">\(T\)</span> in the interior of <span class="process-math">\(S\text{.}\)</span>
+</div></article><article class="task exercise-like" id="subsec-optimization-4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-optimization-4-3-1-1">Parameterize the boundary <span class="process-math">\(\partial S\)</span> and use single-variable calculus to find the extreme values of <span class="process-math">\(T\)</span> on it.</div></article><article class="task exercise-like" id="subsec-optimization-4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-optimization-4-4-1-1">Which point among those found in the previous two tasks is the hottest? Which is the coldest?</div></article></article><article class="activity project-like" id="subsec-optimization-5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.11</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-optimization-5-1-1">Let <span class="process-math">\(f(x,y) = x^2-3y^2-4x+6y\)</span> with triangular domain <span class="process-math">\(R\)</span> whose vertices are at <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((4,0)\text{,}\)</span> and <span class="process-math">\((0,4)\text{.}\)</span> The domain <span class="process-math">\(R\)</span> and a graph of <span class="process-math">\(f\)</span> on the domain appear in <a href="sec-PD-Optimization.html#F_10_7_Optimize_ex2" class="xref" data-knowl="./knowl/xref/F_10_7_Optimize_ex2.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.5.7">Figure 2.5.7</a>.</div> <figure class="figure figure-like" id="F_10_7_Optimize_ex2"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/images/fig_10_7_activity_optim_domain.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/images/fig_10_7_activity_optim.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.7<span class="period">.</span></span><span class="space"> </span>The domain of <span class="process-math">\(f(x,y) = x^2-3y^2-4x+6y\)</span> and its graph.</figcaption></figure> <ol class="lower-alpha ol-marker-2" id="subsec-optimization-5-1-3">
+<li id="subsec-optimization-5-1-3-1"><div class="para" id="subsec-optimization-5-1-3-1-1">Find all of the critical points of <span class="process-math">\(f\)</span> in <span class="process-math">\(R\text{.}\)</span>
+</div></li>
+<li id="subsec-optimization-5-1-3-2"><div class="para" id="subsec-optimization-5-1-3-2-1">Parameterize the horizontal leg of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <span class="process-math">\(f\)</span> on that leg.</div></li>
+<li id="subsec-optimization-5-1-3-3"><div class="para" id="subsec-optimization-5-1-3-3-1">Parameterize the vertical leg of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <span class="process-math">\(f\)</span> on that leg.</div></li>
+<li id="subsec-optimization-5-1-3-4"><div class="para" id="subsec-optimization-5-1-3-4-1">Parameterize the hypotenuse of the triangular domain, and use single-variable calculus to find the absolute maximum and minimum of <span class="process-math">\(f\)</span> on the hypotenuse.</div></li>
+<li id="subsec-optimization-5-1-3-5"><div class="para" id="subsec-optimization-5-1-3-5-1">Find the absolute maximum and absolute minimum values of <span class="process-math">\(f\)</span> on <span class="process-math">\(R\text{.}\)</span>
+</div></li>
+</ol></article><div class="para" id="subsec-optimization-6">Sometimes it is possible to locate an absolute extremum on a non-closed or non-bounded set. For example, it’s easy to see that <span class="process-math">\(f(x) = x^2\)</span> the local minumum at <span class="process-math">\(x = 0\)</span> is also an absolute minimum. Just note that <span class="process-math">\(f'(x) \lt 0\)</span> for <span class="process-math">\(x \lt 0\)</span> and <span class="process-math">\(f'(x) \gt 0\)</span> for <span class="process-math">\(x \gt 0\text{.}\)</span> Hence <span class="process-math">\(f\)</span> is always decreasing to the left of the local minimum and always increasing to the right. This means that the local minimum is also an absolute minimum. A similar argument can be made for multivariable functions. If a function has a unique local extremum which is either a local maximum or a local minimum, then it is also an absolute extremum.</div>
+<div class="para logical" id="subsec-optimization-7">
+<div class="para">If you are attempting to find the extrema of the distance function <span class="process-math">\(d(x,y) = \sqrt{x^2 + y^2}\text{,}\)</span> it’s often easier to work with the square of the distance function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+d^2(x,y) = x^2 + y^2\text{.}
+\end{equation*}
+</div>
+<div class="para">You can prove that both functions will have the same extrema, but the partial derivatives will have a simpler form.</div>
+</div>
+<article class="activity project-like" id="subsec-optimization-8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.12</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-optimization-8-1-1">Find the point on the plane <span class="process-math">\(2x + 3y + z = 2\)</span> that is closest to the origin.</div></article></section><section class="subsection" id="subsec-Lagrange"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.5.5</span><span class="space"> </span><span class="title">Lagrange Multipliers</span>
+</h3>
+<div class="para logical" id="subsec-Lagrange-2">
+<div class="para">According to U.S. postal regulations, the girth plus the length of a parcel sent by mail may not exceed 108 inches, where by “girth” we mean the perimeter of the smallest end. Our goal is to find the largest possible volume of a rectangular parcel with a square end that can be sent by mail. We can think of this problem as a constrained optimization problem. We wish to optimize the volume of the parcel, but we are constrained by the fac that the girth plus the length of the parcel must not exceed 108 inches. The function to be optimized is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y) = x^2y,
+\end{equation*}
+</div>
+<div class="para">and, assuming that the volume is actually maximized when the sum of the girth and the length is exactly 108 inches, the constraint is <span class="process-math">\(4x + y = 108\text{.}\)</span> Another way to think of the constraint is as a contour of the function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x,y) = 4x + y.
+\end{equation*}
+</div>
+<div class="para">at the level <span class="process-math">\(108\text{.}\)</span> The constraint is shown below in red, along with several contours of <span class="process-math">\(f\text{.}\)</span> <figure class="figure figure-like" id="F_10_8_preview"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="external/images/fig_10_8_postal.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">2.5.8<span class="period">.</span></span><span class="space"> </span>Contours of <span class="process-math">\(f\)</span> and the constraint equation <span class="process-math">\(g(x,y) = 108\text{.}\)</span></figcaption></figure> It’s clear that the maximum we seek is somewhere between points <span class="process-math">\(C\)</span> and <span class="process-math">\(D\text{.}\)</span> Also, the maximum is characterized by the constaint and the contours being parallel (i.e. having parallel tangent lines). Equivalently, the gradient vectors of both <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> will be parallel at this point. Solving the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\nabla f = \lambda \nabla g
+\end{equation*}
+</div>
+<div class="para">will give us the point where the maximum volume is attained, and this method is called the method of Lagrange multipliers.</div>
+</div>
+<article class="assemblage assemblage-like" id="Lagrange-multipliers"><h4 class="heading"><span class="title">The method of Lagrange multipliers.</span></h4>
+<div class="para" id="Lagrange-multipliers-2">The general technique for optimizing a function <span class="process-math">\(f = f(x,y)\)</span> subject to a constraint <span class="process-math">\(g(x,y)=c\)</span> is to solve the system <span class="process-math">\(\nabla f = \lambda \nabla g\)</span> and <span class="process-math">\(g(x,y)=c\)</span> for <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(\lambda\text{.}\)</span> We then evaluate the function <span class="process-math">\(f\)</span> at each point <span class="process-math">\((x,y)\)</span> that results from a solution to the system in order to find the optimum values of <span class="process-math">\(f\)</span> subject to the constraint.</div></article><article class="activity project-like" id="A_10_8_1"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.13</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_10_8_1-1-1">
+<div class="para">A cylindrical soda can holds about 355 cc of liquid. In this activity, we want to find the dimensions of such a can that will minimize the surface area. For the sake of simplicity, assume the can is a perfect cylinder.</div>
+<ol class="lower-alpha ol-marker-2" id="A_10_8_1-1-1-1">
+<li id="A_10_8_1-1-1-1-1"><div class="para" id="A_10_8_1-1-1-1-1-1">What are the variables in this problem? Based on the context, what restriction(s), if any, are there on these variables?</div></li>
+<li id="A_10_8_1-1-1-1-2"><div class="para" id="A_10_8_1-1-1-1-2-1">What quantity do we want to optimize in this problem? What equation describes the constraint? (You need to decide which of these functions plays the role of <span class="process-math">\(f\)</span> and which plays the role of <span class="process-math">\(g\)</span> in our discussion of Lagrange multipliers.)</div></li>
+<li id="A_10_8_1-1-1-1-3"><div class="para" id="A_10_8_1-1-1-1-3-1">Find <span class="process-math">\(\lambda\)</span> and the values of your variables that satisfy <span class="process-math">\(\nabla f = \lambda \nabla g\)</span> in the context of this problem.</div></li>
+<li id="A_10_8_1-1-1-1-4"><div class="para" id="A_10_8_1-1-1-1-4-1">Determine the dimensions of the pop can that give the desired solution to this constrained optimization problem.</div></li>
+</ol>
+</div></article><div class="para" id="subsec-Lagrange-5">The method of Lagrange multipliers also works for functions of more than two variables.</div>
+<article class="activity project-like" id="subsec-Lagrange-6"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.14</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-Lagrange-6-1-1">Use the method of Lagrange multipliers to find the point on the plane <span class="process-math">\(2x + 3y + z = 2\)</span> that is closest to the origin. (We already solved this problem using other methods above.)</div></article><article class="activity project-like" id="subsec-Lagrange-7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.15</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-Lagrange-7-1-1">Find the points in <span class="process-math">\(\R^3\)</span> that are farthest from the origin and that lie on both the cylinder <span class="process-math">\(y^2 + z^2 = 1\)</span> and the plane <span class="process-math">\(x + 2y + 3z = 0\text{.}\)</span>
+</div></article><article class="activity project-like" id="A_10_8_2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.5.16</span><span class="period">.</span>
+</h4>
+<div class="para" id="A_10_8_2-1-1">Use the method of Lagrange multipliers to find the dimensions of the least expensive packing crate with a volume of 240 cubic feet when the material for the top costs $2 per square foot, the bottom is $3 per square foot and the sides are $1.50 per square foot.</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-PD-Directional-Derivs-and-Grad.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-MI.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

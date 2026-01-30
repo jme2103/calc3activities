@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Curves</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Calculus III">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Jonathan Epstein">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
+<p class="byline">Jonathan Epstein</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Lines-and-Planes.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-MV.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-PD.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} 
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrpar}[1]{\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\dc}{^\circ}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vT}{\mathbf{T}}
+\newcommand{\vx}{\mathbf{x}}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-PD.html" class="internal"><span class="codenumber">2</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Partial-Derivs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Tangent-Planes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Chain-Rule.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Directional-Derivs-and-Grad.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Directional Derivatives and Gradients</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PD-Optimization.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-Optimization-Intro" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Review of Single-Variable Optimization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-closed-sets" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-critical-points" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Critical Points and The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-optimization" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Optimization on Closed and Bounded Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-Lagrange" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MI.html" class="internal"><span class="codenumber">3</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Review of Riemann Integrals in One Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Double Integrals Over Rectangules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-iterated-ntegrals" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Double Integrals Over General Regions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Double Integrals in Polar Coordinates and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-applications" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-parametric-surfaces.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-triple-integrals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Triple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cartesian" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Triple Integrals in Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cylindrical" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Triple Integrals in cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-spherical" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-change-of-vars.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Change of Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-VC.html" class="internal"><span class="codenumber">4</span> <span class="title">Fundamental Theorems of Vector Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-VC-line-integrals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Line Integrals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-Curves"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.5</span><span class="space"> </span><span class="title">Curves</span>
+</h2>
+<article class="definition definition-like" id="sec-Curves-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-2-1-1">
+<div class="para">A <dfn class="terminology">vector-valued function</dfn> is a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \langle x(t), y(t), z(t) \rangle
+\end{equation*}
+</div>
+<div class="para">whose input is a real parameter <span class="process-math">\(t\)</span> and whose output is a vector that depends on <span class="process-math">\(t\text{.}\)</span> The <dfn class="terminology">graph</dfn> of a vector-valued function is the set of all terminal points of the output vectors with their initial points at the origin.</div>
+</div> <div class="para logical" id="sec-Curves-2-1-2">
+<div class="para">
+<dfn class="terminology">Parametric equations</dfn> for a curve are equations of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = x(t), \ \ \ y = y(t), \ \ \ \text{ and }  \ \ \ \ \ z = z(t)
+\end{equation*}
+</div>
+<div class="para">that describe the <span class="process-math">\((x,y,z)\)</span> coordinates of a point on a curve in <span class="process-math">\(\R^3\text{.}\)</span>
+</div>
+</div> <div class="para" id="sec-Curves-2-1-3">A curve together with a parameterization is called a <dfn class="terminology">parametrized curve</dfn>.</div> <div class="para" id="sec-Curves-2-1-4">If <span class="process-math">\(\mathcal{C}\)</span> is the graph of a vector-valued function <span class="process-math">\(\vr(t)\text{,}\)</span> then we say that <span class="process-math">\(\vr(t)\)</span> is a <dfn class="terminology">parameterization</dfn> of <span class="process-math">\(\mathcal{C}\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-Curves-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Curves-3-1-1">Which of the following vector-valued functions is a parameterization of the curve <span class="process-math">\(\mathcal{C}\)</span> shown below? <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-Curves-3-1-1-2.svg" role="img" class="contained"></div>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-3-1-2">
+<li id="sec-Curves-3-1-2-1"><div class="para" id="sec-Curves-3-1-2-1-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ \cos t, \sin t, \frac{2t}{5\pi} }\)</span></div></li>
+<li id="sec-Curves-3-1-2-2"><div class="para" id="sec-Curves-3-1-2-2-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ \cos t, \sin t, 4 }\)</span></div></li>
+<li id="sec-Curves-3-1-2-3"><div class="para" id="sec-Curves-3-1-2-3-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ \sin t, \frac{2t}{5\pi}, \cos t }\)</span></div></li>
+<li id="sec-Curves-3-1-2-4"><div class="para" id="sec-Curves-3-1-2-4-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ 2\sin t, \frac{2t}{5\pi}, 2\cos t }\)</span></div></li>
+</ol></article><article class="activity project-like" id="sec-Curves-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Curves-4-1-1">Which of the following vector-valued function is not a parameterization of the line <span class="process-math">\(\mathcal{L}\)</span> shown below? <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-Curves-4-1-1-2.svg" role="img" class="contained"></div>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-4-1-2">
+<li id="sec-Curves-4-1-2-1"><div class="para" id="sec-Curves-4-1-2-1-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{-2 + 3t, -1 + 2t}\)</span></div></li>
+<li id="sec-Curves-4-1-2-2"><div class="para" id="sec-Curves-4-1-2-2-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{1 + 3t, 1 + 2t}\)</span></div></li>
+<li id="sec-Curves-4-1-2-3"><div class="para" id="sec-Curves-4-1-2-3-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{1 - 3t, 1 - 2t}\)</span></div></li>
+<li id="sec-Curves-4-1-2-4"><div class="para" id="sec-Curves-4-1-2-4-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{1 + 6t, 1 + 4t}\)</span></div></li>
+<li id="sec-Curves-4-1-2-5"><div class="para" id="sec-Curves-4-1-2-5-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{-2 + 3t^3, -1 + 2t^3}\)</span></div></li>
+<li id="sec-Curves-4-1-2-6"><div class="para" id="sec-Curves-4-1-2-6-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{-2 + \cos(t), -1 + \sin(t)}\)</span></div></li>
+</ol></article><article class="activity project-like" id="sec-Curves-5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-5-1-1">
+<div class="para">Which is the graph of the vector-valued function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \lrangle{ -1 + \cos(t), \sin(t)}
+\end{equation*}
+</div>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-5-1-2">
+<li id="sec-Curves-5-1-2-1"><div class="para" id="sec-Curves-5-1-2-1-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/sec-Curves-5-1-2-1-1-1.svg" role="img" class="contained"></div></div></li>
+<li id="sec-Curves-5-1-2-2"><div class="para" id="sec-Curves-5-1-2-2-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/sec-Curves-5-1-2-2-1-1.svg" role="img" class="contained"></div></div></li>
+<li id="sec-Curves-5-1-2-3"><div class="para" id="sec-Curves-5-1-2-3-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/sec-Curves-5-1-2-3-1-1.svg" role="img" class="contained"></div></div></li>
+<li id="sec-Curves-5-1-2-4"><div class="para" id="sec-Curves-5-1-2-4-1"><div class="image-box" style="width: 75%; margin-left: 12.5%; margin-right: 12.5%;"><img src="generated/latex-image/sec-Curves-5-1-2-4-1-1.svg" role="img" class="contained"></div></div></li>
+</ol></article><article class="activity project-like" id="sec-Curves-6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-6-1"><div class="para" id="sec-Curves-6-1-1">Consider the paraboloid defined by <span class="process-math">\(f(x,y) = x^2 + y^2\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-6-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-Curves-6-2-1-1">
+<div class="para">Which of the following is a parameterization for the <span class="process-math">\(x = 2\)</span> trace of <span class="process-math">\(f\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-6-2-1-1-3">
+<li id="sec-Curves-6-2-1-1-3-1"><div class="para" id="sec-Curves-6-2-1-1-3-1-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ t, 2, 4 + t^2 }\)</span></div></li>
+<li id="sec-Curves-6-2-1-1-3-2"><div class="para" id="sec-Curves-6-2-1-1-3-2-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ 4, t^2, t }\)</span></div></li>
+<li id="sec-Curves-6-2-1-1-3-3"><div class="para" id="sec-Curves-6-2-1-1-3-3-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ t, 4, t^2 }\)</span></div></li>
+<li id="sec-Curves-6-2-1-1-3-4"><div class="para" id="sec-Curves-6-2-1-1-3-4-1"><span class="process-math">\(\displaystyle \vr(t) = \lrangle{ 2, t, 4 + t^2 }\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="sec-Curves-6-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-6-3-1-1">Find a parameterization for the <span class="process-math">\(y = -1\)</span> trace of <span class="process-math">\(f\text{.}\)</span> What type of curve is this trace?</div></article><article class="task exercise-like" id="sec-Curves-6-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-6-4-1-1">Find a parameterization for the level curve <span class="process-math">\(f(x,y) = 25\text{.}\)</span> What type of curve is this trace?</div></article></article><article class="activity project-like" id="sec-Curves-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Curves-7-1-1">Find a vector function that represent the curve of intersection of the paraboloid <span class="process-math">\(z=7x^2 + 2y^2\)</span> and the cylinder <span class="process-math">\(y=4x^2\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-Curves-8"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-8-1"><div class="para" id="sec-Curves-8-1-1">A standard parameterization for the unit circle is <span class="process-math">\(\lrangle{ \cos t, \sin t }\text{,}\)</span> for <span class="process-math">\(0 \leq t \leq 2\pi\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-8-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-8-2-1-1">Find a vector-valued function <span class="process-math">\(\vr\)</span> that describes a point traveling along the unit circle so that at time <span class="process-math">\(t = 0\text{,}\)</span> the point is at <span class="process-math">\(\lrpar{ \frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2} }\)</span> and travels clockwise along the circle as <span class="process-math">\(t\)</span> increases.</div></article><article class="task exercise-like" id="sec-Curves-8-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-8-3-1-1">Find a vector-valued function <span class="process-math">\(\vr\)</span> that describes a point traveling along the unit circle so that at time <span class="process-math">\(t = 0\text{,}\)</span> the point is at <span class="process-math">\(\lrpar{\frac{\sqrt{2}}{2}, \frac{\sqrt{2}}{2}}\)</span> and travels counter-clockwise along the circle as <span class="process-math">\(t\)</span> increases.</div></article></article><article class="activity project-like" id="sec-Curves-9"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.7</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-9-1"><div class="para logical" id="sec-Curves-9-1-1">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be positive real numbers. You have probably seen the equation</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{(x-h)^2}{a^2} + \frac{(y-k)^2}{b^2} = 1
+\end{equation*}
+</div>
+<div class="para">that generates an ellipse, centered at <span class="process-math">\((h,k)\text{,}\)</span> with a horizontal axis of length <span class="process-math">\(2a\)</span> and a vertical axis of length <span class="process-math">\(2b\text{.}\)</span>
+</div>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-9-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-9-2-1-1">Explain why the vector function <span class="process-math">\(\vr(t) = \lrangle{ a\cos t, b\sin t }\text{,}\)</span> <span class="process-math">\(0 \leq t \leq 2\pi\)</span> is one parameterization of the ellipse <span class="process-math">\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-9-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-9-3-1-1">Find a parameterization of the ellipse <span class="process-math">\(\frac{x^2}{4} + \frac{y^2}{16} = 1\)</span> that is traversed counterclockwise.</div></article><article class="task exercise-like" id="sec-Curves-9-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-9-4-1-1">Find a parameterization of the ellipse <span class="process-math">\(\frac{(x+3)^2}{9} + \frac{(y-2)^2}{1} = 1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-9-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para logical" id="sec-Curves-9-5-1-1">
+<div class="para">Determine the <span class="process-math">\(xy\)</span>-equation of the ellipse parameterized by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \lrangle{ 3 + 4\sin(2t), 1 + 3 \cos(2t)}\text{.}
+\end{equation*}
+</div>
+</div></article></article><article class="definition definition-like" id="sec-Curves-10"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.2</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-10-1-1">
+<div class="para">The <dfn class="terminology">derivative</dfn> of a vector-valued function <span class="process-math">\(\vr\)</span> is defined to be</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr'(t) = \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}
+\end{equation*}
+</div>
+<div class="para">for those values of <span class="process-math">\(t\)</span> at which the limit exists. We also use the notation <span class="process-math">\(\frac{d\vr}{dt}\)</span> and <span class="process-math">\(\frac{d}{dt}[\vr(t)]\)</span> for <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div>
+</div></article><div class="para logical" id="sec-Curves-11"><div class="displaymath process-math" id="sec-Curves-11-1">
+\begin{align*}
+\vr'(t) = \mathstrut \amp  \lim_{h \to 0} \frac{\vr(t+h)-\vr(t)}{h}\\
+= \mathstrut \amp \lim_{h \to 0} \frac{[x(t+h)-x(t)] \vi + [y(t+h)-y(t)] \vj +
+[z(t+h)-z(t)] \vk}{h}\\
+= \mathstrut \amp \left(\lim_{h \to 0} \frac{x(t+h)-x(t)}{h}
+\right) \vi + \left( \lim_{h \to 0} \frac{y(t+h)-y(t)}{h} \right) \vj\\
+\mathstrut \amp  + \left( \lim_{h \to 0} \frac{z(t+h)-z(t)}{h} \right)\vk\\
+\mathstrut \amp = x'(t)\vi + y'(t) \vj + z'(t) \vk.
+\end{align*}
+</div></div>
+<article class="assemblage assemblage-like" id="Vector-valued-function-derivative"><h3 class="heading"><span class="title">The derivative of a vector-valued function.</span></h3>
+<div class="para logical" id="Vector-valued-function-derivative-2">
+<div class="para">If <span class="process-math">\(\vr(t) = x(t) \vi + y(t) \vj + z(t) \vk\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt} \vr(t) = x'(t) \vi + y'(t) \vj + z'(t) \vk
+\end{equation*}
+</div>
+<div class="para">for those values of <span class="process-math">\(t\)</span> at which <span class="process-math">\(x\text{,}\)</span> <span class="process-math">\(y\text{,}\)</span> and <span class="process-math">\(z\)</span> are differentiable.</div>
+</div></article><article class="activity project-like" id="sec-Curves-13"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.8</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-13-1"><div class="para logical" id="sec-Curves-13-1-1">
+<div class="para">Consider the following two parameterizations of the unit circle:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr_1(t) = \lrangle{ \cos t, \sin t } \text{ and } \vr_2(t) = \lrangle{ \cos(-2t+\pi), \sin(-2t+\pi) }
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-13-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-13-2-1-1">What is <span class="process-math">\(\vr_1'(\pi)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-13-2-1-2">
+<li id="sec-Curves-13-2-1-2-1"><div class="para" id="sec-Curves-13-2-1-2-1-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 1, 0 }\)</span></div></li>
+<li id="sec-Curves-13-2-1-2-2"><div class="para" id="sec-Curves-13-2-1-2-2-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 0, 1 }\)</span></div></li>
+<li id="sec-Curves-13-2-1-2-3"><div class="para" id="sec-Curves-13-2-1-2-3-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ -1, 0 }\)</span></div></li>
+<li id="sec-Curves-13-2-1-2-4"><div class="para" id="sec-Curves-13-2-1-2-4-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 0, -1 }\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Curves-13-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-13-3-1-1">What is <span class="process-math">\(\vr_2'(\pi)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Curves-13-3-1-2">
+<li id="sec-Curves-13-3-1-2-1"><div class="para" id="sec-Curves-13-3-1-2-1-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 2, 0 }\)</span></div></li>
+<li id="sec-Curves-13-3-1-2-2"><div class="para" id="sec-Curves-13-3-1-2-2-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 0, 2 }\)</span></div></li>
+<li id="sec-Curves-13-3-1-2-3"><div class="para" id="sec-Curves-13-3-1-2-3-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ -2, 0 }\)</span></div></li>
+<li id="sec-Curves-13-3-1-2-4"><div class="para" id="sec-Curves-13-3-1-2-4-1"><span class="process-math">\(\displaystyle \vr'(\pi) = \lrangle{ 0, -2 }\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Curves-13-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-13-4-1-1">Plot both <span class="process-math">\(\vr_1(\pi)\)</span> and <span class="process-math">\(\vr_2(\pi)\)</span> with their tails located at <span class="process-math">\(\vr_1(\pi) = \vr_2(\pi) = \lrangle{ -1 , 0 }\text{.}\)</span> What do you notice?</div></article></article><article class="assemblage assemblage-like" id="sec-Curves-14"><h3 class="heading"><span class="title"><span class="process-math">\(\vr'(t)\)</span> is the direction of the tangent line.</span></h3>
+<div class="para" id="sec-Curves-14-2">If <span class="process-math">\(\vr(t)\)</span> is a vector-valued function that parameterizes a curve, then <span class="process-math">\(\vr'(t)\)</span> is a tangent vector to the curve at the point <span class="process-math">\(\vr(t)\text{.}\)</span> In terms of motion, if <span class="process-math">\(\vr(t)\)</span> is the position vector of a moving object then <span class="process-math">\(\vv(t) = \vr'(t)\)</span> is the object’s velocity vector and <span class="process-math">\(\va(t) = \vr''(t)\)</span> is the object’s acceleration vector.</div></article><article class="activity project-like" id="sec-Curves-15"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.9</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-15-1-1">
+<div class="para">For each of the following vector-valued functions, find <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-2" id="sec-Curves-15-1-1-2">
+<li id="sec-Curves-15-1-1-2-1"><div class="para" id="sec-Curves-15-1-1-2-1-1"><span class="process-math">\(\vr(t) = \langle \cos(t), t\sin(t), \ln(t) \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-2"><div class="para" id="sec-Curves-15-1-1-2-2-1"><span class="process-math">\(\vr(t) = \langle t^2 + 3t, e^{-2t}, \frac{t}{t^2 + 1} \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-3"><div class="para" id="sec-Curves-15-1-1-2-3-1"><span class="process-math">\(\vr(t) = \langle \tan(t), \cos(t^2), te^{-t} \rangle\text{.}\)</span></div></li>
+<li id="sec-Curves-15-1-1-2-4"><div class="para" id="sec-Curves-15-1-1-2-4-1"><span class="process-math">\(\vr(t) = \langle \sqrt{t^4 + 4}, \sin(3t), \cos(4t) \rangle\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="assemblage assemblage-like" id="sec-Curves-16"><h3 class="heading"><span class="title">Properties of derivatives of vector-valued functions.</span></h3>
+<div class="para logical" id="sec-Curves-16-2">
+<div class="para">Let <span class="process-math">\(f\)</span> be a differentiable real-valued function of a real variable <span class="process-math">\(t\)</span> and let <span class="process-math">\(\vr\)</span> and <span class="process-math">\(\vs\)</span> be differentiable vector-valued functions of the real variable <span class="process-math">\(t\text{.}\)</span> Then</div>
+<ol class="decimal" id="sec-Curves-16-2-6">
+<li id="sec-Curves-16-2-6-1"><div class="para" id="sec-Curves-16-2-6-1-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) + \vs(t) \right] = \vr'(t) +
+\vs'(t)\)</span></div></li>
+<li id="sec-Curves-16-2-6-2"><div class="para" id="sec-Curves-16-2-6-2-1"><span class="process-math">\(\displaystyle \frac{d}{dt} [f(t) \vr(t)] = f(t) \vr'(t) + f'(t) \vr(t)\)</span></div></li>
+<li id="sec-Curves-16-2-6-3"><div class="para" id="sec-Curves-16-2-6-3-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \cdot \vs(t) \right] = \vr'(t)
+\cdot \vs(t) + \vr(t) \cdot \vs'(t)\)</span></div></li>
+<li id="sec-Curves-16-2-6-4"><div class="para" id="sec-Curves-16-2-6-4-1"><span class="process-math">\(\displaystyle \frac{d}{dt} \left[\vr(t) \times \vs(t) \right] = \vr'(t)
+\times \vs(t) + \vr(t) \times \vs'(t)\)</span></div></li>
+<li id="sec-Curves-16-2-6-5"><div class="para" id="sec-Curves-16-2-6-5-1"><span class="process-math">\(\frac{d}{dt} \left[\vr(f(t))\right] = f'(t) \vr'(f(t))\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Curves-17"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.10</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-17-1"><div class="para" id="sec-Curves-17-1-1">Consider the standard parameterization of the unit circle: <span class="process-math">\(\lrangle{ \cos t, \sin t }\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-17-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-17-2-1-1">Find <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-17-3-1-1">Find <span class="process-math">\(\frac{d}{dt}[\vr(2t)]\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-17-4-1-1">What relationship does the velocity of <span class="process-math">\(\vr(t)\)</span> have with the velocity of <span class="process-math">\(\vr(2t)\text{?}\)</span> How about their speeds?</div></article><article class="task exercise-like" id="sec-Curves-17-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-Curves-17-5-1-1">Verify that <span class="process-math">\(|\vr(t)| = 1\)</span> for all <span class="process-math">\(t\)</span> and differentiate this equation to find a geometric relationship between <span class="process-math">\(\vr(t)\)</span> and <span class="process-math">\(\vr'(t)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-17-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para logical" id="sec-Curves-17-6-1-1">
+<div class="para">Show that the speed’s rate of change is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{d}{dt}|\vv(t)| = \comp_{\vv} \va.
+\end{equation*}
+</div>
+</div></article></article><div class="para logical" id="sec-Curves-18">
+<div class="para">Given a differentiable vector-valued function <span class="process-math">\(\vr\text{,}\)</span> the tangent line to the curve at the input value <span class="process-math">\(a\)</span> is given by</div>
+<div class="displaymath process-math" id="sec-Curves-18-3">
+\begin{equation}
+\vL(t) = \vr(a) + t \vr'(a).\tag{1.5.1}
+\end{equation}
+</div>
+<div class="para">Note how analogous the formula for <span class="process-math">\(\vL(t)\)</span> is to the tangent line approximation from single-variable calculus: in that context, for a given function <span class="process-math">\(y = f(x)\)</span> at a value <span class="process-math">\(x = a\text{,}\)</span> we found that the tangent line can be expressed by the linear function <span class="process-math">\(y = L(x)\)</span> whose formula is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+L(x) = f(a) + f'(a)(x-a).
+\end{equation*}
+</div>
+</div>
+<article class="activity project-like" id="sec-Curves-19"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.11</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-19-1"><div class="para logical" id="sec-Curves-19-1-1">
+<div class="para">Suppose a moving object in space has its velocity given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vv(t) = (-2\sin(2t)) \vi + (2 \cos(t)) \vj + \left(1 - \frac{1}{1+t}\right) \vk.
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-19-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-19-2-1-1">Find the object’s position function <span class="process-math">\(\vr(t)\)</span> if it is at <span class="process-math">\((1.5, -1, 0)\)</span> at <span class="process-math">\(t = 0\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-19-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-19-3-1-1">Find the object’s acceleration function <span class="process-math">\({\bf a}(t)\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-19-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Curves-19-4-1-1">Determine a vector equation for the tangent line, <span class="process-math">\({\bf L}(t)\text{,}\)</span> to the position curve at <span class="process-math">\(t = 1\text{.}\)</span>
+</div></article></article><article class="assemblage assemblage-like" id="Length-of-a-curve"><h3 class="heading"><span class="title">The length of a curve.</span></h3>
+<div class="para logical" id="Length-of-a-curve-2">
+<div class="para">If <span class="process-math">\(\vr(t)\)</span> defines a smooth curve <span class="process-math">\(C\)</span> on an interval <span class="process-math">\([a,b]\text{,}\)</span> then the <em class="emphasis">length</em> <span class="process-math">\(L\)</span> of <span class="process-math">\(C\)</span> is given by</div>
+<div class="displaymath process-math" id="eq_9_8_arclength_2">
+\begin{equation}
+L = \int_a^b |\vr'(t)| \, dt.\tag{1.5.2}
+\end{equation}
+</div>
+</div></article><article class="activity project-like" id="A_9_8_1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.12</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="A_9_8_1-1-1">
+<div class="para">Here we calculate the arc length of two familiar curves.</div>
+<ol class="lower-alpha ol-marker-2" id="A_9_8_1-1-1-1">
+<li id="A_9_8_1-1-1-1-1"><div class="para" id="A_9_8_1-1-1-1-1-1">Use Equation <a href="sec-Curves.html#eq_9_8_arclength_2" class="xref" data-knowl="./knowl/xref/eq_9_8_arclength_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.2">(1.5.2)</a> to calculate the circumference of a circle of radius <span class="process-math">\(r\text{.}\)</span>
+</div></li>
+<li id="A_9_8_1-1-1-1-2"><div class="para" id="A_9_8_1-1-1-1-2-1">Find the exact length of the spiral defined by <span class="process-math">\(\vr(t) = \langle \cos(t), \sin(t), t \rangle\)</span> on the interval <span class="process-math">\([0,2\pi]\text{.}\)</span>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="A_9_8_1-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="A_9_8_1-2-1">
+<li id="A_9_8_1-2-1-1"><div class="para logical" id="A_9_8_1-2-1-1-1">
+<div class="para">We can parameterize a circle of radius <span class="process-math">\(r\)</span> centered at the origin by <span class="process-math">\(\vr(t) = \langle \cos(t), \sin(t) \rangle\)</span> for <span class="process-math">\(t\)</span> in the interval <span class="process-math">\([0, 2\pi]\text{.}\)</span> The circumference of this circle is the length of curve defined by <span class="process-math">\(r\text{,}\)</span> or</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^{2\pi} \lvert \vr'(t) \rvert \, dt = \int_0^{2\pi} \sqrt{(-r\sin(t))^2 + (r\cos(t))^2} \, dt = \int_0^{2\pi} r \, dt = 2 \pi r
+\end{equation*}
+</div>
+<div class="para">as expected.</div>
+</div></li>
+<li id="A_9_8_1-2-1-2"><div class="para logical" id="A_9_8_1-2-1-2-1">
+<div class="para">The length of curve defined by <span class="process-math">\(r\)</span> on the interval <span class="process-math">\([0,2 \pi]\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_0^{2\pi} \lvert \vr'(t) \rvert \, dt = \int_0^{2\pi} \sqrt{(-\sin(t))^2 + (\cos(t))^2 + 1^2} \, dt = \int_0^{2\pi} \sqrt{2} \, dt = 2 \pi \sqrt{2}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></details></div></article><div class="para" id="sec-Curves-22">We can adapt the arc length formula to curves in 2-space that define <span class="process-math">\(y\)</span> as a function of <span class="process-math">\(x\)</span> as the following activity shows.</div>
+<article class="activity project-like" id="A_9_8_3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.13</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="A_9_8_3-1-1">
+<div class="para">Let <span class="process-math">\(y = f(x)\)</span> define a smooth curve in 2-space. Parameterize this curve and use Equation <a href="sec-Curves.html#eq_9_8_arclength_2" class="xref" data-knowl="./knowl/xref/eq_9_8_arclength_2.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.2">(1.5.2)</a> to show that the length of the curve defined by <span class="process-math">\(f\)</span> on an interval <span class="process-math">\([a,b]\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_9_8_arclength_2.html">
+\begin{equation*}
+\int_a^b \sqrt{1+[f'(t)]^2} \, dt.
+\end{equation*}
+</div>
+</div>
+<div class="solutions"><details id="A_9_8_3-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><div class="para logical" id="A_9_8_3-2-1">
+<div class="para">We can parameterize <span class="process-math">\(y=f(x)\)</span> on <span class="process-math">\([a,b]\)</span> by <span class="process-math">\(\vr(t) = \langle t, f(t) \rangle\)</span> for <span class="process-math">\(t\)</span> in <span class="process-math">\([a,b]\text{.}\)</span> Then the length of the curve defined by <span class="process-math">\(y=f(x)\)</span> on <span class="process-math">\([a,b]\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b \lvert \vr'(t) \rvert \, dt =  \int_a^b \lvert \langle 1, f'(t) \rvert \, dt = \int_a^b \sqrt{1+[f'(t)]^2} \, dt\text{.}
+\end{equation*}
+</div>
+</div></div></details></div></article><details id="ex_9_8_circle_arc_length" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.3</span><span class="period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex_9_8_circle_arc_length-1">
+<div class="para">Consider a circle of radius <span class="process-math">\(5\)</span> in 2-space centered at the origin. We know that we can parameterize this circle as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \langle 5\cos(t), 5\sin(t) \rangle,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(t\)</span> runs from 0 to <span class="process-math">\(2\pi\text{.}\)</span> We see that <span class="process-math">\(\vr'(t) = \langle -5\sin(t), 5\cos(t) \rangle\text{,}\)</span> and hence <span class="process-math">\(|\vr'(t)| = 5\text{.}\)</span> It then follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s=L(t) = \int_0^t |\vr'(w)|~dw = \int_0^t 5~dw = 5t.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="ex_9_8_circle_arc_length-2">
+<div class="para">Since <span class="process-math">\(s=L(t) = 5t\text{,}\)</span> we may solve for <span class="process-math">\(t\)</span> in terms of <span class="process-math">\(s\)</span> to obtain <span class="process-math">\(t(s)=L^{-1}(s) 
+= s/5\text{.}\)</span> We then find the arc length parametrization by composing</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t(s))=\vr(L^{-1}(s)) = \left\langle 5\cos\left(\frac s5\right),
+5\sin\left(\frac s5\right)\right\rangle.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="ex_9_8_circle_arc_length-3">
+<div class="para">More generally, for a circle of radius <span class="process-math">\(a\)</span> centered at the origin, a similar computation shows that</div>
+<div class="displaymath process-math" id="eq_9_8_circle_arc_length_parameterization">
+\begin{equation}
+\left\langle a\cos\left(\frac sa\right), a\sin\left(\frac sa\right)\right\rangle\tag{1.5.3}
+\end{equation}
+</div>
+<div class="para">is an arc length parametrization.</div>
+</div></article></details><article class="activity project-like" id="A_9_8_4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.14</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="A_9_8_4-1-1">
+<div class="para">In this activity we parameterize a line in 2-space in terms of arc length. Consider the line with parametric equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(t) = x_0+at \ \ \ \ \text{ and }  \ \ \ \ y(t) = y_0+bt.
+\end{equation*}
+</div>
+<ol class="lower-alpha ol-marker-2" id="A_9_8_4-1-1-2">
+<li id="A_9_8_4-1-1-2-1"><div class="para logical" id="A_9_8_4-1-1-2-1-1">
+<div class="para">To write <span class="process-math">\(t\)</span> in terms of <span class="process-math">\(s\text{,}\)</span> evaluate the integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+s=L(t) = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw
+\end{equation*}
+</div>
+<div class="para">to determine the length of the line from time 0 to time <span class="process-math">\(t\text{.}\)</span>
+</div>
+</div></li>
+<li id="A_9_8_4-1-1-2-2"><div class="para logical" id="A_9_8_4-1-1-2-2-1">
+<div class="para">Use the formula from (a) for <span class="process-math">\(s\)</span> in terms of <span class="process-math">\(t\)</span> to write <span class="process-math">\(t\)</span> in terms of <span class="process-math">\(s\text{.}\)</span> Then explain why a parameterization of the line in terms of arc length is</div>
+<div class="displaymath process-math" id="eq_9_8_line_arc_length_parameterization">
+\begin{equation}
+x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s.\tag{1.5.4}
+\end{equation}
+</div>
+</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="A_9_8_4-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="A_9_8_4-2-1">
+<li id="A_9_8_4-2-1-1"><div class="para logical" id="A_9_8_4-2-1-1-1">
+<div class="para">The length of the line from time 0 to time <span class="process-math">\(t\)</span> is</div>
+<div class="displaymath process-math" id="A_9_8_4-2-1-1-1-2">
+\begin{align*}
+s(t) \amp = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2} \, dw\\
+\amp = \int_0^t \sqrt{a^2+b^2} \, dw\\
+\amp = \sqrt{a^2+b^2}t\text{.}
+\end{align*}
+</div>
+</div></li>
+<li id="A_9_8_4-2-1-2"><div class="para logical" id="A_9_8_4-2-1-2-1">
+<div class="para">We have <span class="process-math">\(t = \frac{s}{\sqrt{a^2+b^2}}\text{,}\)</span> and so a parameterization for the line in terms of arc length is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \ y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></details></div></article><article class="activity project-like" id="sec-Curves-26"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.15</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Curves-26-1"><div class="para logical" id="sec-Curves-26-1-1">
+<div class="para">Let <span class="process-math">\(\mathcal{C}\)</span> be the curve parameterized by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \left\langle t^2, \frac{8}{3}t^{3/2}, 4t \right\rangle
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(t \geq 0\text{.}\)</span> We will parameterize <span class="process-math">\(\mathcal{C}\)</span> in terms of arc length.</div>
+</div></div>
+<article class="task exercise-like" id="sec-Curves-26-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Curves-26-2-1-1">Find the arc length function <span class="process-math">\(s(t)\)</span> for this parameterization of <span class="process-math">\(\mathcal{C}\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Curves-26-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Curves-26-3-1-1">Find an arc length parameterization for <span class="process-math">\(\mathcal{C}\text{.}\)</span>
+</div></article></article><details id="ex_9_8_AL_curvature_ex_2" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.5.4</span><span class="period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex_9_8_AL_curvature_ex_2-1-1">
+<div class="para">Let us parameterize the curve defined by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \left\langle t^2, \frac{8}{3}t^{3/2}, 4t \right\rangle
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(t \geq 0\)</span> in terms of arc length. To write <span class="process-math">\(t\)</span> in terms of <span class="process-math">\(s\)</span> we find <span class="process-math">\(s\)</span> in terms of <span class="process-math">\(t\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="ex_9_8_AL_curvature_ex_2-1-1-7">
+\begin{align*}
+s(t) \amp = \int_{0}^t \sqrt{(x'(w))^2 + (y'(w))^2 +(z'(w))^2} \, dw\\
+\amp = \int_0^t \sqrt{(2w)^2 + (4w^{1/2})^2 + (4)^2} \, dw\\
+\amp = \int_0^t \sqrt{4w^2 + 16w + 16} \, dw\\
+\amp = 2\int_0^t \sqrt{(w+2)^2} \, dw\\
+\amp = 2\int_0^t w+2 \, dw\\
+\amp = \left(w^2+4w\right)\biggm|_{0}^{t}\\
+\amp = t^2+4t.
+\end{align*}
+</div>
+</div> <div class="para logical" id="ex_9_8_AL_curvature_ex_2-1-2">
+<div class="para">Since <span class="process-math">\(t \geq 0\text{,}\)</span> we can solve the equation <span class="process-math">\(s = t^2+4t\)</span> (or <span class="process-math">\(t^2+4t-s=0\)</span>) for <span class="process-math">\(t\)</span> to obtain <span class="process-math">\(t = \frac{-4 +\sqrt{16+4s}}{2} = -2 + \sqrt{4+s}\text{.}\)</span> So we can parameterize our curve in terms of arc length by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(s) = \left\langle \left(-2 + \sqrt{4+s}\right)^2, \frac{8}{3}\left(-2 + \sqrt{4+s}\right)^{3/2}, 4\left(-2 + \sqrt{4+s}\right) \right\rangle.
+\end{equation*}
+</div>
+</div></article></details><article class="assemblage assemblage-like" id="sec-Curves-28"><h3 class="heading"><span class="title">Arc Length Parameterizations Usually Exist.</span></h3>
+<div class="para" id="sec-Curves-28-2">If <span class="process-math">\(\vr(t)\)</span> defines a smooth curve <span class="process-math">\(\mathcal{C}\)</span> on an interval <span class="process-math">\([a,b]\)</span> such that <span class="process-math">\(|\vr'(t)| \neq 0\)</span> on the interval <span class="process-math">\([a,b]\text{,}\)</span> then there exists an arc length parameterization <span class="process-math">\(\vr(s)\)</span> of <span class="process-math">\(\mathcal{C}\text{.}\)</span>
+</div></article><article class="definition definition-like" id="sec-Curves-29"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.5</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-29-1-1">
+<div class="para">For a curve with parameterization <span class="process-math">\(\vr(t)\text{,}\)</span> the <dfn class="terminology">unit tangent vector</dfn> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT(t) = \frac{\vr'(t)}{|\vr'(t)|}.
+\end{equation*}
+</div>
+<div class="para">Note that if <span class="process-math">\(\vr(s)\)</span> is the corresponding arc length parameterization, then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr'(s) = \vT(s).
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="sec-Curves-30"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.16</span><span class="period">.</span>
+</h3></article><article class="definition definition-like" id="sec-Curves-31"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.5.6</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Curves-31-1-1">
+<div class="para">If <span class="process-math">\(C\)</span> is a smooth space curve and <span class="process-math">\(s\)</span> is an arc length parameter for <span class="process-math">\(C\text{,}\)</span> then the <dfn class="terminology">curvature</dfn>, <span class="process-math">\(\kappa\text{,}\)</span> of <span class="process-math">\(C\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\kappa = \kappa(s) = \left\lvert \frac{d \vT}{ds} \right\rvert.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="A_9_8_5"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.17</span><span class="period">.</span>
+</h3>
+<ol class="lower-alpha ol-marker-2" id="A_9_8_5-1-1">
+<li id="A_9_8_5-1-1-1"><div class="para logical" id="A_9_8_5-1-1-1-1">
+<div class="para">We should expect that the curvature of a line is 0 everywhere. To show that our definition of curvature measures this correctly in 2-space, recall that <a href="sec-Curves.html#eq_9_8_line_arc_length_parameterization" class="xref" data-knowl="./knowl/xref/eq_9_8_line_arc_length_parameterization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.4">(1.5.4)</a> gives us the arc length parameterization</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_9_8_line_arc_length_parameterization.html">
+\begin{equation*}
+x(s) = x_0+\frac{a}{\sqrt{a^2+b^2}}s \ \ \ \ \text{ and }  \ \ \ \
+y(s) = y_0+\frac{b}{\sqrt{a^2+b^2}}s
+\end{equation*}
+</div>
+<div class="para">of a line. Use this information to explain why the curvature of a line is 0 everywhere.</div>
+</div></li>
+<li id="A_9_8_5-1-1-2">
+<div class="para logical" id="A_9_8_5-1-1-2-1">
+<div class="para">Recall that an arc length parameterization of a circle in 2-space of radius <span class="process-math">\(a\)</span> centered at the origin is, from <a href="sec-Curves.html#eq_9_8_circle_arc_length_parameterization" class="xref" data-knowl="./knowl/xref/eq_9_8_circle_arc_length_parameterization.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 1.5.3">(1.5.3)</a>,</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_9_8_circle_arc_length_parameterization.html">
+\begin{equation*}
+\vr(s) = \left\langle a \cos\left(\frac{s}{a}\right),~
+a \sin\left(\frac{s}{a}\right)\right\rangle.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="A_9_8_5-1-1-2-2">Show that the curvature of this circle is the constant <span class="process-math">\(\frac{1}{a}\text{.}\)</span> What can you say about the relationship between the size of the radius of a circle and the value of its curvature? Why does this make sense?</div>
+</li>
+</ol>
+<div class="solutions"><details id="A_9_8_5-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para logical" id="A_9_8_5-2-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT(s) = \left\langle -\sin\left(\frac{s}{a}\right), \cos\left(\frac{s}{a}\right) \right\rangle\text{.}
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="A_9_8_5-2-2">
+<div class="para">So the curvature of a circle of radius <span class="process-math">\(a\)</span> is</div>
+<div class="displaymath process-math" id="A_9_8_5-2-2-2">
+\begin{align*}
+\kappa \amp = \left\lvert \frac{d \vT}{ds} \right\rvert\\
+\amp = \left\lvert \left\langle -\frac{1}{a}\cos\left(\frac{s}{a}\right), -\frac{1}{a}\sin\left(\frac{s}{a}\right) \right\rangle \right\rvert\\
+\amp = \frac{1}{a}\text{.}
+\end{align*}
+</div>
+</div>
+<div class="para" id="A_9_8_5-2-3">So, as expected, larger circles have smaller curvature.</div>
+</div></details></div></article><div class="para" id="sec-Curves-33">The definition of curvature relies on our ability to parameterize curves in terms of arc length. Since we have seen that finding an arc length parametrization can be difficult, we would like to be able to express the curvature in terms of a more general parametrization <span class="process-math">\(\vr(t)\text{.}\)</span>
+</div>
+<div class="para logical" id="sec-Curves-34">
+<div class="para">To begin, we need to describe the vector <span class="process-math">\(\vT\text{,}\)</span> which is a vector tangent to the curve having unit length. Of course, the velocity vector <span class="process-math">\(\vr'(t)\)</span> is tangent to the curve; we simply need to normalize its length to be one. This means that we may take</div>
+<div class="displaymath process-math" id="eq_9_8_unit_tangent">
+\begin{equation}
+\vT(t) = \frac{\vr'(t)}{|\vr'(t)|}.\tag{1.5.5}
+\end{equation}
+</div>
+</div>
+<div class="para logical" id="sec-Curves-35">
+<div class="para">Then the curvature of the curve defined by <span class="process-math">\(\vr\)</span> is</div>
+<div class="displaymath process-math" id="sec-Curves-35-2">
+\begin{align*}
+\kappa \amp = \left\lvert \frac{d \vT}{ds} \right\rvert\\
+\amp = \left\lvert \frac{d \vT}{dt} \frac{dt}{ds} \right\rvert\\
+\amp = \frac{\left\lvert \frac{d \vT}{dt} \right\rvert}{ \left\lvert \frac{ds}{dt} \right\rvert }\\
+\amp = \frac{\left\lvert \vT'(t) \right\rvert}{ \left\lvert \vr'(t) \right\rvert}.
+\end{align*}
+</div>
+</div>
+<div class="para" id="sec-Curves-36">This last formula allows us to use any parameterization of a curve to calculate its curvature. There is another useful formula, given below, whose derivation is left for the exercises.</div>
+<article class="assemblage assemblage-like" id="Curvature"><h3 class="heading"><span class="title">Formulas for curvature.</span></h3>
+<div class="para logical" id="Curvature-2">
+<div class="para">If <span class="process-math">\(\vr\)</span> is a vector-valued function defining a smooth space curve <span class="process-math">\(C\text{,}\)</span> and if <span class="process-math">\(\vr'(t)\)</span> is not zero and if <span class="process-math">\(\vr''(t)\)</span> exists, then the curvature <span class="process-math">\(\kappa\)</span> of <span class="process-math">\(C\)</span> satisfies</div>
+<ul class="disc" id="Curvature-2-7">
+<li id="Curvature-2-7-1"><div class="para" id="Curvature-2-7-1-1"><span class="process-math">\(\displaystyle \kappa = \kappa(t) = \frac{\left\lvert \vT'(t) \right\rvert}{ \left\lvert \vr'(t) \right\rvert}\)</span></div></li>
+<li id="Curvature-2-7-2"><div class="para" id="Curvature-2-7-2-1"><span class="process-math">\(\kappa = \frac{\lvert \vr'(t) \times \vr''(t) \rvert}{\lvert \vr'(t) \rvert^3}\text{.}\)</span></div></li>
+</ul>
+</div></article><article class="activity project-like" id="A_9_8_6"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.5.18</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="A_9_8_6-1-1">
+<div class="para">Use one of the two formulas for <span class="process-math">\(\kappa\)</span> in terms of <span class="process-math">\(t\)</span> to help you answer the following questions.</div>
+<ol class="lower-alpha ol-marker-2" id="A_9_8_6-1-1-3">
+<li id="A_9_8_6-1-1-3-1"><div class="para logical" id="A_9_8_6-1-1-3-1-1">
+<div class="para">The ellipse <span class="process-math">\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)</span> has parameterization</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr(t) = \langle a\cos(t), b\sin(t) \rangle.
+\end{equation*}
+</div>
+<div class="para">Find the curvature of the ellipse. Assuming <span class="process-math">\(0 \lt  b \lt  a\text{,}\)</span> at what points is the curvature the greatest and at what points is the curvature the smallest? Does this agree with your intuition?</div>
+</div></li>
+<li id="A_9_8_6-1-1-3-2"><div class="para" id="A_9_8_6-1-1-3-2-1">The standard helix has parameterization <span class="process-math">\(\vr(t) = \cos(t) \vi + \sin(t) \vj + t \vk\text{.}\)</span>  Find the curvature of the helix.  Does the result agree with your intuition?</div></li>
+</ol>
+</div>
+<div class="solutions"><details id="A_9_8_6-2" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="decimal" id="A_9_8_6-2-1">
+<li id="A_9_8_6-2-1-1"><div class="para logical" id="A_9_8_6-2-1-1-1">
+<div class="para">We have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT(t) = \left\langle -\frac{a\sin(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}}, \frac{b\cos(t)}{\sqrt{a^2\sin^2(t) + b^2\cos^2(t)}} \right\rangle
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT'(t) = \left\langle -\frac{ab^2\cos(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}, -\frac{a^2b\sin(t)}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}} \right\rangle\text{.}
+\end{equation*}
+</div>
+<div class="para">So the curvature of the ellipse is given by</div>
+<div class="displaymath process-math" id="A_9_8_6-2-1-1-1-3">
+\begin{align*}
+\kappa(t) \amp = \frac{1}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{(ab^2\cos(t))^2 +(a^2b\sin(t))^2}\\
+\amp = \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^2} \sqrt{b^2\cos^(t) + a^2\sin^2(t)}\\
+\amp = \frac{ab}{\left(a^2\sin^2(t) + b^2\cos^2(t)\right)^{3/2}}\text{.}
+\end{align*}
+</div>
+<div class="para">If we assume that <span class="process-math">\(0 \lt  b \lt  a\text{,}\)</span> then we should expect that ellipse to have the largest curvature at the points <span class="process-math">\((\pm a, 0)\)</span> and the smallest at the points <span class="process-math">\((0, \pm b)\)</span> (when <span class="process-math">\(t = \frac{\pi}{2} + \pi k\)</span> for some integer <span class="process-math">\(k\)</span>). The denominator of our curvature function can be written as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+a^2(1-\cos^2(t)) + b^2 \cos^2(t) = a^2 - (a^2-b^2)\cos^2(t)\text{.}
+\end{equation*}
+</div>
+<div class="para">The curvature of the ellipse is largest when this denominator is smallest, or when <span class="process-math">\(t = 0\)</span> or <span class="process-math">\(t=\pi\text{.}\)</span> These <span class="process-math">\(t\)</span> values correspond to the points <span class="process-math">\((\pm a, 0)\text{.}\)</span> Similarly, the curvature of the ellipse is smallest when the denominator is largest, or when <span class="process-math">\(t = \frac{\pi}{2}\)</span> and <span class="process-math">\(t = \frac{3\pi}{2}\text{.}\)</span> These <span class="process-math">\(t\)</span> values correspond to the points <span class="process-math">\((0, \pm b)\)</span> as expected.</div>
+</div></li>
+<li id="A_9_8_6-2-1-2"><div class="para logical" id="A_9_8_6-2-1-2-1">
+<div class="para">Here we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vr'(t) = (-\sin(t)) \vi + \cos(t) \vj + \vk
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT(t) = \frac{1}{\sqrt{2}}\left( (-\sin(t)) \vi + \cos(t) \vj + \vk \right)\text{.}
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vT'(t) = \frac{1}{\sqrt{2}}\left( (-\cos(t)) \vi - \sin(t) \vj \right)
+\end{equation*}
+</div>
+<div class="para">and so</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\kappa(t) = \frac{1}{2}\text{.}
+\end{equation*}
+</div>
+</div></li>
+</ol></div></details></div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-Lines-and-Planes.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-PD.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

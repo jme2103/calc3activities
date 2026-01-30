@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Vector Geometry</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Calculus III">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Jonathan Epstein">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
+<p class="byline">Jonathan Epstein</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-Vectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-MV.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-Lines-and-Planes.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} 
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrpar}[1]{\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\dc}{^\circ}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vT}{\mathbf{T}}
+\newcommand{\vx}{\mathbf{x}}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-PD.html" class="internal"><span class="codenumber">2</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Partial-Derivs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Tangent-Planes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Chain-Rule.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Directional-Derivs-and-Grad.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Directional Derivatives and Gradients</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PD-Optimization.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-Optimization-Intro" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Review of Single-Variable Optimization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-closed-sets" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-critical-points" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Critical Points and The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-optimization" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Optimization on Closed and Bounded Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-Lagrange" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MI.html" class="internal"><span class="codenumber">3</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Review of Riemann Integrals in One Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Double Integrals Over Rectangules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-iterated-ntegrals" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Double Integrals Over General Regions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Double Integrals in Polar Coordinates and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-applications" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-parametric-surfaces.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-triple-integrals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Triple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cartesian" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Triple Integrals in Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cylindrical" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Triple Integrals in cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-spherical" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-change-of-vars.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Change of Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-VC.html" class="internal"><span class="codenumber">4</span> <span class="title">Fundamental Theorems of Vector Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-VC-line-integrals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Line Integrals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-Vector-Geometry"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Vector Geometry</span>
+</h2>
+<article class="definition definition-like" id="sec-Vector-Geometry-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Dot Product (Algebraic Definition).</span>
+</h3>
+<div class="para logical" id="sec-Vector-Geometry-2-2-1">
+<div class="para">The <dfn class="terminology">dot product</dfn> of vectors <span class="process-math">\(\vu=\langle u_1, u_2,\ldots,u_n \rangle\)</span> and <span class="process-math">\(\vv=\langle v_1, v_2,\ldots,v_n \rangle\)</span> in <span class="process-math">\(\R^n\)</span> is the scalar</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vu\cdot\vv = u_1v_1+u_2v_2 + \ldots + u_nv_n.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="ve2-dot-product-compute-1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ve2-dot-product-compute-1-1-1">
+<div class="para">Which option gives the dot product <span class="process-math">\(\lrangle{10,-1,2}\cdot\lrangle{-8,4,0}\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="ve2-dot-product-compute-1-1-1-2">
+<li id="ve2-dot-product-compute-1-1-1-2-1"><div class="para" id="ve2-dot-product-compute-1-1-1-2-1-1"><span class="process-math">\(\displaystyle \lrangle{2,3,2}\)</span></div></li>
+<li id="ve2-dot-product-compute-1-1-1-2-2"><div class="para" id="ve2-dot-product-compute-1-1-1-2-2-1"><span class="process-math">\(\displaystyle 7\)</span></div></li>
+<li id="ve2-dot-product-compute-1-1-1-2-3"><div class="para" id="ve2-dot-product-compute-1-1-1-2-3-1"><span class="process-math">\(\displaystyle \lrangle{-80,-4,0}\)</span></div></li>
+<li id="ve2-dot-product-compute-1-1-1-2-4"><div class="para" id="ve2-dot-product-compute-1-1-1-2-4-1"><span class="process-math">\(\displaystyle -84\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-Vector-Geometry-4-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-Vector-Geometry-4-1-1-1">
+<div class="para">Sketch the vector <span class="process-math">\(\vu=\langle 1,3 \rangle\)</span> in one color, along with the vectors</div>
+<ul class="disc" id="sec-Vector-Geometry-4-1-1-1-2">
+<li id="sec-Vector-Geometry-4-1-1-1-2-1"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-1-1"><span class="process-math">\(\vv=\langle 3, 2 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-2"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-2-1"><span class="process-math">\(\vv=\langle 3, 1 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-3"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-3-1"><span class="process-math">\(\vv=\langle 3, 0 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-4"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-4-1"><span class="process-math">\(\vv=\langle 3,-1 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-5"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-5-1"><span class="process-math">\(\vv=\langle 3,-2 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-6"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-6-1"><span class="process-math">\(\vv=\langle 3,-3 \rangle\text{.}\)</span></div></li>
+<li id="sec-Vector-Geometry-4-1-1-1-2-7"><div class="para" id="sec-Vector-Geometry-4-1-1-1-2-7-1"><span class="process-math">\(\vv=\langle 3,-4 \rangle\text{.}\)</span></div></li>
+</ul>
+<div class="para">in a different color.</div>
+</div></article><article class="task exercise-like" id="sec-Vector-Geometry-4-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Vector-Geometry-4-2-1-1">Compute <span class="process-math">\(\vu \cdot \vv\)</span> for each of these vectors. Organize your answers in a table.</div></article><article class="task exercise-like" id="sec-Vector-Geometry-4-3"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Vector-Geometry-4-3-1-1">Which of the following is a conclusion you may reach from your computations?</div> <ol class="upper-alpha ol-marker-1" id="sec-Vector-Geometry-4-3-1-2">
+<li id="sec-Vector-Geometry-4-3-1-2-1"><div class="para" id="sec-Vector-Geometry-4-3-1-2-1-1">The sign of a dot product depends on the magnitude of the vectors.</div></li>
+<li id="sec-Vector-Geometry-4-3-1-2-2"><div class="para" id="sec-Vector-Geometry-4-3-1-2-2-1">The dot product is usually not zero.</div></li>
+<li id="sec-Vector-Geometry-4-3-1-2-3"><div class="para" id="sec-Vector-Geometry-4-3-1-2-3-1">As the angle between two vectors increases, their dot product increases.</div></li>
+<li id="sec-Vector-Geometry-4-3-1-2-4"><div class="para" id="sec-Vector-Geometry-4-3-1-2-4-1">As the angle between two vectors increases, their dot product decreases.</div></li>
+<li id="sec-Vector-Geometry-4-3-1-2-5"><div class="para" id="sec-Vector-Geometry-4-3-1-2-5-1">The dot product is never zero.</div></li>
+</ol></article></article><article class="definition definition-like" id="def-dot-product-geo"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Dot Product (Geometric Definition).</span>
+</h3>
+<div class="para logical" id="def-dot-product-geo-3-1">
+<div class="para">If the angle between the two vectors <span class="process-math">\(\textbf{u}\)</span> and <span class="process-math">\(\textbf{v}\)</span> is given by <span class="process-math">\(\theta\)</span> (in radians), then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\textbf{u}\cdot\textbf{v} = ||\textbf{u}||\,||\textbf{v}||\cos\theta
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="ve2-dot-product-geo-1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ve2-dot-product-geo-1-1-1">
+<div class="para">Which is the correct angle between the vectors <span class="process-math">\(\textbf{i}+\textbf{j}-\textbf{k}\)</span> and <span class="process-math">\(\textbf{i} -2\textbf{j}-3\textbf{k}\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="ve2-dot-product-geo-1-1-1-3">
+<li id="ve2-dot-product-geo-1-1-1-3-1"><div class="para" id="ve2-dot-product-geo-1-1-1-3-1-1"><span class="process-math">\(\displaystyle 2\)</span></div></li>
+<li id="ve2-dot-product-geo-1-1-1-3-2"><div class="para" id="ve2-dot-product-geo-1-1-1-3-2-1"><span class="process-math">\(\displaystyle \inv{\cos} \lrpar{\frac{2}{\sqrt{42}}}\)</span></div></li>
+<li id="ve2-dot-product-geo-1-1-1-3-3"><div class="para" id="ve2-dot-product-geo-1-1-1-3-3-1"><span class="process-math">\(\displaystyle \cos \lrpar{\frac{2}{\sqrt{42}}}\)</span></div></li>
+<li id="ve2-dot-product-geo-1-1-1-3-4"><div class="para" id="ve2-dot-product-geo-1-1-1-3-4-1"><span class="process-math">\(\displaystyle \frac{\pi}{2}\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-7"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Vector-Geometry-7-1-1">
+<div class="para">If two vectors make a right angle, what is the value of their dot product?</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-7-1-1-1">
+<li id="sec-Vector-Geometry-7-1-1-1-1"><div class="para" id="sec-Vector-Geometry-7-1-1-1-1-1"><span class="process-math">\(\displaystyle \pi\)</span></div></li>
+<li id="sec-Vector-Geometry-7-1-1-1-2"><div class="para" id="sec-Vector-Geometry-7-1-1-1-2-1"><span class="process-math">\(\displaystyle 0\)</span></div></li>
+<li id="sec-Vector-Geometry-7-1-1-1-3"><div class="para" id="sec-Vector-Geometry-7-1-1-1-3-1"><span class="process-math">\(\displaystyle 1\)</span></div></li>
+<li id="sec-Vector-Geometry-7-1-1-1-4"><div class="para" id="sec-Vector-Geometry-7-1-1-1-4-1"><span class="process-math">\(\displaystyle \frac{\pi}{2}\)</span></div></li>
+</ol>
+</div></article><article class="assemblage assemblage-like" id="Dot-product-orthogonality"><h3 class="heading"><span class="title">The dot product and orthogonality.</span></h3>
+<div class="para" id="Dot-product-orthogonality-2">Two vectors are said to be orthogonal when the angle between them is <span class="process-math">\(90\dc\)</span> or <span class="process-math">\(\pi/2\)</span> radians.</div>
+<div class="para" id="Dot-product-orthogonality-3">Two vectors <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> in <span class="process-math">\(\R^n\)</span> are orthogonal  to each other if and only if <span class="process-math">\(\vu \cdot \vv = 0\text{.}\)</span>
+</div></article><div class="para logical" id="sec-Vector-Geometry-9">
+<div class="para">More generally, the sign of the dot product gives us useful information about the relative orientation of the vectors. If we remember that</div>
+<div class="displaymath process-math" id="sec-Vector-Geometry-9-1">
+\begin{align*}
+\cos(\theta) \gt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an acute angle,}\\
+\cos(\theta) = 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is a right angle, and}\\
+\cos(\theta) \lt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an obtuse angle,}
+\end{align*}
+</div>
+<div class="para">we see that for nonzero vectors <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\text{,}\)</span>
+</div>
+<div class="displaymath process-math" id="sec-Vector-Geometry-9-4">
+\begin{align*}
+\vu\cdot\vv \gt 0 \mathstrut \amp \ \ \ \text{ if } \theta \text{ is an acute angle,}\\
+\vu\cdot\vv = 0 \mathstrut \amp \ \ \ \text{ if }
+\theta \text{ is a right angle, and}\\
+\vu\cdot\vv \lt  0 \mathstrut \amp \ \ \ \text{ if }
+\theta \text{ is an obtuse angle.}
+\end{align*}
+</div>
+</div>
+<article class="assemblage assemblage-like" id="Dot-product-properties"><h3 class="heading"><span class="title">Properties of the dot product.</span></h3>
+<div class="para logical" id="Dot-product-properties-2">
+<div class="para">Let <span class="process-math">\(\vu\text{,}\)</span> <span class="process-math">\(\vv\text{,}\)</span> and <span class="process-math">\(\vw\)</span> be vectors in <span class="process-math">\(\R^n\text{.}\)</span> Then</div>
+<ol class="decimal" id="Dot-product-properties-2-5">
+<li id="Dot-product-properties-2-5-1"><div class="para" id="Dot-product-properties-2-5-1-1">
+<span class="process-math">\(\vu \cdot \vv = \vv \cdot \vu\)</span> (the dot product is <em class="emphasis">commutative</em>), and</div></li>
+<li id="Dot-product-properties-2-5-2"><div class="para" id="Dot-product-properties-2-5-2-1"><span class="process-math">\((\vu + \vv) \cdot \vw = (\vu \cdot \vw) + (\vv \cdot \vw)\text{.}\)</span></div></li>
+<li id="Dot-product-properties-2-5-3"><div class="para" id="Dot-product-properties-2-5-3-1">if <span class="process-math">\(c\)</span> is a scalar, then <span class="process-math">\((c\vu) \cdot \vw = c(\vu \cdot
+\vw)\text{.}\)</span>
+</div></li>
+<li id="Dot-product-properties-2-5-4"><div class="para" id="Dot-product-properties-2-5-4-1"><span class="process-math">\(\vu \cdot \vu = |\vu|^2\text{.}\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-11"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Vector-Geometry-11-1"><div class="para" id="sec-Vector-Geometry-11-1-1">Let <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> be vectors in <span class="process-math">\(\R^5\)</span> with <span class="process-math">\(\vu \cdot \vv = -1\text{,}\)</span> <span class="process-math">\(|\vu| = 2\text{,}\)</span> and <span class="process-math">\(|\vv| = 3\text{.}\)</span> Use the properties of the dot product to find each of the following.</div></div>
+<article class="task exercise-like" id="sec-Vector-Geometry-11-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-2-1-1"><span class="process-math">\(\vu \cdot 2 \vv\)</span></div></article><article class="task exercise-like" id="sec-Vector-Geometry-11-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-3-1-1"><span class="process-math">\(\vv \cdot \vv\)</span></div></article><article class="task exercise-like" id="sec-Vector-Geometry-11-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-4-1-1"><span class="process-math">\((\vu + \vv) \cdot \vv\)</span></div></article><article class="task exercise-like" id="sec-Vector-Geometry-11-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-5-1-1"><span class="process-math">\((2\vu + 4\vv) \cdot (\vu - 7\vv)\)</span></div></article><article class="task exercise-like" id="sec-Vector-Geometry-11-6"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-6-1-1">
+<span class="process-math">\(|\vu| |\vv| \cos \theta\text{,}\)</span> where <span class="process-math">\(\theta\)</span> is the angle between <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span>
+</div></article><article class="task exercise-like" id="sec-Vector-Geometry-11-7"><h4 class="heading"><span class="codenumber">(f)</span></h4>
+<div class="para" id="sec-Vector-Geometry-11-7-1-1"><span class="process-math">\(\theta\)</span></div></article></article><article class="activity project-like" id="sec-Vector-Geometry-12"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Vector-Geometry-12-1">
+<div class="para" id="sec-Vector-Geometry-12-1-1">For any two vectors <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> draw the perpendicular line segment from the terminal of <span class="process-math">\(\vu\)</span> to the line containing <span class="process-math">\(\vv\text{.}\)</span> If <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> are <span class="process-math">\(n\)</span>-dimensional, you can imagine that this drawing is just what is happening in the plane containing both vectors.</div>
+<figure class="figure figure-like" id="sec-Vector-Geometry-12-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-Vector-Geometry-12-1-2-1.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.3<span class="period">.</span></span><span class="space"> </span></figcaption></figure><div class="para" id="sec-Vector-Geometry-12-1-3">Let <span class="process-math">\(a\)</span> denote the length of the perpendicular, and let <span class="process-math">\(b\)</span> denote the distance from the initial point of <span class="process-math">\(\vv\)</span> to where the perpendicular meets <span class="process-math">\(\vv\text{.}\)</span>
+</div>
+</div>
+<article class="task exercise-like" id="sec-Vector-Geometry-12-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Vector-Geometry-12-2-1-1">Which of the following is equal to the distance <span class="process-math">\(a\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-12-2-1-2">
+<li id="sec-Vector-Geometry-12-2-1-2-1"><div class="para" id="sec-Vector-Geometry-12-2-1-2-1-1"><span class="process-math">\(\displaystyle |\vv|\sin \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-12-2-1-2-2"><div class="para" id="sec-Vector-Geometry-12-2-1-2-2-1"><span class="process-math">\(\displaystyle |\vv|\cos \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-12-2-1-2-3"><div class="para" id="sec-Vector-Geometry-12-2-1-2-3-1"><span class="process-math">\(\displaystyle |\vu|\sin \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-12-2-1-2-4"><div class="para" id="sec-Vector-Geometry-12-2-1-2-4-1"><span class="process-math">\(\displaystyle |\vu|\cos \theta\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Vector-Geometry-12-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Vector-Geometry-12-3-1-1">Which of the following is equal to the distance <span class="process-math">\(a\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-12-3-1-2">
+<li id="sec-Vector-Geometry-12-3-1-2-1"><div class="para" id="sec-Vector-Geometry-12-3-1-2-1-1"><span class="process-math">\(\displaystyle \frac{\vu \cdot \vv}{|\vu|}\)</span></div></li>
+<li id="sec-Vector-Geometry-12-3-1-2-2"><div class="para" id="sec-Vector-Geometry-12-3-1-2-2-1"><span class="process-math">\(\displaystyle \frac{\vu \cdot \vv}{|\vv|}\)</span></div></li>
+<li id="sec-Vector-Geometry-12-3-1-2-3"><div class="para" id="sec-Vector-Geometry-12-3-1-2-3-1"><span class="process-math">\(\displaystyle \frac{\vv \cdot \vv}{|\vu|}\)</span></div></li>
+<li id="sec-Vector-Geometry-12-3-1-2-4"><div class="para" id="sec-Vector-Geometry-12-3-1-2-4-1"><span class="process-math">\(\displaystyle \frac{\vu \cdot \vu}{|\vv|}\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Vector-Geometry-12-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Vector-Geometry-12-4-1-1">Suppose that <span class="process-math">\(\vu = \lrangle{1,3}\)</span> and <span class="process-math">\(\vv = \lrangle{4,1}\text{.}\)</span> Find the components of the vector that points in the same direction as <span class="process-math">\(\vv\)</span> and has magnitude <span class="process-math">\(a\text{.}\)</span>
+</div></article></article><article class="assemblage assemblage-like" id="Dot-product-projection"><h3 class="heading"><span class="title">The dot product and projections.</span></h3>
+<div class="para logical" id="Dot-product-projection-2">
+<div class="para">Let <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> be vectors in <span class="process-math">\(\R^n\text{.}\)</span> The component of <span class="process-math">\(\vu\)</span> in the direction of <span class="process-math">\(\vv\)</span> is the scalar</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\comp_{\vv} \vu = \frac{\vu \cdot \vv}{|\vv|},
+\end{equation*}
+</div>
+<div class="para">and the projection of <span class="process-math">\(\vu\)</span> onto <span class="process-math">\(\vv\)</span> is the vector</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\proj_{\vv} \vu = \frac{\vu \cdot \vv}{\vv\cdot\vv} \vv.
+\end{equation*}
+</div>
+</div></article><div class="para logical" id="sec-Vector-Geometry-14">
+<div class="para">Moreover, since</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vu = \proj_{\vv} \vu + \proj_{\perp \vv} \vu,
+\end{equation*}
+</div>
+<div class="para">it follows that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\proj_{\perp \vv} \vu = \vu - \proj_{\vv} \vu.
+\end{equation*}
+</div>
+</div>
+<div class="para" id="sec-Vector-Geometry-15">This shows that once we have computed <span class="process-math">\(\proj_{\vv} \vu\text{,}\)</span> we can find <span class="process-math">\(\proj_{\perp \vv} \vu\)</span> simply by calculating the difference of two known vectors.</div>
+<article class="activity project-like" id="sec-Vector-Geometry-16"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Vector-Geometry-16-1-1">Suppose that <span class="process-math">\(\vu = \lrangle{1,3,0}\)</span> and <span class="process-math">\(\vv = \lrangle{-2,-2,5}\text{.}\)</span> Find the vector projection <span class="process-math">\(\proj_{\vv} \vu\)</span> of <span class="process-math">\(\vu\)</span> onto (i.e. paralle to) <span class="process-math">\(\vv\)</span> and the vector projection <span class="process-math">\(\proj_{\perp \vv} \vu\)</span> of <span class="process-math">\(\vu\)</span> orthogonal (i.e. anti-parallel) to <span class="process-math">\(\vv\text{.}\)</span>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-17"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:55%;"><div class="para" id="sec-Vector-Geometry-17-1-1-1">Molecular geometry is the geometry determined by arrangements of atoms in molecules. Molecular geometry includes measurements like bond angle, bond length, and torsional angles. These attributes influence several properties of molecules, such as reactivity, color, and polarity.</div></div>
+<div class="sbspanel top" style="width:45%;"><figure class="figure figure-like" id="F-9-3-methane"><img src="external/images/fig_9_3_methane.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.4<span class="period">.</span></span><span class="space"> </span>A methane molecule.</figcaption></figure></div>
+</div></div> <div class="para" id="sec-Vector-Geometry-17-1-2">As an example of the molecular geometry of a molecule, consider the methane <span class="process-math">\(\text{CH}_4\)</span> molecule, as illustrated in <a href="sec-Vector-Geometry.html#F-9-3-methane" class="xref" data-knowl="./knowl/xref/F-9-3-methane.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.3.4">Figure 1.3.4</a>. According to the Valence Shell Electron Repulsion (VSEPR) model, atoms that surround single different atoms do so in a way that positions them as far apart as possible. This means that the hydrogen atoms in the methane molecule arrange themselves at the vertices of a regular tetrahedron. The <em class="emphasis">bond angle</em> for methane is the angle determined by two consecutive hydrogen atoms and the central carbon atom. To determine the bond angle for methane, we can place the center carbon atom at the point <span class="process-math">\(\left(\frac{1}{2}, \frac{1}{2}, \frac{1}{2} \right)\)</span> and the hydrogen atoms at the points <span class="process-math">\((0,0,0)\text{,}\)</span> <span class="process-math">\((1,1,0)\text{,}\)</span> <span class="process-math">\((1,0,1)\text{,}\)</span> and <span class="process-math">\((0,1,1)\text{.}\)</span> Find the bond angle for methane to the nearest tenth of a degree.</div>
+<div class="solutions">
+<details id="sec-Vector-Geometry-17-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para" id="sec-Vector-Geometry-17-2-1"><span class="process-math">\(109.47^(\circ)\text{.}\)</span></div></div></details><details id="sec-Vector-Geometry-17-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content">
+<div class="para" id="sec-Vector-Geometry-17-3-1">The vector from <span class="process-math">\((0, 0, 0) to (\frac{1}{2}, \frac{1}{2}, \frac{1}{2})\)</span> is <span class="process-math">\(\va = \langle \frac{-1}{2}, \frac{-1}{2}, \frac{-1}{2} \rangle\text{.}\)</span>
+</div>
+<div class="para" id="sec-Vector-Geometry-17-3-2">The vector from <span class="process-math">\((\frac{1}{2}, \frac{1}{2}, \frac{1}{2}) to (0, 1, 1)\)</span> is <span class="process-math">\(\vb = \langle \frac{-1}{2}, \frac{1}{2}, \frac{1}{2} \rangle\text{.}\)</span>
+</div>
+<div class="para" id="sec-Vector-Geometry-17-3-3"><span class="process-math">\(|\va| = \sqrt{(\frac{-1}{2})^2 + (\frac{-1}{2})^2 + (\frac{-1}{2})^2} = \sqrt{\frac{3}{4}}, |\vb| = \sqrt{(\frac{-1}{2})^2 + (\frac{1}{2})^2 + (\frac{1}{2})^2} = \sqrt{\frac{3}{4}}\text{.}\)</span></div>
+<div class="para" id="sec-Vector-Geometry-17-3-4"><span class="process-math">\(\theta = cos^-1(\frac{(\frac{-1}{2})(\frac{-1}{2}) + (\frac{-1}{2})(\frac{1}{2}) + (\frac{-1}{2})(\frac{1}{2})}{(\sqrt{\frac{3}{4}}) * (\sqrt{\frac{3}{4}})}) = 109.47^(\circ)\text{.}\)</span></div>
+</div></details>
+</div></article><article class="activity project-like" id="ve2-dot-product-application"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.9</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ve2-dot-product-application-1-1">
+<div class="para">When constant force is applied to an object so that the object moves in a straight line from point <span class="process-math">\(P\)</span> to point <span class="process-math">\(Q\text{,}\)</span> the work <span class="process-math">\(W\)</span> done by the form <span class="process-math">\(\textbf{F}\text{,}\)</span> acting at an angle <span class="process-math">\(\theta\)</span> from the line of motion, is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+W = \textbf{F}\cdot \textbf{PQ} = ||\textbf{F}||\, ||\textbf{PQ}||\cos\theta
+\end{equation*}
+</div>
+</div> <div class="para" id="ve2-dot-product-application-1-2">A constant force of 30 pounds is applied at angle of <span class="process-math">\(60\dc\)</span> to pull a handcart 10 feet across the ground. What is the work done by this force?</div></article><article class="definition definition-like" id="sec-Vector-Geometry-19"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span><span class="space"> </span><span class="title">Cross Product (Algebraic Definition).</span>
+</h3>
+<div class="para logical" id="sec-Vector-Geometry-19-2-1">
+<div class="para">The <dfn class="terminology">cross product</dfn> <span class="process-math">\(\vu \times \vv\)</span> of vectors <span class="process-math">\(\vu = u_1\vi + u_2\vj + u_3\vk\)</span> and <span class="process-math">\(\vv = v_1\vi + v_2\vj + v_3\vk\)</span> in <span class="process-math">\(\R^3\)</span> is the vector</div>
+<div class="displaymath process-math" id="E_9_4_cross_def">
+\begin{equation}
+(u_2v_3-u_3v_2)\vi - (u_1v_3-u_3v_1)\vj + (u_1v_2-u_2v_1)\vk.\tag{1.3.1}
+\end{equation}
+</div>
+</div></article><article class="remark remark-like" id="sec-Vector-Geometry-20"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Vector-Geometry-20-1">The cross product formula looks complicated, but it can be easily remembered as the result of computing the determinant of a 3x3 matrix.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\vu\times\vv = 
+\left|
+\begin{array}{ccc}
+\vi \amp  \vj \amp  \vk \\
+u_1 \amp  u_2 \amp  u_3 \\
+v_1 \amp  v_2 \amp  v_3
+\end{array} 
+\right|.
+\end{equation*}
+</div>
+<div class="para" id="sec-Vector-Geometry-20-3">Keep in mind that this is a mnemonic device. This is not really a matrix like the ones you know from linear algebra beacuse it has some entries that are scalars and others that are vectors. However, the formula is not unrelated to linear algebra because you can derive it by solving a system of equations using row reduction.</div></article><article class="activity project-like" id="ve2-cross-product-1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="ve2-cross-product-1-1"><div class="para" id="ve2-cross-product-1-1-1">Let <span class="process-math">\(\textbf{a} = \lrangle{-1,2,3}\)</span> and <span class="process-math">\(\textbf{b} = \lrangle{1,0,-1}\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="ve2-cross-product-1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="ve2-cross-product-1-2-1-1">
+<div class="para">Which vector gives the cross product <span class="process-math">\(\textbf{a}\times\textbf{b}\text{?}\)</span>
+</div>
+<ol class="decimal" id="ve2-cross-product-1-2-1-1-2">
+<li id="ve2-cross-product-1-2-1-1-2-1"><div class="para" id="ve2-cross-product-1-2-1-1-2-1-1"><span class="process-math">\(\displaystyle \lrangle{-2,2,-2}\)</span></div></li>
+<li id="ve2-cross-product-1-2-1-1-2-2"><div class="para" id="ve2-cross-product-1-2-1-1-2-2-1"><span class="process-math">\(\displaystyle \lrangle{2,-2,2}\)</span></div></li>
+<li id="ve2-cross-product-1-2-1-1-2-3"><div class="para" id="ve2-cross-product-1-2-1-1-2-3-1"><span class="process-math">\(\displaystyle \lrangle{2,2,2}\)</span></div></li>
+<li id="ve2-cross-product-1-2-1-1-2-4"><div class="para" id="ve2-cross-product-1-2-1-1-2-4-1"><span class="process-math">\(\displaystyle \lrangle{-2,-2,-2}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="ve2-cross-product-1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="ve2-cross-product-1-3-1-1">
+<div class="para">Which option gives the cross product <span class="process-math">\(\textbf{b}\times\textbf{a}\text{?}\)</span>
+</div>
+<ol class="decimal" id="ve2-cross-product-1-3-1-1-2">
+<li id="ve2-cross-product-1-3-1-1-2-1"><div class="para" id="ve2-cross-product-1-3-1-1-2-1-1"><span class="process-math">\(\displaystyle \lrangle{-2,2,-2}\)</span></div></li>
+<li id="ve2-cross-product-1-3-1-1-2-2"><div class="para" id="ve2-cross-product-1-3-1-1-2-2-1"><span class="process-math">\(\displaystyle \lrangle{2,-2,2}\)</span></div></li>
+<li id="ve2-cross-product-1-3-1-1-2-3"><div class="para" id="ve2-cross-product-1-3-1-1-2-3-1"><span class="process-math">\(\displaystyle \lrangle{2,2,2}\)</span></div></li>
+<li id="ve2-cross-product-1-3-1-1-2-4"><div class="para" id="ve2-cross-product-1-3-1-1-2-4-1"><span class="process-math">\(\displaystyle \lrangle{-2,-2,-2}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="ve2-cross-product-1-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="ve2-cross-product-1-4-1-1">In order to be commutative, it must be true that <span class="process-math">\(\textbf{a}\times\textbf{b} = \textbf{b}\times\textbf{a}\text{.}\)</span> Is the cross product commutative? What relationship, if any, can you establish from this task?</div></article><article class="task exercise-like" id="ve2-cross-product-1-5"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="ve2-cross-product-1-5-1-1">Compute <span class="process-math">\((\textbf{a}\times\textbf{b}) \cdot \textbf{a}\)</span> and <span class="process-math">\((\textbf{a}\times\textbf{b}) \cdot \textbf{b}\text{.}\)</span> What geometric relationship holds between <span class="process-math">\(\textbf{a}\times\textbf{b}\)</span> and <span class="process-math">\(\textbf{a}\)</span> and <span class="process-math">\(\textbf{b}\text{?}\)</span>
+</div></article></article><article class="remark remark-like" id="sec-Vector-Geometry-22"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Vector-Geometry-22-1">The cross product of two vectors <span class="process-math">\(\textbf{a}\)</span> and <span class="process-math">\(\textbf{b}\)</span> produces a third vector, <span class="process-math">\(\textbf{a}\times\textbf{b}\text{,}\)</span> which is orthogonal to <span class="process-math">\(\textbf{a}\)</span> and <span class="process-math">\(\textbf{b}\)</span> according to the right-hand rule.</div>
+<div class="image-box" style="width: 25%; margin-left: 37.5%; margin-right: 37.5%;"><img src="generated/latex-image/sec-Vector-Geometry-22-2.svg" role="img" class="contained"></div>
+<div class="para" id="sec-Vector-Geometry-22-3">The system of equations from which the cross product is derived comes from the requirement that the cross product be orthogonal to both <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\text{.}\)</span>
+</div></article><article class="assemblage assemblage-like" id="Cross-product-properties"><h3 class="heading"><span class="title">Properties of the cross product.</span></h3>
+<div class="para logical" id="Cross-product-properties-2">
+<div class="para">Let <span class="process-math">\(\vu\text{,}\)</span> <span class="process-math">\(\vv\text{,}\)</span> and <span class="process-math">\(\vw\)</span> be vectors in <span class="process-math">\(\R^3\text{,}\)</span> and let <span class="process-math">\(c\)</span> be a scalar. Then</div>
+<ol class="decimal" id="Cross-product-properties-2-6">
+<li id="Cross-product-properties-2-6-1"><div class="para" id="Cross-product-properties-2-6-1-1"><span class="process-math">\(\displaystyle \vu \times \vv = -(\vv \times \vu)\)</span></div></li>
+<li id="Cross-product-properties-2-6-2"><div class="para" id="Cross-product-properties-2-6-2-1"><span class="process-math">\(\displaystyle (\vu +\vv)\times \vw = (\vu \times \vw) + (\vv \times \vw)\)</span></div></li>
+<li id="Cross-product-properties-2-6-3"><div class="para" id="Cross-product-properties-2-6-3-1"><span class="process-math">\(\displaystyle (c\vu)\times \vw = c(\vu \times \vw) = \vu \times (c\vw)\)</span></div></li>
+<li id="Cross-product-properties-2-6-4"><div class="para" id="Cross-product-properties-2-6-4-1">
+<span class="process-math">\(\vu\times\vv = \vzero\)</span> if <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> are parallel.</div></li>
+<li id="Cross-product-properties-2-6-5"><div class="para logical" id="Cross-product-properties-2-6-5-1">
+<div class="para">The cross product is not associative;  that is, in general</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(\vu\times\vv)\times\vw \neq \vu\times(\vv\times\vw).
+\end{equation*}
+</div>
+</div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-24"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.11</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-Vector-Geometry-24-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Vector-Geometry-24-1-1-1">What is <span class="process-math">\(\vi \times \vj\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-24-1-1-2">
+<li id="sec-Vector-Geometry-24-1-1-2-1"><div class="para" id="sec-Vector-Geometry-24-1-1-2-1-1"><span class="process-math">\(\displaystyle \vzero\)</span></div></li>
+<li id="sec-Vector-Geometry-24-1-1-2-2"><div class="para" id="sec-Vector-Geometry-24-1-1-2-2-1"><span class="process-math">\(\displaystyle \vk\)</span></div></li>
+<li id="sec-Vector-Geometry-24-1-1-2-3"><div class="para" id="sec-Vector-Geometry-24-1-1-2-3-1"><span class="process-math">\(\displaystyle -\vk\)</span></div></li>
+<li id="sec-Vector-Geometry-24-1-1-2-4"><div class="para" id="sec-Vector-Geometry-24-1-1-2-4-1"><span class="process-math">\(\displaystyle \vi \vj\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Vector-Geometry-24-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Vector-Geometry-24-2-1-1">What is <span class="process-math">\(\vi \times \vk\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-24-2-1-2">
+<li id="sec-Vector-Geometry-24-2-1-2-1"><div class="para" id="sec-Vector-Geometry-24-2-1-2-1-1"><span class="process-math">\(\displaystyle \vzero\)</span></div></li>
+<li id="sec-Vector-Geometry-24-2-1-2-2"><div class="para" id="sec-Vector-Geometry-24-2-1-2-2-1"><span class="process-math">\(\displaystyle -\vi\)</span></div></li>
+<li id="sec-Vector-Geometry-24-2-1-2-3"><div class="para" id="sec-Vector-Geometry-24-2-1-2-3-1"><span class="process-math">\(\displaystyle \vj\)</span></div></li>
+<li id="sec-Vector-Geometry-24-2-1-2-4"><div class="para" id="sec-Vector-Geometry-24-2-1-2-4-1"><span class="process-math">\(\displaystyle -\vj\)</span></div></li>
+</ol></article></article><article class="activity project-like" id="ve2-cross-product-2"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.12</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ve2-cross-product-2-1-1">
+<div class="para">Use the results of the previous activity and the properties of the cross product to compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+(3\vj \times 2\vk) \times (-\vi)
+\end{equation*}
+</div>
+</div></article><article class="definition definition-like" id="def-cross-product-geo"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.3.8</span><span class="period">.</span><span class="space"> </span><span class="title">Cross Product (Geometric Definition).</span>
+</h3>
+<div class="para logical" id="def-cross-product-geo-3-1">
+<div class="para">Let <span class="process-math">\(\textbf{u}\)</span> and <span class="process-math">\(\textbf{v}\)</span> be two vectors, and let <span class="process-math">\(\theta\)</span> be the angle between them. Then,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+||\textbf{u}\times\textbf{v}|| = ||\textbf{u}||\,||\textbf{v}||\sin\theta
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="sec-Vector-Geometry-27"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.13</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Vector-Geometry-27-1">
+<div class="para" id="sec-Vector-Geometry-27-1-1"></div>
+<figure class="figure figure-like" id="sec-Vector-Geometry-27-1-2"><div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/sec-Vector-Geometry-27-1-2-1.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.3.9<span class="period">.</span></span><span class="space"> </span>The parallelogram spanned by <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span></figcaption></figure>
+</div>
+<article class="task exercise-like" id="sec-Vector-Geometry-27-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Vector-Geometry-27-2-1-1">Which of the following is equal to the length <span class="process-math">\(b\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-27-2-1-2">
+<li id="sec-Vector-Geometry-27-2-1-2-1"><div class="para" id="sec-Vector-Geometry-27-2-1-2-1-1"><span class="process-math">\(\displaystyle |\vu| \sin \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-27-2-1-2-2"><div class="para" id="sec-Vector-Geometry-27-2-1-2-2-1"><span class="process-math">\(\displaystyle |\vv| \sin \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-27-2-1-2-3"><div class="para" id="sec-Vector-Geometry-27-2-1-2-3-1"><span class="process-math">\(\displaystyle |\vu| \cos \theta\)</span></div></li>
+<li id="sec-Vector-Geometry-27-2-1-2-4"><div class="para" id="sec-Vector-Geometry-27-2-1-2-4-1"><span class="process-math">\(\displaystyle |\vv| \cos \theta\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Vector-Geometry-27-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Vector-Geometry-27-3-1-1">Which of the following gives the area of the parallelogram spanned by <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="sec-Vector-Geometry-27-3-1-2">
+<li id="sec-Vector-Geometry-27-3-1-2-1"><div class="para" id="sec-Vector-Geometry-27-3-1-2-1-1"><span class="process-math">\(\displaystyle |\vu| \cdot |\vv|\)</span></div></li>
+<li id="sec-Vector-Geometry-27-3-1-2-2"><div class="para" id="sec-Vector-Geometry-27-3-1-2-2-1"><span class="process-math">\(\displaystyle |\vv| b\)</span></div></li>
+<li id="sec-Vector-Geometry-27-3-1-2-3"><div class="para" id="sec-Vector-Geometry-27-3-1-2-3-1"><span class="process-math">\(\displaystyle |\vu| a\)</span></div></li>
+<li id="sec-Vector-Geometry-27-3-1-2-4"><div class="para" id="sec-Vector-Geometry-27-3-1-2-4-1"><span class="process-math">\(\displaystyle ab\)</span></div></li>
+</ol></article><article class="task exercise-like" id="sec-Vector-Geometry-27-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para" id="sec-Vector-Geometry-27-4-1-1">How is the cross product of two vectors related to the area of the parallelogram spanned by them?</div></article></article><article class="remark remark-like" id="sec-Vector-Geometry-28"><h3 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.10</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="sec-Vector-Geometry-28-1">
+<div class="para">The cross product of two vectors <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\)</span> is completely determined geometrically by the following three properties:</div>
+<ol class="decimal" id="sec-Vector-Geometry-28-1-3">
+<li id="sec-Vector-Geometry-28-1-3-1"><div class="para" id="sec-Vector-Geometry-28-1-3-1-1">
+<span class="process-math">\(\vu \times \vv\)</span> is orthogonal to both <span class="process-math">\(\vu\)</span> and <span class="process-math">\(\vv\text{.}\)</span>
+</div></li>
+<li id="sec-Vector-Geometry-28-1-3-2"><div class="para" id="sec-Vector-Geometry-28-1-3-2-1">Between the two possible orthogonal directions, the direction <span class="process-math">\(\vu \times \vv\)</span> is determined by the right-hand rule.</div></li>
+<li id="sec-Vector-Geometry-28-1-3-3"><div class="para" id="sec-Vector-Geometry-28-1-3-3-1">The magnitude of <span class="process-math">\(\vu \times \vv\)</span> is equal to the area of the parallelogram formed by the two vectors.</div></li>
+</ol>
+</div></article><article class="activity project-like" id="ve2-cross-product-3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.14</span><span class="period">.</span>
+</h3>
+<div class="para" id="ve2-cross-product-3-1-1">Find two unit vectors orthogonal to both <span class="process-math">\(\textbf{u} = \lrangle{3,5,-1}\)</span> and <span class="process-math">\(\textbf{v} = \lrangle{2,-2,1}\)</span>
+</div></article><article class="activity project-like" id="ve2-cross-product-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.15</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="ve2-cross-product-4-1-1">
+<div class="para">
+<em class="emphasis">Torque</em> is the tendency of a force to produce rotation about an axis of rotation. Let <span class="process-math">\(\textbf{r}\)</span> is a vector whose initial point is located on the axis of rotation and whose terminal point is located at the point where the force is applied. Let <span class="process-math">\(\textbf{F}\)</span> be the vector representing the force. Then,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\mathbf{\tau} = \textbf{r}\times\textbf{F}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\mathbf{\tau}\)</span> represents the torque vector.</div>
+</div> <div class="para" id="ve2-cross-product-4-1-2">A bolt is tightened by applying a 10 N force to a wrench of length 0.3 meters; the angle between the wrench and the force vector is <span class="process-math">\(40\dc\text{.}\)</span> Find the magnitude of the torque about the center of the bolt.</div></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-Vectors.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-Lines-and-Planes.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

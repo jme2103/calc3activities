@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Double Integrals</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Calculus III">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Jonathan Epstein">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
+<p class="byline">Jonathan Epstein</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-MI.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-MI.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-MI-double-integrals-polar-and-apps.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} 
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrpar}[1]{\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\dc}{^\circ}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vT}{\mathbf{T}}
+\newcommand{\vx}{\mathbf{x}}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-PD.html" class="internal"><span class="codenumber">2</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Partial-Derivs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Tangent-Planes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Chain-Rule.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Directional-Derivs-and-Grad.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Directional Derivatives and Gradients</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PD-Optimization.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-Optimization-Intro" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Review of Single-Variable Optimization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-closed-sets" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-critical-points" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Critical Points and The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-optimization" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Optimization on Closed and Bounded Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-Lagrange" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-MI.html" class="internal"><span class="codenumber">3</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-MI-double-integrals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Review of Riemann Integrals in One Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Double Integrals Over Rectangules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-iterated-ntegrals" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Double Integrals Over General Regions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Double Integrals in Polar Coordinates and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-applications" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-parametric-surfaces.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-triple-integrals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Triple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cartesian" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Triple Integrals in Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cylindrical" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Triple Integrals in cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-spherical" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-change-of-vars.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Change of Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-VC.html" class="internal"><span class="codenumber">4</span> <span class="title">Fundamental Theorems of Vector Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-VC-line-integrals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Line Integrals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-MI-double-integrals"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.1</span><span class="space"> </span><span class="title">Double Integrals</span>
+</h2>
+<section class="subsection" id="subsec-review-single-variable-riemann-integrals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="space"> </span><span class="title">Review of Riemann Integrals in One Variable</span>
+</h3>
+<div class="para" id="subsec-review-single-variable-riemann-integrals-2">Before defining double and triple integrals, let’s review how Riemann integral are defined in single-variable calculus. First, we fix and interval <span class="process-math">\([a,b]\)</span> over which we wish integrate a function <span class="process-math">\(f(x)\text{.}\)</span> Next, we partition the interval into <span class="process-math">\(n\)</span> subintervals <span class="process-math">\([x_{i-1},x_i]\)</span> of equal length <span class="process-math">\(\Delta x\text{.}\)</span>
+</div>
+<article class="activity project-like" id="subsec-review-single-variable-riemann-integrals-3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-review-single-variable-riemann-integrals-3-1-1">Which of the following expressions is the length of each subinterval?</div> <ol class="upper-alpha ol-marker-1" id="subsec-review-single-variable-riemann-integrals-3-1-2">
+<li id="subsec-review-single-variable-riemann-integrals-3-1-2-1"><div class="para" id="subsec-review-single-variable-riemann-integrals-3-1-2-1-1"><span class="process-math">\(\displaystyle \Delta x = \frac{b-a}{n-1}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-3-1-2-2"><div class="para" id="subsec-review-single-variable-riemann-integrals-3-1-2-2-1"><span class="process-math">\(\displaystyle \Delta x = \frac{b-a}{n+1}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-3-1-2-3"><div class="para" id="subsec-review-single-variable-riemann-integrals-3-1-2-3-1"><span class="process-math">\(\displaystyle \Delta x = \frac{b-a}{n}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-3-1-2-4"><div class="para" id="subsec-review-single-variable-riemann-integrals-3-1-2-4-1"><span class="process-math">\(\displaystyle \Delta x = b-a\)</span></div></li>
+</ol></article><article class="activity project-like" id="subsec-review-single-variable-riemann-integrals-4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-review-single-variable-riemann-integrals-4-1-1">Which of the following expressions is a formula for the endpoints of the subintervals?</div> <ol class="upper-alpha ol-marker-1" id="subsec-review-single-variable-riemann-integrals-4-1-2">
+<li id="subsec-review-single-variable-riemann-integrals-4-1-2-1"><div class="para" id="subsec-review-single-variable-riemann-integrals-4-1-2-1-1"><span class="process-math">\(\displaystyle x_i = a + i \lrpar{ \frac{b-a}{n} }\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-4-1-2-2"><div class="para" id="subsec-review-single-variable-riemann-integrals-4-1-2-2-1"><span class="process-math">\(\displaystyle x_i = a + i \Delta x\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-4-1-2-3"><div class="para" id="subsec-review-single-variable-riemann-integrals-4-1-2-3-1"><span class="process-math">\(\displaystyle x_i = i \Delta x\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-4-1-2-4"><div class="para" id="subsec-review-single-variable-riemann-integrals-4-1-2-4-1"><span class="process-math">\(\displaystyle x_i = i (b-a)\)</span></div></li>
+</ol></article><div class="para" id="subsec-review-single-variable-riemann-integrals-5">Next, we choose a <dfn class="terminology">sample point</dfn> denoted <span class="process-math">\(x_i^*\)</span> in each subinterval <span class="process-math">\([x_{i-1},x_i]\text{.}\)</span> Often, we take the sample point to be the left endpoint, righ endpoint, or midpoint of the subinterval.</div>
+<article class="activity project-like" id="subsec-review-single-variable-riemann-integrals-6"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-1">For each sample point decide if it’s a left endpoint, right endpoint, midpoint, or something else of the subinterval <span class="process-math">\([x_{i-1},x_i]\text{.}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="subsec-review-single-variable-riemann-integrals-6-1-2">
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-1"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-1-1"><span class="process-math">\(\displaystyle x_i^* = a\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-2"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-2-1"><span class="process-math">\(\displaystyle x_i^* = x_{i-1}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-3"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-3-1"><span class="process-math">\(\displaystyle x_i^* = x_{i-1} + \frac{\Delta x}{3}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-4"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-4-1"><span class="process-math">\(\displaystyle x_i^* = x_i\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-5"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-5-1"><span class="process-math">\(\displaystyle x_i^* = \frac{x_{i-1}+x_i}{2}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-6-1-2-6"><div class="para" id="subsec-review-single-variable-riemann-integrals-6-1-2-6-1"><span class="process-math">\(\displaystyle x_i^* = x_{i+1}\)</span></div></li>
+</ol></article><div class="para logical" id="subsec-review-single-variable-riemann-integrals-7">
+<div class="para">Now, we use the sample points to form a <dfn class="terminology">Riemann sum</dfn>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{i=1}^n f(x_i^*) \Delta x.
+\end{equation*}
+</div>
+</div>
+<article class="activity project-like" id="subsec-review-single-variable-riemann-integrals-8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-1">Which of the following is a Riemann sum of the function <span class="process-math">\(f(x) = x^2 + 1\)</span> over the interval <span class="process-math">\([5,11]\)</span> with <span class="process-math">\(n=7\)</span> subintervals and using sample points that are the right endpoints of the subintervals?</div> <ol class="upper-alpha ol-marker-1" id="subsec-review-single-variable-riemann-integrals-8-1-2">
+<li id="subsec-review-single-variable-riemann-integrals-8-1-2-1"><div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-2-1-1"><span class="process-math">\(\displaystyle \sum_{i = 5}^{11} \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-8-1-2-2"><div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-2-2-1"><span class="process-math">\(\displaystyle \sum_{i = 1}^7 \lrpar{\lrpar{ i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-8-1-2-3"><div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-2-3-1"><span class="process-math">\(\displaystyle \sum_{i = 1}^7 \lrpar{\lrpar{ 5 + i \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-8-1-2-4"><div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-2-4-1"><span class="process-math">\(\displaystyle \sum_{i = 1}^7 \lrpar{ 5 + i \frac{11-5}{7} } \frac{11-5}{7}\)</span></div></li>
+<li id="subsec-review-single-variable-riemann-integrals-8-1-2-5"><div class="para" id="subsec-review-single-variable-riemann-integrals-8-1-2-5-1"><span class="process-math">\(\displaystyle \sum_{i = 1}^7 \lrpar{\lrpar{ 5 + (i-1) \frac{11-5}{7} }^2 + 1}\frac{11-5}{7}\)</span></div></li>
+</ol></article><div class="para logical" id="subsec-review-single-variable-riemann-integrals-9">
+<div class="para">Finally, the Riemann integral is defined as the limit of Riemann sums as the number of subintervals goes to infinity.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b f(x) \ dx = \lim_{n \to \infty} \sum_{i=1}^n f(x_i^*) \Delta x
+\end{equation*}
+</div>
+<div class="para">It’s not obvious (i.e. it requires a proof) that this definition is independent of the choice of sample points. In other words, if this limit exists, then you can choose <em class="emphasis">any</em> sample points and the limit will be the same.</div>
+</div>
+<article class="activity project-like" id="subsec-review-single-variable-riemann-integrals-10"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-review-single-variable-riemann-integrals-10-1-1">
+<div class="para">Use the limit definition the Riemann integral to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_a^b x \ dx = \frac{1}{2}(b^2 - a^2).
+\end{equation*}
+</div>
+</div></article></section><section class="subsection" id="subsec-double-integrals-over-rectangles"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="space"> </span><span class="title">Double Integrals Over Rectangules</span>
+</h3>
+<div class="para" id="subsec-double-integrals-over-rectangles-2">We will extend the above process outlined above to define double integrals. Instead of a function of one variables, we will have a function of two variables <span class="process-math">\(f(x,y)\text{,}\)</span> and instead of an interval of real numbers, we will have a rectangle in the plane.</div>
+<div class="para" id="subsec-double-integrals-over-rectangles-3">But first, let’s consider an example. Emmy is wants to know how much of a toxic pollutant is present in the soil of a rectangular plot of land. To get an estimate, she first divides the plot into subrectangles. In each subrectangle, she extracts a soil sample and measures the concentration of the pollutant.</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-double-integrals-over-rectangles-4.svg" role="img" class="contained"></div>
+<div class="para logical" id="subsec-double-integrals-over-rectangles-5">
+<div class="para">Let <span class="process-math">\((x_{ij}^*, y_{ij}^*)\)</span> be the location of the sample from the <span class="process-math">\(ij\)</span>-th subrectangle and let <span class="process-math">\(f(x,y)\)</span> be the concentration of the pollutant at location <span class="process-math">\((x,y)\text{.}\)</span> Emmy now knows the value of the function at many evenly spaced points throughout the plot of land. Making the assumption that the concentration of the pollutant in each subrectangle is roughly the same as the concentration at the sample location <span class="process-math">\((x_{ij}^*, y_{ij}^*)\text{,}\)</span> she can approximate the total amount of the pollutant as</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\text{total quantity of pollutant} \approx \sum_{i=1}^6 \sum_{j=1}^4 f(x_{ij}^*, y_{ij}^*) \Delta A,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\Delta A\)</span> is the area of each subrectangle. Clearly, Emmy’s approximation will get better and better as divides the plot into more and more subrectangles. This is the idea behind double integrals.</div>
+</div>
+<article class="definition definition-like" id="subsec-double-integrals-over-rectangles-6"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.1</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-double-integrals-over-rectangles-6-1-1">
+<div class="para">Let <span class="process-math">\(f\)</span> be a continuous function on a rectangle <span class="process-math">\(R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}\text{.}\)</span> A <dfn class="terminology">double Riemann sum for <span class="process-math">\(f\)</span> over <span class="process-math">\(R\)</span></dfn> is created as follows.</div>
+<ul class="disc" id="subsec-double-integrals-over-rectangles-6-1-1-5">
+<li id="subsec-double-integrals-over-rectangles-6-1-1-5-1"><div class="para" id="subsec-double-integrals-over-rectangles-6-1-1-5-1-1">Partition the interval <span class="process-math">\([a, b]\)</span> into <span class="process-math">\(m\)</span> subintervals of equal length <span class="process-math">\(\Delta x = \frac{b-a}{m}\text{.}\)</span> Let <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(x_1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(x_m\)</span> be the endpoints of these subintervals, where <span class="process-math">\(a = x_0\lt x_1\lt x_2 \lt  \cdots \lt  x_m = b\text{.}\)</span>
+</div></li>
+<li id="subsec-double-integrals-over-rectangles-6-1-1-5-2"><div class="para" id="subsec-double-integrals-over-rectangles-6-1-1-5-2-1">Partition the interval <span class="process-math">\([c, d]\)</span> into <span class="process-math">\(n\)</span> subintervals of equal length <span class="process-math">\(\Delta y = \frac{d-c}{n}\text{.}\)</span> Let <span class="process-math">\(y_0\text{,}\)</span> <span class="process-math">\(y_1\text{,}\)</span> <span class="process-math">\(\ldots\text{,}\)</span> <span class="process-math">\(y_n\)</span> be the endpoints of these subintervals, where <span class="process-math">\(c = y_0\lt y_1\lt y_2 \lt  \cdots \lt  y_n = d\text{.}\)</span>
+</div></li>
+<li id="subsec-double-integrals-over-rectangles-6-1-1-5-3"><div class="para" id="subsec-double-integrals-over-rectangles-6-1-1-5-3-1">These two partitions create a partition of the rectangle <span class="process-math">\(R\)</span> into <span class="process-math">\(mn\)</span> subrectangles <span class="process-math">\(R_{ij}\)</span> with opposite vertices <span class="process-math">\((x_{i-1},y_{j-1})\)</span> and <span class="process-math">\((x_i, y_j)\)</span> for <span class="process-math">\(i\)</span> between <span class="process-math">\(1\)</span> and <span class="process-math">\(m\)</span> and <span class="process-math">\(j\)</span> between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\text{.}\)</span> These rectangles all have equal area <span class="process-math">\(\Delta A = \Delta x \cdot \Delta y\text{.}\)</span>
+</div></li>
+<li id="subsec-double-integrals-over-rectangles-6-1-1-5-4"><div class="para logical" id="subsec-double-integrals-over-rectangles-6-1-1-5-4-1">
+<div class="para">Choose a point <span class="process-math">\((x_{ij}^*, y_{ij}^*)\)</span> in each rectangle <span class="process-math">\(R_{ij}\text{.}\)</span> Then, a double Riemann sum for <span class="process-math">\(f\)</span> over <span class="process-math">\(R\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div></article><article class="activity project-like" id="subsec-double-integrals-over-rectangles-7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-double-integrals-over-rectangles-7-1"><div class="para" id="subsec-double-integrals-over-rectangles-7-1-1">Let <span class="process-math">\(f(x,y) = x + 2y\)</span> and let <span class="process-math">\(R = [0,2] \times [1,3]\text{.}\)</span> Draw a picture of <span class="process-math">\(R\)</span> and the grid that results from paritioning <span class="process-math">\([0,2]\)</span> into 2 subintervals and <span class="process-math">\([1,3]\)</span> into 2 subintervals.</div></div>
+<article class="task exercise-like" id="subsec-double-integrals-over-rectangles-7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="subsec-double-integrals-over-rectangles-7-2-1-1">What are the Caresian coordinates of <span class="process-math">\((x_2, y_1)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="subsec-double-integrals-over-rectangles-7-2-1-2">
+<li id="subsec-double-integrals-over-rectangles-7-2-1-2-1"><div class="para" id="subsec-double-integrals-over-rectangles-7-2-1-2-1-1"><span class="process-math">\(\displaystyle (0,1)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-2-1-2-2"><div class="para" id="subsec-double-integrals-over-rectangles-7-2-1-2-2-1"><span class="process-math">\(\displaystyle (1,2)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-2-1-2-3"><div class="para" id="subsec-double-integrals-over-rectangles-7-2-1-2-3-1"><span class="process-math">\(\displaystyle (2,3)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-2-1-2-4"><div class="para" id="subsec-double-integrals-over-rectangles-7-2-1-2-4-1"><span class="process-math">\(\displaystyle (2,2)\)</span></div></li>
+</ol></article><article class="task exercise-like" id="subsec-double-integrals-over-rectangles-7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="subsec-double-integrals-over-rectangles-7-3-1-1">What is the value of <span class="process-math">\(\Delta A\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="subsec-double-integrals-over-rectangles-7-3-1-2">
+<li id="subsec-double-integrals-over-rectangles-7-3-1-2-1"><div class="para" id="subsec-double-integrals-over-rectangles-7-3-1-2-1-1"><span class="process-math">\(\displaystyle 1\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-3-1-2-2"><div class="para" id="subsec-double-integrals-over-rectangles-7-3-1-2-2-1"><span class="process-math">\(\displaystyle 2\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-3-1-2-3"><div class="para" id="subsec-double-integrals-over-rectangles-7-3-1-2-3-1"><span class="process-math">\(\displaystyle 4\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-3-1-2-4"><div class="para" id="subsec-double-integrals-over-rectangles-7-3-1-2-4-1"><span class="process-math">\(\displaystyle 6\)</span></div></li>
+</ol></article><article class="task exercise-like" id="subsec-double-integrals-over-rectangles-7-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="subsec-double-integrals-over-rectangles-7-4-1-1">If we take our sample points <span class="process-math">\((x_{ij}^*, y_{ij}^*)\)</span> to be the center of each rectangle, what is <span class="process-math">\((x_{12}^*, y_{12}^*)\text{?}\)</span>
+</div> <ol class="upper-alpha ol-marker-1 cols2" id="subsec-double-integrals-over-rectangles-7-4-1-2">
+<li id="subsec-double-integrals-over-rectangles-7-4-1-2-1"><div class="para" id="subsec-double-integrals-over-rectangles-7-4-1-2-1-1"><span class="process-math">\(\displaystyle (0.5,1.5)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-4-1-2-2"><div class="para" id="subsec-double-integrals-over-rectangles-7-4-1-2-2-1"><span class="process-math">\(\displaystyle (1,2)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-4-1-2-3"><div class="para" id="subsec-double-integrals-over-rectangles-7-4-1-2-3-1"><span class="process-math">\(\displaystyle (2.5,0.5)\)</span></div></li>
+<li id="subsec-double-integrals-over-rectangles-7-4-1-2-4"><div class="para" id="subsec-double-integrals-over-rectangles-7-4-1-2-4-1"><span class="process-math">\(\displaystyle (0.5,2.5)\)</span></div></li>
+</ol></article><article class="task exercise-like" id="subsec-double-integrals-over-rectangles-7-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para logical" id="subsec-double-integrals-over-rectangles-7-5-1-1">
+<div class="para">Write out all the terms of the Riemann sum</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A
+\end{equation*}
+</div>
+<div class="para">for this scenario without any simlificiation. Then use a calculator to compute the numerical value of the Riemann and give an interpreation of it.</div>
+</div></article></article><article class="definition definition-like" id="subsec-double-integrals-over-rectangles-8"><h4 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">3.1.2</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-double-integrals-over-rectangles-8-1-1">
+<div class="para">Let <span class="process-math">\(R\)</span> be a rectangular region in the <span class="process-math">\(xy\)</span>-plane and <span class="process-math">\(f\)</span> a continuous function over <span class="process-math">\(R\text{.}\)</span> With terms defined as in a double Riemann sum, the <dfn class="terminology">double integral of <span class="process-math">\(f\)</span> over <span class="process-math">\(R\)</span></dfn> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_R f(x,y) \, dA = \lim_{m,n \to \infty} \sum_{j=1}^n \sum_{i=1}^m f(x_{ij}^*, y_{ij}^*) \cdot \Delta A.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="A_11_1_3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.7</span><span class="period">.</span>
+</h4>
+<div class="para" id="A_11_1_3-1-1">Let <span class="process-math">\(f(x,y) = \sqrt{4-y^2}\)</span> on the rectangular domain <span class="process-math">\(R = [1,7] \times [-2,2]\text{.}\)</span> Partition <span class="process-math">\([1,7]\)</span> into 3 equal length subintervals and <span class="process-math">\([-2,2]\)</span> into 2 equal length subintervals. A table of values of <span class="process-math">\(f\)</span> at some points in <span class="process-math">\(R\)</span> is given in <a href="sec-MI-double-integrals.html#DI_11_1_TOV" class="xref" data-knowl="./knowl/xref/DI_11_1_TOV.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.1.3: Table of values of f(x,y) =  \sqrt{4-y^2}">Table 3.1.3</a>, and a graph of <span class="process-math">\(f\)</span> with the indicated partitions is shown in <a href="sec-MI-double-integrals.html#F_11_1_DI_example" class="xref" data-knowl="./knowl/xref/F_11_1_DI_example.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 3.1.4">Figure 3.1.4</a>.</div> <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel fixed-width top" style="width:50%;"><figure class="table table-like" id="DI_11_1_TOV"><table class="tabular">
+<tr>
+<td class="c m b2 r0 l0 t1 lines"></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(-2\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(-1\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b2 r0 l0 t1 lines"><span class="process-math">\(2\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(4\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+<tr>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(7\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(2\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(\sqrt{3}\)</span></td>
+<td class="c m b1 r0 l0 t0 lines"><span class="process-math">\(0\)</span></td>
+</tr>
+</table>
+<figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">3.1.3<span class="period">.</span></span><span class="space"> </span>Table of values of <span class="process-math">\(f(x,y) =  \sqrt{4-y^2}\text{.}\)</span></figcaption></figure></div>
+<div class="sbspanel top" style="width:50%;"><figure class="figure figure-like" id="F_11_1_DI_example"><img src="generated/latex-image/F_11_1_DI_example-2.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.1.4<span class="period">.</span></span><span class="space"> </span>Graph of <span class="process-math">\(f(x,y) =  \sqrt{4-y^2}\)</span> on <span class="process-math">\(R\text{.}\)</span></figcaption></figure></div>
+</div></div> <ol class="lower-alpha ol-marker-2" id="A_11_1_3-1-3">
+<li id="A_11_1_3-1-3-1"><div class="para" id="A_11_1_3-1-3-1-1">Sketch the region <span class="process-math">\(R\)</span> in the plane using the values in <a href="sec-MI-double-integrals.html#DI_11_1_TOV" class="xref" data-knowl="./knowl/xref/DI_11_1_TOV.html" data-reveal-label="Reveal" data-close-label="Close" title="Table 3.1.3: Table of values of f(x,y) =  \sqrt{4-y^2}">Table 3.1.3</a> as the partitions.</div></li>
+<li id="A_11_1_3-1-3-2"><div class="para" id="A_11_1_3-1-3-2-1">Calculate the double Riemann sum using the given partition of <span class="process-math">\(R\)</span> and the values of <span class="process-math">\(f\)</span> in the upper right corner of each subrectangle.</div></li>
+<li id="A_11_1_3-1-3-3"><div class="para" id="A_11_1_3-1-3-3-1">Use geometry to calculate the exact value of <span class="process-math">\(\iint_R f(x,y) \, dA\)</span> and compare it to your approximation. Describe one way we could obtain a better approximation using the given data.</div></li>
+</ol></article><div class="para" id="subsec-double-integrals-over-rectangles-10">The integral from single-variable calculus can be interpreted as measuring <em class="emphasis">area under the curve</em>. When the curve lies above the <span class="process-math">\(x\)</span>-axis, the definite integral is measuring the area above the <span class="process-math">\(x\)</span>-axis, below the graph <span class="process-math">\(y = f(x)\text{,}\)</span> and between <span class="process-math">\(x = a\)</span> and <span class="process-math">\(x=b\text{.}\)</span> Every Riemann sum will be positive and hence their limit, the definite integral, will also be positive. This is good because the quantity <em class="emphasis">area</em> is usually considered to be a positive quantity.</div>
+<div class="para" id="subsec-double-integrals-over-rectangles-11">When the graph crosses the <span class="process-math">\(x\)</span>-axis somewhere inside the interval <span class="process-math">\([a,b]\text{,}\)</span> then you need to be careful about how you count the area. You are still measuring the area between the <span class="process-math">\(x\)</span>-axis and the graph <span class="process-math">\(y = f(x)\text{,}\)</span> but now the area of the part of the region below the <span class="process-math">\(x\)</span>-axis gets counted with a negative sign. This is why the integral of <span class="process-math">\(f(x) = x\)</span> over <span class="process-math">\([-2,2]\)</span> is zero. The total amount of area above below the <span class="process-math">\(x\)</span>-axis is the same. Sometimes, we use the phrases <em class="emphasis">net area</em> or <em class="emphasis">signed area</em>to describe what the definite integral measures.</div>
+<div class="para" id="subsec-double-integrals-over-rectangles-12">A similar interpretation can be given to the double integral. The double integral of a function <span class="process-math">\(f(x,y)\)</span> over a rectangle <span class="process-math">\(R\)</span> is the <em class="emphasis">net volume</em> or <em class="emphasis">signed volume</em> between the graph of <span class="process-math">\(z=f(x,y)\)</span> and the <span class="process-math">\(xy\)</span>-plane. Again, this is simply a consequence of the function <span class="process-math">\(f(x,y)\)</span> taking on negative values, causing some terms in the Riemann sum to be negative.</div>
+<div class="para" id="subsec-double-integrals-over-rectangles-13">Double integrals satisfy many of the same properties as single integrals, and their justifications are essentially the same.</div>
+<article class="assemblage assemblage-like" id="Double-integral-properties"><h4 class="heading"><span class="title">Properties of Double Integrals.</span></h4>
+<div class="para logical" id="Double-integral-properties-2">
+<div class="para">Let <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> be continuous functions on a rectangle <span class="process-math">\(R = \{(x,y) : a \leq x \leq b, c \leq y \leq d\}\text{,}\)</span> and let <span class="process-math">\(k\)</span> be a constant. Then</div>
+<ol class="decimal" id="Double-integral-properties-2-5">
+<li id="Double-integral-properties-2-5-1"><div class="para" id="Double-integral-properties-2-5-1-1"><span class="process-math">\(\iint_R (f(x,y) + g(x,y)) \, dA = \iint_R f(x,y) \, dA + \iint_R g(x,y) \, dA\text{.}\)</span></div></li>
+<li id="Double-integral-properties-2-5-2"><div class="para" id="Double-integral-properties-2-5-2-1"><span class="process-math">\(\iint_R kf(x,y) \, dA = k \iint_R f(x,y) \, dA\text{.}\)</span></div></li>
+<li id="Double-integral-properties-2-5-3"><div class="para" id="Double-integral-properties-2-5-3-1">If <span class="process-math">\(f(x,y) \geq g(x,y)\)</span> on <span class="process-math">\(R\text{,}\)</span> then <span class="process-math">\(\iint_R f(x,y) \, dA \geq \iint_R g(x,y) \, dA\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="activity project-like" id="riem-sum-from-contour-plot"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.8</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="riem-sum-from-contour-plot-1-1">
+<div class="para">Below is a the contour plot of a function <span class="process-math">\(f(x,y)\text{.}\)</span> Estimate the value of the double integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_R f(x,y) \, dA
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(R = [-1,1] \times [-1,1]\)</span> using a Riemann sum with 4 subrectangles (i.e. each interval <span class="process-math">\([-1,1]\)</span> should be divided into two subintervals) and sample points taken at the lower-left corners of each subrectangle. Interpret your answer in terms of the signed volume between the graph of <span class="process-math">\(z=f(x,y)\)</span> and the <span class="process-math">\(xy\)</span>-plane. What do you think the exact value of this double integral is?</div>
+</div> <div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/sageplot/riem-sum-from-contour-plot-1-2.svg" role="img" class="contained"></div></article></section><section class="subsection" id="subsec-iterated-ntegrals"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.3</span><span class="space"> </span><span class="title">Iterated Integrals</span>
+</h3>
+<div class="para logical" id="subsec-iterated-ntegrals-2">
+<div class="para">To compute the partial derivative of a function <span class="process-math">\(f(x_1, \ldots, x_n)\)</span> of many variables with respect to <span class="process-math">\(x_k\text{,}\)</span> we think of the other independent variables as constants. In other words we now have a function</div>
+<div class="displaymath process-math">
+\begin{equation*}
+g(x_k) = f(c_1, \ldots, c_{k-1}, x_k, c_{k+1}, \ldots, c_n)
+\end{equation*}
+</div>
+<div class="para">of a single variable, and we can take its derivative in exactly the same way as in single-variable calculus. One can ask the same question about double integrals. What happens if we think of <span class="process-math">\(y\)</span> (or <span class="process-math">\(x\)</span>) as a constant and integrate with respect to <span class="process-math">\(x\)</span> (or <span class="process-math">\(y\)</span>)?</div>
+</div>
+<div class="para logical" id="subsec-iterated-ntegrals-3">
+<div class="para">The result of integrating <span class="process-math">\(f(x,y)\)</span> with respect to <span class="process-math">\(y\)</span> is a function of <span class="process-math">\(x\)</span> only.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(x) = \int_{c}^{d} f(x,y) \, dy.
+\end{equation*}
+</div>
+<div class="para">So, it can be integrated with respect to <span class="process-math">\(x\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{a}^{b} A(x) \, dx = \int_{a}^{b} \lrpar{\int_{c}^{d} f(x,y) \, dy} \, dx = \int_{a}^{b} \int_{c}^{d} f(x,y) \, dy \, dx.
+\end{equation*}
+</div>
+<div class="para">This process is of nesting integrals is called an <dfn class="terminology">iterated integral</dfn>.</div>
+</div>
+<div class="para" id="subsec-iterated-ntegrals-4">You probably have a few burning questions now. First, does the order in which we integrate matter? If I integrate with respect to <span class="process-math">\(x\)</span> first and then <span class="process-math">\(y\)</span> does that change the number I get at the end? Also, note that at no point in the discussion above is a double integral mentioned. You are probably asking yourself, how is an interated integral over a over a rectangle related to a double of the same function of the same rectangle? The answer to both of these questions is answered simply and beautifully by Fubini’s Theorem.</div>
+<article class="assemblage assemblage-like" id="Fubini-theorem"><h4 class="heading"><span class="title">Fubini’s Theorem.</span></h4>
+<div class="para logical" id="Fubini-theorem-2">
+<div class="para">If <span class="process-math">\(f = f(x,y)\)</span> is a continuous function on a rectangle <span class="process-math">\(R = [a,b] \times [c,d]\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_R f(x,y) \, dA = \int_c^d \int_a^b f(x,y) \, dx \, dy = \int_a^b \int_c^d f(x,y) \, dy \, dx.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="subsec-iterated-ntegrals-6"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.9</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-iterated-ntegrals-6-1-1">
+<div class="para">Which is the correct first step in computing the iterated integral below?</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_1^2\int_0^3 x^2y^3\, dx\, dy
+\end{equation*}
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="subsec-iterated-ntegrals-6-1-1-2">
+<li id="subsec-iterated-ntegrals-6-1-1-2-1"><div class="para" id="subsec-iterated-ntegrals-6-1-1-2-1-1"><span class="process-math">\(\displaystyle \ds \int_1^2 \dfrac{1}{3}x^3y^3\bigg|_0^3\, dy\)</span></div></li>
+<li id="subsec-iterated-ntegrals-6-1-1-2-2"><div class="para" id="subsec-iterated-ntegrals-6-1-1-2-2-1"><span class="process-math">\(\displaystyle \ds \int_1^2 \dfrac{1}{4}x^2y^4\bigg|_0^3\, dx\)</span></div></li>
+<li id="subsec-iterated-ntegrals-6-1-1-2-3"><div class="para" id="subsec-iterated-ntegrals-6-1-1-2-3-1"><span class="process-math">\(\displaystyle \ds \int_1^2 \dfrac{1}{4}x^2y^2\bigg|_0^3\, dy\)</span></div></li>
+<li id="subsec-iterated-ntegrals-6-1-1-2-4"><div class="para" id="subsec-iterated-ntegrals-6-1-1-2-4-1"><span class="process-math">\(\displaystyle \ds \int_0^3\dfrac{1}{3}x^3y^3\bigg|_1^2\, dy\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="A_11_2_1"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.10</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_11_2_1-1-1">
+<div class="para">Let <span class="process-math">\(f(x,y) = 25-x^2-y^2\)</span> on the rectangular domain <span class="process-math">\(R = [-3,3] \times [-4,4]\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-2" id="A_11_2_1-1-1-3">
+<li id="A_11_2_1-1-1-3-1"><div class="para logical" id="A_11_2_1-1-1-3-1-1">
+<div class="para">Viewing <span class="process-math">\(x\)</span> as a fixed constant, use the Fundamental Theorem of Calculus to evaluate the integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A(x) = \int_{-4}^4 f(x,y) \, dy.
+\end{equation*}
+</div>
+<div class="para">Note that you will be integrating with respect to <span class="process-math">\(y\text{,}\)</span> and holding <span class="process-math">\(x\)</span> constant.  Your result should be a function of <span class="process-math">\(x\)</span> only.</div>
+</div></li>
+<li id="A_11_2_1-1-1-3-2"><div class="para" id="A_11_2_1-1-1-3-2-1">Next, use your result from (a) along with the Fundamental Theorem of Calculus to determine the value of <span class="process-math">\(\int_{-3}^3 A(x) \, dx\text{.}\)</span>
+</div></li>
+<li id="A_11_2_1-1-1-3-3"><div class="para" id="A_11_2_1-1-1-3-3-1">What is the value of <span class="process-math">\(\iint_R f(x,y) \, dA\text{?}\)</span> What are two different ways we may interpret the meaning of this value?</div></li>
+</ol>
+</div></article><article class="activity project-like" id="subsec-iterated-ntegrals-8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.11</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-iterated-ntegrals-8-1-1">
+<div class="para">Use Fubini’s Theorem to evaluate the double integral</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/riem-sum-from-contour-plot.html">
+\begin{equation*}
+\iint_R (x^2 - y^2) \, dA
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(R = [-1,1] \times [-1,1]\text{.}\)</span> (The contour plot of this function was used to estimate the value of this integral in <a href="sec-MI-double-integrals.html#riem-sum-from-contour-plot" class="xref" data-knowl="./knowl/xref/riem-sum-from-contour-plot.html" data-reveal-label="Reveal" data-close-label="Close" title="Activity 3.1.8">Activity 3.1.8</a>. Does the exact value determined here match your estimate?)</div>
+</div></article><article class="activity project-like" id="A_11_2_2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.12</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_11_2_2-1-1">
+<div class="para">Let <span class="process-math">\(f(x,y) = x+y^2\)</span> on the rectangle <span class="process-math">\(R = [0,2] \times [0,3]\text{.}\)</span>
+</div>
+<ol class="lower-alpha ol-marker-2" id="A_11_2_2-1-1-3">
+<li id="A_11_2_2-1-1-3-1"><div class="para" id="A_11_2_2-1-1-3-1-1">Evaluate <span class="process-math">\(\iint_R f(x,y) \, dA\)</span> using an iterated integral.  Choose an order for integration by deciding whether you want to integrate first with respect to <span class="process-math">\(x\)</span> or <span class="process-math">\(y\text{.}\)</span>
+</div></li>
+<li id="A_11_2_2-1-1-3-2"><div class="para" id="A_11_2_2-1-1-3-2-1">Evaluate <span class="process-math">\(\iint_R f(x,y) \, dA\)</span> using the iterated integral whose order of integration is the opposite of the order you chose in (a).</div></li>
+</ol>
+</div></article><article class="activity project-like" id="mi-double-integrals-cartesian-rectangle-calculate4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.13</span><span class="period">.</span>
+</h4>
+<div class="para" id="mi-double-integrals-cartesian-rectangle-calculate4-1-1">Compute <span class="process-math">\(\ds \iint_R xe^y\, dA\text{,}\)</span> where <span class="process-math">\(R = [0,1]\times[-1,1]\)</span>
+</div></article><article class="remark remark-like" id="subsec-iterated-ntegrals-11"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.5</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-iterated-ntegrals-11-1">
+<div class="para">Notice that when you integrate a function that can be written <span class="process-math">\(f(x,y) = g(x)h(y)\)</span> over a rectangle, the double integral is the product of two single integrals.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_R f(x,y) \, dA = \int_c^d \int_a^b g(x)h(y) \, dx \, dy = \lrpar{\int_a^b g(x) \, dx} \lrpar{\int_c^d h(y) \, dy}
+\end{equation*}
+</div>
+</div></article></section><section class="subsection" id="subsec-double-integrals-over-general-regions"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.1.4</span><span class="space"> </span><span class="title">Double Integrals Over General Regions</span>
+</h3>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-2">
+<div class="para">Technically speaking, both the definition of the double integral and interated integrals depended crucially on the fact that the region of integration was a rectangle. Suppose we wish to integrate <span class="process-math">\(f(x,y)\)</span> over a more general, non-rectangular region <span class="process-math">\(D\text{.}\)</span> We start by defining a new function that equal <span class="process-math">\(f\)</span> inside of <span class="process-math">\(D\)</span> and equals zero outside of it.</div>
+<div class="displaymath process-math">
+\begin{equation*}
+F(x,y) = \begin{cases} f(x,y) &amp; \text{ if } (x,y) \in D \\ 0 &amp; \text{ if } (x,y) \notin D \end{cases}
+\end{equation*}
+</div>
+<div class="para">Then we define the integral of <span class="process-math">\(f\)</span> over <span class="process-math">\(D\)</span> to be the integral of <span class="process-math">\(F\)</span> over some rectangle <span class="process-math">\(R\)</span> that contains <span class="process-math">\(D\text{.}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D f(x,y) \, dA = \iint_R F(x,y) \, dA.
+\end{equation*}
+</div>
+<div class="para">Note that this requires that <span class="process-math">\(D\)</span> be bounded. In practice, we just ignore everything that is in <span class="process-math">\(R\)</span> but not in <span class="process-math">\(D\text{,}\)</span> since these regions contribute <span class="process-math">\(0\)</span> to the value of the integral.</div>
+</div>
+<div class="para" id="subsec-double-integrals-over-general-regions-3">This introduces a new complication to our main tool for evaluating double integrals, iterated integrals. The bounds of integration may now depend on where we are in the region <span class="process-math">\(D\text{.}\)</span> For example, suppose <span class="process-math">\(D\)</span> is the triangle in the first quadrant with vertices at <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((1,0)\text{,}\)</span> and <span class="process-math">\((0,1)\text{.}\)</span> If we wish to integrate with respect to <span class="process-math">\(y\)</span> first, the when <span class="process-math">\(x = 0.3\text{,}\)</span> the bounds of integration should be <span class="process-math">\([0, 0.7]\text{.}\)</span> And when <span class="process-math">\(x = 0.6\text{,}\)</span> then the bounds of integration should be <span class="process-math">\([0, 0.4]\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 50%; margin-left: 25%; margin-right: 25%;"><img src="generated/latex-image/subsec-double-integrals-over-general-regions-4.svg" role="img" class="contained"></div>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-5">
+<div class="para">In the figure, each vertical red line segment represents a trace of the region <span class="process-math">\(D\)</span> at a fixed value of <span class="process-math">\(x\)</span> along which we are integrating with respect to <span class="process-math">\(y\text{.}\)</span> Although the bounds change for different values of <span class="process-math">\(x\text{,}\)</span> they change in a predictable way. In fact, the upper bound of integration is a simple function of <span class="process-math">\(x\text{.}\)</span> For any vertical trace, the lower bound of integration is <span class="process-math">\(y = 0\)</span> and the upper bound is <span class="process-math">\(y = 1-x\text{.}\)</span> So, the first integral is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{y = 0}^{y = 1-x} f(x,y) \, dy.
+\end{equation*}
+</div>
+<div class="para">The result of this integral is still just a function of <span class="process-math">\(x\text{,}\)</span> and the range of <span class="process-math">\(x\)</span> values that we want to include in our integral is <span class="process-math">\([0,1]\text{.}\)</span> So, the second integral is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x = 0}^{x = 1} \int_{y = 0}^{y = 1-x} f(x,y) \, dy \, dx.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-6">
+<div class="para">This procedure works if <span class="process-math">\(D\)</span> is bounded by two vertical lines and the graphs of two functions of <span class="process-math">\(x\text{.}\)</span> In other words, if <span class="process-math">\(D\)</span> can be described as <span class="process-math">\(a \leq x \leq b\)</span> and <span class="process-math">\(g_1(x) \leq y \leq g_2(x)\text{.}\)</span> In this case,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D f(x,y) \, dA = \int_{x=a}^{x=b} \int_{y=g_1(x)}^{y=g_2(x)} f(x,y) \, dy \, dx.
+\end{equation*}
+</div>
+<div class="para">These types of regions are sometimes called <dfn class="terminology">type I</dfn> regions. Alternatively, turning your head 90 degrees, you can also imagine regions that are bounded by two horizontal lines and the graphs of two functions of <span class="process-math">\(y\text{.}\)</span> These are called <dfn class="terminology">type II</dfn> regions and are described by <span class="process-math">\(c \leq y \leq d\)</span> and <span class="process-math">\(h_1(y) \leq x \leq h_2(y)\text{.}\)</span> In this case,</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D f(x,y) \, dA = \int_{y=c}^{y=d} \int_{x=h_1(y)}^{x=h_2(y)} f(x,y) \, dx \, dy.
+\end{equation*}
+</div>
+</div>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-7">
+<div class="para">In an iterated double integral:</div>
+<ul class="disc" id="subsec-double-integrals-over-general-regions-7-1">
+<li id="subsec-double-integrals-over-general-regions-7-1-1"><div class="para" id="subsec-double-integrals-over-general-regions-7-1-1-1">the limits on the outer integral must be constants;</div></li>
+<li id="subsec-double-integrals-over-general-regions-7-1-2"><div class="para" id="subsec-double-integrals-over-general-regions-7-1-2-1">the limits on the inner integral must be constants or in terms of only the remaining variable — that is, if the inner integral is with respect to <span class="process-math">\(y\text{,}\)</span> then its limits may only involve <span class="process-math">\(x\)</span> and constants, and vice versa.</div></li>
+</ul>
+</div>
+<article class="activity project-like" id="subsec-double-integrals-over-general-regions-8"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.14</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="subsec-double-integrals-over-general-regions-8-1">
+<div class="para" id="subsec-double-integrals-over-general-regions-8-1-1">The image below is a Type I and a Type II region; call it <span class="process-math">\(R\text{.}\)</span>
+</div>
+<div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="generated/latex-image/subsec-double-integrals-over-general-regions-8-1-2.svg" role="img" class="contained"></div>
+</div>
+<article class="task exercise-like" id="subsec-double-integrals-over-general-regions-8-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-8-2-1-1">
+<div class="para">Which set describes <span class="process-math">\(R\)</span> as a Type II region?</div>
+<ol class="upper-alpha ol-marker-1" id="subsec-double-integrals-over-general-regions-8-2-1-1-2">
+<li id="subsec-double-integrals-over-general-regions-8-2-1-1-2-1"><div class="para" id="subsec-double-integrals-over-general-regions-8-2-1-1-2-1-1">
+<span class="process-math">\(0 \leq x \leq 2\)</span> and <span class="process-math">\(x^2 \leq y \leq 2x\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-2-1-1-2-2"><div class="para" id="subsec-double-integrals-over-general-regions-8-2-1-1-2-2-1">
+<span class="process-math">\(0 \leq x \leq 4\)</span> and <span class="process-math">\(x^2 \leq y \leq 2x\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-2-1-1-2-3"><div class="para" id="subsec-double-integrals-over-general-regions-8-2-1-1-2-3-1">
+<span class="process-math">\(\frac{y}{2} \leq x \leq \sqrt{y}\)</span> and <span class="process-math">\(0 \leq y \leq 4\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-2-1-1-2-4"><div class="para" id="subsec-double-integrals-over-general-regions-8-2-1-1-2-4-1">
+<span class="process-math">\(\frac{y}{2} \leq x \leq \sqrt{y}\)</span> and <span class="process-math">\(0 \leq y \leq 2\)</span> </div></li>
+</ol>
+</div></article><article class="task exercise-like" id="subsec-double-integrals-over-general-regions-8-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-8-3-1-1">
+<div class="para">Which set describes <span class="process-math">\(R\)</span> as a Type I region?</div>
+<ol class="upper-alpha ol-marker-1" id="subsec-double-integrals-over-general-regions-8-3-1-1-2">
+<li id="subsec-double-integrals-over-general-regions-8-3-1-1-2-1"><div class="para" id="subsec-double-integrals-over-general-regions-8-3-1-1-2-1-1">
+<span class="process-math">\(0 \leq x \leq 2\)</span> and <span class="process-math">\(x^2 \leq y \leq 2x\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-3-1-1-2-2"><div class="para" id="subsec-double-integrals-over-general-regions-8-3-1-1-2-2-1">
+<span class="process-math">\(0 \leq x \leq 4\)</span> and <span class="process-math">\(x^2 \leq y \leq 2x\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-3-1-1-2-3"><div class="para" id="subsec-double-integrals-over-general-regions-8-3-1-1-2-3-1">
+<span class="process-math">\(\frac{y}{2} \leq x \leq \sqrt{y}\)</span> and <span class="process-math">\(0 \leq y \leq 4\)</span> </div></li>
+<li id="subsec-double-integrals-over-general-regions-8-3-1-1-2-4"><div class="para" id="subsec-double-integrals-over-general-regions-8-3-1-1-2-4-1">
+<span class="process-math">\(\frac{y}{2} \leq x \leq \sqrt{y}\)</span> and <span class="process-math">\(0 \leq y \leq 2\)</span> </div></li>
+</ol>
+</div></article></article><article class="activity project-like" id="mi-double-integrals-calculate4"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.15</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="mi-double-integrals-calculate4-1"><div class="para" id="mi-double-integrals-calculate4-1-1">The base of a prism is the triangle in the <span class="process-math">\(xy-\)</span>plane bounded by the <span class="process-math">\(y-\)</span>axis, the line <span class="process-math">\(y=x\text{,}\)</span> and the line <span class="process-math">\(y=1\text{.}\)</span> The top of the prism lies in the plane <span class="process-math">\(z = 5-y-x\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="mi-double-integrals-calculate4-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="mi-double-integrals-calculate4-2-1-1">Sketch and label the region.</div></article><article class="task exercise-like" id="mi-double-integrals-calculate4-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para logical" id="mi-double-integrals-calculate4-3-1-1">
+<div class="para">If we consider region as Type I, which integral will compute the volume of the prism?</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="mi-double-integrals-calculate4-3-1-1-1">
+<li id="mi-double-integrals-calculate4-3-1-1-1-1"><div class="para" id="mi-double-integrals-calculate4-3-1-1-1-1-1"><span class="process-math">\(\displaystyle \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dx\, dy\)</span></div></li>
+<li id="mi-double-integrals-calculate4-3-1-1-1-2"><div class="para" id="mi-double-integrals-calculate4-3-1-1-1-2-1"><span class="process-math">\(\displaystyle \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dy\, dx\)</span></div></li>
+<li id="mi-double-integrals-calculate4-3-1-1-1-3"><div class="para" id="mi-double-integrals-calculate4-3-1-1-1-3-1"><span class="process-math">\(\displaystyle \ds \int_{y=0}^{y=1}\int_{x=0}^{x=y} (5-y-x) \, dx\, dy\)</span></div></li>
+<li id="mi-double-integrals-calculate4-3-1-1-1-4"><div class="para" id="mi-double-integrals-calculate4-3-1-1-1-4-1"><span class="process-math">\(\displaystyle \ds \int_{y=0}^{y=1}\int_{x=0}^{x=y} (5-y-x) \, dy\, dx\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="mi-double-integrals-calculate4-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para logical" id="mi-double-integrals-calculate4-4-1-1">
+<div class="para">If we consider region as Type II, which integral will compute the volume of the prism?</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="mi-double-integrals-calculate4-4-1-1-1">
+<li id="mi-double-integrals-calculate4-4-1-1-1-1"><div class="para" id="mi-double-integrals-calculate4-4-1-1-1-1-1"><span class="process-math">\(\displaystyle \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dx\, dy\)</span></div></li>
+<li id="mi-double-integrals-calculate4-4-1-1-1-2"><div class="para" id="mi-double-integrals-calculate4-4-1-1-1-2-1"><span class="process-math">\(\displaystyle \ds \int_{x=0}^{x=1}\int_{y=x}^{y=1} (5-y-x) \, dy\, dx\)</span></div></li>
+<li id="mi-double-integrals-calculate4-4-1-1-1-3"><div class="para" id="mi-double-integrals-calculate4-4-1-1-1-3-1"><span class="process-math">\(\displaystyle \ds \int_{y=0}^{y=1}\int_{x=0}^{x=y} (5-y-x) \, dx\, dy\)</span></div></li>
+<li id="mi-double-integrals-calculate4-4-1-1-1-4"><div class="para" id="mi-double-integrals-calculate4-4-1-1-1-4-1"><span class="process-math">\(\displaystyle \ds \int_{y=0}^{y=1}\int_{x=0}^{x=y} (5-y-x) \, dy\, dx\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="mi-double-integrals-calculate4-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="mi-double-integrals-calculate4-5-1-1">Choose to use (b) or (c) to compute the value of the integral.</div></article></article><article class="activity project-like" id="subsec-double-integrals-over-general-regions-10"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.16</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-10-1-1">
+<div class="para">Let <span class="process-math">\(f(x,y) = x^2y\)</span> be defined on the triangle <span class="process-math">\(D\)</span> with vertices <span class="process-math">\((0,0)\text{,}\)</span> <span class="process-math">\((2,0)\text{,}\)</span> and <span class="process-math">\((2,3)\text{.}\)</span> Compute</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D f(x,y) \, dA.
+\end{equation*}
+</div>
+</div></article><article class="activity project-like" id="A_11_3_2"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.17</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="A_11_3_2-1-1">
+<div class="para">Consider the iterated integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x=0}^{x=1} \int_{y=x}^{y=\sqrt{x}} (4x+10y) \, dy \, dx\text{.}
+\end{equation*}
+</div>
+<ol class="lower-alpha ol-marker-2" id="A_11_3_2-1-1-2">
+<li id="A_11_3_2-1-1-2-1"><div class="para logical" id="A_11_3_2-1-1-2-1-1">
+<div class="para">Sketch the region of integration, <span class="process-math">\(D\text{,}\)</span> for which</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D (4x + 10y) \, dA = \int_{x=0}^{x=1} \int_{y=x}^{y=\sqrt{x}} (4x+10y) \, dy \, dx.
+\end{equation*}
+</div>
+</div></li>
+<li id="A_11_3_2-1-1-2-2"><div class="para logical" id="A_11_3_2-1-1-2-2-1">
+<div class="para">Determine the equivalent iterated integral that results from integrating in the opposite order (<span class="process-math">\(dx \, dy\text{,}\)</span> instead of <span class="process-math">\(dy \, dx\)</span>).  That is, determine the limits of integration for which</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\iint_D (4x + 10y) \, dA = \int_{y=?}^{y=?}  \int_{x=?}^{x=?} (4x+10y) \, dx \, dy.
+\end{equation*}
+</div>
+</div></li>
+<li id="A_11_3_2-1-1-2-3"><div class="para" id="A_11_3_2-1-1-2-3-1">Evaluate one of the two iterated integrals above. Explain what the value you obtained tells you.</div></li>
+<li id="A_11_3_2-1-1-2-4"><div class="para" id="A_11_3_2-1-1-2-4-1">Set up and evaluate a single definite integral to determine the exact area of <span class="process-math">\(D\text{,}\)</span> <span class="process-math">\(A(D)\text{.}\)</span>
+</div></li>
+<li id="A_11_3_2-1-1-2-5"><div class="para" id="A_11_3_2-1-1-2-5-1">Determine the exact average value of <span class="process-math">\(f(x,y) = 4x  + 10y\)</span> over <span class="process-math">\(D\text{.}\)</span>
+</div></li>
+</ol>
+</div></article><article class="activity project-like" id="A_11_3_3"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.18</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="A_11_3_3-1"><div class="para logical" id="A_11_3_3-1-1">
+<div class="para">Consider the iterated integral</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\int_{x=0}^{x=4} \int_{y=x/2}^{y=2} e^{y^2} \, dy \, dx\text{.}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="A_11_3_3-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="A_11_3_3-2-1-1">Which of the following best describes why you cannot proceed with evaluating this iterated integral?</div> <ol class="lower-alpha ol-marker-2" id="A_11_3_3-2-1-2">
+<li id="A_11_3_3-2-1-2-1"><div class="para" id="A_11_3_3-2-1-2-1-1">We cannot use <span class="process-math">\(u\)</span>-substitution because there is no factor of <span class="process-math">\(y\)</span> in the integrand.</div></li>
+<li id="A_11_3_3-2-1-2-2"><div class="para" id="A_11_3_3-2-1-2-2-1">We cannot apply integration by parts because the integrand is not a product.</div></li>
+<li id="A_11_3_3-2-1-2-3"><div class="para" id="A_11_3_3-2-1-2-3-1">We cannot integrate nest exponents like <span class="process-math">\(a^{b^c}\text{.}\)</span>
+</div></li>
+</ol></article><article class="task exercise-like" id="A_11_3_3-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="A_11_3_3-3-1-1">If <span class="process-math">\(\ds \iint_D e^{y^2} \, dA = \int_{x=0}^{x=4} \int_{y=x/2}^{y=2} e^{y^2} \, dy \, dx\text{,}\)</span> sketch the region <span class="process-math">\(D\text{.}\)</span>
+</div></article><article class="task exercise-like" id="A_11_3_3-4"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="A_11_3_3-4-1-1">Rewrite the integral in the opposite order using <span class="process-math">\(dA = dx \, dy\text{.}\)</span>
+</div></article><article class="task exercise-like" id="A_11_3_3-5"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="A_11_3_3-5-1-1">Use the FTC to evaluate the integral you found in the previous part. What lesson do you take from this?</div></article></article><article class="activity project-like" id="mi-double-integrals-calculate7"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3.1.19</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="mi-double-integrals-calculate7-1"><div class="para" id="mi-double-integrals-calculate7-1-1">Consider the region bounded by the curves <span class="process-math">\(y=x\)</span> and <span class="process-math">\(y=1-x^2\text{.}\)</span>
+</div></div>
+<article class="task exercise-like" id="mi-double-integrals-calculate7-2"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<div class="para" id="mi-double-integrals-calculate7-2-1-1">Use techniques from Calculus I to find the area between the curves.</div></article><article class="task exercise-like" id="mi-double-integrals-calculate7-3"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="mi-double-integrals-calculate7-3-1-1">Let <span class="process-math">\(R\)</span> denote the region. Compute <span class="process-math">\(\ds \iint_R\, dA\text{.}\)</span> What do you notice?</div></article></article><article class="remark remark-like" id="subsec-double-integrals-over-general-regions-14"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.1.6</span><span class="period">.</span>
+</h4>
+<div class="para logical" id="subsec-double-integrals-over-general-regions-14-1-1">
+<div class="para">The area of a closed, bounded plane region <span class="process-math">\(R\)</span> is given by</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\ds \iint_R \,dA
+\end{equation*}
+</div>
+</div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch-MI.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-MI-double-integrals-polar-and-apps.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>

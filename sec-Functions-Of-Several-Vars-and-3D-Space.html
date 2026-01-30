@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Functions of Several Variables and Three Dimensional Space</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="Calculus III">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="Jonathan Epstein">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.11.11';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.fc0e080e84d54281.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.e2abc79debce15fd.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
+<script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Calculus III:</span> <span class="subtitle">In-Class Activities</span></a></h1>
+<p class="byline">Jonathan Epstein</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-MV.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-MV.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-Vectors.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\ds}{\displaystyle} 
+\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} 
+\newcommand{\vv}{{\bf v}} \newcommand{\vu}{{\bf u}} \newcommand{\vw}{{\bf w}} \newcommand{\vzero}{{\bf 0}} \newcommand{\vr}{{\bf r}}
+\newcommand{\lrbrace}[1]{\left\lbrace #1 \right\rbrace}
+\newcommand{\lrangle}[1]{\left\langle #1 \right\rangle}
+\newcommand{\lrpar}[1]{\left(#1\right)}
+\newcommand{\inv}[1]{#1^{-1}}
+\newcommand{\dc}{^\circ}
+\newcommand{\proj}{\text{proj}}
+\newcommand{\comp}{\text{comp}}
+\newcommand{\vz}{{\bf z}}
+\newcommand{\vi}{\mathbf{i}}
+\newcommand{\vj}{\mathbf{j}}
+\newcommand{\vk}{\mathbf{k}}
+\newcommand{\vs}{\mathbf{s}}
+\newcommand{\va}{\mathbf{a}}
+\newcommand{\vL}{\mathbf{L}}
+\newcommand{\vn}{\mathbf{n}}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\vT}{\mathbf{T}}
+\newcommand{\vx}{\mathbf{x}}
+\DeclareMathOperator{\grad}{grad}
+\DeclareMathOperator{\hess}{Hess}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-MV.html" class="internal"><span class="codenumber">1</span> <span class="title">Multivariable and Vector Functions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-Functions-Of-Several-Vars-and-3D-Space.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Functions of Several Variables and Three Dimensional Space</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vectors.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Vector-Geometry.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Vector Geometry</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Lines-and-Planes.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Lines and Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Curves.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Curves</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-PD.html" class="internal"><span class="codenumber">2</span> <span class="title">Partial Derivatives</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Partial-Derivs.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Partial Derivatives</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-Tangent-Planes.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Tangent Planes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Chain-Rule.html" class="internal"><span class="codenumber">2.3</span> <span class="title">The Chain Rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-PD-Directional-Derivs-and-Grad.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Directional Derivatives and Gradients</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-PD-Optimization.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Optimization</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-Optimization-Intro" class="internal"><span class="codenumber">2.5.1</span> <span class="title">Review of Single-Variable Optimization</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-closed-sets" class="internal"><span class="codenumber">2.5.2</span> <span class="title">Closed and Bounded Subsets of <span class="process-math">\(\R^n\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-PD-critical-points" class="internal"><span class="codenumber">2.5.3</span> <span class="title">Critical Points and The Second Derivative Test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-optimization" class="internal"><span class="codenumber">2.5.4</span> <span class="title">Optimization on Closed and Bounded Domains</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-PD-Optimization.html#subsec-Lagrange" class="internal"><span class="codenumber">2.5.5</span> <span class="title">Lagrange Multipliers</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-MI.html" class="internal"><span class="codenumber">3</span> <span class="title">Multiple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Double Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-review-single-variable-riemann-integrals" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Review of Riemann Integrals in One Variable</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-rectangles" class="internal"><span class="codenumber">3.1.2</span> <span class="title">Double Integrals Over Rectangules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-iterated-ntegrals" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Iterated Integrals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals.html#subsec-double-integrals-over-general-regions" class="internal"><span class="codenumber">3.1.4</span> <span class="title">Double Integrals Over General Regions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Double Integrals in Polar Coordinates and Applications</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-polar-integrals" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Double Integrals in Polar Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-double-integrals-polar-and-apps.html#subsec-applications" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Applications of Double Integrals</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-parametric-surfaces.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Parametric Surfaces</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-MI-triple-integrals.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Triple Integrals</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cartesian" class="internal"><span class="codenumber">3.4.1</span> <span class="title">Triple Integrals in Cartesian Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-cylindrical" class="internal"><span class="codenumber">3.4.2</span> <span class="title">Triple Integrals in cylindrical Coordinates</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-MI-triple-integrals.html#subsec-triple-integrals-spherical" class="internal"><span class="codenumber">3.4.3</span> <span class="title">Triple Integrals in Spherical Coordinates</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-MI-change-of-vars.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Change of Variables</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-VC.html" class="internal"><span class="codenumber">4</span> <span class="title">Fundamental Theorems of Vector Calculus</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-VC-line-integrals.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Line Integrals</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-Functions-Of-Several-Vars-and-3D-Space"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Functions of Several Variables and Three Dimensional Space</span>
+</h2>
+<article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-2"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-2-1-1">A <dfn class="terminology">function <span class="process-math">\(f\)</span> of two independent variables</dfn> is a rule that assigns to each ordered pair <span class="process-math">\((x,y)\)</span> in some set <span class="process-math">\(D\)</span> exactly one real number <span class="process-math">\(f(x,y)\text{.}\)</span>
+</div></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-3"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-3-1-1">The <dfn class="terminology">domain</dfn> of a function <span class="process-math">\(f\)</span> is the set of all inputs at which the function is defined.</div></article><article class="activity project-like" id="activity-n1-se1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-n1-se1-1"><div class="para logical" id="activity-n1-se1-1-1">
+<div class="para">Consider the concentration, C, (in mg/liter) of a drug in the blood as a function of the amount of drug given, <span class="process-math">\(x\text{,}\)</span> and the time since injection, <span class="process-math">\(t\text{.}\)</span> For <span class="process-math">\(0 \leq x \leq 6 \)</span> mg and <span class="process-math">\(t \geq 0\)</span> hours, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+C = f(x,t) = 28te^{(6-x)t}
+\end{equation*}
+</div>
+</div></div>
+<article class="task exercise-like" id="activity-n1-se1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>Which of the following best describes the meaning of <span class="process-math">\(f(2,3)\)</span> in this context? <ol class="upper-alpha ol-marker-1" id="activity-n1-se1-2-1-2">
+<li id="activity-n1-se1-2-1-2-1"><div class="para" id="activity-n1-se1-2-1-2-1-1">
+<span class="process-math">\(f(2,3)\)</span> is the concentration in the blood 3 hours after a 2 mg injection.</div></li>
+<li id="activity-n1-se1-2-1-2-2"><div class="para" id="activity-n1-se1-2-1-2-2-1">
+<span class="process-math">\(f(2,3)\)</span> is the concentration in the blood 2 hours after a 3 mg injection.</div></li>
+<li id="activity-n1-se1-2-1-2-3"><div class="para" id="activity-n1-se1-2-1-2-3-1">
+<span class="process-math">\(f(2,3)\)</span> is the change in concentration of a 3 mg dose 2 hours after injection.</div></li>
+<li id="activity-n1-se1-2-1-2-4"><div class="para" id="activity-n1-se1-2-1-2-4-1">
+<span class="process-math">\(f(2,3)\)</span> is the change in concentration of a 2 mg does 3 hours after injection.</div></li>
+</ol></article></article><article class="activity project-like" id="activity-n1-fb1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="activity-n1-fb1-1"><div class="para" id="activity-n1-fb1-1-1">A car rental company charges a one-time application fee of 30 dollars, 50 dollars per day, and 11 cents per mile for its cars.</div></div>
+<article class="task exercise-like" id="activity-n1-fb1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-n1-fb1-2-1-1">Write a formula for the cost, <span class="process-math">\(C\text{,}\)</span> of renting a car as a function of the number of days, <span class="process-math">\(d\text{,}\)</span> and the number of miles driven, <span class="process-math">\(m\text{.}\)</span>
+</div></article><article class="task exercise-like" id="activity-n1-fb1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-n1-fb1-3-1-1">Describe the domain of the function.</div></article></article><article class="activity project-like" id="activity-n1-se2"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="activity-n1-se2-1-1">
+<div class="para">Which of the following best describes the domain of <span class="process-math">\(f\text{?}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+f(x,y) = \frac{2\sin(xy)}{x^2 + y}
+\end{equation*}
+</div>
+</div> <ol class="upper-alpha ol-marker-1" id="activity-n1-se2-1-2">
+<li id="activity-n1-se2-1-2-1"><div class="para" id="activity-n1-se2-1-2-1-1">The domain is all <span class="process-math">\((x,y)\)</span> such that <span class="process-math">\(y &gt; 0\)</span>
+</div></li>
+<li id="activity-n1-se2-1-2-2"><div class="para" id="activity-n1-se2-1-2-2-1">The domain is all <span class="process-math">\(\R^2\)</span> except the origin <span class="process-math">\((0,0)\text{.}\)</span>
+</div></li>
+<li id="activity-n1-se2-1-2-3"><div class="para" id="activity-n1-se2-1-2-3-1">The domain is all <span class="process-math">\((x,y)\)</span> such that <span class="process-math">\(y \geq -x^2\)</span>
+</div></li>
+<li id="activity-n1-se2-1-2-4"><div class="para" id="activity-n1-se2-1-2-4-1">The domain is all <span class="process-math">\(\R^2\text{.}\)</span>
+</div></li>
+<li id="activity-n1-se2-1-2-5"><div class="para" id="activity-n1-se2-1-2-5-1">The domain is all <span class="process-math">\((x,y)\)</span> such that <span class="process-math">\(x \geq 0\)</span> and <span class="process-math">\(y \geq 0\)</span> because sine is not defined for negative numbers.</div></li>
+</ol></article><article class="activity project-like" id="pd-functions-domain-range1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="pd-functions-domain-range1-1"><div class="para" id="pd-functions-domain-range1-1-1">Identify the domain of the functions below.</div></div>
+<article class="task exercise-like" id="pd-functions-domain-range1-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="pd-functions-domain-range1-2-1-1">
+<div class="para"><span class="process-math">\(g(x,y) = \sqrt{36-x^2-y^2}\)</span></div>
+<ol class="upper-alpha ol-marker-1 cols2" id="pd-functions-domain-range1-2-1-1-2">
+<li id="pd-functions-domain-range1-2-1-1-2-1"><div class="para" id="pd-functions-domain-range1-2-1-1-2-1-1"><span class="process-math">\(\displaystyle \{ (x,y)\mid x^2 + y^2 \gt 6 \}\)</span></div></li>
+<li id="pd-functions-domain-range1-2-1-1-2-2"><div class="para" id="pd-functions-domain-range1-2-1-1-2-2-1"><span class="process-math">\(\displaystyle \{ (x,y)\mid x^2 + y^2 \geq 6 \}\)</span></div></li>
+<li id="pd-functions-domain-range1-2-1-1-2-3"><div class="para" id="pd-functions-domain-range1-2-1-1-2-3-1"><span class="process-math">\(\displaystyle \{ (x,y)\mid x^2 + y^2 \lt 6 \}\)</span></div></li>
+<li id="pd-functions-domain-range1-2-1-1-2-4"><div class="para" id="pd-functions-domain-range1-2-1-1-2-4-1"><span class="process-math">\(\displaystyle \{ (x,y)\mid x^2 + y^2 \leq 6 \}\)</span></div></li>
+</ol>
+</div></article><article class="task exercise-like" id="pd-functions-domain-range1-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="pd-functions-domain-range1-3-1-1"><span class="process-math">\(h(y,z) = 2y^2 + z^2\)</span></div></article></article><article class="activity project-like" id="pd-functions-graph1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="pd-functions-graph1-1-1">Use technology to graph the function <span class="process-math">\(f(x,y) = \sqrt{x^2 + y^2}\text{.}\)</span> Report the domain and the range of the function.</div></article><article class="activity project-like" id="activit-n1-fb"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="activit-n1-fb-1-1">
+<div class="para">Identify the domain of each of the following functions. Draw a picture of each domain in the <span class="process-math">\(xy\)</span>-plane.</div>
+<ol class="lower-alpha ol-marker-2" id="activit-n1-fb-1-1-2">
+<li id="activit-n1-fb-1-1-2-1"><div class="para" id="activit-n1-fb-1-1-2-1-1"><span class="process-math">\(\displaystyle f(x,y) = x^2+y^2\)</span></div></li>
+<li id="activit-n1-fb-1-1-2-2"><div class="para" id="activit-n1-fb-1-1-2-2-1"><span class="process-math">\(\displaystyle f(x,y) = \sqrt{x^2+y^2}\)</span></div></li>
+<li id="activit-n1-fb-1-1-2-3"><div class="para" id="activit-n1-fb-1-1-2-3-1"><span class="process-math">\(\displaystyle Q(x,y) = \frac{x+y}{x^2-y^2}\)</span></div></li>
+<li id="activit-n1-fb-1-1-2-4"><div class="para" id="activit-n1-fb-1-1-2-4-1"><span class="process-math">\(\displaystyle s(x,y) = \frac{1}{\sqrt{1-xy^2}}\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="activity-n1-fe"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="activity-n1-fe-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="activity-n1-fe-1-1-1">Describe a physical or real-world example of a function of two variables. What is its domain?</div></article><article class="task exercise-like" id="activity-n1-fe-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="activity-n1-fe-2-1-1">Describe a physical or real-world example of a function of <em class="emphasis">three</em> variables. What is its domain?</div></article></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-11"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-11-1-1">A three-dimensional coordinate system is called <dfn class="terminology">right-handed</dfn> if, after pointing your right thumb in the direction of the positive <span class="process-math">\(x\)</span>-axis, your remaining fingers curl (as if you are making a fist) in the direction from the positive <span class="process-math">\(y\)</span>-axis to the positive <span class="process-math">\(z\)</span>-axis. Otherwise, it’s called left-handed.</div></article><article class="activity project-like" id="activity-n1-se3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.8</span><span class="period">.</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="generated/latex-image/activity-n1-se3-1-1-1.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="generated/latex-image/activity-n1-se3-1-1-2.svg" role="img" class="contained"></div>
+</div></div> Which of the following best describes the two coordinate systems? <ol class="upper-alpha ol-marker-1" id="activity-n1-se3-1-2">
+<li id="activity-n1-se3-1-2-1"><div class="para" id="activity-n1-se3-1-2-1-1">The first one is right-handed, while the second is left-handed.</div></li>
+<li id="activity-n1-se3-1-2-2"><div class="para" id="activity-n1-se3-1-2-2-1">The first one is left-handed, while the second is right-handed.</div></li>
+<li id="activity-n1-se3-1-2-3"><div class="para" id="activity-n1-se3-1-2-3-1">They are both right-handed.</div></li>
+<li id="activity-n1-se3-1-2-4"><div class="para" id="activity-n1-se3-1-2-4-1">They are both left-handed.</div></li>
+</ol></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-13"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-13-1-1">The <dfn class="terminology">graph</dfn> of a function <span class="process-math">\(f = f(x,y)\)</span> is the set of points of the form <span class="process-math">\((x,y,f(x,y))\text{,}\)</span> where the point <span class="process-math">\((x,y)\)</span> is in the domain of <span class="process-math">\(f\text{.}\)</span>
+</div></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-14"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-14-1-1">A <dfn class="terminology">trace</dfn> of a function <span class="process-math">\(f\)</span> of two independent variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> in the <span class="process-math">\(x\)</span> direction is a curve of the form <span class="process-math">\(z = f(x,c)\text{,}\)</span> where <span class="process-math">\(c\)</span> is a constant. Similarly, a <dfn class="terminology">trace</dfn> of a function <span class="process-math">\(f\)</span> of two independent variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> in the <span class="process-math">\(y\)</span> direction is a curve of the form <span class="process-math">\(z = f(c,y)\text{,}\)</span> where <span class="process-math">\(c\)</span> is a constant.</div></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-15"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-15-1-1">A <dfn class="terminology">level curve (or contour)</dfn> of a function <span class="process-math">\(f\)</span> of two independent variables <span class="process-math">\(x\)</span> and <span class="process-math">\(y\)</span> is a curve of the form <span class="process-math">\(k = f(x,y)\text{,}\)</span> where <span class="process-math">\(k\)</span> is a constant.</div></article><article class="activity project-like" id="pd-vertical-trace1"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="pd-vertical-trace1-1-1">
+<div class="para">Which of the following sets up the vertical trace for <span class="process-math">\(x=1\)</span> for the function <span class="process-math">\(z = 4-x-y\text{?}\)</span>
+</div>
+<ol class="upper-alpha ol-marker-1 cols2" id="pd-vertical-trace1-1-1-3">
+<li id="pd-vertical-trace1-1-1-3-1"><div class="para" id="pd-vertical-trace1-1-1-3-1-1"><span class="process-math">\(\displaystyle 1 = 4-x-y\)</span></div></li>
+<li id="pd-vertical-trace1-1-1-3-2"><div class="para" id="pd-vertical-trace1-1-1-3-2-1"><span class="process-math">\(\displaystyle z = 3-y\)</span></div></li>
+<li id="pd-vertical-trace1-1-1-3-3"><div class="para" id="pd-vertical-trace1-1-1-3-3-1"><span class="process-math">\(\displaystyle x + y = 3\)</span></div></li>
+<li id="pd-vertical-trace1-1-1-3-4"><div class="para" id="pd-vertical-trace1-1-1-3-4-1"><span class="process-math">\(\displaystyle z = 3-x\)</span></div></li>
+</ol>
+</div></article><article class="activity project-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-17"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-17-1-1">Which of the following is a contour map for the function <span class="process-math">\(f(x,y) = \sqrt{x^2 + y^2}\text{?}\)</span> </div></article><article class="activity project-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-18"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.11</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-18-1-1">Sketch the contour map for the function <span class="process-math">\(f(x,y) = \sqrt{8+8x-4y-4x^2-y^2}\)</span> for <span class="process-math">\(c = 0,1,2,3,4\)</span>
+</div></article><article class="activity project-like" id="activity-n1-fe3"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.12</span><span class="period">.</span>
+</h3>Which of the following best describes the difference between traces and contours? <ol class="upper-alpha ol-marker-1" id="activity-n1-fe3-1-1">
+<li id="activity-n1-fe3-1-1-1"><div class="para" id="activity-n1-fe3-1-1-1-1">There is no difference; they are the same.</div></li>
+<li id="activity-n1-fe3-1-1-2"><div class="para" id="activity-n1-fe3-1-1-2-1">Traces are "vertical" while contours are "horizontal."</div></li>
+<li id="activity-n1-fe3-1-1-3"><div class="para" id="activity-n1-fe3-1-1-3-1">Traces never involve the <span class="process-math">\(z\)</span> coordinate, while contours do.</div></li>
+<li id="activity-n1-fe3-1-1-4"><div class="para" id="activity-n1-fe3-1-1-4-1">Contours never involve the <span class="process-math">\(z\)</span> coordinate, while traces do.</div></li>
+</ol></article><article class="definition definition-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-20"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.7</span><span class="period">.</span>
+</h3>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-20-1-1">A <dfn class="terminology">sphere</dfn> is the set of all points equidistant from a fixed point. The fixed point is called the <dfn class="terminology">center</dfn> of the sphere, and the distance from the center to any point on the sphere is called the <dfn class="terminology">radius</dfn> of the sphere, and the distance from the center to all the points in the sphere is called the <dfn class="terminology">radius</dfn>.</div></article><article class="activity project-like" id="A-9-1-4"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.13</span><span class="period">.</span>
+</h3>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:47%;"><div class="para" id="A-9-1-4-1-1-1">Let <span class="process-math">\(P=(x_0, y_0, z_0)\)</span> and <span class="process-math">\(Q=(x_1, y_1, z_1)\)</span> be two points in <span class="process-math">\(\R^3\text{.}\)</span> These two points form opposite vertices of a rectangular box whose sides are planes parallel to the coordinate planes as illustrated in <a href="sec-Functions-Of-Several-Vars-and-3D-Space.html#F-9-1-Distance-3D" class="xref" data-knowl="./knowl/xref/F-9-1-Distance-3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.8">Figure 1.1.8</a>, and the distance between <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> is the length of the blue diagonal shown in <a href="sec-Functions-Of-Several-Vars-and-3D-Space.html#F-9-1-Distance-3D" class="xref" data-knowl="./knowl/xref/F-9-1-Distance-3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.8">Figure 1.1.8</a>.</div></div>
+<div class="sbspanel top" style="width:53%;"><figure class="figure figure-like" id="F-9-1-Distance-3D"><img src="external/images/fig_9_1_distance.svg" role="img" class="contained"><figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.8<span class="period">.</span></span><span class="space"> </span>The distance formula in <span class="process-math">\(\R^3\text{.}\)</span></figcaption></figure></div>
+</div></div> <ol class="lower-alpha ol-marker-2" id="A-9-1-4-1-2">
+<li id="A-9-1-4-1-2-1"><div class="para" id="A-9-1-4-1-2-1-1">Consider the right triangle <span class="process-math">\(PRS\)</span> in the base of the box whose hypotenuse is shown as the red line in <a href="sec-Functions-Of-Several-Vars-and-3D-Space.html#F-9-1-Distance-3D" class="xref" data-knowl="./knowl/xref/F-9-1-Distance-3D.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.8">Figure 1.1.8</a>. What are the coordinates of the vertices of this triangle? Since this right triangle lies in a plane, we can use the Pythagorean Theorem to find a formula for the length of the hypotenuse of this triangle. Find such a formula, which will be in terms of <span class="process-math">\(x_0\text{,}\)</span> <span class="process-math">\(y_0\text{,}\)</span> <span class="process-math">\(x_1\text{,}\)</span> and <span class="process-math">\(y_1\text{.}\)</span>
+</div></li>
+<li id="A-9-1-4-1-2-2"><div class="para logical" id="A-9-1-4-1-2-2-1">
+<div class="para">Now notice that the triangle <span class="process-math">\(PRQ\)</span> whose hypotenuse is the blue segment connecting the points <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\)</span> with a leg as the hypotenuse <span class="process-math">\(PR\)</span> of the triangle found in part (a) lies entirely in a plane, so we can again use the Pythagorean Theorem to find the length of its hypotenuse. Explain why the length of this hypotenuse, which is the distance between the points <span class="process-math">\(P\)</span> and <span class="process-math">\(Q\text{,}\)</span> is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\sqrt{(x_1-x_0)^2 + (y_1-y_0)^2 + (z_1-z_0)^2}.
+\end{equation*}
+</div>
+</div></li>
+</ol>
+<div class="solutions">
+<details id="A-9-1-4-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period">.</span></summary><div class="answer solution-like knowl__content"><div class="para logical" id="A-9-1-4-2-1"><ol class="lower-alpha ol-marker-2" id="A-9-1-4-2-1-1">
+<li id="A-9-1-4-2-1-1-1">
+<div class="para" id="A-9-1-4-2-1-1-1-1">
+<span class="process-math">\(S = (x_{1},y_{0},z_{0})\)</span> <span class="process-math">\(R = (x_{1},y_{1},z_{0})\text{.}\)</span>
+</div>
+<div class="para" id="A-9-1-4-2-1-1-1-2"><span class="process-math">\(PR = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}}\text{.}\)</span></div>
+</li>
+<li id="A-9-1-4-2-1-1-2"><div class="para" id="A-9-1-4-2-1-1-2-1"><span class="process-math">\(\displaystyle PQ = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}}\)</span></div></li>
+</ol></div></div></details><details id="A-9-1-4-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period">.</span></summary><div class="solution solution-like knowl__content"><ol class="lower-alpha ol-marker-2" id="A-9-1-4-3-1">
+<li id="A-9-1-4-3-1-1">
+<div class="para" id="A-9-1-4-3-1-1-1">
+<span class="process-math">\(PS = \left( x_{1} - x_{0} \right)\)</span> <span class="process-math">\(SR = (y_{1} - y_{0})\text{.}\)</span>
+</div>
+<div class="para" id="A-9-1-4-3-1-1-2"><span class="process-math">\(PR = \sqrt{PS^{2} + SR^{2}} = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}}\text{.}\)</span></div>
+</li>
+<li id="A-9-1-4-3-1-2">
+<div class="para" id="A-9-1-4-3-1-2-1"><span class="process-math">\(RQ = (z_{1} - z_{0})\text{.}\)</span></div>
+<div class="para" id="A-9-1-4-3-1-2-2"><span class="process-math">\(PQ = \sqrt{PR^{2} + RQ^{2}} = \sqrt{\left( \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2}} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}} = \sqrt{\left( x_{1} - x_{0} \right)^{2} + \left( y_{1} - y_{0} \right)^{2} + \left( z_{1} - z_{0} \right)^{2}}\text{.}\)</span></div>
+</li>
+</ol></div></details>
+</div></article><article class="activity project-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-22"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.14</span><span class="period">.</span>
+</h3>
+<article class="task exercise-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-22-1"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-22-1-1-1">Find the equation of the sphere is center <span class="process-math">\((-6, -4, -3)\)</span> with radius <span class="process-math">\(3\text{.}\)</span> Normalize your equation so that the coefficient of <span class="process-math">\(x^2\)</span> is <span class="process-math">\(1\text{.}\)</span>
+</div></article><article class="task exercise-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-22-2"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-22-2-1-1">Give an equation which describes the intersection of this sphere with the plane <span class="process-math">\(z = -2\text{.}\)</span>
+</div></article></article><article class="definition definition-like" id="def-quadric-surface"><h3 class="heading">
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.9</span><span class="period">.</span><span class="space"> </span><span class="title">Quadric Surface.</span>
+</h3>
+<div class="para logical" id="def-quadric-surface-2-1">
+<div class="para">A <dfn class="terminology">quadric surface</dfn> is a surface of the form</div>
+<div class="displaymath process-math">
+\begin{equation*}
+Ax^2 + By^2 + Cz^2 + Dxy + Exz + Fyz + Gx + Hy + Jz + K = 0
+\end{equation*}
+</div>
+</div></article><article class="fact theorem-like" id="fact-quadric-surfaces"><h3 class="heading">
+<span class="type">Fact</span><span class="space"> </span><span class="codenumber">1.1.10</span><span class="period">.</span>
+</h3>
+<div class="para logical" id="fact-quadric-surfaces-1-1">
+<div class="para">There are six common types of quadric surfaces:</div>
+<ul class="disc" id="fact-quadric-surfaces-1-1-1">
+<li id="fact-quadric-surfaces-1-1-1-1"><div class="para logical" id="fact-quadric-surfaces-1-1-1-1-1">
+<div class="para">Ellipsoid</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1
+\end{equation*}
+</div>
+</div></li>
+<li id="fact-quadric-surfaces-1-1-1-2"><div class="para logical" id="fact-quadric-surfaces-1-1-1-2-1">
+<div class="para">Elliptic Cone</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 0
+\end{equation*}
+</div>
+</div></li>
+<li id="fact-quadric-surfaces-1-1-1-3"><div class="para logical" id="fact-quadric-surfaces-1-1-1-3-1">
+<div class="para">Elliptic Paraboloid</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}
+\end{equation*}
+</div>
+</div></li>
+<li id="fact-quadric-surfaces-1-1-1-4"><div class="para logical" id="fact-quadric-surfaces-1-1-1-4-1">
+<div class="para">Hyperboloid of One Sheet</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = 1
+\end{equation*}
+</div>
+</div></li>
+<li id="fact-quadric-surfaces-1-1-1-5"><div class="para logical" id="fact-quadric-surfaces-1-1-1-5-1">
+<div class="para">Hyperboloid of Two Sheets</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\dfrac{z^2}{c^2} - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1
+\end{equation*}
+</div>
+</div></li>
+<li id="fact-quadric-surfaces-1-1-1-6"><div class="para logical" id="fact-quadric-surfaces-1-1-1-6-1">
+<div class="para">Hyperbolic Paraboloid</div>
+<div class="displaymath process-math">
+\begin{equation*}
+z = \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2}
+\end{equation*}
+</div>
+</div></li>
+</ul>
+</div></article><article class="activity project-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-25"><h3 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.15</span><span class="period">.</span>
+</h3>
+<div class="introduction" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-1"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-1-1">Each equation below is a quadric surface. Identify which kind it is.</div></div>
+<article class="task exercise-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<div class="para logical" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1">
+<div class="para"><span class="process-math">\(-x^2 + 36y^2 + 36z^2 = 9\)</span></div>
+<ol class="upper-alpha ol-marker-1 cols2" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2">
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-1"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-1-1">Ellipsoid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-2"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-2-1">Hyperboloid of One Sheet</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-3"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-3-1">Elliptic Cone</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-4"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-4-1">Elliptic Paraboloid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-5"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-5-1">Hyperboloid of Two Sheets</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-6"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-2-1-1-2-6-1">Hyperbolic Paraboloid</div></li>
+</ol>
+</div></article><article class="task exercise-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para logical" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1">
+<div class="para"><span class="process-math">\(5y=x^2-z^2\)</span></div>
+<ol class="upper-alpha ol-marker-1 cols2" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2">
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-1"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-1-1">Ellipsoid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-2"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-2-1">Hyperboloid of One Sheet</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-3"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-3-1">Elliptic Cone</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-4"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-4-1">Elliptic Paraboloid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-5"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-5-1">Hyperboloid of Two Sheets</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-6"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-3-1-1-2-6-1">Hyperbolic Paraboloid</div></li>
+</ol>
+</div></article><article class="task exercise-like" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<div class="para logical" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1">
+<div class="para"><span class="process-math">\(x^2+5y^2-8z^2 = 0\)</span></div>
+<ol class="upper-alpha ol-marker-1 cols2" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2">
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-1"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-1-1">Ellipsoid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-2"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-2-1">Hyperboloid of One Sheet</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-3"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-3-1">Elliptic Cone</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-4"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-4-1">Elliptic Paraboloid</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-5"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-5-1">Hyperboloid of Two Sheets</div></li>
+<li id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-6"><div class="para" id="sec-Functions-Of-Several-Vars-and-3D-Space-25-4-1-1-2-6-1">Hyperbolic Paraboloid</div></li>
+</ol>
+</div></article></article></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="ch-MV.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-Vectors.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
